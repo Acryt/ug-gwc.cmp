@@ -1,0 +1,46 @@
+// Светлая тема
+:root {
+	--bg: #ffffff;
+	--text: #67878e;
+	--thead: #010648;
+	--taccent: #1e2364;
+	--hover: #6e6cff;
+	--hoverb: #5abebe;
+	--tabhead: #f7f6fa;
+
+	--bg-wave: #6e6cff linear-gradient(16deg, #5abebe 11.27%, #6f6cff 93.22%);
+	--bg-item: linear-gradient(180deg, #fafafa, #ffffff);
+	--bg-icon: #d9ecef;
+	--bg-block: #d9ecef;
+	--bg-opacity: #ffffffaa;
+
+	// --stars: #fc9d8a;
+	--stars: #fcc68a;
+	--border: #dae1f2cc;
+	--filter: unset;
+	--filter-active: invert(60%) sepia(18%) saturate(1580%) hue-rotate(136deg) brightness(96%) contrast(77%);
+	--shadow-header: #206ca429;
+	--box-shadow: #866fe826;
+}
+// Темная тема
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--bg: #161720;
+// 		--bgcolor-wave: #36abb5 linear-gradient(16deg,#30abba 11.27%,#6f6cff 93.22%);
+// 		--bgcolor-item: linear-gradient(180deg,#161720 ,#0C0D14);
+// 		--bgcolor-icon: #1c103a;
+// 		--bgcolor-block: #d9ecef;
+// 		--bg-opacity: #161720e0;
+// 		--text-default: #B4B4B4;
+// 		--text-selected: #6a36e4;
+// 		--text-accent: #7c74b7;
+// 		--hover: #36abb5;
+// 		--stars: #fc9d8a;
+// 		--border: #2e2f33;
+// 		--filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(200deg) brightness(100%) contrast(100%);
+// 		--filter-active: invert(60%) sepia(18%) saturate(1580%) hue-rotate(136deg) brightness(96%) contrast(77%);
+// 		--shadow-header: #3353;
+// 		--box-shadow: #3353;
+// 		--table-head: #231e33;
+// 	}
+// }

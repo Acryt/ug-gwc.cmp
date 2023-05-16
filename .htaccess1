@@ -1,0 +1,78 @@
+#This Apache config file was created by Duplicator Installer on 2023-01-18 14:32:18.
+#The original can be found in archived file with the name .htaccess__[HASH]
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Leistungen
+Redirect 301 /essay-vom-ghostwriter-bestellen-sie-ihren-aufsatz-aus-jedem-fachbereich/ /essay/
+Redirect 301 /ug-gwc-ghostwriting-service-bietet-ihnen-exzellente-prasentationen-in-powerpoint/ /praesentation/
+Redirect 301 /projektarbeit-schreiben-lassen-vom-studierten-ghostwriter/ /projektarbeit/
+Redirect 301 /facharbeit-schreiben-lassen/ /facharbeit/
+Redirect 301 /ein-einzigartiges-leben-festhalten-biografie-schreiben-lassen/ /biografie/
+Redirect 301 /ghostwriter-beauftragen-fur-diplomarbeiten/ /diplomarbeit/
+Redirect 301 /warum-sie-ein-expose-vom-ghostwriter-schreiben-lassen-sollten/ /expose/
+Redirect 301 /hausarbeit-vom-ghostwriter-qualifizierte-erstellung-in-allen-themenbereichen/ /hausarbeit/
+Redirect 301 /ein-einzigartiges-leben-festhalten-biografie-schreiben-lassen/ /biografie/
+Redirect 301 /masterarbeit-schreiben-lassen/ /masterarbeit/
+Redirect 301 /studienarbeit-schreiben/ /studienarbeit/
+Redirect 301 /businessplan-schreiben-lassen/ /businessplan/
+Redirect 301 /eine-danksagung-passt-in-jede-studienarbeit/ /danksagung/
+
+# Disziplinen
+Redirect 301 /ghostwriter-fur-statistik/ /statistik/
+
+# Политики
+Redirect 301 /allgemeine-geschaftsbedingungen/ /statistik/
+
+# blog
+Redirect 301 /was-ist-handout/ /blog/was-ist-handout/
+Redirect 301 /bildquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/ /blog/bildquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/
+Redirect 301 /quellenangabe-buch-buchquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/ /blog/quellenangabe-buch-buchquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/
+Redirect 301 /richtig-zitieren-in-deutsch-mit-fusnoten-zitieren-an-der-uni/ /blog/richtig-zitieren-in-deutsch-mit-fusnoten-zitieren-an-der-uni/
+Redirect 301 /fallstudie-forschungsmethode-bei-wissenschaftlichen-arbeiten/ /blog/fallstudie-forschungsmethode-bei-wissenschaftlichen-arbeiten/
+Redirect 301 /anleitung-und-tipps-zum-schreiben-einer-reflexion/ /blog/anleitung-und-tipps-zum-schreiben-einer-reflexion/
+Redirect 301 /indirekte-zitate-in-wissenschaftlichen-arbeiten/ /blog/indirekte-zitate-in-wissenschaftlichen-arbeiten/
+Redirect 301 /erlauterung-quellennachweis-mit-praktischen-tipps-vielen-beispielen/ /blog/erlauterung-quellennachweis-mit-praktischen-tipps-vielen-beispielen/
+Redirect 301 /wie-schreibe-ich-eine-quellenanalyse-die-besten-tipps-fur-deinen-erfolg-von-ug-gwc/ /blog/wie-schreibe-ich-eine-quellenanalyse-die-besten-tipps-fur-deinen-erfolg-von-ug-gwc/
+Redirect 301 /effizient-auf-online-prufungen-vorbereiten-ganz-einfach-mit-den-9-ug-gwc-regeln/ /blog/effizient-auf-online-prufungen-vorbereiten-ganz-einfach-mit-den-9-ug-gwc-regeln/
+Redirect 301 /ghost-writerservice-hilfe-bei-facharbeiten-in-allen-phasen-der-arbeit/ /blog/ghost-writerservice-hilfe-bei-facharbeiten-in-allen-phasen-der-arbeit/
+Redirect 301 /so-veroffentlichst-du-dein-buch-bei-einem-verlag-tipps-tricks/ /blog/so-veroffentlichst-du-dein-buch-bei-einem-verlag-tipps-tricks/
+Redirect 301 /quellen-aus-dem-internet-wie-verwendet-man-sie-richtig/ /blog/quellen-aus-dem-internet-wie-verwendet-man-sie-richtig/
+Redirect 301 /akademisches-ghostwriting-mit-professioneller-unterstutzung-zur-perfekten-wissenschaftlichen-arbeit/ /blog/akademisches-ghostwriting-mit-professioneller-unterstutzung-zur-perfekten-wissenschaftlichen-arbeit/
+Redirect 301 /vom-antiken-ghostwriting-zur-professionellen-begleitung-wissenschaftlicher-arbeiten/ /blog/vom-antiken-ghostwriting-zur-professionellen-begleitung-wissenschaftlicher-arbeiten/
+Redirect 301 /hausarbeiten-schreiben-anregungen-fur-eine-perfekte-wissenschaftliche-arbeit/ /blog/hausarbeiten-schreiben-anregungen-fur-eine-perfekte-wissenschaftliche-arbeit/
+Redirect 301 /gliederung-der-bachelorarbeit-so-gelingt-die-perfekte-ubersicht/ /blog/gliederung-der-bachelorarbeit-so-gelingt-die-perfekte-ubersicht/
+Redirect 301 /preise-der-ghostwriter-deutlich-mehr-als-bezahlte-schreibarbeit/ /blog/preise-der-ghostwriter-deutlich-mehr-als-bezahlte-schreibarbeit/
+Redirect 301 /die-15-saulen-einer-bachelorarbeit-der-ultimative-guideline/ /blog/bachelorarbeit-schreiben-der-ultimative-guideline/
+Redirect 301 /bachelorarbeit-und-masterarbeit-wesentliche-bestandteile-und-hilfreiche-tools/ /blog/bachelorarbeit-und-masterarbeit-wesentliche-bestandteile-und-hilfreiche-tools/
+Redirect 301 /richtig-zitieren-unerlasslich-bei-allen-wissenschaftlichen-arbeiten/ /blog/richtig-zitieren-unerlasslich-bei-allen-wissenschaftlichen-arbeiten/
+Redirect 301 /studienarbeiten-fachkundig-schreiben-lassen-die-ghostwriter-agentur/ /blog/studienarbeiten-fachkundig-schreiben-lassen-die-ghostwriter-agentur/
+Redirect 301 /hausarbeiten-regeln-kennen-und-fehler-vermeiden/ /blog/hausarbeiten-regeln-kennen-und-fehler-vermeiden/
+Redirect 301 /gesetze-in-wissenschaftlichen-arbeiten-richtig-zitieren/ /blog/gesetze-in-wissenschaftlichen-arbeiten-richtig-zitieren/
+Redirect 301 /bachelorarbeit-schreiben-themenfindung-und-aufbau/ /blog/bachelorarbeit-schreiben-themenfindung-und-aufbau/
+Redirect 301 /perfekter-einstieg-in-wissenschaftliches-arbeiten/ /blog/perfekter-einstieg-in-wissenschaftliches-arbeiten/
+Redirect 301 /ghostwriter-muhelos-zur-perfekten-abschlussarbeit/ /blog/ghostwriter-muhelos-zur-perfekten-abschlussarbeit/
+Redirect 301 /das-fazit-der-bachelorarbeit/ /blog/das-fazit-der-bachelorarbeit/
+Redirect 301 /akademisches-ghostwriting-die-hausarbeit/ /blog/akademisches-ghostwriting-die-hausarbeit/
+Redirect 301 /die-stufen-der-prufungsvorbereitung/ /blog/die-stufen-der-prufungsvorbereitung/
+Redirect 301 /das-schreiben-einer-seminararbeit/ /blog/das-schreiben-einer-seminararbeit/
+
+Redirect 301 /einen-juristischen-aufsatz-schreiben-wie-schreibt-man-einen-guten-juristischen-aufsatz/ /
+Redirect 301 /mini-lease-test/blog/resource/p-3000-kroner-selvrisiko/ /
+
+Redirect 301 /die-besten-bachelorarbeit-im-fach-logistik-schritt-fur-schritt-anleitung-und-themenvorschlage/ /blog/die-besten-bachelorarbeit-im-fach-logistik/
+Redirect 301 /blog/die-besten-bachelorarbeit-im-fach-logistik-schritt-fur-schritt-anleitung-und-themenvorschlage/ /blog/die-besten-bachelorarbeit-im-fach-logistik/

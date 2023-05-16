@@ -1,0 +1,52 @@
+{
+    "name": "acryt/composer-project",
+    "autoload": {
+        "psr-4": {
+            "Acryt\\ComposerProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Acryt",
+            "email": "acryt@mail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+	 "require": {
+        "composer/installers": "^2.2",
+		"johnpbloch/wordpress": "^6.1",
+        "wpackagist-plugin/akismet":"dev-trunk",
+        "wpackagist-plugin/wordpress-seo":"^20",
+        "wpackagist-plugin/classic-editor":"^1.6",
+        "wpackagist-plugin/duplicate-page": ">=1",
+        "wpackagist-plugin/ajax-load-more": "5.6.0.4",
+        "wpackagist-plugin/tinymce-advanced": "^5.6",
+        "wpackagist-plugin/wp-smushit": "*"
+	},
+	"config": {
+		"allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
+        }
+	},
+    "extra": {
+        "installer-paths": {
+            "app/mu-plugins/{$name}/": [],
+            "app/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "app/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}

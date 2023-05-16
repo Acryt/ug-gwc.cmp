@@ -1,0 +1,14 @@
+.content__container .section {
+	p {
+		text-indent: unset;
+	}
+	.why__item {
+		gap: 12px;
+	}
+	.price__item {
+		flex: 1 1 350px;
+	}
+	.price__extras li::before {
+		content: unset;
+	}
+}

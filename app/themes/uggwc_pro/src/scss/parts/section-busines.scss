@@ -1,0 +1,19 @@
+.busines {
+	.section__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+	&__map {
+		height: 500px;
+		flex: 1 0 290px;
+	}
+	&__text {
+		flex: 2 1 290px;
+	}
+	&__register {
+		display: flex;
+		height: fit-content;
+		max-width: 320px;
+	}
+}

@@ -1,0 +1,150 @@
+html {
+	font-size: 16px;
+	font-family: "Poppins";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--thead);
+	margin: 0px;
+	font-weight: 600;
+	line-height: 130%;
+	margin-bottom: 0.5em;
+}
+p {
+	margin: 0;
+}
+ul li {
+	color: var(--text);
+	font-weight: 400;
+	margin: 0px;
+	margin-bottom: 0.5em;
+}
+*~p {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+ul li::marker {
+}
+
+h1 {
+	font-size: calc(32px + (22 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 54px;
+	}
+}
+
+h2 {
+	margin-bottom: 0.5em;
+	font-size: calc(28px + (14 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 42px;
+	}
+}
+
+h3 {
+	font-size: calc(24px + (8 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 32px;
+	}
+}
+
+h4 {
+	font-size: calc(22px + (2 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 24px;
+	}
+}
+
+h5 {
+	font-size: calc(20px + (2 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 22px;
+	}
+}
+
+h6 {
+	font-size: calc(16px + (2 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 18px;
+	}
+}
+tbody {
+	h2 {
+		font-size: calc(16px + (4 * ((100vw - 320px) / (1280 - 320))));
+		@media (min-width: 1280px) {
+			font-size: 20px;
+		}
+	}
+	h3 {
+		font-size: calc(15px + (3 * ((100vw - 320px) / (1280 - 320))));
+		@media (min-width: 1280px) {
+			font-size: 18px;
+		}
+	}
+	h4 {
+		font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
+		@media (min-width: 1280px) {
+			font-size: 16px;
+		}
+	}
+	h5 {
+		font-size: calc(13px + (2 * ((100vw - 320px) / (1280 - 320))));
+		@media (min-width: 1280px) {
+			font-size: 15px;
+		}
+	}
+	h6 {
+		font-size: calc(12px + (2 * ((100vw - 320px) / (1280 - 320))));
+		@media (min-width: 1280px) {
+			font-size: 14px;
+		}
+	}
+}
+p,
+ul li,
+ol li,
+option {
+	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 16px;
+	}
+}
+strong {
+	font-size: calc(16px + (2 * ((100vw - 320px) / (1280 - 320))));
+	font-weight: 600;
+
+	@media (min-width: 1280px) {
+		font-size: 18px;
+	}
+}
+.si {
+	font-size: 12px;
+	font-style: italic;
+}
+.s {
+	font-size: 12px;
+}
+.header_mob_contact {
+	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
+	@media (min-width: 1280px) {
+		font-size: 16px;
+	}
+}
+p span {
+	color: var(--stars);
+}
+a {
+	text-decoration: none;
+	color: var(--thead);
+	transition: all 0.3s;
+	&:hover {
+		color: var(--hover);
+	}
+	&:active {
+	}
+}

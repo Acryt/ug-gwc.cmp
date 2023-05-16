@@ -1,0 +1,386 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&_big {
+		position: relative;
+		// max-width: 800px;
+		// margin: auto;
+		gap: 24px;
+		// backdrop-filter: blur(8px);
+
+		label,
+		.form_select {
+			flex: 1 1 300px;
+		}
+		.form__number,
+		.form__deadline {
+			flex: 1 1 110px;
+		}
+	}
+	&_medium {
+		height: 100%;
+		width: 100%;
+		justify-content: space-between;
+		gap: 12px;
+
+		label,
+		.form_select {
+			flex: 1 1 150px;
+		}
+		.form__email,
+		.form__phone {
+			flex: 1 1 150px;
+		}
+	}
+	&_small {
+		label,
+		.form_select {
+			flex: 1 1 200px;
+		}
+	}
+	&_care {
+		width: 100%;
+		height: 100%;
+		gap: 12px;
+		.form__order {
+			flex: 1 1 150px;
+		}
+		.form__email {
+			flex: 1 1 280px;
+		}
+	}
+	&_author {
+		position: relative;
+		gap: 24px;
+		max-width: 800px;
+
+		&>:nth-child(-n + 4)  {
+			flex: 1 1 300px;
+		}
+	}
+	&__heading {
+		z-index: 1;
+	}
+	// Звездочки
+	.req_star::before {
+		content: "*";
+		color: red;
+		position: absolute;
+		left: 26px;
+		z-index: 1;
+		top: 4px;
+	}
+	.form__number::before {
+		content: "*";
+		color: red;
+		position: absolute;
+		left: 24px;
+		z-index: 1;
+		top: 4px;
+	}
+	.c_btn__left {
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		left: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--hoverb);
+		color: var(--bg);
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+	.c_btn__right {
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		right: 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--hoverb);
+		color: var(--bg);
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+	&__desc {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		height: 16px;
+		width: 16px;
+		top: -8px;
+		left: -8px;
+		border-radius: 50%;
+		background: var(--bg-wave);
+		color: var(--bg);
+		z-index: 1;
+		&_t {
+			display: none;
+			position: absolute;
+			background: var(--thead);
+			border-radius: 4px;
+			width: 200px;
+			bottom: 28px;
+			left: 0px;
+			padding: 4px;
+			p {
+				font-size: 12px;
+				color: white;
+				z-index: 3;
+			}
+			&::before {
+				content: "";
+				display: flex;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background: var(--thead);
+				bottom: 0px;
+				left: 8px;
+				transform: skewY(-50deg);
+				z-index: 2;
+			}
+		}
+		&:hover {
+			.form__desc_t {
+				display: flex;
+			}
+		}
+	}
+	&__icon {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		left: 8px;
+		width: 16px;
+		height: 16px;
+		// background: var(--text);
+		color: var(--text);
+		border-radius: 4px;
+		z-index: 1;
+	}
+	&_select {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 40px;
+		margin: 0 auto;
+
+		.nice-select {
+			padding-left: 32px;
+			padding-right: 12px;
+			background: var(--border);
+			border: 1px solid var(--border);
+			font-size: 16px;
+
+			&:focus {
+				border: 1px solid var(--hover);
+			}
+			&.open {
+				border: 1px solid var(--hover);
+			}
+		}
+		.option {
+		}
+	}
+	select {
+		position: absolute;
+		width: 4px !important;
+		height: 4px !important;
+		border: 0px;
+	}
+	label {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: auto;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+		height: 100px;
+	}
+	&__text {
+		width: 100%;
+
+		span {
+			color: red;
+		}
+	}
+	&__guarant {
+		width: 100%;
+		display: flex;
+		gap: 4px;
+		margin-top: .5em;
+		
+		a {
+			font-size: 12px;
+		}
+	}
+	&__shield {
+		height: 20px;
+		width: 20px;
+	}
+	input:not([type="submit"]) {
+		background: var(--border);
+		padding: 8px 12px;
+		border-radius: 8px;
+		outline: none;
+		// border-top: 1px solid #0000;
+		// border-right: 1px solid #0000;
+		// border-left: 1px solid #0000;
+		border: 1px solid var(--border);
+		width: 100%;
+		transition: all 0.5s;
+		color: var(--thead);
+		font-weight: 500;
+		height: 40px;
+
+		&::placeholder {
+			color: var(--text);
+			opacity: 1;
+			font-weight: 300;
+		}
+		&:focus-visible {
+			border: 1px solid var(--hover);
+			background: var(--bg);
+		}
+	}
+	input[type="tel"] {
+		padding-left: 48px;
+	}
+	input[type="number"] {
+		text-align: center;
+	}
+	textarea {
+		background: var(--border);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		padding: 8px;
+		&::placeholder {
+			color: var(--text);
+			opacity: 1;
+			font-weight: 300;
+		}
+		&:focus-visible {
+			outline: none;
+			border: 1px solid var(--hover);
+			background: var(--bg);
+		}
+	}
+
+
+	&__sending {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		justify-content: center;
+		align-items: center;
+		background: var(--bg-opacity);
+		z-index: 3;
+		border-radius: 12px;
+		& > img {
+			width: 64px;
+			height: 64px;
+		}
+	}
+	&__disabled {
+		position: absolute;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-radius: 12px;
+		background: var(--bg-opacity);
+		z-index: 3;
+	}
+	// При отправке
+	&._sending {
+		.btn {
+			display: none;
+		}
+		.form__sending {
+			display: flex;
+		}
+
+	}
+
+	// После отправки
+	&._disabled {
+		.btn {
+			display: none;
+		}
+		.form__disabled {
+			display: flex;
+		}
+	}
+
+	// Отступы если иконка
+	.form__icon ~ input,
+	.form__icon ~ .form_select__title {
+		padding-left: 32px;
+	}
+	.form__theme {
+		flex: 1 1 100%;
+	}
+
+	// ITI
+	.iti__country,
+	.iti__divider {
+		display: list-item;
+		&::before {
+			content: unset;
+		}
+	}
+	.iti {
+		width: 100%;
+	}
+
+	// DatePicker
+	.datepicker .datepicker-picker {
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	.datepicker-header .datepicker-controls {
+		padding: 0;
+	}
+	.datepicker-cell.selected,
+	.datepicker-cell.selected:hover {
+		background-color: var(--hoverb);
+	}
+	.datepicker
+		.datepicker-picker
+		.datepicker-header
+		.datepicker-controls
+		button {
+		background: var(--hoverb);
+		border: none;
+		color: var(--bg);
+		padding: 4px;
+	}
+}
+
+// Удаляем стандартные стрелочки
+.count-input {
+	-moz-appearance: textfield;
+}
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

@@ -1,0 +1,19 @@
+.promoblock {
+	.section__content {
+		display: flex;
+		gap: 0;
+		flex-wrap: wrap;
+		align-items: center;
+		border-radius: 12px;
+		overflow: hidden;
+		background: linear-gradient(-85deg, white, var(--box-shadow));
+	}
+	&__image {
+		display: flex;
+		width: 290px;
+	}
+	&__text {
+		flex: 1 0 290px;
+		margin: 8px 12px;
+	}
+}

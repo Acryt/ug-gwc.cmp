@@ -1,0 +1,32 @@
+.guaranties {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: stretch;
+		align-items: stretch;
+		gap: 24px;
+	}
+	&__item {
+		display: flex;
+		flex: 1 1 400px;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: stretch;
+	}
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: var(--bg-icon);
+		color: var(--taccent);
+		font-size: 20px;
+	}
+	&__title {
+		margin: .5em 0;
+	}
+	&__text {}
+	&__annotation {}
+}

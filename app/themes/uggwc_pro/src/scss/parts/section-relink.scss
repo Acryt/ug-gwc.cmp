@@ -1,0 +1,38 @@
+.relink {
+	.section__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 0px;
+		font-size: 12px;
+
+		& > * {
+			display: flex;
+			flex: 1 0 22%;
+			align-items: center;
+			gap: 8px;
+			@media (max-width: 1024px) {
+				flex: 1 0 40%;
+			}
+			@media (max-width: 460px) {
+				flex: 1 0 100%;
+			}
+		}
+		a:hover {
+			.relink__img {
+				background: var(--hover);
+			}
+		}
+	}
+
+	&__img {
+		width: 32px;
+		height: 32px;
+		background: var(--taccent);
+		padding: 8px;
+		border-radius: 30%;
+		transition: .3s all;
+	}
+	a {
+		text-decoration: underline;
+	}
+}

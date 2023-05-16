@@ -1,0 +1,30 @@
+.care {
+	.section__content {
+		display: flex;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+	&__info {
+		flex: 1 1 300px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 16px;
+		height: fit-content;
+	}
+	&__c_form {
+		position: relative;
+		flex: 1 1 300px;
+	}
+	&__img {
+		width: 80px;
+		height: 80px;
+		flex: 0 0 80px;
+	}
+	&__h {
+		flex: 1 0 200px;
+	}
+	&__p {
+		flex: 1 1 100%;
+	}
+}

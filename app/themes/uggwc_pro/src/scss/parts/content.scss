@@ -1,0 +1,60 @@
+.content {
+	.section__header {
+		p {
+			text-align: center;
+		}
+	}
+	.section__content {
+		display: flex;
+		justify-content: center;
+		gap: 32px;
+		flex-wrap: wrap;
+	}
+	&__container, .about__description {
+		flex: 1 1 400px;
+
+		// Изображения в контенте с обтеканием
+		figure {
+			width: 272px;
+			height: auto;
+			border-radius: 12px;
+			@media (max-width: 540px) {
+				width: 100%;
+			}
+		}
+		p {
+			text-align: justify;
+			text-indent: 32px;
+		}
+		p ~ h1,
+		p ~ h2,
+		p ~ h3,
+		p ~ h4,
+		p ~ h5,
+		p ~ h6 {
+			margin-top: 1em;
+		}
+		figure:nth-of-type(2n) {
+			float: right;
+			margin: 12px 0px 12px 12px;
+		}
+		figure:nth-of-type(2n + 1) {
+			float: left;
+			margin: 12px 12px 12px 0;
+		}
+		.post_img:first-child {
+			display: flex;
+			width: 100%;
+			height: fit-content;
+			margin: 0;
+			border-radius: 12px;
+			overflow: hidden;
+		}
+	}
+	&__aside {
+		position: sticky;
+		width: 296px;
+		height: fit-content;
+		top: 120px;
+	}
+}

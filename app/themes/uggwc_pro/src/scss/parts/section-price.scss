@@ -1,0 +1,119 @@
+.price {
+	&__container {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		width: 100%;
+		background: var(--bg);
+		justify-content: center;
+		// overflow: hidden;
+		color: var(--text);
+		// border: 1px solid var(--tabhead);
+		// border-radius: 12px;
+		gap: 24px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 290px;
+		justify-content: stretch;
+		text-align: center;
+		transition: all .5s;
+		border-radius: 12px;
+		box-shadow: 0 2px 12px 0px var(--box-shadow);
+		// overflow: hidden;
+
+		&:hover {
+			background: var(--hoverb);
+
+			.price__name p {
+				color: var(--bg);
+			}
+			.price__price {}
+			.price__extras li {
+				color: var(--bg);
+			}
+			.price__footer {}
+		}
+	}
+	&__name {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 86px;
+		max-height: 86px;
+		border: 1px solid var(--tabhead);
+		padding: 15px;
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+
+		p {
+			font-size: 10px;
+		}
+	}
+	&__price {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+		width: 100%;
+		background: var(--tabhead);
+		color: var(--text);
+		border: 1px solid var(--tabhead);
+		padding: 5px 15px;
+		font-size: 12px;
+
+		strong {
+			margin-right: 10px;
+			font-size: 32px;
+			color: var(--thead);
+		}
+	}
+	&__extras {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			min-height: 70px;
+			max-height: 70px;
+			border: 1px solid var(--tabhead);
+			padding: 4px 12px;
+			font-size: 14px;
+			margin: 0px;
+		}
+	}
+	&__footer {
+		width: 100%;
+		background: var(--tabhead);
+		border: 1px solid var(--tabhead);
+		padding: 5px 40px;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+
+		.section__btn-cities {
+			position: relative;
+			display: flex;
+			margin: 0;
+			padding: 14px 24px;
+			border-radius: 10px;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			font-weight: 600;
+			transition: all .3s;
+			overflow: hidden;
+			background-color: transparent;
+			background: var(--hover);
+			box-shadow: 0 4px 10px var(--shadow);
+			color: var(--bg);
+		}
+	}
+}

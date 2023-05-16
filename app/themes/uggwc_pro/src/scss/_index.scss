@@ -1,0 +1,57 @@
+// Путь к FA
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+@import
+// RESET
+"reset",
+"../fonts/stylesheet.css",
+"typography",
+"variables",
+
+// FA
+"~@fortawesome/fontawesome-free/scss/fontawesome",
+"~@fortawesome/fontawesome-free/scss/solid",
+"~@fortawesome/fontawesome-free/scss/regular",
+"~@fortawesome/fontawesome-free/scss/brands",
+
+// LIBS
+"~@fancyapps/ui/src/Fancybox/Fancybox",
+"/node_modules/vanillajs-datepicker/sass/datepicker",
+
+// ОСНОВНАЯ ЧАСТЬ!
+"ui",
+
+// Куски
+"parts/blog",
+"parts/content",
+"parts/content-section",
+
+// Компоненты
+"parts/component-ratings",
+
+// Секции
+"parts/section-first",
+"parts/section-faq",
+"parts/section-numbers",
+"parts/section-how",
+"parts/section-guaranties",
+"parts/section-price",
+"parts/section-pricelist",
+"parts/section-review",
+"parts/section-why",
+"parts/section-form",
+"parts/section-managers",
+"parts/section-about",
+"parts/section-care",
+"parts/section-busines",
+"parts/section-promo",
+"parts/section-promoblock",
+"parts/section-relink",
+
+// Слайдеры
+"parts/swiper-small-managers",
+"parts/swiper-review",
+
+"parts/popup",
+"parts/forms",
+"parts/header",
+"parts/footer"

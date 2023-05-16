@@ -1,0 +1,13 @@
+vendor
+wordpress
+node_modules
+wp-config1.php
+composer.lock
+**/cache
+/app/plugins
+!important**/carbon-fields
+!important**/wp-rocket
+/app/upgrade
+**/inc/Ajax.php
+!important**/assets/images
+yarn.lock

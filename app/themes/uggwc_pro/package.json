@@ -1,0 +1,43 @@
+{
+	"name": "ug",
+	"version": "1.0.0",
+	"main": "webpack.config.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"start": "webpack --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.21.4",
+		"@babel/preset-env": "^7.21.4",
+		"@fancyapps/ui": "^4",
+		"@fortawesome/fontawesome-free": "^6.4.0",
+		"@types/node": "*",
+		"autoprefixer": "^10.4.14",
+		"babel-loader": "^9.1.2",
+		"css-loader": "^6.7.1",
+		"intl-tel-input": "^18",
+		"mini-css-extract-plugin": "^2.6.1",
+		"nice-select2": "^2.1.0",
+		"postcss": "^8.4.23",
+		"postcss-loader": "^7.0.1",
+		"postcss-preset-env": "^8",
+		"sass": ">=1.61",
+		"sass-loader": "^13.0.2",
+		"select2": "^4.1.0-rc.0",
+		"style-loader": "^3.3.1",
+		"swiper": "^8",
+		"ts-node": ">=10",
+		"typescript": ">=3",
+		"vanillajs-datepicker": "^1.2.0",
+		"webpack": "^5.78.0",
+		"webpack-cli": "^5",
+		"webpack-dev-server": "^4.11.1"
+	},
+	"dependencies": {
+		"-": "^0.0.1"
+	},
+	"description": ""
+}

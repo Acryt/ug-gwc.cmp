@@ -1,0 +1,16 @@
+<option value="" disabled selected>Arbeitstyp</option>
+<option value="Diplomarbeit">Diplomarbeit</option>
+<option value="Bachelorarbeit">Bachelorarbeit</option>
+<option value="Online Prüfung">Online Prüfung</option>
+<option value="Doktorarbeit">Doktorarbeit</option>
+<option value="Masterarbeit">Masterarbeit</option>
+<option value="Hausarbeit">Hausarbeit</option>
+<option value="Statistische Auswertung">Statistische Auswertung</option>
+<option value="Businessplan">Businessplan</option>
+<option value="Biografie">Biografie</option>
+<option value="Forschungsartikel">Forschungsartikel</option>
+<option value="Facharbeit">Facharbeit</option>
+<option value="Abschlussarbeit">Abschlussarbeit</option>
+<option value="Magisterarbeit">Magisterarbeit</option>
+<option value="Exposé">Exposé</option>
+<option value="Zusammenfassung">Zusammenfassung</option>

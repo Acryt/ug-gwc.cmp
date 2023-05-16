@@ -1,0 +1,39 @@
+.ratings {
+	display: flex;
+	gap: 24px;
+	font-size: 10px;
+	margin-top: 24px;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	& > * {
+		position: relative;
+		width: 160px;
+		height: 70px;
+		background: var(--bg);
+		border-radius: 8px;
+	}
+	&__one {
+	}
+	&__two {
+	}
+	&__stars {
+		position: absolute;
+		bottom: 0px;
+		left: 20px;
+
+		i {
+			color: var(--stars);
+		}
+		span {
+			margin-left: 4px;
+		}
+	}
+	img {
+		position: absolute;
+		width: 80%;
+		height: 80%;
+		top: 6%;
+		left: 10%;
+	}
+}
