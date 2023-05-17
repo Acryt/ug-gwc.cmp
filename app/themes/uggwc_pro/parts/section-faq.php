@@ -1,8 +1,20 @@
 <section id="faq" class="section faq">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2 class="section__heading"><?php echo carbon_get_theme_option('cf_faq_title'); ?></h2>
-			<p class="section__subheading"><?php echo carbon_get_theme_option('cf_faq_subtitle'); ?></p>
+			<h2 class="section__heading"><?php
+			if (carbon_get_post_meta(get_the_ID(), 'cf_faq_title')) { 
+				echo carbon_get_post_meta(get_the_ID(), 'cf_faq_title');
+			} else {
+				echo carbon_get_theme_option('cf_faq_title');
+			} ?>
+			</h2>
+			<p class="section__subheading"><?php
+			if (carbon_get_post_meta(get_the_ID(), 'cf_faq_subtitle')) { 
+				echo carbon_get_post_meta(get_the_ID(), 'cf_faq_subtitle');
+			} else {
+				echo carbon_get_theme_option('cf_faq_subtitle');
+			} ?>
+			</p>
 		</div>
 		<div class="faq__accordion" role="tablist" aria-multiselectable="true" itemscope itemtype="https://schema.org/FAQPage">
 			<div class="faq__side">
