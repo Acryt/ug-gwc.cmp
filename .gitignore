@@ -9,5 +9,6 @@ composer.lock
 !important**/wp-rocket
 /app/upgrade
 **/inc/Ajax.php
+**/assets
 !important**/assets/images
 yarn.lock
