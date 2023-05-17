@@ -42,6 +42,9 @@ body {
 .content__container .wrapper {
 	padding: 0;
 }
+.content__container .section {
+	overflow: unset;
+}
 .section {
 	margin: 32px 0;
 	scroll-margin-top: 64px;
