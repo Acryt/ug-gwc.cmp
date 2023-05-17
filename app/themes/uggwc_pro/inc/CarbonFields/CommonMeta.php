@@ -353,7 +353,7 @@ class CommonMeta
 					array(
 						Field::make('textarea', 'cf_faq_quest', __('Вопрос'))
 							->set_width(40),
-						Field::make('textarea', 'cf_faq_answer', __('Ответ'))
+						Field::make('rich_text', 'cf_faq_answer', __('Ответ'))
 							->set_width(40),
 					)
 				)

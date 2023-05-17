@@ -18,7 +18,7 @@ if ($items) {
 				<?php
 				foreach ($items as $key => $item) { ?>
 
-					<input type="radio" class="promo__input" name="promo" id="promo<?php echo $key; ?>" checked>
+					<input type="radio" class="promo__input" name="promo" id="promo<?php echo $key; ?>" <?php if($key == 0){echo 'checked';}?>>
 					<label class="promo__elem" for="promo<?php echo $key; ?>"><?php echo $item['title']; ?></label>
 					<div class="promo__block">
 					<?php if($item['image']) { ?>

@@ -24,7 +24,7 @@
 				if (($key % 2) == 0) { ?>
 				<div id="hl_faqp<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 					<input type="radio" id="faqp<?php echo $key; ?>" name="faq"><label class="faq__label" for="faqp<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_faq_answer']; ?></div></div>
 				</div>
 			<?php }} ?>
 			<?php 
@@ -36,7 +36,7 @@
 					if (($key % 2) == 1) { ?>
 					<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 						<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_faq_answer']; ?></div></div>
 					</div>
 			<?php }}} ?>
 			</div>
@@ -46,7 +46,7 @@
 				if (($key % 2) == 1) { ?>
 				<div id="hl_faqp<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 					<input type="radio" id="faqp<?php echo $key; ?>" name="faq"><label class="faq__label" for="faqp<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_faq_answer']; ?></div></div>
 				</div>
 			<?php }} ?>
 			<?php 
@@ -57,7 +57,7 @@
 					if (($key % 2) == 0) { ?>
 					<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
 						<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_faq_answer']; ?></div></div>
 					</div>
 			<?php }}} ?>
 		</div>
