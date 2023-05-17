@@ -16,14 +16,17 @@
 				</div>
 			<?php }} ?>
 			<?php 
-			$items = carbon_get_theme_option('cf_faq');
-			foreach ($items as $key => $item) { 
-				if (($key % 2) == 1) { ?>
-				<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-					<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
-				</div>
-			<?php }} ?>
+			if(carbon_get_post_meta(get_the_ID(), 'cf_faq_global')){
+				// Пусто
+			} else {
+				$items = carbon_get_theme_option('cf_faq');
+				foreach ($items as $key => $item) { 
+					if (($key % 2) == 1) { ?>
+					<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
+						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+					</div>
+			<?php }}} ?>
 			</div>
 			<div class="faq__side">
 			<?php 
@@ -35,13 +38,16 @@
 				</div>
 			<?php }} ?>
 			<?php 
-			foreach ($items as $key => $item) { 
-				if (($key % 2) == 0) { ?>
-				<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-					<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
-					<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
-				</div>
-			<?php }} ?>
+			if(carbon_get_post_meta(get_the_ID(), 'cf_faq_global')){
+				// Пусто
+			} else {
+				foreach ($items as $key => $item) { 
+					if (($key % 2) == 0) { ?>
+					<div id="hl_faq<?php echo $key; ?>" class="faq__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+						<input type="radio" id="faq<?php echo $key; ?>" name="faq"><label class="faq__label" for="faq<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_faq_quest']; ?></h6></label>
+						<div class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text"><?php echo $item['cf_faq_answer']; ?></p></div>
+					</div>
+			<?php }}} ?>
 		</div>
 	</div>
 </section>

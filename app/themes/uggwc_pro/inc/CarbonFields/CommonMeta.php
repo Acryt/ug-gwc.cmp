@@ -336,6 +336,12 @@ class CommonMeta
 				),
 		];
 	}
+	public static function switchMeta(): array
+	{
+		return [
+			Field::make( 'checkbox', 'cf_faq_global', __( 'Скрыть глобального FAQ на странице' ) ),
+		];
+	}
 	public static function faqMeta(): array
 	{
 		return [
