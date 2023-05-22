@@ -647,21 +647,21 @@ class Helpers
 	public static function geo() {
 		function getOS($userAgent) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Windows") !== false) $browser = "Windows";
-			elseif (strpos($user_agent, "(Linux)") !== false) $browser = "Linux";
-			elseif (strpos($user_agent, "(X11)") !== false) $browser = "Linux";
-			elseif (strpos($user_agent, "(iPhone)") !== false) $browser = "iPhone";
-			elseif (strpos($user_agent, "OpenBSD") !== false) $browser = "OpenBSD";
-			elseif (strpos($user_agent, "SunOS") !== false) $browser = "SunOS";
-			elseif (strpos($user_agent, "(Safari)") !== false) $browser = "Safari";
-			elseif (strpos($user_agent, "(Macintosh)") !== false) $browser = "Macintosh";
-			elseif (strpos($user_agent, "(Mac_PowerPC)") !== false) $browser = "Macintosh";
-			elseif (strpos($user_agent, "QNX") !== false) $browser = "QNX";
-			elseif (strpos($user_agent, "BeOS") !== false) $browser = "BeOS";
-			elseif (strpos($user_agent, "OS/2") !== false) $browser = "OS/2";
-			elseif (strpos($user_agent, "QNX") !== false) $browser = "QNX";
-			else $browser = "Undefined or Search Bot";
-			return $browser;
+			if (strpos($user_agent, "Windows") !== false) $os = "Windows";
+			elseif (strpos($user_agent, "(Linux)") !== false) $os = "Linux";
+			elseif (strpos($user_agent, "(X11)") !== false) $os = "Linux";
+			elseif (strpos($user_agent, "(iPhone)") !== false) $os = "iPhone";
+			elseif (strpos($user_agent, "OpenBSD") !== false) $os = "OpenBSD";
+			elseif (strpos($user_agent, "SunOS") !== false) $os = "SunOS";
+			elseif (strpos($user_agent, "(Safari)") !== false) $os = "Safari";
+			elseif (strpos($user_agent, "(Macintosh)") !== false) $os = "Macintosh";
+			elseif (strpos($user_agent, "(Mac_PowerPC)") !== false) $os = "Macintosh";
+			elseif (strpos($user_agent, "QNX") !== false) $os = "QNX";
+			elseif (strpos($user_agent, "BeOS") !== false) $os = "BeOS";
+			elseif (strpos($user_agent, "OS/2") !== false) $os = "OS/2";
+			elseif (strpos($user_agent, "QNX") !== false) $os = "QNX";
+			else $os = "Undefined or Search Bot";
+			return $os;
 		}
 		function getBrowser($userAgent) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
@@ -745,6 +745,10 @@ class Helpers
 		// GEO параметры
 		if (!isset($_COOKIE['geo'])) {
 			setcookie('geo', json_encode(getGeo()), time() + 60 * 60 * 24, '/');
+		}
+		if (!isset($_COOKIE['user_agent'])) {
+			$user_agent = $_SERVER["HTTP_USER_AGENT"];
+			setcookie('user_agent', $user_agent, time() + 60 * 60 * 24, '/');
 		}
 	}
 }
