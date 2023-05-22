@@ -44,8 +44,7 @@
 		<div class="header__content">
 			<div class="header__a_links">
 				<a href="/impressum">Impressum</a>
-				<a href="/wie-wir-arbeiten">So geht's!</a>
-				<a href="/uber-uns">Über uns</a>
+				<a href="/ghostwriter-preise">Preise</a>
 				<a href="/autoren">Unsere Autoren</a>
 				<a href="/faq">FAQ</a>
 			</div>
@@ -57,8 +56,7 @@
 
 				<div class="header__links">
 					<a class="header__item" href="/impressum">Impressum</a>
-					<a class="header__item" href="/wie-wir-arbeiten">So geht's!</a>
-					<a class="header__item" href="/uber-uns">Über uns</a>
+					<a class="header__item" href="/ghostwriter-preise">Preise</a>
 					<a class="header__item" href="/autoren">Unsere Autoren</a>
 					<a class="header__item" href="/faq">FAQ</a>
 					<div class="header__item header__time">
@@ -99,9 +97,10 @@
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_beis') ?>
 					</div>
-					<div class="dd-btn">Preise</div>
+					<div class="dd-btn">Über uns</div>
 					<div class="dd-menu">
-						<a href="/ghostwriter-preise">Ghostwriter Preise</a>
+						<a href="/uber-uns">Über uns</a>
+						<a href="/wie-wir-arbeiten">So geht's!</a>
 						<a href="/werbeaktionen">Werbeaktionen und Rabatte</a>
 					</div>
 					<a href="/bewertungen">Bewertungen</a>

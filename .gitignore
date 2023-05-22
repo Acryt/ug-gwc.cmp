@@ -8,7 +8,7 @@ composer.lock
 !important**/carbon-fields
 !important**/wp-rocket
 /app/upgrade
-**/inc/Ajax.php
+**/inc/Ajax*
 **/assets
 !important**/assets/images
 yarn.lock

@@ -20,6 +20,7 @@ import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
 import { closePopups, openPopup, cookieClose } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
+import { siteTimer } from "./js/siteTimer";
 import {
 	mailer,
 	stepper,
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	openPopup();
 	cookieClose();
 	sliders();
+	siteTimer();
 	phoneInput(); //Вызывает ошибки
 });
 

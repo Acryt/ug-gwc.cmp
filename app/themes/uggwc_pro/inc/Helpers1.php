@@ -645,35 +645,22 @@ class Helpers
 		return strtr($item, $sp);
 	}
 	public static function geo() {
-		function getOS($userAgent) {
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Windows") !== false) $browser = "Windows";
-			elseif (strpos($user_agent, "(Linux)") !== false) $browser = "Linux";
-			elseif (strpos($user_agent, "(X11)") !== false) $browser = "Linux";
-			elseif (strpos($user_agent, "(iPhone)") !== false) $browser = "iPhone";
-			elseif (strpos($user_agent, "OpenBSD") !== false) $browser = "OpenBSD";
-			elseif (strpos($user_agent, "SunOS") !== false) $browser = "SunOS";
-			elseif (strpos($user_agent, "(Safari)") !== false) $browser = "Safari";
-			elseif (strpos($user_agent, "(Macintosh)") !== false) $browser = "Macintosh";
-			elseif (strpos($user_agent, "(Mac_PowerPC)") !== false) $browser = "Macintosh";
-			elseif (strpos($user_agent, "QNX") !== false) $browser = "QNX";
-			elseif (strpos($user_agent, "BeOS") !== false) $browser = "BeOS";
-			elseif (strpos($user_agent, "OS/2") !== false) $browser = "OS/2";
-			elseif (strpos($user_agent, "QNX") !== false) $browser = "QNX";
-			else $browser = "Undefined or Search Bot";
-			return $browser;
+		// GET параметры
+		if (!isset($_COOKIE['getParam'])) {
+			setcookie('getParam', json_encode($_GET), time() + 60 * 60 * 24, '/');
 		}
-		function getBrowser($userAgent) {
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Firefox") !== false) $browser = "Firefox";
-			elseif (strpos($user_agent, "Opera") !== false) $browser = "Opera";
-			elseif (strpos($user_agent, "Chrome") !== false) $browser = "Chrome";
-			elseif (strpos($user_agent, "MSIE") !== false) $browser = "Internet Explorer";
-			elseif (strpos($user_agent, "Safari") !== false) $browser = "Safari";
-			else $browser = "Undefined";
-			return $browser;
-		}
-		function getGeo() {
+		// URL параметры
+		$session = [
+			"first" => ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+			"isMobile" => wp_is_mobile() ? 'true' : 'false',
+			"refer" => $_SERVER["HTTP_REFERER"],
+		];
+		if (!isset($_COOKIE['session'])) {
+			setcookie('session', json_encode($session), time() + 60 * 60 * 24, '/');
+		};
+
+		// GEO параметры
+		if (!isset($_COOKIE['geo'])) {
 			$client_ip = $_SERVER['REMOTE_ADDR'];
 			// проверка для локалки
 			// $client_ip = '84.244.8.172';
@@ -687,65 +674,25 @@ class Helpers
 			$response = curl_exec($ch);
 			curl_close($ch);
 
-			$response = json_decode($response);
-
-			$geo = array(
-				'ip' => $response -> ip,
-				'country_name' => $response -> country_name,
-				'region' => $response -> region
-			);
-			return $geo;
+			$response = json_encode(json_decode($response));
+			setcookie('geo', $response, time() + 60 * 60 * 24, '/');
+			return $response;
 		}
-
-		//  куки
-		$utm = $_GET;
-
-		// органика - директ - реклама
-		if ($utm['utm_medium']) {
-			$utm['utm_channel'] = 'cpc';
-		} else if (!$_SERVER["HTTP_REFERER"]) {
-			$utm['utm_channel'] = 'direct';
-		} else {
-			$utm['utm_channel'] = 'organic';
-		}
-		// запись утм
-		if(!isset($_COOKIE['fc_utm'])){
-			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 365, '/');
-			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-		} else {
-			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-		}
-		// реферальная ссылка
-		if (!isset($_COOKIE['refer'])) {
-			if ($_SERVER["HTTP_REFERER"]) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 365, '/');
-			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
+	}
+	public static function get_utm() {
+		$out = array();
+		$keys = array('utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term');
+		foreach ($keys as $row) {
+			if (!empty($_GET[$row])) {
+				$value = strval($_GET[$row]);
+				$value = stripslashes($value);
+				$value = htmlspecialchars_decode($value, ENT_QUOTES);
+				$value = strip_tags($value);
+				$value = htmlspecialchars($value, ENT_QUOTES);
+				$out[] = '<input type="hidden" name="' . $row . '" value="' . $value . '">';
 			}
 		}
-		// Страница
-		if (!isset($_COOKIE['fc_page'])) {
-			setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 365, '/');
-			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
-		} else {
-			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
-		}
-		//OS
-		if (!isset($_COOKIE['os'])) {
-			setcookie('os', getOS($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		//Browser
-		if (!isset($_COOKIE['browser'])) {
-			setcookie('browser', getBrowser($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		// mobile
-		if (!isset($_COOKIE['is_mobile'])) {
-			setcookie('is_mobile', (wp_is_mobile() ? 'yes' : 'no'), time() + 60 * 60 * 24, '/');
-		}
-		// GEO параметры
-		if (!isset($_COOKIE['geo'])) {
-			setcookie('geo', json_encode(getGeo()), time() + 60 * 60 * 24, '/');
-		}
+		return implode("\r\n", $out);
 	}
 }
 
