@@ -26,9 +26,7 @@ if ($items) {
 							<img class="" src="<?php echo $item['image']; ?>" alt="promo image">
 						</div>
 					<?php } ?>
-						<p class="promo__txt">
-							<?php echo $item['text']; ?>
-						</p>
+					<?php echo $item['text']; ?>
 					</div>
 
 				<?php } ?>
