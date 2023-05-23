@@ -33,6 +33,7 @@
 				// 3
 				echo $items[2]['cf_content_content'];
 				get_template_part('parts/section-guaranties');
+				get_template_part('parts/section-snippet');
 				
 
 				// 4
