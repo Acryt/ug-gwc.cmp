@@ -31,6 +31,7 @@ class GeneralMeta
 			->add_tab(__('Guaranties'), CommonMeta::guarantMeta())
 			->add_tab(__('Taking Care'), CommonMeta::careMeta())
 			->add_tab(__('Why Us (Authors)'), CommonMeta::whyAuthorMeta())
+			->add_tab(__('Snippet'), CommonMeta::snippetMeta())
 			->add_tab(__('Promo'), CommonMeta::promoMeta());
 	}
 }

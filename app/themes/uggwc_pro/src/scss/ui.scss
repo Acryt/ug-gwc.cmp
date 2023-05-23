@@ -172,11 +172,22 @@ li {
 }
 
 // Table
+table {
+	width: 100%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	overflow: hidden;
+	border-spacing: 0;
+}
 thead,
 tfoot {
 	background: var(--tabhead);
 	color: var(--hover);
 	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
+	text-align: center;
+	height: 16px;
 	@media (min-width: 1280px) {
 		font-size: 16px;
 	}

@@ -1,0 +1,25 @@
+.snippet {
+	.wrapper {
+		max-width: 560px;
+	}
+	.section__header {
+		margin: unset;
+	}
+	.section__content {
+		p {
+			text-align: justify;
+		}
+	}
+	&__cont {
+		display: flex;
+		gap: 8px;
+	}
+	&__cert {
+		height: 64px;
+		flex: 0 0 64px;
+	}
+	table {
+		margin-top: 32px;
+	}
+
+}

@@ -482,6 +482,14 @@ class CommonMeta
 				->set_width(70),
 		];
 	}
+	public static function snippetMeta(): array
+	{
+		return [
+			Field::make('text', 'cf_snippet_title', __('Заголовок')),
+			Field::make('text', 'cf_snippet_subtitle', __('Подзаголовок')),
+			Field::make('text', 'cf_snippet_text', __('Текст')),
+		];
+	}
 	public static function guarantMeta(): array
 	{
 		return [
