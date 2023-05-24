@@ -26,14 +26,7 @@
 			text-align: justify;
 			text-indent: 32px;
 		}
-		p ~ h1,
-		p ~ h2,
-		p ~ h3,
-		p ~ h4,
-		p ~ h5,
-		p ~ h6 {
-			margin-top: 1em;
-		}
+
 		figure:nth-of-type(2n) {
 			float: right;
 			margin: 12px 0px 12px 12px;

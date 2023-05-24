@@ -1,4 +1,18 @@
 .promo {
+	.section__header {
+		h1,h2,h3,h4,h5,h6 {
+			text-align: start;
+		}
+	}
+	.header_c {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+	}
+	.header_img {
+		height: 100px;
+		flex: 0 0 64px;
+	}
 	&__list {
 		position: relative;
 		padding: 0;
@@ -60,10 +74,13 @@
 		}
 	}
 	&__cimg {
-		height: 100px;
+		height: 160px;
 		float: left;
 		margin: .5em .5em 0 0;
-		width: 100px;
+		width: 160px;
+		img {
+			object-fit: cover;
+		}
 	}
 	&__txt {}
 	&__hashtag {

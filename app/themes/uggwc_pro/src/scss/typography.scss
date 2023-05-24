@@ -13,7 +13,37 @@ h6 {
 	margin: 0px;
 	font-weight: 600;
 	line-height: 130%;
-	margin-bottom: 0.5em;
+}
+* + h2 {
+	margin-top: 0.8em;
+}
+* + h3 {
+	margin-top: 0.7em;
+}
+* + h4 {
+	margin-top: 0.7em;
+}
+* + h5 {
+	margin-top: 0.6em;
+}
+* + h6 {
+	margin-top: 0.6em;
+}
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+	margin-top: 1em;
+}
+div + h1,
+div + h2,
+div + h3,
+div + h4,
+div + h5,
+div + h6 {
+	margin-top: 0;
 }
 p {
 	margin: 0;
@@ -30,9 +60,12 @@ ul li {
 	margin: 0px;
 	margin-bottom: 0.5em;
 }
-*~p {
+* + p {
 	margin-top: 0.5em;
 	margin-bottom: 0;
+}
+div + p {
+	margin: 0;
 }
 ul li::marker {
 }
@@ -45,7 +78,6 @@ h1 {
 }
 
 h2 {
-	margin-bottom: 0.5em;
 	font-size: calc(28px + (14 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
 		font-size: 42px;

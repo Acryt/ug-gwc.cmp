@@ -6,16 +6,17 @@ if ($items) {
 	<section id="promo" class="promo section">
 		<div class="wrapper">
 			<div class="section__header">
-
-				<h2>
-					<?php echo carbon_get_theme_option('cf_promo_title') ?>
-				</h2>
-				<?php if (condition) { ?>
-					<p>
-						<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
-					</p>
+				<div class="header_c">
+					<div class="header_img"><img class="" src="<?php bloginfo('template_url'); ?>/assets/images/icons/aktionen.svg" alt=""></div>
+					<h2>
+						<?php echo carbon_get_theme_option('cf_promo_title') ?>
+					</h2>
+				</div>
+				<?php if (carbon_get_theme_option('cf_promo_subtitle')) { ?>
+				<p>
+					<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
+				</p>
 				<?php } ?>
-
 			</div>
 			<div class="section__content">
 				<fieldset class="promo__list">
@@ -34,7 +35,9 @@ if ($items) {
 							<?php } ?>
 							<?php echo $item['text']; ?>
 							<br>
-							<p class="promo__hashtag"><?php echo $item['hashtag']; ?></p>
+							<p class="promo__hashtag">
+								<?php echo $item['hashtag']; ?>
+							</p>
 						</div>
 
 					<?php } ?>
