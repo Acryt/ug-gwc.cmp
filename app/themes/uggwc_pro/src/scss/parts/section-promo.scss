@@ -78,6 +78,8 @@
 		float: left;
 		margin: .5em .5em 0 0;
 		width: 160px;
+		border-bottom-right-radius: 50px;
+		overflow: hidden;
 		img {
 			object-fit: cover;
 		}
