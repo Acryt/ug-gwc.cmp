@@ -5,10 +5,8 @@ export function promo() {
 
 	if(window.innerWidth > 920){
 		container.style.minHeight = elems.length * 48 + 4 + 'px';
-		container.style.height = elems.length * 48 + 4 + 'px';
-		setTimeout(() => {
-			container.style.height = blocks[0].scrollHeight + 'px';
-		}, 300);
+		container.style.height = '0px';
+		container.style.height = blocks[0].scrollHeight + 'px';
 	} else {
 		blocks[0].style.height = blocks[0].scrollHeight + 'px';
 		container.style.minHeight = blocks[0].scrollHeight + (elems.length * 48 + 4) + 'px';

@@ -6,12 +6,16 @@ if ($items) {
 	<section id="promo" class="promo section">
 		<div class="wrapper">
 			<div class="section__header">
+
 				<h2>
 					<?php echo carbon_get_theme_option('cf_promo_title') ?>
 				</h2>
-				<p>
-					<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
-				</p>
+				<?php if (condition) { ?>
+					<p>
+						<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
+					</p>
+				<?php } ?>
+
 			</div>
 			<div class="section__content">
 				<fieldset class="promo__list">

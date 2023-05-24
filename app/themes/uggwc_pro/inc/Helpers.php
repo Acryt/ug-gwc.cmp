@@ -648,14 +648,14 @@ class Helpers
 		function getOS($userAgent) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
 			if (strpos($user_agent, "Windows") !== false) $os = "Windows";
-			elseif (strpos($user_agent, "(Linux)") !== false) $os = "Linux";
-			elseif (strpos($user_agent, "(X11)") !== false) $os = "Linux";
-			elseif (strpos($user_agent, "(iPhone)") !== false) $os = "iPhone";
+			elseif (strpos($user_agent, "Linux") !== false) $os = "Linux";
+			elseif (strpos($user_agent, "X11") !== false) $os = "Linux";
+			elseif (strpos($user_agent, "iPhone") !== false) $os = "iPhone";
 			elseif (strpos($user_agent, "OpenBSD") !== false) $os = "OpenBSD";
 			elseif (strpos($user_agent, "SunOS") !== false) $os = "SunOS";
-			elseif (strpos($user_agent, "(Safari)") !== false) $os = "Safari";
-			elseif (strpos($user_agent, "(Macintosh)") !== false) $os = "Macintosh";
-			elseif (strpos($user_agent, "(Mac_PowerPC)") !== false) $os = "Macintosh";
+			elseif (strpos($user_agent, "Safari") !== false) $os = "Safari";
+			elseif (strpos($user_agent, "Macintosh") !== false) $os = "Macintosh";
+			elseif (strpos($user_agent, "Mac_PowerPC") !== false) $os = "Macintosh";
 			elseif (strpos($user_agent, "QNX") !== false) $os = "QNX";
 			elseif (strpos($user_agent, "BeOS") !== false) $os = "BeOS";
 			elseif (strpos($user_agent, "OS/2") !== false) $os = "OS/2";
