@@ -10,8 +10,9 @@
 		align-items: center;
 	}
 	.header_img {
+		position: absolute;
+		left: -64px;
 		height: 100px;
-		flex: 0 0 64px;
 	}
 	&__list {
 		position: relative;

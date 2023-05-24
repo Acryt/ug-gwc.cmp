@@ -22,6 +22,7 @@ import { closePopups, openPopup, cookieClose } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer } from "./js/siteTimer";
 import { promo } from "./js/promo";
+import { promoBlockTimer } from "./js/promoBlockTimer";
 import {
 	mailer,
 	stepper,
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	sliders();
 	siteTimer();
 	promo();
+	promoBlockTimer();
 	phoneInput(); //Вызывает ошибки
 });
 

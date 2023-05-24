@@ -11,7 +11,7 @@ export function siteTimer() {
 	function updateTime(){
 		startTime += 5;
 		setCookie('time_passed', startTime)
-		setTimeout(updateTime, 5000);
 	}
 	updateTime();
+	setInterval(updateTime, 5000);
 }
