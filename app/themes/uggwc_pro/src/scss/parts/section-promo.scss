@@ -8,10 +8,13 @@
 		display: flex;
 		gap: 32px;
 		align-items: center;
+		h2 {
+			margin-left: 64px;
+		}
 	}
 	.header_img {
 		position: absolute;
-		left: -64px;
+		left: 0;
 		height: 100px;
 	}
 	&__list {

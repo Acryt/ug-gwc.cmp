@@ -4,15 +4,20 @@ export function promo() {
 	let blocks = document.querySelectorAll(".promo__block");
 
 	if (document.querySelector(".promo__list")) {
-		if (window.innerWidth > 920) {
-			container.style.minHeight = elems.length * 48 + 4 + "px";
-			container.style.height = "0px";
-			container.style.height = blocks[0].scrollHeight + "px";
-		} else {
-			blocks[0].style.height = blocks[0].scrollHeight + "px";
-			container.style.minHeight =
-				blocks[0].scrollHeight + (elems.length * 48 + 4) + "px";
+		function updateHeight(){
+			if (window.innerWidth > 920) {
+				container.style.minHeight = elems.length * 48 + 4 + "px";
+				container.style.height = "0px";
+				setTimeout(() => {
+					container.style.height = blocks[0].scrollHeight + "px";
+				}, 300);
+			} else {
+				blocks[0].style.height = blocks[0].scrollHeight + "px";
+				container.style.minHeight = blocks[0].scrollHeight + (elems.length * 48 + 4) + "px";
+			}
 		}
+		updateHeight();
+		window.addEventListener("resize", updateHeight)
 
 		elems.forEach((el, key) => {
 			el.addEventListener("click", () => {
