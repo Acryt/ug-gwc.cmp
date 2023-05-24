@@ -742,9 +742,11 @@ class CommonMeta
 			Field::make('complex', 'cf_promo', __('Список'))
 				->add_fields([
 					Field::make('text', 'title', __('Заголовок'))
-						->set_width(15),
+						->set_width(20),
+					Field::make('text', 'hashtag', __('Хештеги'))
+						->set_width(20),
 					Field::make('rich_text', 'text', __('Само предложение'))
-						->set_width(70),
+						->set_width(50),
 					Field::make('image', 'image', __('Картинка'))
 						->set_type('image')
 						->set_value_type('url')

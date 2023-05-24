@@ -8,7 +8,7 @@
 		width: 100%;
 		transition: all .3s;
 		// height: 256px;
-		background: var(--border);
+		background: var(--bg-wave);
 		// @media (max-width: 1200px) {
 		// 	height: 300px;
 		// }
@@ -27,9 +27,10 @@
 	}
 	&__elem {
 		display: flex;
+		width: 290px;
+		color: var(--bg);
 		font-weight: 600;
 		padding: 12px;
-		width: 290px;
 		z-index: 1;
 		transition: all .3s;
 		@media (max-width: 920px) {
@@ -46,7 +47,8 @@
 		padding: 12px;
 		transition: all .3s;
 		overflow: hidden;
-		background: white;
+		background: linear-gradient(120deg, #ffffff 0%, #ffffff 30%, #f7dcff 65%, #d2fffe 100%);
+		color: var(--thead);
 		height: 100%;
 		@media (max-width: 920px) {
 			// display: block;

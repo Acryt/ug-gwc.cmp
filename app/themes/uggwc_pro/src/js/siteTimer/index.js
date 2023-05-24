@@ -7,7 +7,6 @@ export function siteTimer() {
 	} else {
 		startTime = parseInt(getCookie('time_passed'));
 	}
-	console.log (startTime);
 
 	function updateTime(){
 		startTime += 5;
