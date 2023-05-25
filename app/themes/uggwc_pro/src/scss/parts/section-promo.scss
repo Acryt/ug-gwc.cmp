@@ -6,16 +6,14 @@
 	}
 	.header_c {
 		display: flex;
-		gap: 32px;
-		align-items: center;
+		align-items: flex-end;
 		h2 {
-			margin-left: 64px;
+			margin-left: 12px;
 		}
 	}
 	.header_img {
-		position: absolute;
-		left: 0;
-		height: 100px;
+		position: relative;
+		height: 80px;
 	}
 	&__list {
 		position: relative;

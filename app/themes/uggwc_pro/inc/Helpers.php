@@ -669,10 +669,19 @@ class Helpers
 		//  куки
 		$utm = $_GET;
 
+		// реферальная ссылка
+		if (!isset($_COOKIE['refer'])) {
+			if ($_SERVER["HTTP_REFERER"]) {
+				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 365, '/');
+			} else {
+				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
+			}
+		}
+		
 		// органика - директ - реклама
 		if ($utm['utm_medium']) {
 			$utm['utm_channel'] = 'cpc';
-		} else if (!$_SERVER["HTTP_REFERER"]) {
+		} else if (!$_SERVER["HTTP_REFERER"] || (stripslashes($_COOKIE['refer']) == 'none')) {
 			$utm['utm_channel'] = 'direct';
 		} else {
 			$utm['utm_channel'] = 'organic';
@@ -684,14 +693,7 @@ class Helpers
 		} else {
 			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
 		}
-		// реферальная ссылка
-		if (!isset($_COOKIE['refer'])) {
-			if ($_SERVER["HTTP_REFERER"]) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 365, '/');
-			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
-			}
-		}
+
 		// Страница
 		if (!isset($_COOKIE['fc_page'])) {
 			setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 365, '/');
