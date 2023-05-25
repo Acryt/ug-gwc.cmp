@@ -93,37 +93,6 @@ class Helpers
 		if (in_array($string, ['form-popup'])) {
 			$name = 'Попап форма';
 		}
-		if (in_array($string, ['full-form-online'])) {
-			$name = 'Полная форма online';
-		}
-		if (in_array($string, ['first-form-online'])) {
-			$name = 'Полная форма online в шапке';
-		}
-		if (in_array($string, ['full-form-online-popup'])) {
-			$name = 'Полная форма online в попапе';
-		}
-		if (in_array($string, ['first-form', 'first-form_v2'])) {
-			$name = 'Форма в шапке';
-		}
-		if (in_array($string, ['full-form', 'full-form_v2'])) {
-			$name = 'Полная форма';
-		}
-		if (in_array($string, ['mail-form-medium', 'mail-form-large'])) {
-			$name = 'Краткая форма';
-		}
-		if (in_array($string, ['medium-form'])) {
-			$name = 'Дополнительные услуги';
-		}
-		if (in_array($string, ['calculator-form'])) {
-			$name = 'Онлайн-калькулятор';
-		}
-		if (in_array($string, ['call-form'])) {
-			$name = 'Обратный звонок';
-		}
-		if (in_array($string, ['mail-form-small'])) {
-			$name = 'Бесплатная проверка на плагиат';
-		}
-
 		return $name;
 	}
 

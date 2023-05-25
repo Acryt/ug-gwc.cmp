@@ -13,6 +13,7 @@ Template Name: Price
 	<?php get_template_part('parts/section-price');?>
 	<?php get_template_part('parts/section-promoblock');?>
 	<?php get_template_part('parts/section-guaranties');?>
+	<?php get_template_part('parts/section-form');?>
 </main>
 
 <?php 
