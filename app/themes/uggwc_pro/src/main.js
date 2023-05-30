@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	sliders();
 	siteTimer();
 	promo();
+	phoneInput();
 	promoBlockTimer();
-	phoneInput(); //Вызывает ошибки
 });
 
 const carbonFieldsImagesFix = (() => {

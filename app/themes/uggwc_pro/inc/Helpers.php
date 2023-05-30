@@ -686,6 +686,7 @@ class Helpers
 		} else {
 			$utm['utm_channel'] = 'organic';
 		}
+		
 		// запись утм
 		if(!isset($_COOKIE['fc_utm'])){
 			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 365, '/');
