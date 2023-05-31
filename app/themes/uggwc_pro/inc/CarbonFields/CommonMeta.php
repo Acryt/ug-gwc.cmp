@@ -188,38 +188,44 @@ class CommonMeta
 				),
 		];
 	}
-	public static function bAuthorMeta(): array
+	public static function authorMeta(): array
 	{
 		return [
-			Field::make('text', 'cf_bauthor_title', __('Заголовок')),
-			Field::make('text', 'cf_bauthor_subtitle', __('Подзаголовок')),
-			Field::make('complex', 'cf_bauthor', __('Массив авторов'))
+			Field::make('text', 'cf_author_title', __('Заголовок')),
+			Field::make('text', 'cf_author_subtitle', __('Подзаголовок')),
+			Field::make('complex', 'cf_author', __('Массив авторов'))
 				->set_layout('tabbed-horizontal')
 				->add_fields(
 					array(
-						Field::make('image', 'cf_bauthor_photo', __('Фото'))
+						Field::make('image', 'cf_author_photo', __('Фото'))
 							->set_value_type('url')
 							->set_width(10),
-						Field::make('text', 'cf_bauthor_name', __('Имя'))
+						Field::make('text', 'cf_author_name', __('Имя'))
 							->set_width(30),
-						Field::make('text', 'cf_bauthor_spec', __('Должность'))
-							->set_width(20),
-						Field::make('text', 'cf_bauthor_time', __('Time'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_day', __('Days'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_work', __('Режим работы'))
-							->set_width(30),
-						Field::make('separator', 'cf_bauthor_links', __('Контакты')),
-						Field::make('text', 'cf_bauthor_mail', __('eMail'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_phone', __('Phone'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_whatsapp', __('WhatsApp'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_facebook', __('Facebook'))
-							->set_width(30),
-						Field::make('text', 'cf_bauthor_skype', __('Skype'))
+						Field::make('text', 'cf_author_rating', __('Рейтинг автора'))
+							->set_help_text('Rating')
+							->set_label('label')
+							->set_width(10)
+							->set_required(true)
+							->set_attribute('type', 'number')
+							->set_attribute('min', '0')
+							->set_attribute('max', '50'),
+						Field::make('text', 'cf_author_orders', __('Заказы автора'))
+							->set_help_text('Rating')
+							->set_label('label')
+							->set_width(10)
+							->set_required(true)
+							->set_attribute('type', 'number')
+							->set_attribute('min', '0'),
+						Field::make('text', 'cf_author_orders', __('Процент выполненных работ'))
+							->set_help_text('Rating')
+							->set_label('label')
+							->set_width(10)
+							->set_required(true)
+							->set_attribute('type', 'number')
+							->set_attribute('min', '0')
+							->set_attribute('max', '100'),
+						Field::make('text', 'cf_author_competencies', __('Компетенции'))
 							->set_width(30),
 					)
 				),
