@@ -14,7 +14,7 @@ get_header();
 	
 	<?php get_template_part('parts/section-card-manager'); ?>
 	<!-- <?php get_template_part('parts/section-card-client'); ?> -->
-	<!-- <?php get_template_part('parts/section-card-bauthor'); ?> -->
+	<!-- <?php get_template_part('parts/section-card-author'); ?> -->
 	<!-- <?php get_template_part('parts/section-card-dev'); ?> -->
 	<!-- <?php get_template_part('parts/section-card-recruit'); ?> -->
 	<!-- <?php get_template_part('parts/section-card-boss'); ?> -->
