@@ -75,4 +75,33 @@ export function sliders() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+	const authorSwiper = new Swiper('.author_swiper', {
+		modules: [Navigation, Autoplay, Pagination],
+		// Optional parameters
+		direction: 'horizontal',
+		slidesPerView: "auto",
+		slidesPerGroup: 1,
+		loop: true,
+		centeredSlides: true,
+		centeredSlidesBounds: true,
+		autoplay: {
+			enabled: false,
+			delay: 1000,
+		},
+		speed: 500,
+	
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
 }

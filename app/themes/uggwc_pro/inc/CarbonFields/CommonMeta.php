@@ -21,7 +21,6 @@ use Carbon_Fields\Field;
 
 class CommonMeta
 {
-
 	public static function generalMeta(): array
 	{
 		return [
@@ -114,6 +113,14 @@ class CommonMeta
 						Field::make('text', 'cf_select_calltime_item', __('Пункт'))
 					)
 				),
+			Field::make('complex', 'cf_select_competition', __('Список всех компетенции авторов'))
+				->set_layout('tabbed-horizontal')
+				->add_fields(
+					array(
+						Field::make('text', 'cf_select_competition_label', __('Label')),
+						Field::make('text', 'cf_select_competition_value', __('Value')),
+					)
+				),
 		];
 	}
 	public static function managerMeta(): array
@@ -203,30 +210,41 @@ class CommonMeta
 						Field::make('text', 'cf_author_name', __('Имя'))
 							->set_width(30),
 						Field::make('text', 'cf_author_rating', __('Рейтинг автора'))
-							->set_help_text('Rating')
-							->set_label('label')
+							->set_help_text('0 - 50')
 							->set_width(10)
 							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
 							->set_attribute('max', '50'),
-						Field::make('text', 'cf_author_orders', __('Заказы автора'))
-							->set_help_text('Rating')
-							->set_label('label')
+						Field::make('radio', 'cf_author_quality', __('Качество'))
+							->set_options(
+								array(
+									'Bachelor' => __('Bachelor'),
+									'Doctor' => __('Doctor'),
+									'Master' => __('Master'),
+								)
+							),
+						Field::make('text', 'cf_author_review', __('Колличество отзывов'))
+							->set_help_text('0 - *****')
 							->set_width(10)
 							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0'),
-						Field::make('text', 'cf_author_orders', __('Процент выполненных работ'))
-							->set_help_text('Rating')
-							->set_label('label')
+						Field::make('text', 'cf_author_orders', __('Заказы автора'))
+							->set_help_text('0 - *****')
+							->set_width(10)
+							->set_required(true)
+							->set_attribute('type', 'number')
+							->set_attribute('min', '0'),
+						Field::make('text', 'cf_author_percent', __('Процент выполненных работ'))
+							->set_help_text('0 - 100')
 							->set_width(10)
 							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
 							->set_attribute('max', '100'),
-						Field::make('text', 'cf_author_competencies', __('Компетенции'))
-							->set_width(30),
+						Field::make('multiselect', 'cf_selected_options', __('Selected Options'))
+							->set_options(Helpers::get_checkbox_options()),
 					)
 				),
 		];
@@ -345,7 +363,7 @@ class CommonMeta
 	public static function switchMeta(): array
 	{
 		return [
-			Field::make( 'checkbox', 'cf_faq_global', __( 'Скрыть глобального FAQ на странице' ) ),
+			Field::make('checkbox', 'cf_faq_global', __('Скрыть глобального FAQ на странице')),
 		];
 	}
 	public static function faqMeta(): array

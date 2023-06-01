@@ -613,6 +613,14 @@ class Helpers
 		$sp = array(' ' => '', '+' => '', '(' => '', ')' => '', '-' => '');
 		return strtr($item, $sp);
 	}
+	public static function get_checkbox_options() {
+		$options = carbon_get_theme_option('cf_select_competition');
+		$checkbox_options = array();
+		foreach ($options as $option) {
+			 $checkbox_options[$option['cf_select_competition_value']] = $option['cf_select_competition_label'];
+		}
+		return $checkbox_options;
+	}
 	public static function geo() {
 		function getOS($userAgent) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];

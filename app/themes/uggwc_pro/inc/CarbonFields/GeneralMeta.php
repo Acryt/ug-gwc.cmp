@@ -19,7 +19,7 @@ class GeneralMeta
 			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
 			->add_tab(__('Managers'), CommonMeta::managerMeta())
 			->add_tab(__('Client'), CommonMeta::clientMeta())
-			->add_tab(__('Author'), CommonMeta::bauthorMeta())
+			->add_tab(__('Author'), CommonMeta::authorMeta())
 			->add_tab(__('Marketing/DEV'), CommonMeta::devMeta())
 			->add_tab(__('Recruitment'), CommonMeta::recruitMeta())
 			->add_tab(__('Bosses'), CommonMeta::bossMeta())

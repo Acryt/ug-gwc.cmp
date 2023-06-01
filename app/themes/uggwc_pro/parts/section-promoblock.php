@@ -9,8 +9,8 @@
 				<img src="<?php bloginfo('template_url'); ?>/assets/images/promoblock.jpg" alt="promoblock image">
 			</div>
 			<div class="promoblock__text">
-				<div class="promoblock__timer timer" data-end="2023-05-31"></div>
-				<h5 class="promoblock__t">Bestellen Sie eine Arbeit und erhalten Sie ein Coaching als Geschenk! Sparen Sie 150 Euro! Die Geschenke sind limitiert, holen Sie sich Ihr Geschenk jetzt! Das Angebot ist bis zum 31. Mai gültig.</h5>
+				<div class="promoblock__timer timer" data-end="2023-06-30"></div>
+				<h5 class="promoblock__t">Erhalten Sie 30 Euro als Geschenk für Ihre erste Bestellung bis 30. Juni!!! Die Geschenke sind limitiert, holen Sie sich Ihr Geschenk jetzt!</h5>
 			</div>
 		</div>
 	</div>
