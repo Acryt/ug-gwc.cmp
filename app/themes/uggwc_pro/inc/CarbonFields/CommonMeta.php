@@ -81,8 +81,8 @@ class CommonMeta
 						Field::make('text', 'cf_select_type_item', __('Пункт'))
 					)
 				),
-			Field::make('text', 'cf_select_specialization_placeholder', __('Плейсхолдер специальности')),
-			Field::make('complex', 'cf_select_specialization', __('Специальности (для форм)'))
+			Field::make('text', 'cf_select_specialization_placeholder', __('Плейсхолдер дисциплин/специальностей')),
+			Field::make('complex', 'cf_select_specialization', __('Дисциплины (для форм)'))
 				->set_layout('tabbed-horizontal')
 				->add_fields(
 					array(
