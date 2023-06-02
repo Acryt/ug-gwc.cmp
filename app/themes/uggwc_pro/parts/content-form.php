@@ -43,7 +43,7 @@
 
 				// 5
 				echo $items[4]['cf_content_content'];
-				// get_template_part('parts/section-promoblock');
+				get_template_part('parts/section-promoblock');
 
 				// 6
 				echo get_the_content();  

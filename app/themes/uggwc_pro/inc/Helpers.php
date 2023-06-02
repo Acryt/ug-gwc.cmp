@@ -1,13 +1,15 @@
 <?php
 class Helpers
 {
-	public function __construct() {
+	public function __construct()
+	{
 		add_filter('determine_current_user', [$this, 'jsonBasicAuthHandler'], 20);
 		add_filter('rest_authentication_errors', [$this, 'jsonBasicAuthError']);
 		add_action('init', [$this, 'geo']);
 	}
 
-	public function jsonBasicAuthHandler($user) {
+	public function jsonBasicAuthHandler($user)
+	{
 		global $wp_json_basic_auth_error;
 		$wp_json_basic_auth_error = null;
 		if (!empty($user)) {
@@ -37,7 +39,8 @@ class Helpers
 		return $user->ID;
 	}
 
-	public function jsonBasicAuthError($error) {
+	public function jsonBasicAuthError($error)
+	{
 		if (!empty($error)) {
 			return $error;
 		}
@@ -50,12 +53,14 @@ class Helpers
 	 * Выводит домен сайта без протокола
 	 * @return string
 	 */
-	public static function siteUri(): string {
+	public static function siteUri(): string
+	{
 		$uri = get_site_url(get_current_blog_id());
 		$uri = explode('//', $uri);
 		return end($uri);
 	}
-	public static function siteNumber(): string {
+	public static function siteNumber(): string
+	{
 		$number = get_current_blog_id();
 		$number = explode('//', $number);
 		return end($number);
@@ -65,7 +70,8 @@ class Helpers
 	 * @param string $string
 	 * @return string
 	 */
-	public static function siteFormName($string = ''): string {
+	public static function siteFormName($string = ''): string
+	{
 		if (!$string) {
 			return '';
 		}
@@ -100,7 +106,8 @@ class Helpers
 	 * Выводит массив с данными о всех лендингах
 	 * @return array
 	 */
-	public static function sites(): array {
+	public static function sites(): array
+	{
 		return [
 			18 => [
 				'name' => 'Diplomarbeit',
@@ -232,7 +239,8 @@ class Helpers
 	/**
 	 * Добавляет код после открывающегося тега BODY
 	 */
-	public static function addedCodeBeforeBody() {
+	public static function addedCodeBeforeBody()
+	{
 		if (is_user_logged_in()) {
 			return;
 		}
@@ -242,11 +250,11 @@ class Helpers
 		 * https://gwrites-ma.de/
 		 */
 		if (get_current_blog_id() === 1) {
-?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GBT53"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GBT53" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
@@ -257,11 +265,11 @@ class Helpers
 		 * https://gwrites-da.de/
 		 */
 		if (get_current_blog_id() === 3) {
-            ?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NGGW6"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NGGW6" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
@@ -272,11 +280,11 @@ class Helpers
 		 * https://gwrites-statistik.de/
 		 */
 		if (get_current_blog_id() === 4) {
-            ?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THWDP8M"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THWDP8M" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
@@ -287,11 +295,11 @@ class Helpers
 		 * https://gwrites-fa.de/
 		 */
 		if (get_current_blog_id() === 5) {
-            ?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPJTBXP"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPJTBXP" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
@@ -302,11 +310,11 @@ class Helpers
 		 * https://gwrites-abschluss.de/
 		 */
 		if (get_current_blog_id() === 6) {
-            ?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCPWR9V"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCPWR9V" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
@@ -317,22 +325,22 @@ class Helpers
 		 * https://gwrites-artikel.de/
 		 */
 		if (get_current_blog_id() === 7) {
-            ?>
+			?>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8M6HZZ"
-						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8M6HZZ" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe>
 			</noscript>
 			<!-- End Google Tag Manager (noscript) -->
 			<?php
 		}
 
 		if (get_current_blog_id() === 18) {
-            ?>
-				<!-- Google Tag Manager (noscript) -->
-				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3FHL9"
-				height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-				<!-- End Google Tag Manager (noscript) -->
+			?>
+			<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3FHL9" height="0" width="0"
+					style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
 			<?php
 		}
 	}
@@ -340,7 +348,8 @@ class Helpers
 	/**
 	 * Добавляет код перед закрывающемся тегом BODY
 	 */
-	public static function addedCodeAfterBody() {
+	public static function addedCodeAfterBody()
+	{
 		if (is_user_logged_in()) {
 			return;
 		}
@@ -350,7 +359,7 @@ class Helpers
 		 * https://gwrites-ma.de/
 		 */
 		if (get_current_blog_id() === 1) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -360,7 +369,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87228864, "init", {
 					clickmap: true,
@@ -371,7 +380,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87228864" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87228864" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -383,7 +392,7 @@ class Helpers
 		 * https://gwrites-da.de/
 		 */
 		if (get_current_blog_id() === 3) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -393,7 +402,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87304110, "init", {
 					clickmap: true,
@@ -404,7 +413,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87304110" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87304110" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -416,7 +425,7 @@ class Helpers
 		 * https://gwrites-statistik.de/
 		 */
 		if (get_current_blog_id() === 4) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -426,7 +435,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87304490, "init", {
 					clickmap: true,
@@ -437,7 +446,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87304490" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87304490" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -449,7 +458,7 @@ class Helpers
 		 * https://gwrites-fa.de/
 		 */
 		if (get_current_blog_id() === 5) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -459,7 +468,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87304778, "init", {
 					clickmap: true,
@@ -470,7 +479,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87304778" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87304778" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -482,7 +491,7 @@ class Helpers
 		 * https://gwrites-abschluss.de/
 		 */
 		if (get_current_blog_id() === 6) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -492,7 +501,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87305000, "init", {
 					clickmap: true,
@@ -503,7 +512,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87305000" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87305000" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -515,7 +524,7 @@ class Helpers
 		 * https://gwrites-artikel.de/
 		 */
 		if (get_current_blog_id() === 7) {
-            ?>
+			?>
 			<!-- Yandex.Metrika counter -->
 			<script>
 				(function (m, e, t, r, i, k, a) {
@@ -525,7 +534,7 @@ class Helpers
 					m[i].l = 1 * new Date();
 					k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
 				})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(87305822, "init", {
 					clickmap: true,
@@ -536,7 +545,7 @@ class Helpers
 			</script>
 			<noscript>
 				<div>
-					<img src="https://mc.yandex.ru/watch/87305822" style="position:absolute; left:-9999px;" alt=""/>
+					<img src="https://mc.yandex.ru/watch/87305822" style="position:absolute; left:-9999px;" alt="" />
 				</div>
 			</noscript>
 			<!-- /Yandex.Metrika counter -->
@@ -544,22 +553,26 @@ class Helpers
 		}
 
 		if (get_current_blog_id() === 18) {
-            ?>
-				<!-- Yandex.Metrika counter -->
-				<script type="text/javascript" >
-				(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-				m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-				(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+			?>
+			<!-- Yandex.Metrika counter -->
+			<script type="text/javascript">
+				(function (m, e, t, r, i, k, a) {
+					m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+					m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+				})
+					(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
 				ym(89900744, "init", {
-						clickmap:true,
-						trackLinks:true,
-						accurateTrackBounce:true,
-						webvisor:true
+					clickmap: true,
+					trackLinks: true,
+					accurateTrackBounce: true,
+					webvisor: true
 				});
-				</script>
-				<noscript><div><img src="https://mc.yandex.ru/watch/89900744" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-				<!-- /Yandex.Metrika counter -->
+			</script>
+			<noscript>
+				<div><img src="https://mc.yandex.ru/watch/89900744" style="position:absolute; left:-9999px;" alt="" /></div>
+			</noscript>
+			<!-- /Yandex.Metrika counter -->
 			<?php
 		}
 	}
@@ -568,7 +581,8 @@ class Helpers
 	 * Получает ID Яндекс.Метрике для блога
 	 * @return int
 	 */
-	public static function getIdYM(): int {
+	public static function getIdYM(): int
+	{
 		$id = 0;
 
 		if (get_current_blog_id() === 1) {
@@ -598,7 +612,8 @@ class Helpers
 		return $id;
 	}
 
-	public static function urlPathFromRef(): string {
+	public static function urlPathFromRef(): string
+	{
 		$str = wp_get_referer();
 		if ($str) {
 			preg_match_all('/https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/i', $str, $matches, PREG_SET_ORDER, 0);
@@ -609,48 +624,87 @@ class Helpers
 			return $site;
 		}
 	}
-	public static function del_space($item) {
+	public static function del_space($item)
+	{
 		$sp = array(' ' => '', '+' => '', '(' => '', ')' => '', '-' => '');
 		return strtr($item, $sp);
 	}
-	public static function get_checkbox_options() {
+	public static function get_competition_options()
+	{
 		$options = carbon_get_theme_option('cf_select_competition');
 		$checkbox_options = array();
 		foreach ($options as $option) {
-			 $checkbox_options[$option['cf_select_competition_value']] = $option['cf_select_competition_label'];
+			$checkbox_options[$option['cf_select_competition_id']] = $option['cf_select_competition_value'];
 		}
 		return $checkbox_options;
 	}
-	public static function geo() {
-		function getOS($userAgent) {
+	public static function get_competition_values($competition_ids)
+	{
+		$values = array();
+		$arr_select = carbon_get_theme_option('cf_select_competition');
+		foreach ($competition_ids as $competition_id) {
+			foreach ($arr_select as $select_item) {
+				if ($select_item['cf_select_competition_id'] == $competition_id) {
+					$values[] = $select_item['cf_select_competition_value'];
+				}
+			}
+		}
+		return $values;
+	}
+	public static function geo()
+	{
+		function getOS($userAgent)
+		{
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Windows") !== false) $os = "Windows";
-			elseif (strpos($user_agent, "Linux") !== false) $os = "Linux";
-			elseif (strpos($user_agent, "X11") !== false) $os = "Linux";
-			elseif (strpos($user_agent, "iPhone") !== false) $os = "iPhone";
-			elseif (strpos($user_agent, "OpenBSD") !== false) $os = "OpenBSD";
-			elseif (strpos($user_agent, "SunOS") !== false) $os = "SunOS";
-			elseif (strpos($user_agent, "Safari") !== false) $os = "Safari";
-			elseif (strpos($user_agent, "Macintosh") !== false) $os = "Macintosh";
-			elseif (strpos($user_agent, "Mac_PowerPC") !== false) $os = "Macintosh";
-			elseif (strpos($user_agent, "QNX") !== false) $os = "QNX";
-			elseif (strpos($user_agent, "BeOS") !== false) $os = "BeOS";
-			elseif (strpos($user_agent, "OS/2") !== false) $os = "OS/2";
-			elseif (strpos($user_agent, "QNX") !== false) $os = "QNX";
-			else $os = "Undefined or Search Bot";
+			if (strpos($user_agent, "Windows") !== false)
+				$os = "Windows";
+			elseif (strpos($user_agent, "Linux") !== false)
+				$os = "Linux";
+			elseif (strpos($user_agent, "X11") !== false)
+				$os = "Linux";
+			elseif (strpos($user_agent, "iPhone") !== false)
+				$os = "iPhone";
+			elseif (strpos($user_agent, "OpenBSD") !== false)
+				$os = "OpenBSD";
+			elseif (strpos($user_agent, "SunOS") !== false)
+				$os = "SunOS";
+			elseif (strpos($user_agent, "Safari") !== false)
+				$os = "Safari";
+			elseif (strpos($user_agent, "Macintosh") !== false)
+				$os = "Macintosh";
+			elseif (strpos($user_agent, "Mac_PowerPC") !== false)
+				$os = "Macintosh";
+			elseif (strpos($user_agent, "QNX") !== false)
+				$os = "QNX";
+			elseif (strpos($user_agent, "BeOS") !== false)
+				$os = "BeOS";
+			elseif (strpos($user_agent, "OS/2") !== false)
+				$os = "OS/2";
+			elseif (strpos($user_agent, "QNX") !== false)
+				$os = "QNX";
+			else
+				$os = "Undefined or Search Bot";
 			return $os;
 		}
-		function getBrowser($userAgent) {
+		function getBrowser($userAgent)
+		{
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Firefox") !== false) $browser = "Firefox";
-			elseif (strpos($user_agent, "Opera") !== false) $browser = "Opera";
-			elseif (strpos($user_agent, "Chrome") !== false) $browser = "Chrome";
-			elseif (strpos($user_agent, "MSIE") !== false) $browser = "Internet Explorer";
-			elseif (strpos($user_agent, "Safari") !== false) $browser = "Safari";
-			else $browser = "Undefined";
+			if (strpos($user_agent, "Firefox") !== false)
+				$browser = "Firefox";
+			elseif (strpos($user_agent, "Opera") !== false)
+				$browser = "Opera";
+			elseif (strpos($user_agent, "Chrome") !== false)
+				$browser = "Chrome";
+			elseif (strpos($user_agent, "MSIE") !== false)
+				$browser = "Internet Explorer";
+			elseif (strpos($user_agent, "Safari") !== false)
+				$browser = "Safari";
+			else
+				$browser = "Undefined";
 			return $browser;
 		}
-		function getGeo() {
+		function getGeo()
+		{
 			$client_ip = $_SERVER['REMOTE_ADDR'];
 			// проверка для локалки
 			// $client_ip = '84.244.8.172';
@@ -667,9 +721,9 @@ class Helpers
 			$response = json_decode($response);
 
 			$geo = array(
-				'ip' => $response -> ip,
-				'country_name' => $response -> country_name,
-				'region' => $response -> region
+				'ip' => $response->ip,
+				'country_name' => $response->country_name,
+				'region' => $response->region
 			);
 			return $geo;
 		}
@@ -685,7 +739,7 @@ class Helpers
 				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
 			}
 		}
-		
+
 		// органика - директ - реклама
 		if ($utm['utm_medium']) {
 			$utm['utm_channel'] = 'cpc';
@@ -694,9 +748,9 @@ class Helpers
 		} else {
 			$utm['utm_channel'] = 'organic';
 		}
-		
+
 		// запись утм
-		if(!isset($_COOKIE['fc_utm'])){
+		if (!isset($_COOKIE['fc_utm'])) {
 			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 365, '/');
 			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
 		} else {

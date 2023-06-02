@@ -27,17 +27,23 @@
 						}
 					?>
 					</div>
-					<p>Review: <span><?php echo $item['cf_author_review'] ?></span></p>
+					<p class="s">Review: <span><?php echo $item['cf_author_review'] ?></span></p>
 				</div>
 				<div class="author_swiper__item_table">
 					<hr>
 					<p>Degree: <span><?php echo $item['cf_author_quality'] ?></span></p>
 					<p>Total orders: <span><?php echo $item['cf_author_orders'] ?></span></p>
 					<p>Success rate: <span><?php echo $item['cf_author_percent'] ?></span></p>
+
 				</div>
 				<div class="author_swiper__item_list">
 					<hr>
-					<p><?php echo $item['cf_author_competencies'] ?></p>
+					<div><strong>Competitions: </strong></div>
+					<?php
+					foreach (Helpers::get_competition_values($item['cf_author_competition']) as $key => $value) {
+						echo '<div>' . $value . '</div>';
+					}
+					?>
 				</div>
 			</div>
 		</div>

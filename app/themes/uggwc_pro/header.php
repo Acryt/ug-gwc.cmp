@@ -35,6 +35,28 @@
 				}
 			]
 		}
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"url":  "https://ug-gwc.de",
+			"name": "Hausarbeit schreiben lassen",
+			"softwareVersion": "1",
+			"description": "Die einfachste Lösung",
+			"inLanguage": "de",
+			"applicationCategory": "https://schema.org/OtherApplication",
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"worstRating":  "1",
+				"bestRating": "5",
+				"ratingValue": "4,9",
+				"ratingCount": "587"
+			},
+			"offers": {
+				"@type": "AggregateOffer",
+				"lowprice": "50",
+				"priceCurrency": "EUR"
+			}
+		}
 	</script>
 	<?php wp_head(); ?>
 </head>

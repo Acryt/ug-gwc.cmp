@@ -6,7 +6,7 @@
 		<!-- </div> -->
 		<div class="section__content">
 			<div class="promoblock__image">
-				<img src="<?php bloginfo('template_url'); ?>/assets/images/promoblock.jpg" alt="promoblock image">
+				<img src="<?php bloginfo('template_url'); ?>/assets/images/promoblocks.jpg" alt="promoblock image">
 			</div>
 			<div class="promoblock__text">
 				<div class="promoblock__timer timer" data-end="2023-06-30"></div>

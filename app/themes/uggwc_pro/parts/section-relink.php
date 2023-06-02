@@ -23,12 +23,12 @@
 				</div>
 				<span>BWL</span>
 			</a>
-			<div href="">
+			<a href="/chemie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Chemie.svg" alt="theme image">
 				</div>
 				<span>Chemie</span>
-			</div>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Elektrotechnik.svg" alt="theme image">
@@ -147,7 +147,13 @@
 				</div>
 				<span>Statistik</span>
 			</a>
-			<a href="">
+			<a href="/vwa">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/VWL.svg" alt="theme image">
+				</div>
+				<span>VWA</span>
+			</a>
+			<a href="/vwl">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/VWL.svg" alt="theme image">
 				</div>
