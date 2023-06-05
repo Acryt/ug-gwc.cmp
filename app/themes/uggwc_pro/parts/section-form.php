@@ -1,6 +1,6 @@
 <section id="sform" class="section sform">
 	<div class="wrapper container">
-		<img class="sform__img" src="<?php bloginfo('template_url'); ?>/assets/images/form.svg" alt="">
+		<img class="sform__img" src="<?php bloginfo('template_url'); ?>/assets/images/forms/form.svg" alt="">
 		<div class="section__header">
 			<h2>Anfrage hinterlassen</h2>
 			<p>Hier können Sie Ihr unverbindliches Angebot erhalten</p>

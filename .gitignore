@@ -9,6 +9,5 @@ app/plugins/
 !app/plugins/wp-rocket/
 app/upgrade/
 **/inc/Ajax*
-**/assets/
-!**/assets/images/
+**/assets/*.*
 yarn.lock

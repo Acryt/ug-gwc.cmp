@@ -44,7 +44,7 @@
 	<input type="hidden" id="ip_address" name="ip_address">
 
 	<input type="hidden" name="form-id" value="form-small">
-	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/loading.gif" alt=""></div>
+	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif" alt=""></div>
 	<div class="form__disabled"><h3>Danke!</h3></div>
 	<button type="submit" class="btn wave_effect"><span>Submit</span></button>
 </form>
