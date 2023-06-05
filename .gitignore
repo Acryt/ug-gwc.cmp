@@ -10,5 +10,5 @@ app/plugins/
 app/upgrade/
 **/inc/Ajax*
 **/assets/
-!**/assets/images/
+!**/assets/images/**
 yarn.lock
