@@ -300,7 +300,7 @@
 		position: absolute;
 		display: none;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: end;
 		align-items: center;
 		text-align: center;
 		padding: 12px;
@@ -309,8 +309,15 @@
 		left: 0;
 		top: 0;
 		border-radius: 12px;
-		background: var(--bg-opacity);
+		background: var(--bg);
 		z-index: 3;
+	}
+	&__sent {
+		width: 160px;
+
+		p{
+			font-size: 14px;
+		}
 	}
 	// При отправке
 	&._sending {

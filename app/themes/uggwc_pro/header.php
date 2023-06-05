@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de_DE" style="margin-top: 0px !important;">
+<html lang="de" style="margin-top: 0px !important;">
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -35,21 +35,22 @@
 				}
 			]
 		}
+	</script>
+	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "SoftwareApplication",
-			"url":  "https://ug-gwc.de",
-			"name": "Hausarbeit schreiben lassen",
-			"softwareVersion": "1",
-			"description": "Die einfachste Lösung",
-			"inLanguage": "de",
 			"applicationCategory": "https://schema.org/OtherApplication",
+			"url":  "<?php echo Helpers::urlPathFromRef(); ?>",
+			"name": "<?php echo carbon_get_post_meta(get_the_ID(), 'cf_first_title'); ?>",
+			"softwareVersion": "1.0.1",
+			"inLanguage": "de",
 			"aggregateRating": {
 				"@type": "AggregateRating",
 				"worstRating":  "1",
 				"bestRating": "5",
-				"ratingValue": "4,9",
-				"ratingCount": "587"
+				"ratingValue": "4,8",
+				"ratingCount": "354"
 			},
 			"offers": {
 				"@type": "AggregateOffer",
