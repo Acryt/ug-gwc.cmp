@@ -7,57 +7,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"url": "https://ug-gwc.de",
-			"name": "GWC Ghost-writerservice UG",
-			"legalName": "GWC Ghost-writerservice UG (haftungsbeschränkt)",
-			"address": "Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland",
-			"email": "info@ug-gwc.de",
-			"foundingDate": "10.04.2018",
-			"foundingLocation": "Amtsgericht Charlottenburg (Berlin)",
-			"description": "Ghostwriting-Dienste",
-			"slogan": "Ihre Arbeit ist unser Problem",
-			"logo": "<?php echo bloginfo('template_url'); ?>/assets/images/logos/logo.svg",
-			"aggregateRating": {
-				"@type": "AggregateRating",
-				"worstRating":  "1",
-				"bestRating": "5",
-				"ratingCount": "734",
-				"ratingValue": "4.8"
-			},
-			"contactPoint" : [
-				{
-					"@type" : "ContactPoint",
-					"telephone" : "+49-30-223-898-44",
-					"contactType" : "Kundenbetreuung"
-				}
-			]
-		}
-	</script>
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "SoftwareApplication",
-			"applicationCategory": "https://schema.org/OtherApplication",
-			"url":  "<?php echo Helpers::urlPathFromRef(); ?>",
-			"name": "<?php echo carbon_get_post_meta(get_the_ID(), 'cf_first_title'); ?>",
-			"softwareVersion": "1.0.1",
-			"inLanguage": "de",
-			"aggregateRating": {
-				"@type": "AggregateRating",
-				"worstRating":  "1",
-				"bestRating": "5",
-				"ratingValue": "4,8",
-				"ratingCount": "354"
-			},
-			"offers": {
-				"@type": "AggregateOffer",
-				"lowprice": "50",
-				"priceCurrency": "EUR"
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"url": "https://ug-gwc.de",
+		"name": "GWC Ghost-writerservice UG",
+		"legalName": "GWC Ghost-writerservice UG (haftungsbeschränkt)",
+		"address": "Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland",
+		"email": "info@ug-gwc.de",
+		"foundingDate": "10.04.2018",
+		"foundingLocation": "Amtsgericht Charlottenburg (Berlin)",
+		"description": "Ghostwriting-Dienste",
+		"slogan": "Ihre Arbeit ist unser Problem",
+		"contactPoint": [
+			{
+				"@type": "ContactPoint",
+				"telephone": "+49-30-223-898-44",
+				"contactType": "Kundenbetreuung"
 			}
-		}
+		]
+	}
 	</script>
 	<?php wp_head(); ?>
 </head>
@@ -83,12 +52,16 @@
 					<a class="header__item" href="/autoren">Unsere Autoren</a>
 					<a class="header__item" href="/faq">FAQ</a>
 					<div class="header__item header__time">
-						<p class="s"><?php echo carbon_get_theme_option('cf_work'); ?></p>
+						<p class="s">
+							<?php echo carbon_get_theme_option('cf_work'); ?>
+						</p>
 						<a class="s" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>"><?php echo carbon_get_theme_option('cf_mail'); ?></a>
 					</div>
 					<div class="header__item header__phones s">
 						<a href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><?php echo carbon_get_theme_option('cf_phone'); ?></a>
-						<a target="_blank" href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>">Unser WhatsApp</a>
+						<a target="_blank"
+							href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>">Unser
+							WhatsApp</a>
 					</div>
 				</div>
 
@@ -103,7 +76,7 @@
 				</div>
 			</div>
 			<nav class="header__nav nav-menu">
-				<div class="header__nav_wrap">			
+				<div class="header__nav_wrap">
 					<div class="dd-btn">Leistungen</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_leis') ?>
