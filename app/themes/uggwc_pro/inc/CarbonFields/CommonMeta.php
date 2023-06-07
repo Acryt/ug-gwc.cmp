@@ -365,7 +365,19 @@ class CommonMeta
 	public static function switchMeta(): array
 	{
 		return [
-			Field::make('checkbox', 'cf_faq_global', __('Скрыть глобального FAQ на странице')),
+			Field::make('checkbox', 'cf_faq_global', __('Скрыть глобальный FAQ на странице')),
+		];
+	}
+	public static function metaMeta(): array
+	{
+		return [
+			Field::make('separator', 'cf_meta', __('SotwareApplication Meta (только для коммерческих)')),
+			Field::make('text', 'cf_meta_rvalue', __('Средний рейтинг'))
+				->set_width(20),
+			Field::make('text', 'cf_meta_rcount', __('Колличество отзывов'))
+				->set_width(20),
+			Field::make('text', 'cf_meta_rprice', __('Минимальная цена в сниппете'))
+				->set_width(20),
 		];
 	}
 	public static function faqMeta(): array

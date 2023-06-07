@@ -68,7 +68,7 @@
 				<p>unter der Nummer HRB 195339 B, 10.04.2018</p>
 				<p>Steuernummer: 23/324/20008 UST-ID: DE317425223</p>
 				<p><strong>Links zu offiziellen Quellen:</strong></p>
-				<a target="_blank" class="footer__register" href="https://www.unternehmensregister.de/ureg/result.html;jsessionid=73BE561BFB6B7AA977BC69C26C0868E7.web03-1"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
+				<a target="_blank" class="footer__register" href="https://www.unternehmensregister.de/ureg/result.html;jsessionid=AEF9C46B79D711C5CE2AAD9207EA0410.web03-1"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
 			</div>
 			<div class="footer__three">
 				<p class=""><strong>NÜTZLICHES</strong></p>
