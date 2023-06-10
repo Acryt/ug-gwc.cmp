@@ -78,8 +78,9 @@
 				<a href="/blog">Blog</a>
 				<a href="/kontakte">Kontakte</a>
 				<p class=""><strong>WIR ARBEITEN IN:</strong></p>
-				<a href="/ghostwriter-osterreich">Ghostwriter Österreich</a>
 				<a href="/ghostwriter-berlin">Ghostwriter Berlin</a>
+				<a href="/ghostwriter-deutschland">Ghostwriter Deutschland</a>
+				<a href="/ghostwriter-osterreich">Ghostwriter Österreich</a>
 				<a class="btn fit borda" href="/impressum"><span>IMPRESSUM</span></a>
 			</div>
 			<div class="footer__four">
