@@ -164,18 +164,18 @@
 			top: unset;
 		}
 	}
-	.borda {
-		border: 2px solid var(--hoverb);
-		padding: 4px 18px;
-		background: none;
+}
+.borda {
+	border: 2px solid var(--hoverb);
+	padding: 4px 18px;
+	background: none;
+	&>span {
+		color: var(--hoverb);
+	}
+	&:hover {
+		background: var(--hoverb);
 		>* {
-			color: var(--hoverb);
-		}
-		&:hover {
-			background: var(--hoverb);
-			>* {
-				color: var(--bg);
-			}
+			color: var(--bg);
 		}
 	}
 }

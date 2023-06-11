@@ -1,10 +1,12 @@
 .author_swiper {
-	height: 400px;
+	height: 500px;
 	// width: 800px;
 	&__container {
 		display: flex;
 		justify-content: center;
 		width: 33%;
+		transition: all .3s ease;
+
 		@media (max-width: 1024px) {
 			width:40%;
 		}
@@ -20,12 +22,18 @@
 		@media (max-width: 480px) {
 			width:100%;
 		}
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 	&__item {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 30px 15px;
 		height: calc(100% - 60px);
+		align-items: center;
+		justify-content: center;
 
 		span {
 			color: var(--hover);
@@ -89,9 +97,6 @@
 		}
 	}
 
-	.swiper-slide-active {
-		transform: scale(1.05);
-	}
 	.swiper-button-prev::after, .swiper-button-next::after {
 		font-size: 24px;
 	}

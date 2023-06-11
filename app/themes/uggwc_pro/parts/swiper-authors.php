@@ -45,6 +45,7 @@
 					}
 					?>
 				</div>
+				<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
 			</div>
 		</div>
 		<?php } ?>
@@ -54,3 +55,4 @@
   <div class="swiper-button-next"></div>
   <div class="swiper-pagination"></div>
 </div>
+<a class="btn wave_effect aauthor__btn" href="/impressum"><span>All Authors</span></a>
