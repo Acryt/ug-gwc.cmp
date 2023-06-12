@@ -117,10 +117,8 @@ class CommonMeta
 				->set_layout('tabbed-horizontal')
 				->add_fields(
 					array(
-						Field::make('text', 'cf_select_competition_value', __('Value'))
-							->set_required(true),
-						Field::make('text', 'cf_select_competition_id', __('ID'))
-							->set_required(true),
+						Field::make('text', 'cf_select_competition_value', __('Value')),
+						Field::make('text', 'cf_select_competition_id', __('ID')),
 					)
 				),
 		];
@@ -209,31 +207,29 @@ class CommonMeta
 						Field::make('image', 'cf_author_photo', __('Фото'))
 							->set_value_type('url')
 							->set_width(5),
+						Field::make('text', 'cf_author_id', __('ID'))
+							->set_width(5),
 						Field::make('text', 'cf_author_name', __('Имя'))
 							->set_width(10),
 						Field::make('text', 'cf_author_rating', __('Рейтинг автора'))
 							->set_help_text('0 - 50')
 							->set_width(10)
-							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
 							->set_attribute('max', '50'),
 						Field::make('text', 'cf_author_review', __('Колличество отзывов'))
 							->set_help_text('0 - *****')
 							->set_width(10)
-							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0'),
 						Field::make('text', 'cf_author_orders', __('Заказы автора'))
 							->set_help_text('0 - *****')
 							->set_width(10)
-							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0'),
 						Field::make('text', 'cf_author_percent', __('Процент выполненных работ'))
 							->set_help_text('0 - 100')
 							->set_width(10)
-							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
 							->set_attribute('max', '100'),
@@ -614,7 +610,6 @@ class CommonMeta
 							->set_help_text('Rating')
 							->set_label('label')
 							->set_width(10)
-							->set_required(true)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
 							->set_attribute('max', '10'),
@@ -714,7 +709,6 @@ class CommonMeta
 					Field::make('image', 'image', __('Картинка'))
 						->set_type('image')
 						->set_value_type('url')
-						->set_required(true)
 						->set_width(20),
 					Field::make('text', 'title', __('Заголовок'))
 						->set_width(30),
@@ -735,7 +729,6 @@ class CommonMeta
 					Field::make('image', 'image', __('Картинка'))
 						->set_type('image')
 						->set_value_type('url')
-						->set_required(true)
 						->set_width(20),
 					Field::make('text', 'title', __('Заголовок'))
 						->set_width(40),

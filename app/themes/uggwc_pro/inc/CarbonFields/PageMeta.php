@@ -23,7 +23,6 @@ class PageMeta
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 			->add_tab(__('Price'), CommonMeta::priceMeta())
-			
 		;
 	}
 	public function postMeta()

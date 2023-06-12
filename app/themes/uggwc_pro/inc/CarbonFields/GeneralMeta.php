@@ -16,10 +16,8 @@ class GeneralMeta
 			->add_tab(__('Global Options'), CommonMeta::generalMeta())
 			->add_tab(__('Busines'), CommonMeta::businesMeta())
 			->add_tab(__('Menu'), CommonMeta::menuMeta())
-			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
 			->add_tab(__('Managers'), CommonMeta::managerMeta())
 			->add_tab(__('Client'), CommonMeta::clientMeta())
-			->add_tab(__('Author'), CommonMeta::authorMeta())
 			->add_tab(__('Marketing/DEV'), CommonMeta::devMeta())
 			->add_tab(__('Recruitment'), CommonMeta::recruitMeta())
 			->add_tab(__('Bosses'), CommonMeta::bossMeta())
@@ -32,7 +30,10 @@ class GeneralMeta
 			->add_tab(__('Taking Care'), CommonMeta::careMeta())
 			->add_tab(__('Why Us (Authors)'), CommonMeta::whyAuthorMeta())
 			->add_tab(__('Snippet'), CommonMeta::snippetMeta())
-			->add_tab(__('Promo'), CommonMeta::promoMeta());
+			->add_tab(__('Promo'), CommonMeta::promoMeta())
+			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
+			->add_tab(__('Author'), CommonMeta::authorMeta())
+		;
 	}
 }
 

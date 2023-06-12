@@ -10,7 +10,7 @@
 		</div>
 		<div id="aauthor-lm-c" class="section__content">
 		</div>
-		<button id="aauthor-lm-btn" class="btn wave_effect fit"><span>asdfasdfasdf</span></button>
+		<button id="aauthor-lm-btn" class="btn wave_effect fit"><span>Mehr</span></button>
 	</div>
 </section>
 
@@ -27,7 +27,6 @@
 		let ratingScore = rating / 10;
 		let solidStar = Math.floor(rating / 10);
 		let emptyStar = 5 - solidStar - Math.floor(rating / 5) % 2;
-
 		let cardHtml = `<div class="aauthor__item card shadow">
 				<div class="aauthor__photo"><img src="${author.cf_author_photo}" alt="photo"></div>
 				<div class="aauthor__cont">
@@ -47,15 +46,15 @@
 		cardHtml += `</div>
 					</div>
 					<div class="aauthor__two">
-						<div>Review: <span>${author.cf_author_review}</span></div>
-						<div>Degree: <span>${author.cf_author_quality}</span></div>
-						<div>Total orders: <span>${author.cf_author_orders}</span></div>
-						<div>Success rate: <span>${author.cf_author_percent}</span></div>
+						<div>Rezension: <span>${author.cf_author_review}</span></div>
+						<div>Grad: <span>${author.cf_author_quality}</span></div>
+						<div>Aufträge insgesamt: <span>${author.cf_author_orders}</span></div>
+						<div>Erfolgsrate: <span>${author.cf_author_percent}</span></div>
 					</div>
-					<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
+					<a class="btn fit borda js_author-btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
 					<hr>
 					<div class="aauthor__three">
-						<div><strong>Competitions: </strong></div>`;
+						<div><strong>Wettkämpfe: </strong></div>`;
 
 		getCompetitionValues(author.cf_author_competition).forEach(el => {
 			cardHtml += `<div>${el}</div>`;
@@ -64,9 +63,9 @@
 		cardHtml += `</div>
 					<details class="aauthor__det">
 						<summary class="aauthor__sum">
-							<h6>Description:</h6>
+							<h6>Beschreibung:</h6>
 						</summary>
-						<div class="aauthor__desc">${author.cf_author_desc}</div>
+						<div class="aauthor__desc">` + author.cf_author_desc + `</div>
 					</details>
 				</div>
 			</div>`;
@@ -91,19 +90,44 @@
 		const cardsHtml = cards.map(createAuthorCard).join('');
 		lmCont.innerHTML = cardsHtml;
 	}
-
+	function evLis(el) {
+		document.querySelector(el.dataset.slr).classList.add('_active');
+		document.querySelector('.popups').classList.add('_active');
+	}
 	// Обработчик клика на кнопку "Загрузить еще"
-	lmBtn.addEventListener('click', function() {
-	// Добавляем 3 карточки авторов из массива к текущим карточкам
-	const startIndex = lmCont.children.length;
-	const endIndex = startIndex + 3;
-	const newCards = authors.slice(startIndex, endIndex);
-	const newCardsHtml = newCards.map(createAuthorCard).join('');
-	lmCont.insertAdjacentHTML('beforeend', newCardsHtml);
+	lmBtn.addEventListener('click', function () {
+		// Добавляем 3 карточки авторов из массива к текущим карточкам
+		const startIndex = lmCont.children.length;
+		const endIndex = startIndex + 3;
+		const newCards = authors.slice(startIndex, endIndex);
+		const newCardsHtml = newCards.map(createAuthorCard).join('');
 
-	// Загрузить еще"
-	if (endIndex >= authors.length) { lmBtn.style.display = 'none'; } });
+		let buttons = document.querySelectorAll('.js_author-btn');
+		buttons.forEach(el => {
+			el.removeEventListener('click', function() {
+				evLis(el);
+			});
+		});
 
+		lmCont.insertAdjacentHTML('beforeend', newCardsHtml);
+		// Загрузить еще"
+		if (endIndex >= authors.length) { lmBtn.style.display = 'none'; }
+
+		buttons = document.querySelectorAll('.js_author-btn');
+
+		buttons.forEach(el => {
+			el.addEventListener('click', function() {
+				evLis(el);
+			});
+		});
+	});
 	// Отображаем первые 5 карточек авторов при загрузке страницы
-	renderAuthorCards(authors.slice(0, 5));
+	renderAuthorCards(authors.slice(0, 3));
+	const buttons = document.querySelectorAll('.js_author-btn');
+	Array.from(buttons).forEach(el => {
+		el.addEventListener('click', function evLis(event) {
+			document.querySelector(el.dataset.slr).classList.add('_active');
+			document.querySelector('.popups').classList.add('_active');
+		});
+	});
 </script>
