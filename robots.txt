@@ -13,6 +13,7 @@ Disallow: */embed$              # Все встраивания.
 Disallow: */xmlrpc.php          # Файл WordPress API
 Disallow: *utm*=                # Ссылки с utm-метками
 Disallow: *openstat=            # Ссылки с метками openstat
+Allow: /favicon.ico
 
 # Одина или несколько ссылок на карту сайта (файл Sitemap). Это независимая
 # директива и дублировать её для каждого User-agent не нужно. Так например

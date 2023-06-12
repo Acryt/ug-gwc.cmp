@@ -1,69 +1,109 @@
 <section id="aauthor" class="section aauthor">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2><?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_title'); ?></h2>
-			<p><?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle'); ?></p>
+			<h2>
+				<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_title'); ?>
+			</h2>
+			<p>
+				<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle'); ?>
+			</p>
 		</div>
-		<div class="section__content">
-		<?php 
-		$items = carbon_get_theme_option('cf_author');
-		foreach ($items as $key => $item) { ?>
-			<div class="aauthor__item card shadow">
-				<div class="aauthor__photo"><img src="<?php echo $item['cf_author_photo']?>" alt="photo"></div>
-				<div class="aauthor__cont">
+		<div id="aauthor-lm-c" class="section__content">
+		</div>
+		<button id="aauthor-lm-btn" class="btn wave_effect fit"><span>asdfasdfasdf</span></button>
+	</div>
+</section>
 
+<script>
+	// JavaScript код для контейнера карточек авторов
+	const lmCont = document.querySelector('#aauthor-lm-c');
+	const lmBtn = document.querySelector('#aauthor-lm-btn');
+	// Массив с карточками авторов
+	const authors = <?php echo json_encode(carbon_get_theme_option('cf_author')); ?>;
+
+	// Функция для создания HTML разметки карточки автора
+	function createAuthorCard(author) {
+		let rating = author.cf_author_rating;
+		let ratingScore = rating / 10;
+		let solidStar = Math.floor(rating / 10);
+		let emptyStar = 5 - solidStar - Math.floor(rating / 5) % 2;
+
+		let cardHtml = `<div class="aauthor__item card shadow">
+				<div class="aauthor__photo"><img src="${author.cf_author_photo}" alt="photo"></div>
+				<div class="aauthor__cont">
 					<div class="aauthor__one">
-						<h6 class="aauthor__name"><?php echo $item['cf_author_name'] ?></h6>
-						<div class="aauthor__stars">
-						<?php
-							// логика звездочек
-							$rating = $item['cf_author_rating'];
-							echo '<p><strong>' . $item['cf_author_rating']/10 . '</strong></p>';
-							$solidStar = intdiv($rating, 10);
-							// $divStar = boolval($rating % 10);
-							$emptyStar = ((5 - $solidStar) - (($rating/5) % 2));
-							for ($i=0; $i < $solidStar; $i++) {
-								echo '<i class="fa-solid fa-star"></i>';
-							}
-							if (($rating/5) % 2 != 0) {
-								echo '<i class="fa-solid fa-star-half-stroke"></i>';
-							}
-							for ($i=0; $i < $emptyStar; $i++) {
-								echo '<i class="fa-regular fa-star"></i>';
-							}
-						?>
-						</div>
+						<h6 class="aauthor__name">${author.cf_author_name}</h6>
+						<div class="aauthor__stars">`;
+
+		for (let i = 0; i < solidStar; i++) {
+			cardHtml += `<i class="fa-solid fa-star"></i>`;
+		}
+		if (Math.floor(rating / 5) % 2 !== 0) {
+			cardHtml += `<i class="fa-solid fa-star-half-stroke"></i>`;
+		}
+		for (let i = 0; i < emptyStar; i++) {
+			cardHtml += `<i class="fa-regular fa-star"></i>`;
+		}
+		cardHtml += `</div>
 					</div>
 					<div class="aauthor__two">
-						<div>Review: <span><?php echo $item['cf_author_review'] ?></span></div>
-						<div>Degree: <span><?php echo $item['cf_author_quality'] ?></span></div>
-						<div>Total orders: <span><?php echo $item['cf_author_orders'] ?></span></div>
-						<div>Success rate: <span><?php echo $item['cf_author_percent'] ?></span></div>
-
+						<div>Review: <span>${author.cf_author_review}</span></div>
+						<div>Degree: <span>${author.cf_author_quality}</span></div>
+						<div>Total orders: <span>${author.cf_author_orders}</span></div>
+						<div>Success rate: <span>${author.cf_author_percent}</span></div>
 					</div>
 					<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
 					<hr>
 					<div class="aauthor__three">
-						<div><strong>Competitions: </strong></div>
-						<?php
-						foreach (Helpers::get_competition_values($item['cf_author_competition']) as $key => $value) {
-							echo '<div>' . $value . '</div>';
-						}
-						?>
-					</div>
+						<div><strong>Competitions: </strong></div>`;
+
+		getCompetitionValues(author.cf_author_competition).forEach(el => {
+			cardHtml += `<div>${el}</div>`;
+		});
+
+		cardHtml += `</div>
 					<details class="aauthor__det">
 						<summary class="aauthor__sum">
 							<h6>Description:</h6>
 						</summary>
-						<div class="aauthor__desc">
-							<?php echo $item['cf_author_desc'] ?>
-						</div>
+						<div class="aauthor__desc">${author.cf_author_desc}</div>
 					</details>
 				</div>
+			</div>`;
+		return cardHtml;
+	}
 
-			</div>
-		<?php } ?>
-		<a href="#aauthor" class="btn wave_effect fit"><span>asdfasdfasdf</span></a>
-		</div>
-	</div>
-</section>
+	function getCompetitionValues(ids) {
+		let values = [];
+		let arr_select = <?php echo json_encode(carbon_get_theme_option('cf_select_competition')); ?>;
+		ids.forEach(el => {
+			arr_select.forEach(item => {
+				if (item.cf_select_competition_id == el) {
+					values.push(item.cf_select_competition_value);
+				}
+			})
+		});
+		return values;
+	}
+
+	// Функция для отображения карточек авторов на странице
+	function renderAuthorCards(cards) {
+		const cardsHtml = cards.map(createAuthorCard).join('');
+		lmCont.innerHTML = cardsHtml;
+	}
+
+	// Обработчик клика на кнопку "Загрузить еще"
+	lmBtn.addEventListener('click', function() {
+	// Добавляем 3 карточки авторов из массива к текущим карточкам
+	const startIndex = lmCont.children.length;
+	const endIndex = startIndex + 3;
+	const newCards = authors.slice(startIndex, endIndex);
+	const newCardsHtml = newCards.map(createAuthorCard).join('');
+	lmCont.insertAdjacentHTML('beforeend', newCardsHtml);
+
+	// Загрузить еще"
+	if (endIndex >= authors.length) { lmBtn.style.display = 'none'; } });
+
+	// Отображаем первые 5 карточек авторов при загрузке страницы
+	renderAuthorCards(authors.slice(0, 5));
+</script>

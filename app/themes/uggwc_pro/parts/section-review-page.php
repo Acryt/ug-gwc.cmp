@@ -27,4 +27,3 @@
 		</div>
 	</div>
 </section>
-<?php get_template_part('parts/section-all-author'); ?>
