@@ -2,7 +2,9 @@ vendor
 wordpress
 node_modules
 wp-config1.php
+robot*
 composer.lock
+yarn.lock
 **/cache/
 app/plugins/
 !app/plugins/carbon-fields/
@@ -10,4 +12,3 @@ app/plugins/
 app/upgrade/
 **/inc/Ajax*
 **/assets/*.*
-yarn.lock
