@@ -8,13 +8,15 @@ Template Name: Home
 <?php get_header(); ?>
 
 <main class="main">
-	<?php get_template_part('parts/section-first'); ?>
-	<?php get_template_part('parts/section-numbers'); ?>
-	<?php get_template_part('parts/content-manager'); ?>
-	<?php get_template_part('parts/section-price');?>
-	<?php get_template_part('parts/section-review'); ?>
-	<?php get_template_part('parts/section-form'); ?>
-	<?php get_template_part('parts/section-faq'); ?>
+	<?php 
+	get_template_part('parts/section-first');
+	get_template_part('parts/section-numbers');
+	get_template_part('parts/content-manager');
+	get_template_part('parts/section-price');
+	get_template_part('parts/section-review');
+	get_template_part('parts/section-form');
+	get_template_part('parts/section-faq');
+	?>
 </main>
 
 <?php 

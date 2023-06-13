@@ -733,7 +733,7 @@ class Helpers
 
 		// реферальная ссылка
 		if (!isset($_COOKIE['refer'])) {
-			if ($_SERVER["HTTP_REFERER"]) {
+			if (isset($_SERVER["HTTP_REFERER"])) {
 				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 365, '/');
 			} else {
 				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
@@ -741,9 +741,9 @@ class Helpers
 		}
 
 		// органика - директ - реклама
-		if ($utm['utm_medium']) {
+		if (isset($utm['utm_medium'])) {
 			$utm['utm_channel'] = 'cpc';
-		} else if (!$_SERVER["HTTP_REFERER"] || (stripslashes($_COOKIE['refer']) == 'none')) {
+		} else if (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) == 'none')) {
 			$utm['utm_channel'] = 'direct';
 		} else {
 			$utm['utm_channel'] = 'organic';

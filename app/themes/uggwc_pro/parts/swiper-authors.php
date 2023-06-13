@@ -45,7 +45,7 @@
 					}
 					?>
 				</div>
-				<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
+				<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>Bestellen</span></a>
 			</div>
 		</div>
 		<?php } ?>

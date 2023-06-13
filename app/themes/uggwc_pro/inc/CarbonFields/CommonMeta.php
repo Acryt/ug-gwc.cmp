@@ -772,17 +772,18 @@ class CommonMeta
 			Field::make('text', 'cf_promo_title', __('Заголовок Предложений')),
 			Field::make('text', 'cf_promo_subtitle', __('Подаголовок Предложений')),
 			Field::make('complex', 'cf_promo', __('Список'))
+				->set_layout('tabbed-horizontal')
 				->add_fields([
 					Field::make('text', 'title', __('Заголовок'))
-						->set_width(20),
+						->set_width(15),
 					Field::make('text', 'hashtag', __('Хештеги'))
-						->set_width(20),
+						->set_width(15),
 					Field::make('rich_text', 'text', __('Само предложение'))
 						->set_width(50),
 					Field::make('image', 'image', __('Картинка'))
 						->set_type('image')
 						->set_value_type('url')
-						->set_width(10),
+						->set_width(5),
 				])
 		];
 	}
