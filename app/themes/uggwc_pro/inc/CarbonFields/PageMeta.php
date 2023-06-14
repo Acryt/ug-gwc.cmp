@@ -20,9 +20,11 @@ class PageMeta
 			->add_tab(__('Meta'), CommonMeta::metaMeta())
 			->add_tab(__('First Screen'), CommonMeta::firstMeta())
 			->add_tab(__('FAQ'), CommonMeta::faqMeta())
+			->add_tab(__('Accordion'), CommonMeta::accrdMeta())
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 			->add_tab(__('Price'), CommonMeta::priceMeta())
+			->add_tab(__('Rating bottom'), CommonMeta::rateMeta())
 		;
 	}
 	public function postMeta()
@@ -33,6 +35,7 @@ class PageMeta
 			->add_tab(__('Switches'), CommonMeta::switchMeta())
 			->add_tab(__('First Screen'), CommonMeta::firstMeta())
 			->add_tab(__('FAQ'), CommonMeta::faqMeta())
+			->add_tab(__('Accordion'), CommonMeta::accrdMeta())
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 		;

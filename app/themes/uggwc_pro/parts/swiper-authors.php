@@ -2,7 +2,8 @@
 	<div class="swiper-wrapper">
 		<?php 
 		$items = carbon_get_theme_option('cf_author');
-		foreach ($items as $key => $item) { ?>
+		$itemsForSwiper = array_slice($items, 0, 5);
+		foreach ($itemsForSwiper as $key => $item) { ?>
 		<div class="swiper-slide author_swiper__container">
 			<div class="author_swiper__item card shadow">
 				<div class="author_swiper__item_title">

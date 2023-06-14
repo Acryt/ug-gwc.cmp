@@ -22,6 +22,7 @@ class GeneralMeta
 			->add_tab(__('Recruitment'), CommonMeta::recruitMeta())
 			->add_tab(__('Bosses'), CommonMeta::bossMeta())
 			->add_tab(__('FAQ'), CommonMeta::faqMeta())
+			->add_tab(__('Accordion'), CommonMeta::accrdMeta())
 			->add_tab(__('Review'), CommonMeta::reviewMeta())
 			->add_tab(__('About/Impressum'), CommonMeta::aboutMeta())
 			->add_tab(__('Why Us'), CommonMeta::whyMeta())

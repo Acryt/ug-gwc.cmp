@@ -377,6 +377,23 @@ class CommonMeta
 				->set_width(20),
 		];
 	}
+	public static function accrdMeta(): array
+	{
+		return [
+			Field::make('text', 'cf_accrd_title', __('Заголовок')),
+			Field::make('text', 'cf_accrd_subtitle', __('Подзаголовок')),
+			Field::make('complex', 'cf_accrd', __('Accordion'))
+				->set_layout('tabbed-horizontal')
+				->add_fields(
+					array(
+						Field::make('textarea', 'cf_accrd_quest', __('Вопрос'))
+							->set_width(40),
+						Field::make('rich_text', 'cf_accrd_answer', __('Ответ'))
+							->set_width(40),
+					)
+				)
+		];
+	}
 	public static function faqMeta(): array
 	{
 		return [
@@ -641,6 +658,13 @@ class CommonMeta
 				->set_help_text('до 5'),
 			Field::make('text', 'cf_rating_three', __('Оценка на сайте'))
 				->set_help_text('до 5'),
+		];
+	}
+	public static function rateMeta(): array
+	{
+		return [
+			Field::make('text', 'cf_rating_title', __('Заголовок отзывов')),
+			Field::make('textarea', 'cf_rating_sub', __('Подзаголовок отзывов')),
 		];
 	}
 	public static function seoMeta(): array

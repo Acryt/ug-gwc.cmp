@@ -49,7 +49,7 @@
 			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
-		else if ( is_page_template( 'templates/author.php' )) { 
+		else if ( is_page_template( ['templates/author-f.php', 'templates/author-u.php'] )) {
 			$pathImg .= '/assets/images/first/authors.svg';
 			echo '<div class="first__img">';
 			echo '<img class="" src="' . $pathImg . '" alt="Logo">';

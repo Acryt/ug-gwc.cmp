@@ -13,6 +13,7 @@ Template Name: Leistungen
 	<?php get_template_part('parts/content-form');?>
 	<?php get_template_part('parts/section-price');?>
 	<?php get_template_part('parts/section-form');?>
+	<?php get_template_part('parts/section-rate');?>
 	<?php get_template_part('parts/section-faq'); ?>
 </main>
 <?php get_template_part('parts/meta-software-app'); ?>

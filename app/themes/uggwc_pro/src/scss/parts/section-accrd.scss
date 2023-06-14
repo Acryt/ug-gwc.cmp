@@ -1,0 +1,67 @@
+.accrd {
+	&__accordion {
+		display:flex;
+		gap: 16px;
+		flex-wrap: wrap;
+		@media (max-width: 767px) {
+
+		}
+	}
+	&__side {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		flex: 1 1 480px;
+	}
+	&__tab {
+		overflow: hidden;
+		width:100%
+	}
+	&__label {
+		display: flex;
+		justify-content: space-between;
+		font-weight: bold;
+		cursor: pointer;
+		color: var(--text-selected);
+		font-size: 1.125rem;
+		line-height: 133%;
+		font-weight: 600;
+
+		&::after {
+			content: "\276F";
+			width: 1.5em;
+			height: 1.5em;
+			text-align: center;
+			transform: rotate(90deg);
+			opacity: 1;
+			transition: all .5s;
+	  }
+	}
+	&__answer {
+		max-height: 0;
+		padding: 0;
+		transition: all .5s;
+		color: var(--text-default);
+		overflow: hidden;
+	}
+	input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+
+		&:checked {
+			+ .accrd__label {
+				cursor: unset;
+
+				&::after {
+					transform: rotate(-90deg);
+					// opacity: 0;
+				}
+			}
+			~ .accrd__answer {
+				max-height: 350vh;
+				padding: 12px 0 0 0;
+			}
+		}
+	}
+}

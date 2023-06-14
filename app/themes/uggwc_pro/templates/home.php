@@ -13,7 +13,7 @@ Template Name: Home
 	get_template_part('parts/section-numbers');
 	get_template_part('parts/content-manager');
 	get_template_part('parts/section-price');
-	get_template_part('parts/section-review');
+	get_template_part('parts/section-review-txt');
 	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq');
 	?>
