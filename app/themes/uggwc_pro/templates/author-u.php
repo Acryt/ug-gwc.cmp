@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Author
+Template Name: Unsere Autoren
 */ 
 ?>
 
@@ -9,7 +9,6 @@ Template Name: Author
 <main class="main">
 	<?php get_template_part('parts/section-first'); ?>
 	<?php get_template_part('parts/section-numbers'); ?>
-	<?php get_template_part('parts/section-why-author'); ?>
 	<?php
 	get_template_part('parts/section-all-author');
 	?>

@@ -38,7 +38,7 @@
 			<div class="header__a_links">
 				<a href="/impressum">Impressum</a>
 				<a href="/ghostwriter-preise">Preise</a>
-				<a href="/autoren">Unsere Autoren</a>
+				<a href="/unsere-autoren">Unsere Autoren</a>
 				<a href="/faq">FAQ</a>
 			</div>
 			<div class="header__basic">
@@ -50,7 +50,7 @@
 				<div class="header__links">
 					<a class="header__item" href="/impressum">Impressum</a>
 					<a class="header__item" href="/ghostwriter-preise">Preise</a>
-					<a class="header__item" href="/autoren">Unsere Autoren</a>
+					<a class="header__item" href="/unsere-autoren">Unsere Autoren</a>
 					<a class="header__item" href="/faq">FAQ</a>
 					<div class="header__item header__time">
 						<p class="s">
@@ -99,6 +99,7 @@
 						<a href="/uber-uns">Über uns</a>
 						<a href="/wie-wir-arbeiten">So geht's!</a>
 						<a href="/werbeaktionen">Werbeaktionen und Rabatte</a>
+						<a href="/fur-autoren">Für Autoren</a>
 					</div>
 					<a href="/bewertungen">Bewertungen</a>
 					<a href="/blog">Blog</a>

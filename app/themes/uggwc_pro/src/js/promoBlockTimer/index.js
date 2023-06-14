@@ -15,7 +15,7 @@ export function promoBlockTimer(){
 			const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
 			const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
 			const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-			console.log(`${days}:${hours}:${minutes}:${seconds}`);
+			// console.log(`${days}:${hours}:${minutes}:${seconds}`);
 			timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 		}
 		updateTimer();

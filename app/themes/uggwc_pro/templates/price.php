@@ -8,7 +8,7 @@ Template Name: Price
 <?php get_header(); ?>
 
 <main class="main">
-	<?php get_template_part('parts/section-faq'); ?>
+	<?php get_template_part('parts/section-accordion'); ?>
 	<?php get_template_part('parts/section-promo');?>
 	<?php get_template_part('parts/section-price');?>
 	<?php 
