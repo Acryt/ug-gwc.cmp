@@ -31,6 +31,9 @@
 		padding: 8px;
 		border-radius: 30%;
 		transition: all .3s;
+		img {
+			filter: invert(100%);
+		}
 	}
 	a {
 		text-decoration: underline;

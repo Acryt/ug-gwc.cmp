@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="40"
+   height="40"
+   viewBox="0 0 3.2 3.2"
+   stroke-width="3"
+   stroke="#000000"
+   fill="none"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="Physik.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="11.978389"
+     inkscape:cx="6.3447598"
+     inkscape:cy="23.291947"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12">
+    <inkscape:grid
+       type="xygrid"
+       id="grid399" />
+  </sodipodi:namedview>
+  <path
+     d="M 0.87398429,0.1037165 H 0.25168513 v 1.6442527 c 5.5805e-4,1.797194 2.69718767,1.797194 2.69662967,0 V 0.11132238 H 2.3260157 l 10e-8,1.62074362 C 2.24,2.72 0.96,2.72 0.87398429,1.732066 Z"
+     id="path2"
+     style="stroke-width:0.207433"
+     sodipodi:nodetypes="ccccccccc" />
+  <line
+     x1="0.25168514"
+     y1="0.55453759"
+     x2="0.87398428"
+     y2="0.55453759"
+     id="line6"
+     style="stroke-width:0.207433" />
+  <line
+     x1="2.3260157"
+     y1="0.55453759"
+     x2="2.9483147"
+     y2="0.55453759"
+     id="line8"
+     style="stroke-width:0.207433" />
+  <polyline
+     points="34.62 16.38 28.62 22.55 35.91 22.55 29.91 29.48"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="polyline10"
+     transform="matrix(0.06914435,0,0,0.06914435,-0.61261927,-0.61261898)" />
+</svg>

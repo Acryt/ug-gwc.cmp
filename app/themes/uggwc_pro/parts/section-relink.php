@@ -5,18 +5,12 @@
 		<!-- <p><?php echo carbon_get_theme_option('cf_relink_subtitle') ?></p> -->
 		<!-- </div> -->
 		<div class="section__content">
-			<div href="">
-				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Architektur.svg" alt="theme image">
-				</div>
-				<span>Architektur</span>
-			</div>
-			<div href="">
+			<a href="/biologie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
 				</div>
 				<span>Biologie</span>
-			</div>
+			</a>
 			<a href="/bwl">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/BWL.svg" alt="theme image">
@@ -29,12 +23,18 @@
 				</div>
 				<span>Chemie</span>
 			</a>
-			<div href="">
+			<a href="/elektrotechnik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Elektrotechnik.svg" alt="theme image">
 				</div>
 				<span>Elektrotechnik</span>
-			</div>
+			</a>
+			<a href="/ernahrungswissenschaften">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/nutrition.svg" alt="theme image">
+				</div>
+				<span>Ernährungswissenschaften</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Finanzwissenschaften.svg"
@@ -42,48 +42,84 @@
 				</div>
 				<span>Finanzwissenschaften</span>
 			</div>
-			<div href="">
+			<a href="/geografie">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Geografie.svg" alt="theme image">
+				</div>
+				<span>Geografie</span>
+			</a>
+			<a href="/germanistik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Literatur.svg" alt="theme image">
+				</div>
+				<span>Germanistik</span>
+			</a>
+			<a href="/geschichte">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Geschichte.svg" alt="theme image">
 				</div>
 				<span>Geschichte</span>
-			</div>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Informatik.svg" alt="theme image">
 				</div>
 				<span>Informatik</span>
 			</div>
+			<a href="/ingenieurwissenschaften">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Architektur.svg" alt="theme image">
+				</div>
+				<span>Ingenieurwissenschaften</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Jura.svg" alt="theme image">
 				</div>
 				<span>Jura</span>
 			</div>
-			<div href="">
+			<a href="/kommunikation">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Kommunikation.svg" alt="theme image">
+				</div>
+				<span>Kommunikation</span>
+			</a>
+			<a href="/literaturwissenschaften">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Literatur.svg" alt="theme image">
 				</div>
-				<span>Literatur</span>
-			</div>
-			<div href="">
+				<span>Literaturwissenschaften</span>
+			</a>
+			<a href="/logistik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Logistik.svg" alt="theme image">
+				</div>
+				<span>Logistik</span>
+			</a>
+			<a href="/management">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Management.svg" alt="theme image">
 				</div>
 				<span>Management</span>
-			</div>
-			<div href="">
+			</a>
+			<a href="/marketing">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Marketing.svg" alt="theme image">
 				</div>
 				<span>Marketing</span>
-			</div>
-			<div href="">
+			</a>
+			<a href="/maschinenbau">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Elektrotechnik.svg" alt="theme image">
+				</div>
+				<span>Maschinenbau</span>
+			</a>
+			<a href="/mathematik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Mathematik.svg" alt="theme image">
 				</div>
 				<span>Mathematik</span>
-			</div>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Medienwissenschaften.svg"
@@ -97,6 +133,12 @@
 				</div>
 				<span>Medizin</span>
 			</div>
+			<a href="/padagogik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Padagogik.svg" alt="theme image">
+				</div>
+				<span>Pädagogik</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Pflegewissenschaften.svg"
@@ -110,37 +152,61 @@
 				</div>
 				<span>Philosophie</span>
 			</div>
-			<div href="">
+			<div href="/physik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Physik.svg" alt="theme image">
+				</div>
+				<span>Physik</span>
+			</div>
+			<a href="/psychologie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Psychologie.svg" alt="theme image">
 				</div>
 				<span>Psychologie</span>
-			</div>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Publizistik.svg" alt="theme image">
 				</div>
 				<span>Publizistik</span>
 			</div>
+			<a href="/romanistik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Romanistik.svg" alt="theme image">
+				</div>
+				<span>Romanistik</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sozialarbeit.svg" alt="theme image">
 				</div>
 				<span>Sozialarbeit</span>
 			</div>
+			<a href="/sozialwissenschaften">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Soziologie.svg" alt="theme image">
+				</div>
+				<span>Sozialwissenschaften</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Soziologie.svg" alt="theme image">
 				</div>
 				<span>Soziologie</span>
 			</div>
-			<div href="">
+			<a href="/sportwissenschaften">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sport.svg" alt="theme image">
+				</div>
+				<span>Sportwissenschaften</span>
+			</a>
+			<a href="/sprachwissenschaften">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sprachwissenschaften.svg"
 						alt="theme image">
 				</div>
 				<span>Sprachwissenschaften</span>
-			</div>
+			</a>
 			<a href="/statistik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Statistik.svg" alt="theme image">
@@ -159,6 +225,12 @@
 				</div>
 				<span>VWL</span>
 			</a>
+			<a href="/wirtschaftsinformatik">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Management.svg" alt="theme image">
+				</div>
+				<span>Wirtschaftsinformatik</span>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Wirtschaftswissenschaften.svg"
@@ -166,12 +238,12 @@
 				</div>
 				<span>Wirtschaftswissenschaften</span>
 			</div>
-			<div href="">
+			<!-- <div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Zahnmedizin.svg" alt="theme image">
 				</div>
 				<span>Zahnmedizin</span>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
