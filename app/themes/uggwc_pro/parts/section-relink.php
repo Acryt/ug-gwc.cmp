@@ -31,7 +31,7 @@
 			</a>
 			<a href="/ernahrungswissenschaften">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/nutrition.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Nutrition.svg" alt="theme image">
 				</div>
 				<span>Ernährungswissenschaften</span>
 			</a>
