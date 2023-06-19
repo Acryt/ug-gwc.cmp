@@ -1,0 +1,47 @@
+.main .notfound {
+	margin-top: unset;
+	padding-top: 164px;
+	padding-bottom: 32px;
+	@media (max-width: 920px) {
+		margin-top: unset;
+		padding-top: 128px;
+	}
+}
+.notfound {
+	background: linear-gradient(45deg, white, var(--box-shadow));
+	// overflow: hidden;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		z-index: 1;
+		min-height: 280px;
+		gap: 32px;
+	}
+	&__header {
+		flex: 0 0 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__text {
+		flex: 1 1 350px;
+		color: var(--thead);
+		li {
+			color: var(--thead);
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+	&__img {
+		position: relative;
+		flex: 1 1 350px;
+	}
+}
