@@ -66,7 +66,7 @@
 					</div>
 				</div>
 
-				<a class="header_mob_contact btn wave_effect" href="/anfragen">
+				<a class="header_mob_contact btn borda" href="/anfragen">
 					<span>Anfragen</span>
 				</a>
 
@@ -103,7 +103,7 @@
 					</div>
 					<a href="/bewertungen">Bewertungen</a>
 					<a href="/blog">Blog</a>
-					<a class="header__contact btn wave_effect" href="/anfragen">
+					<a class="header__contact btn borda" href="/anfragen">
 						<span>Anfragen</span>
 					</a>
 				</div>

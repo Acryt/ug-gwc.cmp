@@ -72,12 +72,12 @@
 				</div>
 				<span>Ingenieurwissenschaften</span>
 			</a>
-			<div href="">
+			<a href="/jura">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Jura.svg" alt="theme image">
 				</div>
 				<span>Jura</span>
-			</div>
+			</a>
 			<a href="/kommunikation">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Kommunikation.svg" alt="theme image">
@@ -152,12 +152,12 @@
 				</div>
 				<span>Philosophie</span>
 			</div>
-			<div href="/physik">
+			<a href="/physik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Physik.svg" alt="theme image">
 				</div>
 				<span>Physik</span>
-			</div>
+			</a>
 			<a href="/psychologie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Psychologie.svg" alt="theme image">

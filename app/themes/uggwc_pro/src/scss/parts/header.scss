@@ -74,9 +74,12 @@
 	&__a_links {
 		display: none;
 		justify-content: space-around;
+		align-items: flex-end;
 		z-index: 1;
 		background: var(--bg);
 		font-size: calc(12px + (4 * ((100vw - 320px) / (1280 - 320))));
+		height: 25px;
+
 		@media (min-width: 1280px) {
 			font-size: 16px;
 		}
@@ -103,8 +106,7 @@
 			// background: var(--bg-opacity);
 			background: var(--bg);
 			// backdrop-filter: blur(8px);
-			min-height: 100vh;
-			max-height: fit-content;
+			height: 100vh;
 			right: -320px;
 			align-items: stretch;
 		}
@@ -133,7 +135,7 @@
 			// margin: 0px;
 			// padding: 64px 24px;
 			margin: 88px 0 0 0;
-			min-height: 100vh;
+			min-height: calc(100vh - 88px);
 			max-height: fit-content;
 			&>.dd-btn {
 				padding: 8px 16px;

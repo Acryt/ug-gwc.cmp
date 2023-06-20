@@ -25,9 +25,9 @@
 			</p>
 
 			<?php if( is_page_template( ['templates/author.php'] )) {
-				echo '<a href="#sform" class="btn wave_effect"><span>JETZT BEWERBEN</span></a>';
+				echo '<a href="#sform" class="btn borda"><span>JETZT BEWERBEN</span></a>';
 			} else {
-				echo '<a class="btn wave_effect js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>';
+				echo '<a class="btn borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>';
 			}?>
 
 			<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php'] )) {
