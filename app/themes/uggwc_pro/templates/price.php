@@ -9,6 +9,7 @@ Template Name: Price
 
 <main class="main">
 	<?php 
+	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/section-accrd');
 	get_template_part('parts/section-promo');

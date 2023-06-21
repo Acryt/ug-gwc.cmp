@@ -40,25 +40,25 @@
 		if ( is_page_template( 'templates/about.php' )) { 
 			$pathImg .= '/assets/images/first/about.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/anfragen.php' )) { 
 			$pathImg .= '/assets/images/first/contacts.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( ['templates/author-f.php', 'templates/author-u.php'] )) {
 			$pathImg .= '/assets/images/first/authors.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_category() ) { 
 			$pathImg .= '/assets/images/advance/competent.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/disziplinen.php' )) { 
@@ -70,25 +70,25 @@
 		else if ( is_page_template( 'templates/examples.php' )) { 
 			$pathImg .= '/assets/images/first/examples.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/faq.php' )) { 
 			$pathImg .= '/assets/images/first/faq.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/how.php' )) { 
 			$pathImg .= '/assets/images/first/faq.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/impressum.php' )) { 
 			$pathImg .= '/assets/images/first/contacts.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/lectorat.php' )) { 
@@ -100,20 +100,20 @@
 		else if ( is_page_template( 'templates/price.php' )) { 
 			$pathImg .= '/assets/images/first/price.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/review.php' )) { 
 			// $pathImg .= '/assets/images/ratings/ratings.svg';
 			$pathImg .= '/assets/images/ratings/ratings.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_single()) { 
 			$pathImg .= '/assets/images/first/home.svg';
 			echo '<div class="first__img">';
-			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
+			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		} else {
 			$pathImg .= '/assets/images/first/home.svg';

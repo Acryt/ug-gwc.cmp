@@ -6,6 +6,9 @@
 			</h2>
 			<p>
 				<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle'); ?>
+				<br>
+				<p class="s"><span>*</span>In Anbetracht der Datenschutzbestimmungen können Fotos und Namen auf der Website nicht angezeigt werden.</p>
+				<p class="s"><span>**</span>Diese Seite ist neu und wird laufend aktualisiert. Für weitere Informationen können Sie eine unverbindliche Anfrage hinterlassen. Unsere Kundenbetreuer beraten Sie gerne und kostenlos.</p>
 			</p>
 		</div>
 		<div id="aauthor-lm-c" class="section__content">
