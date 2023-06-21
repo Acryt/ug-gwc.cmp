@@ -1,0 +1,16 @@
+.noai {
+	.section__content {
+		display: flex;
+		gap: 32px;
+		flex-wrap: wrap;
+		max-width: 800px;
+		margin: 0 auto;
+		align-items: center;
+	}
+	&__img {
+		flex: 1 0 100px;
+	}
+	&__text {
+		flex: 1 1 400px;
+	}
+}

@@ -3,6 +3,8 @@ import "@fancyapps/ui/dist/fancybox.css";
 import "intl-tel-input/build/css/intlTelInput.css";
 import "nice-select2/src/scss/nice-select2.scss";
 import "vanillajs-datepicker/sass/datepicker.scss";
+import "animate.css";
+import { WOW } from "wowjs";
 // Swiper SCSS
 import "swiper/css";
 import "swiper/css/navigation";
@@ -46,6 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	promo();
 	phoneInput();
 	promoBlockTimer();
+
+	let wow = new WOW(
+		{
+		boxClass:     'wow',      // default
+		animateClass: 'animate__animated', // default
+		offset:       0,          // default
+		mobile:       true,       // default
+		live:         true        // default
+	 }
+	 )
+	 wow.init();
 });
 
 const carbonFieldsImagesFix = (() => {

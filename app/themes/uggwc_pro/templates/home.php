@@ -10,6 +10,7 @@ Template Name: Home
 <main class="main">
 	<?php 
 	get_template_part('parts/section-first');
+	get_template_part('parts/section-noai');
 	get_template_part('parts/section-numbers');
 	get_template_part('parts/content-manager');
 	get_template_part('parts/section-price');
