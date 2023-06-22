@@ -5,6 +5,12 @@
 		<!-- <p><?php echo carbon_get_theme_option('cf_relink_subtitle') ?></p> -->
 		<!-- </div> -->
 		<div class="section__content">
+			<a href="/bauingenieurswesen">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
+				</div>
+				<span>Bauingenieurswesen</span>
+			</a>
 			<a href="/biologie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
@@ -35,13 +41,13 @@
 				</div>
 				<span>Ernährungswissenschaften</span>
 			</a>
-			<div href="">
+			<a href="/finanzwissenschaften">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Finanzwissenschaften.svg"
 						alt="theme image">
 				</div>
 				<span>Finanzwissenschaften</span>
-			</div>
+			</a>
 			<a href="/geografie">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Geografie.svg" alt="theme image">
@@ -50,7 +56,7 @@
 			</a>
 			<a href="/germanistik">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Literatur.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Germanistik.svg" alt="theme image">
 				</div>
 				<span>Germanistik</span>
 			</a>
@@ -60,12 +66,12 @@
 				</div>
 				<span>Geschichte</span>
 			</a>
-			<div href="">
+			<a href="/informatik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Informatik.svg" alt="theme image">
 				</div>
 				<span>Informatik</span>
-			</div>
+			</a>
 			<a href="/ingenieurwissenschaften">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Architektur.svg" alt="theme image">
@@ -110,7 +116,7 @@
 			</a>
 			<a href="/maschinenbau">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Elektrotechnik.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Maschinenbau.svg" alt="theme image">
 				</div>
 				<span>Maschinenbau</span>
 			</a>
@@ -127,12 +133,12 @@
 				</div>
 				<span>Medienwissenschaften</span>
 			</div>
-			<div href="">
+			<a href="/medizin">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Medizin.svg" alt="theme image">
 				</div>
 				<span>Medizin</span>
-			</div>
+			</a>
 			<a href="/padagogik">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Padagogik.svg" alt="theme image">
@@ -184,7 +190,7 @@
 			</div>
 			<a href="/sozialwissenschaften">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Soziologie.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sozialwissenschaften.svg" alt="theme image">
 				</div>
 				<span>Sozialwissenschaften</span>
 			</a>
@@ -213,9 +219,15 @@
 				</div>
 				<span>Statistik</span>
 			</a>
+			<a href="/unterrichtsentwurf">
+				<div class="relink__img">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Statistik.svg" alt="theme image">
+				</div>
+				<span>Unterrichtsentwurf</span>
+			</a>
 			<a href="/vwa">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/VWL.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/VWA.svg" alt="theme image">
 				</div>
 				<span>VWA</span>
 			</a>
@@ -227,7 +239,7 @@
 			</a>
 			<a href="/wirtschaftsinformatik">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Management.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Wirtschaftsinformatik.svg" alt="theme image">
 				</div>
 				<span>Wirtschaftsinformatik</span>
 			</a>
@@ -238,12 +250,6 @@
 				</div>
 				<span>Wirtschaftswissenschaften</span>
 			</div>
-			<!-- <div href="">
-				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Zahnmedizin.svg" alt="theme image">
-				</div>
-				<span>Zahnmedizin</span>
-			</div> -->
 		</div>
 	</div>
 </section>

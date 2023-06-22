@@ -8,7 +8,7 @@
 			<div class="noai__text">
 				<h3 class="c-alert">Wir arbeiten ohne den Einsatz künstlicher Intelligenz!</h3>
 				<br>
-				<p>Heutzutage sind wir immerzu in Eile und vergessen das Wertvollste, was wir haben – unsere Familie, Freunde,</p>
+				<p>Wir haben eine strenge Politik in Bezug auf die Verwendung von neuronalen Netzen und KI. Unsere Autoren verpflichten sich, diese Systeme nicht in ihren Texten zu verwenden.</p>
 			</div>
 			<hr>
 		</div>

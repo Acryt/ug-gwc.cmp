@@ -8,12 +8,14 @@ Template Name: City
 <?php get_header(); ?>
 
 <main class="main">
-	<?php get_template_part('parts/section-first'); ?>
-	<?php get_template_part('parts/section-crumbs'); ?>
-	<?php get_template_part('parts/content-form');?>
-	<?php get_template_part('parts/section-price');?>
-	<?php get_template_part('parts/section-form');?>
-	<?php get_template_part('parts/section-faq'); ?>
+	<?php
+	get_template_part('parts/section-first');
+	get_template_part('parts/section-crumbs');
+	get_template_part('parts/content-form');
+	get_template_part('parts/section-price');
+	get_template_part('parts/section-form');
+	get_template_part('parts/section-faq');
+	?>
 </main>
 
 <?php 
