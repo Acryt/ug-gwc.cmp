@@ -54,7 +54,7 @@ function createAuthorCard(author) {
             <div>Aufträge insgesamt: <span>${author.cf_author_orders}</span></div>
             <div>Erfolgsrate: <span>${author.cf_author_percent}</span></div>
           </div>
-          <a class="btn fit borda aut_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
+          <a class="btn fit borda aut_btn" data-slr=".popup__bigform"><span>Anfragen</span></a>
           <hr>
           <div class="aauthor__three">
             <div><strong>Wettkämpfe: </strong></div>`;
