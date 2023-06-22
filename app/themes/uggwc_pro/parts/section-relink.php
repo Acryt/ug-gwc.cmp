@@ -7,7 +7,7 @@
 		<div class="section__content">
 			<a href="/bauingenieurswesen">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Bauingenieurswesen.svg" alt="theme image">
 				</div>
 				<span>Bauingenieurswesen</span>
 			</a>
@@ -221,7 +221,7 @@
 			</a>
 			<a href="/unterrichtsentwurf">
 				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Statistik.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Unterrichtsentwurf.svg" alt="theme image">
 				</div>
 				<span>Unterrichtsentwurf</span>
 			</a>
