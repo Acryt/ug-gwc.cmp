@@ -80,7 +80,7 @@ if ($items) {
 									<?php echo $value['cost']; ?> €
 								</strong> PRO SEITE</div>
 							<ul class="price__extras">
-								<li style="min-height: 70px;max-height: 70px;"><img
+								<li style="min-height: 70px;max-height: 70px;"><span><img
 										src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 									<?php
 									switch ($key) {
@@ -101,27 +101,27 @@ if ($items) {
 											break;
 									}
 									?>
-								</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen Ihrer
-									Arbeit nach Ihren Wünschen und Anforderungen</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit des
-									anonymen direkten Kontakts mit dem Autor</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
-									sowohl der ganzen Arbeit als auch einzelner Teile</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Unbefristete
-									Garantie für die Korrektur der Arbeit*</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
-										alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Plagiatsprüfung
-									- KOSTENLOS</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
-									Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
-									Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Rechtzeitige
-									Teillieferungen der Arbeit</li>
-								<li><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit der
-									Teilzahlung ohne Zusatzkosten</li>
+								</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen Ihrer
+									Arbeit nach Ihren Wünschen und Anforderungen</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit des
+									anonymen direkten Kontakts mit dem Autor</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
+									sowohl der ganzen Arbeit als auch einzelner Teile</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Unbefristete
+									Garantie für die Korrektur der Arbeit*</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+										alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Plagiatsprüfung
+									- KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
+									Ihrer Arbeit von einem unabhängigen Korrekturleser</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
+									Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Rechtzeitige
+									Teillieferungen der Arbeit</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit der
+									Teilzahlung ohne Zusatzkosten</span></li>
 								<div class="price__footer">
 									<a class="section__btn-cities wave_effect js_btn" href="" data-slr=".popup__bigform"><span>
 											<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>

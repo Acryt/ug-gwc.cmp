@@ -84,8 +84,8 @@
 		text-align: start;
 
 		li {
-			display: inline;
-			justify-content: center;
+			display: flex;
+			justify-content: flex-start;
 			align-items: center;
 			width: 100%;
 			// min-height: 70px;
