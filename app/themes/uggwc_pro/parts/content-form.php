@@ -23,8 +23,13 @@
 				// 1
 				echo $items[0]['cf_content_content'];
 				get_template_part('parts/section-promo');
-				get_template_part('parts/section-relink');
-				
+				// проверка на то какой темплейт
+				if (is_page_template( ['templates/leistungen.php'] )) {
+					get_template_part('parts/section-relink-l');
+				} else {
+					get_template_part('parts/section-relink-d');
+				}
+
 				// 2
 				echo $items[1]['cf_content_content'];
 				get_template_part('parts/section-why');
@@ -47,6 +52,10 @@
 
 				// 6
 				echo get_the_content();  
+				
+				if (is_single()) {
+					get_template_part('parts/component-underpost');
+				}
 				?>
 			</div>
 			<div class="content__aside">
