@@ -123,7 +123,7 @@ if ($items) {
 								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit der
 									Teilzahlung ohne Zusatzkosten</span></li>
 								<div class="price__footer">
-									<a class="section__btn-cities wave_effect js_btn" href="" data-slr=".popup__bigform"><span>
+									<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigform"><span>
 											<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
 										</span></a>
 								</div>
