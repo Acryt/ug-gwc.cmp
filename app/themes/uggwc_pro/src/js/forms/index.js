@@ -26,6 +26,7 @@ export function calendarInput() {
 		new Datepicker(dateInput, {
 			buttonClass: dateInput,
 			weekStart: 1,
+			minDate: new Date(),
 		});
 	}
 }
