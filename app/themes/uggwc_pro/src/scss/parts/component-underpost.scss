@@ -1,0 +1,27 @@
+.under {
+	display: flex;
+	padding: 8px;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(-45deg, white 20%, var(--box-shadow));
+	border-bottom-left-radius: 48px;
+	border-top-left-radius: 48px;
+
+	.post-author {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		&__photo {
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			overflow: hidden;
+
+			img {
+				object-fit: cover;
+			}
+		}
+	}
+	
+}
