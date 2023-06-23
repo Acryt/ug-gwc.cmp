@@ -19,13 +19,11 @@ get_header();
 	// get_template_part('parts/section-card-dev');
 	// get_template_part('parts/section-card-recruit');
 	// get_template_part('parts/section-card-boss');
+	get_template_part('parts/section-care');
+	get_template_part('parts/section-busines');
+	get_template_part('parts/section-form');
+	get_template_part('parts/section-faq');
 	?>
-
-	<?php get_template_part('parts/section-care'); ?>
-	<?php get_template_part('parts/section-busines'); ?>
-
-	<?php get_template_part('parts/section-form'); ?>
-	<?php get_template_part('parts/section-faq'); ?>
 </main>
 
 <?php 

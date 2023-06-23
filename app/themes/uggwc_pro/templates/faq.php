@@ -10,8 +10,10 @@ the_post();
 ?>
 
 <main class="main">
-	<?php get_template_part('parts/section-faq'); ?>
-	<?php get_template_part('parts/section-form'); ?>
+	<?php
+	get_template_part('parts/section-faq');
+	get_template_part('parts/section-form');
+	?>
 </main>
 
 <?php 

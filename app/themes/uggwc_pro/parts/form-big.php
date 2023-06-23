@@ -32,7 +32,12 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required>
+		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" required>
+		<input type="text" name="asd" class="dp_date s-online__on" placeholder="Datum der Prüfung" required>
+	</label>
+	<label class="form__exam_time s-online__on">
+		<div class="form__icon"><i class="fa-regular fa-clock"></i></div>
+		<input type="text" name="exam_time" placeholder="Prüfungszeit">
 	</label>
 	<label class="form__name">
 		<div class="form__icon"><i class="fa-solid fa-user-graduate"></i></div>

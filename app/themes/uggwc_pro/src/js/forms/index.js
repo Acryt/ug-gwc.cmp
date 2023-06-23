@@ -115,7 +115,28 @@ export function stepper() {
 		};
 	});
 }
+export function onlineForm() {
+	// Получаем все селекты на странице
+	const selects = document.querySelectorAll(".select_online");
+	// Добавляем обработчик события "change" для каждого селекта
+	selects.forEach((select) => {
+		select.addEventListener("change", () => {
+			// Получаем выбранную опцию
+			const selectedOption = select.options[select.selectedIndex];
 
+			// Проверяем, была ли выбрана определенная опция
+			if (selectedOption.value == "Online Prüfung" || selectedOption.value == "Online Klausur") {
+				// Добавляем класс "_active" к форме, содержащей этот селект
+				const form = select.closest("form");
+				form.classList.add("_s-online");
+			} else {
+				// Если выбрана другая опция, удаляем класс "_active"
+				const form = select.closest("form");
+				form.classList.remove("_s-online");
+			}
+		});
+	});
+}
 export function mailer() {
 	// const popupBg = document.getElementById('popup-bg');
 	// const popupThanks = document.getElementById('thanks-popup');
@@ -150,8 +171,8 @@ export function mailer() {
 					form.reset();
 					form.classList.remove("_sending");
 					form.classList.add("_disabled");
-					setTimeout( () => {
-						form.classList.remove('_disabled')
+					setTimeout(() => {
+						form.classList.remove("_disabled");
 					}, 120000);
 				});
 		});

@@ -10,10 +10,12 @@ the_post();
 ?>
 
 <main class="main">
-	<?php get_template_part('parts/section-first'); ?>
-	<?php get_template_part('parts/section-crumbs'); ?>
-	<?php get_template_part('parts/blog-posts'); ?>
-	<?php get_template_part('parts/section-form'); ?>
+	<?php
+	get_template_part('parts/section-first');
+	get_template_part('parts/section-crumbs');
+	get_template_part('parts/blog-posts'); 
+	get_template_part('parts/section-form');
+	?>
 </main>
 
 <?php 

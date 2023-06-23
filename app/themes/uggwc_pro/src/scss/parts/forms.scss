@@ -400,3 +400,18 @@
 .content .form ul li::before {
 	content: unset;
 }
+
+// Онлайны
+
+.form {
+	&:not(._s-online) {
+		.s-online__on {
+			display: none;
+		}
+	}
+	&._s-online {
+		.s-online__off {
+			display: none;
+		}
+	}
+}

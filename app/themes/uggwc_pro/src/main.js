@@ -30,6 +30,7 @@ import {
 	stepper,
 	calendarInput,
 	phoneInput,
+	onlineForm,
 } from "./js/forms";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	promo();
 	phoneInput();
 	promoBlockTimer();
+	onlineForm();
 
 	let wow = new WOW(
 		{
