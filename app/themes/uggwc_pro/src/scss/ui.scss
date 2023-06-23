@@ -46,7 +46,7 @@ body {
 	overflow: unset;
 }
 .section {
-	margin: 32px 0;
+	margin: 28px 0;
 	scroll-margin-top: 64px;
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
@@ -55,7 +55,7 @@ body {
 .section__header {
 	// max-width: 800px;
 	width: fit-content;
-	margin: 0 auto 32px auto;
+	margin: 0 auto 16px auto;
 	padding: 4px 16px;
 	text-align: center;
 	position: relative;
