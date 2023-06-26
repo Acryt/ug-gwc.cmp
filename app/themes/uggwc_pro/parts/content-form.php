@@ -25,9 +25,9 @@
 				get_template_part('parts/section-promo');
 				// проверка на то какой темплейт
 				if (is_page_template( ['templates/leistungen.php'] )) {
-					get_template_part('parts/section-relink-l');
-				} else {
 					get_template_part('parts/section-relink-d');
+				} else {
+					get_template_part('parts/section-relink-l');
 				}
 
 				// 2

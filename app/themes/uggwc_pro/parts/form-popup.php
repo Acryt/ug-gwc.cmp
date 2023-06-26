@@ -11,11 +11,19 @@
 	<?php get_template_part('parts/select-quote') ?>
 	<?php get_template_part('parts/select-quality') ?>
 	<label class="form__number req_star form-counter">
-		<div class="form__desc">?
-			<div class="form__desc_t"><p>Seitenzahl</p></div>
+		<div class="form__desc s-online__off">?
+			<div class="form__desc_t">
+				<p>Seitenzahl</p>
+			</div>
+		</div>
+		<div class="form__desc s-online__on">?
+			<div class="form__desc_t">
+				<p>Stundenzahl</p>
+			</div>
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
-		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30" step="5" required>
+		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30"
+			step="5" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
 	<label class="form__deadline req_star">
@@ -23,7 +31,17 @@
 			<div class="form__desc_t"><p>Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage falls nötig haben.</p></div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required>
+		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" required>
+		<input type="text" name="deadline" class="dp_date s-online__on" placeholder="Datum der Prüfung" required>
+	</label>
+	<label class="form__exam_time s-online__on">
+		<div class="form__desc">?
+			<div class="form__desc_t">
+				<p>12.00-13.00</p>
+			</div>
+		</div>
+		<div class="form__icon"><i class="fa-regular fa-clock"></i></div>
+		<input type="text" name="exam_time" placeholder="Prüfungszeit">
 	</label>
 	<label class="form__name">
 		<div class="form__icon"><i class="fa-solid fa-user-graduate"></i></div>
