@@ -105,7 +105,7 @@
 				<p class=""><strong>GARANTIEN</strong></p>
 				<div>
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/noai.svg" alt="">
-					<h6>Ohne AI</h6>
+					<p><strong>Ohne KI</strong></p>
 				</div>
 				<div>
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
