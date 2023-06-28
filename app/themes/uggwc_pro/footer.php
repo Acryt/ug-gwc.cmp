@@ -104,6 +104,10 @@
 				</div>
 				<p class=""><strong>GARANTIEN</strong></p>
 				<div>
+					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/noai.svg" alt="">
+					<h6>Ohne AI</h6>
+				</div>
+				<div>
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 					<a href="/unsere-garantien">Unsere Garantien</a>
 					<a href="/ruckgaberichtlinien">Rückgaberichtlinien</a>
