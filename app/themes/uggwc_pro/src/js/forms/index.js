@@ -165,9 +165,7 @@ export function mailer() {
 				},
 				body: "action=sendForm&" + getQueryString(data),
 				credentials: "same-origin",
-			})
-				.then((response) => response.json())
-				.then((response) => {
+			}).then((response) => {
 					form.reset();
 					form.classList.remove("_sending");
 					form.classList.add("_disabled");
