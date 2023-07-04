@@ -1,0 +1,36 @@
+.ainfo {
+	&__cont {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+
+		& > h3 {
+			flex: 1 0 280px;
+		}
+		& > p {
+			flex: 1 0 280px;
+		}
+	}
+	&__img {
+		height: 280px;
+		width: 280px;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 12px;
+		box-shadow: inset 0 2px 12px 0px var(--box-shadow);
+		img {
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1 0 280px;
+		max-width: 700px;
+	}
+	&__desc {
+		width: 100%;
+	}
+}
