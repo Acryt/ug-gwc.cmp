@@ -69,7 +69,7 @@ function createAuthorCard(author) {
             <summary class="aauthor__sum">
               <h6>Beschreibung:</h6>
             </summary>
-            <div class="aauthor__desc">` +
+            <div class="aauthor__desc content">` +
 		author.cf_author_desc +
 		`</div>
           </details>

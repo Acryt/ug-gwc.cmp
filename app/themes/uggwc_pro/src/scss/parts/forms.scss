@@ -2,6 +2,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	h4 {
+		width: 100%;
+	}
 
 	&_big {
 		position: relative;
@@ -300,23 +306,28 @@
 		}
 	}
 	&__disabled {
-		position: absolute;
+		position: relative;
 		display: none;
 		flex-direction: column;
 		justify-content: end;
 		align-items: center;
 		text-align: center;
-		padding: 12px;
+		// padding: 12px;
 		width: 100%;
+		max-width: 600px;
 		height: 100%;
 		left: 0;
 		top: 0;
 		border-radius: 12px;
-		background: var(--bg);
+		// background: var(--bg);
 		z-index: 3;
+
+		span {
+			color: var(--alert);
+		}
 	}
 	&__sent {
-		width: 160px;
+		width: 50%;
 
 		p{
 			font-size: 14px;
@@ -335,6 +346,9 @@
 
 	// После отправки
 	&._disabled {
+		&>* {
+			display: none;
+		}
 		.btn {
 			display: none;
 		}

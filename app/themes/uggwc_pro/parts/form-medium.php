@@ -1,4 +1,5 @@
 <form id="form_medium" class="form_medium form" action="" method="" accept-charset="utf-8">
+	<h4 class="form__heading">Anruf Bestellen</h4>
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
@@ -62,7 +63,7 @@
 		<div class="form__sent">
 			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
 		</div>
-		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit.Wir werden uns in Kürze mit Ihnen in Verbindung setzen.</p>
+		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
 	<button type="submit" class="btn wave_effect"><span>UNVERBINDLICH ANFRAGEN</span></button>
 </form>
