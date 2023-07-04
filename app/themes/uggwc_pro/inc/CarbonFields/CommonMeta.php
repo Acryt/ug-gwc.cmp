@@ -73,46 +73,6 @@ class CommonMeta
 	public static function selectsMeta(): array
 	{
 		return [
-			Field::make('text', 'cf_select_type_placeholder', __('Плейсхолдер типы работ')),
-			Field::make('complex', 'cf_select_type', __('Типы работ (для форм)'))
-				->set_layout('tabbed-horizontal')
-				->add_fields(
-					array(
-						Field::make('text', 'cf_select_type_item', __('Пункт'))
-					)
-				),
-			Field::make('text', 'cf_select_specialization_placeholder', __('Плейсхолдер дисциплин/специальностей')),
-			Field::make('complex', 'cf_select_specialization', __('Дисциплины (для форм)'))
-				->set_layout('tabbed-horizontal')
-				->add_fields(
-					array(
-						Field::make('text', 'cf_select_specialization_item', __('Пункт'))
-					)
-				),
-			Field::make('text', 'cf_select_quote_placeholder', __('Плейсхолдер цитатник')),
-			Field::make('complex', 'cf_select_quote', __('Тип цитат (для форм)'))
-				->set_layout('tabbed-horizontal')
-				->add_fields(
-					array(
-						Field::make('text', 'cf_select_quote_item', __('Пункт'))
-					)
-				),
-			Field::make('text', 'cf_select_quality_placeholder', __('Плейсхолдер качество работы')),
-			Field::make('complex', 'cf_select_quality', __('Качество (для форм)'))
-				->set_layout('tabbed-horizontal')
-				->add_fields(
-					array(
-						Field::make('text', 'cf_select_quality_item', __('Пункт'))
-					)
-				),
-			Field::make('text', 'cf_select_calltime_placeholder', __('Плейсхолдер Время связи')),
-			Field::make('complex', 'cf_select_calltime', __('Время связи (для форм)'))
-				->set_layout('tabbed-horizontal')
-				->add_fields(
-					array(
-						Field::make('text', 'cf_select_calltime_item', __('Пункт'))
-					)
-				),
 			Field::make('complex', 'cf_select_competition', __('Список всех компетенции авторов'))
 				->set_layout('tabbed-horizontal')
 				->add_fields(

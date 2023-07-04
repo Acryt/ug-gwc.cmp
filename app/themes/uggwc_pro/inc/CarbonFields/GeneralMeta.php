@@ -33,6 +33,8 @@ class GeneralMeta
 			->add_tab(__('Snippet'), CommonMeta::snippetMeta())
 			->add_tab(__('Promo'), CommonMeta::promoMeta())
 			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
+		;
+		Container::make('theme_options', __('Authors'))
 			->add_tab(__('Author'), CommonMeta::authorMeta())
 		;
 	}
