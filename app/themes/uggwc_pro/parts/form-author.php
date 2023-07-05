@@ -15,11 +15,10 @@
 	<div class="form_select form__quality req_star" data-state="">
 		<div class="form__icon"><i class="fa-solid fa-list"></i></div>
 		<select class="simple-select wide" name="quality" id="quality" required>
-			<option id="qualityItem<?php echo $key; ?>" value="" disabled selected class=""><?php echo carbon_get_theme_option('cf_select_quality_placeholder'); ?></option>
-			<?php foreach ($items as $key => $value) { ?>
-				<option id="qualityItem<?php echo $key; ?>" value="<?php echo $value['cf_select_quality_item']; ?>" class="">
-					<?php echo $value['cf_select_quality_item']; ?></option>
-			<?php } ?>
+			<option id="qualityItem" value="" disabled="" selected="" class="">Qualität</option>
+			<option id="qualityItem0" value="Bachelor" class="">Bachelor</option>
+			<option id="qualityItem1" value="Master" class="">Master</option>
+			<option id="qualityItem2" value="Doctor" class="">Doctor</option>
 		</select>
 	</div>
 

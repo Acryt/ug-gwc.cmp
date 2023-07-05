@@ -171,7 +171,7 @@ export function mailer() {
 					form.classList.add("_disabled");
 					setTimeout(() => {
 						form.classList.remove("_disabled");
-					}, 120000);
+					}, 4000);
 				});
 		});
 	}
