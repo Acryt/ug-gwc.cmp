@@ -1,7 +1,7 @@
-export function dropdown() {
+export function priceAccrd() {
 	// Массивы содержащие все переключатели и Меню (обязательно должны быть в одинаковом колличестве)
-	const dropToggler = document.querySelectorAll(".dd-btn");
-	const dropMenu = document.querySelectorAll(".dd-menu");
+	const dropToggler = document.querySelectorAll(".pa-btn");
+	const dropMenu = document.querySelectorAll(".pa-menu");
 
 	function closeAll(activeElem) {
 		// Сначала снимаем active со всех элемов, для минимизации ошибок
@@ -17,7 +17,6 @@ export function dropdown() {
 	if (!dropToggler || !dropMenu) {
 		return;
 	} else {
-		closeAll();
 		// Переменные содержащие активные элемы
 		let activeToggle = "";
 		let activeMenu = "";
@@ -32,37 +31,8 @@ export function dropdown() {
 					activeToggle = dropToggler[key];
 					dropMenu[key].classList.add("_active");
 					activeMenu = dropMenu[key];
-				} else {
-					closeAll();
 				}
 			});
-		});
-
-		// Слушатель для снятия active при клике вне активных элементов
-		document.addEventListener("click", (e) => {
-			// Проверка входит клик в активные элемы
-			let boolEl = e.composedPath().includes(activeToggle || activeMenu);
-			// Если не входит - снимаем active
-			if (!boolEl) {
-				dropToggler.forEach((el) => {
-					el.classList.remove("_active");
-				});
-				dropMenu.forEach((el) => {
-					el.classList.remove("_active");
-				});
-			}
-		});
-
-		// Нажатие на Tab или Escape. Закрыть дропдаун
-		document.addEventListener("keydown", function (e) {
-			if (e.key === "Tab" || e.key === "Escape") {
-				dropToggler.forEach((el) => {
-					el.classList.remove("_active");
-				});
-				dropMenu.forEach((el) => {
-					el.classList.remove("_active");
-				});
-			}
 		});
 	}
 }

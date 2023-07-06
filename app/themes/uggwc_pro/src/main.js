@@ -20,6 +20,7 @@ import { mobileMenu } from "./js/mobileMenu";
 import { stickyHeader } from "./js/scroll";
 import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
+import { priceAccrd } from "./js/priceAccrd";
 import { closePopups, openPopup, cookieClose } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer } from "./js/siteTimer";
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	stepper();
 	calendarInput();
 	dropdown();
+	priceAccrd();
 	closePopups();
 	openPopup();
 	cookieClose();

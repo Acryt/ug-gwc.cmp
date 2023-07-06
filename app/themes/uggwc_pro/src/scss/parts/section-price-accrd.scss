@@ -1,0 +1,13 @@
+.price_accrd {
+	&__cont {}
+	&__item {}
+	&__btn {
+		&._active {}
+	}
+	&__label {
+		display: none;
+		&._active {
+			display: flex;
+		}
+	}
+}

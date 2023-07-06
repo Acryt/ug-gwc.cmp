@@ -720,11 +720,11 @@ class Helpers
 
 			$response = json_decode($response);
 
-			$geo = array(
+			$geo = [
 				'ip' => $response->ip,
 				'country_name' => $response->country_name,
 				'region' => $response->region
-			);
+			];
 			return $geo;
 		}
 
