@@ -873,7 +873,7 @@
 					</table>
 					<ul class="price_accrd__pros">
 						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
-							Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften</li>
+							Autoren mit verschiedenen Abschlüssen aus allen medizinischen Bereichen</li>
 						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
