@@ -3,16 +3,6 @@
 		border-radius: 12px;
 		overflow-x: clip;
 	}
-	&__table {
-		flex: 1 0 100px;
-		tr:first-child td {
-			// border: unset;
-		}
-		tr + tr td {
-			// border: unset;
-			border-top: 1px solid var(--tabhead);
-		}
-	}
 	&__nav {
 		display: flex;
 		width: 100%;
@@ -36,12 +26,23 @@
 	&__desc {
 		display: none;
 		flex: 0 0 100%;
+		flex-wrap: wrap;
 		background: var(--bg);
 		border-top: 3px solid var(--hoverb);
 		position: relative;
 		// min-height: 800px;
 		&._active {
 			display: flex;
+		}
+	}
+	&__table {
+		flex: 1 0 280px;
+		tr:first-child td {
+			// border: unset;
+		}
+		tr + tr td {
+			// border: unset;
+			border-top: 1px solid var(--tabhead);
 		}
 	}
 	&__plus {
@@ -80,6 +81,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		flex: 1 0 280px;
 		align-self: baseline;
 		flex-wrap: wrap;
 		margin: 0;
