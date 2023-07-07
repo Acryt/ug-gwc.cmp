@@ -3,14 +3,28 @@ export function niceSelectVanilla() {
 	
 	const simpleSelect = document.querySelectorAll(".simple-select");
 	const searchSelect = document.querySelectorAll(".search-select");
+	const popups = document.querySelector(".popups");
+	let instSimple = new Array();
+	let instSelect = new Array();
 
 	simpleSelect.forEach(elem => {
-		NiceSelect.bind(elem);
+		instSimple.push(NiceSelect.bind(elem));
 	});
 
 	searchSelect.forEach(elem => {
-		NiceSelect.bind(elem, { searchable: true });
+		instSelect.push(NiceSelect.bind(elem, { searchable: true }));
 	});
+
+	let obs = new MutationObserver(() => {
+		if (popups.classList.contains("_active")) {
+			console.log('tuk tuk');
+			instSelect.forEach(el => {
+				el.update();
+			})
+		}
+	 });
+  
+	 obs.observe(popups, { attributes: true, attributeFilter: ['class'] });
 }
 // export function selectors() {
 // 	const selects = document.querySelectorAll(".form_select");
