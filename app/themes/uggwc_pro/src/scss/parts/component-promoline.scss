@@ -1,0 +1,14 @@
+.promoline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	background: var(--promo);
+	height: 48px;
+	width: 100%;
+	cursor: pointer;
+
+	&__img {
+		height: 40px;
+	}
+}

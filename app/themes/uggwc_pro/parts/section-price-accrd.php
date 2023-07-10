@@ -1,7 +1,7 @@
 <section id="priceAccrd" class="section price_accrd">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2>Preisliste</h2>
+			<h2>Ghostwriter Preise pro Seite</h2>
 		</div>
 		<div class="section__content">
 			<div class="price_accrd__cont shadow">

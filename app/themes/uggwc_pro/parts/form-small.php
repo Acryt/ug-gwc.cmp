@@ -1,4 +1,4 @@
-<form id="form_small" class="form_small form" action="" method="" accept-charset="utf-8">
+<form id="form_small" class="form_small form" accept-charset="utf-8">
 	<label><span>Theme</span><input type="text" name="theme"></label>
 	<label><span>Type</span><input type="text" name="specialization"></label>
 	<label><span>Name</span><input type="text" name="name"></label>

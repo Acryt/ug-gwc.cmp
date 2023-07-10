@@ -1,4 +1,4 @@
-<form id="form_care" class="form_care form" action="" method="" accept-charset="utf-8">
+<form id="form_care" class="form_care form" accept-charset="utf-8">
 	<label class="form__order req_star">
 		<div class="form__icon"><i class="fa-solid fa-hashtag"></i></div>
 		<input id="order" type="text" name="order" placeholder="Order Number" pattern="^[0-9]+$" required>

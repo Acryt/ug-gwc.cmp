@@ -1,4 +1,4 @@
-<form id="form_popup" class="form_big form" action="" method="" accept-charset="utf-8">
+<form id="form_popup" class="form_big form" accept-charset="utf-8">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme req_star">

@@ -4,10 +4,10 @@
 	</div>
 	<div class="form__icon"><i class="fa-solid fa-list"></i></div>
 	<select class="simple-select wide" name="quality" id="quality">
-		<option id="qualityItem" value="" disabled="" selected="" class="">Qualität</option>
-		<option id="qualityItem0" value="Bachelor" class="">Bachelor</option>
-		<option id="qualityItem1" value="Master" class="">Master</option>
-		<option id="qualityItem2" value="Doctor" class="">Doctor</option>
+		<option value="" disabled="" selected="" class="">Qualität</option>
+		<option value="Bachelor" class="">Bachelor</option>
+		<option value="Master" class="">Master</option>
+		<option value="Doctor" class="">Doctor</option>
 	</select>
 </div>
 

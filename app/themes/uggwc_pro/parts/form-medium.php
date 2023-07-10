@@ -1,4 +1,4 @@
-<form id="form_medium" class="form_medium form" action="" method="" accept-charset="utf-8">
+<form id="form_medium" class="form_medium form" accept-charset="utf-8">
 	<h4 class="form__heading">Anruf Bestellen</h4>
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>

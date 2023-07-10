@@ -18,11 +18,21 @@
 				Institutseinweihung.</li>
 		</ul>
 	</div>
+	<div class="popup popup__bigpromo card shadow">
+		<div class="popup_x">
+			<div></div>
+			<div></div>
+		</div>
+		<?php get_template_part('parts/form-popup') ?>
+	</div>
 	<div class="popup popup__bigform card shadow">
 		<div class="popup_x">
 			<div></div>
 			<div></div>
 		</div>
+		<h4>Erhalten Sie  30 Euro  als Geschenk für Ihre erste Bestellung bis 31. Juli!!!</h4>
+		<h6>Die Geschenke sind limitiert, holen Sie sich Ihr Geschenk jetzt! ⏱</h6>
+		<p>*die Werbeaktion gilt nicht für das Coaching und für schriftliche Arbeiten unter 7 Seiten</p>
 		<?php get_template_part('parts/form-popup') ?>
 	</div>
 </div>
