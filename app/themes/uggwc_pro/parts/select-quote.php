@@ -1,6 +1,6 @@
 <div class="form_select  form__quote" data-state="">
 	<div class="form__icon"><i class="fa-solid fa-list"></i></div>
-	<select class="simple-select wide" name="quote" id="quote">
+	<select class="simple-select wide" name="quote">
 		<option value="" disabled="" selected="" class="">Zitierweise</option>
 		<option value="APA" class="">APA</option>
 		<option value="Chicago" class="">Chicago</option>

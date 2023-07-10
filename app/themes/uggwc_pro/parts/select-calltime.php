@@ -1,6 +1,6 @@
 <div class="form_select form__calltime">
 	<div class="form__icon"><i class="fa-solid fa-list"></i></div>
-	<select class="simple-select wide" name="calltime" id="calltime">
+	<select class="simple-select wide" name="calltime">
 		<option value="" disabled="" selected="" class="">Ihre Verfügbarkeit</option>
 		<option value="Beliebige Geschäftszeit" class="">Beliebige Geschäftszeit</option>
 		<option value="8-00 - 10.00" class="">8-00 - 10.00</option>

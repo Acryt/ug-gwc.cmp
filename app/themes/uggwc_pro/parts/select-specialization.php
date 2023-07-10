@@ -3,7 +3,7 @@
 		<div class="form__desc_t"><p>Wählen Sie bitte die Fachrichtung Ihrer Arbeit aus. Wenn keine Fachrichtung passend ist, wählen Sie „Andere Fachrichtung” Je mehrere Informationen Sie eingeben, desto besser.</p></div>
 	</div>
 	<div class="form__icon"><i class="fa-solid fa-list"></i></div>
-	<select class="search-select wide" name="specialization" id="specialization" required="">
+	<select class="search-select wide" name="specialization" required="">
 		<option value="" disabled="" selected="" class="">Fachrichtung</option>
 		<option value="Betriebswirtschaftslehre" class="">Betriebswirtschaftslehre</option>
 		<option value="Allgemeine Volkswirtschaft" class="">Allgemeine Volkswirtschaft</option>
