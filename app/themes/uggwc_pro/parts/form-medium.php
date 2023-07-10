@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
-		<input id="theme" type="text" name="theme" placeholder="Thema der Arbeit" required>
+		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
 	</label>
 
 	<label class="form__number req_star form-counter">
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input id="deadline" type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required>
+		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required>
 	</label>
 
 	<label class="form__email req_star">
@@ -44,10 +44,10 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
-		<input id="email" type="email" name="email" placeholder="E-Mail" required>
+		<inputid="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
-		<input id="phone" class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
+		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">

@@ -64,10 +64,6 @@
 		</div>
 		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
 	</label>
-	<!-- <label class="form__service">
-		<div class="form__icon"><i class="fa-solid fa-medal"></i></div>
-		<input type="text" name="service" placeholder="Leistungen">
-	</label> -->
 	<?php get_template_part('parts/select-calltime') ?>
 	<label class="form__promo">
 		<input type="text" name="promo" placeholder="Promocode">

@@ -1,24 +1,24 @@
 <form id="form_author" class="form_author form" accept-charset="utf-8">
 	<label class="req_star">
 		<div class="form__icon"><i class="fa-solid fa-user-graduate"></i></div>
-		<input id="name" type="text" name="name" placeholder="Name" required>
+		<input type="text" name="name" placeholder="Name" required>
 	</label>
 	<label class="req_star">
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
-		<input id="email" type="email" name="email" placeholder="E-Mail" required>
+		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label>
-		<input id="phone" class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
+		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
 	</label>
 
 	<?php $items = carbon_get_theme_option('cf_select_quality'); ?>
 	<div class="form_select form__quality req_star" data-state="">
 		<div class="form__icon"><i class="fa-solid fa-list"></i></div>
 		<select class="simple-select wide" name="quality" id="quality" required>
-			<option id="qualityItem" value="" disabled="" selected="" class="">Qualität</option>
-			<option id="qualityItem0" value="Bachelor" class="">Bachelor</option>
-			<option id="qualityItem1" value="Master" class="">Master</option>
-			<option id="qualityItem2" value="Doctor" class="">Doctor</option>
+			<option value="" disabled="" selected="" class="">Qualität</option>
+			<option value="Bachelor" class="">Bachelor</option>
+			<option value="Master" class="">Master</option>
+			<option value="Doctor" class="">Doctor</option>
 		</select>
 	</div>
 
