@@ -12,7 +12,6 @@ import 'swiper/css/pagination';
 
 import "./scss/_index.scss";
 
-
 import NiceSelect from 'nice-select2/dist/js/nice-select2.js';
 import { Fancybox } from "@fancyapps/ui";
 // JS

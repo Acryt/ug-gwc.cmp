@@ -18,6 +18,9 @@
 		border-top: 1px solid var(--box-shadow);
 		border-right: 1px solid var(--box-shadow);
 		border-left: 1px solid var(--box-shadow);
+		&:hover {
+			background: var(--bg);
+		}
 		&._active {
 			background: var(--hoverb);
 			color: var(--bg);
@@ -40,6 +43,10 @@
 		tr:first-child td {
 			// border: unset;
 		}
+		tr td:first-child:hover {
+			background: var(--hoverb);
+			color: var(--bg);
+		}
 		tr + tr td {
 			// border: unset;
 			border-top: 1px solid var(--tabhead);
@@ -55,7 +62,8 @@
 			font-weight: 600;
 		}
 		&::before {
-			content: "+";
+			content: "";
+			font-family: "Font Awesome 6 Free";
 			position: absolute;
 			display: flex;
 			width: 40px;
@@ -64,16 +72,18 @@
 			align-items: center;
 			top: 0;
 			right: 0;
-			background: var(--hover);
-			color: var(--bg);
+			
+			color: var(--hoverb);
 			transition: 0.3s all;
-			opacity: 0;
+			// opacity: 0;
 		}
 		&:hover {
 			background: var(--hoverb);
 			transition: 0.3s all;
 			&::before {
-				opacity: 1;
+				background: var(--hover);
+				color: var(--bg);
+				// opacity: 1;
 			}
 		}
 	}

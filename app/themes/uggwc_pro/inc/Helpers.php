@@ -99,6 +99,9 @@ class Helpers
 		if (in_array($string, ['form-popup'])) {
 			$name = 'Попап форма';
 		}
+		if (in_array($string, ['form-bigpromo'])) {
+			$name = 'Попап форма акции';
+		}
 		return $name;
 	}
 

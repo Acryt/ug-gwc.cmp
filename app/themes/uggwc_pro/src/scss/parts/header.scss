@@ -1,4 +1,4 @@
-.header { 
+.header {
 	position: fixed;
 	display: flex;
 	justify-content: center;
@@ -25,10 +25,10 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 64px;
-		transition: all .5s;
+		transition: all 0.5s;
 		z-index: 1;
 		background: var(--bg);
-		&>* {
+		& > * {
 			padding: 12px;
 		}
 	}
@@ -65,7 +65,7 @@
 	}
 	&__contact {
 		width: fit-content;
-		
+
 		@media (max-width: 920px) {
 			width: fit-content;
 			margin: 24px auto 8px;
@@ -88,14 +88,15 @@
 			display: flex;
 		}
 	}
-	&__item {}
+	&__item {
+	}
 	&__nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 64px;
 		border-top: 1px solid var(--tabhead);
-		transition: all .5s;
+		transition: all 0.5s;
 		@media (max-width: 920px) {
 			position: absolute;
 			width: 320px;
@@ -121,12 +122,12 @@
 		justify-content: space-between;
 		// justify-content: stretch;
 		align-items: center;
-		transition: all .5s;
+		transition: all 0.5s;
 		width: 100%;
 		height: 100%;
 		margin: 0px 12px;
 		overflow-y: auto;
-		&>* {
+		& > * {
 			display: block;
 			font-weight: 600;
 		}
@@ -137,16 +138,16 @@
 			margin: 88px 0 0 0;
 			min-height: calc(100vh - 88px);
 			max-height: fit-content;
-			&>.dd-btn {
+			& > .dd-btn {
 				padding: 8px 16px;
 				display: flex;
 			}
-			&>.dd-menu {
+			& > .dd-menu {
 				display: flex;
 				border: none;
 				border-radius: none;
 			}
-			&>a {
+			& > a {
 				padding: 8px 16px;
 			}
 		}
@@ -163,11 +164,11 @@
 		// border-bottom-left-radius: 12px;
 		// background: var(--bg-opacity);
 		// backdrop-filter: blur(8px);
-		// box-shadow: -6px 0px 6px var(--shadow-header); 
+		// box-shadow: -6px 0px 6px var(--shadow-header);
 		top: 30px;
 		right: 0px;
 		padding: 8px;
-		transition: all .5s;
+		transition: all 0.5s;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
@@ -197,7 +198,7 @@
 			background: black;
 			position: absolute;
 			height: 3px;
-			transition: all .5s;
+			transition: all 0.5s;
 		}
 		& :nth-child(1) {
 			width: 36px;
@@ -227,7 +228,7 @@
 		position: relative;
 		display: flex;
 		// border-radius: 8px;
-		transition: all .3s;
+		transition: all 0.3s;
 		font-weight: 600;
 		color: var(--taccent);
 		@media (max-width: 920px) {
@@ -266,7 +267,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all 0.5s;
 		}
 	}
 	.dd-menu {
@@ -284,7 +285,7 @@
 		border: 1px solid var(--box-shadow);
 		border-radius: 10px;
 		text-align: left;
-		transition: all .5s;
+		transition: all 0.5s;
 		overflow: hidden;
 		@media (max-width: 920px) {
 			position: relative;
@@ -293,7 +294,7 @@
 			border-radius: unset;
 			border-bottom: 3px solid var(--box-shadow);
 		}
-		&>* {
+		& > * {
 			flex: 1 1 25%;
 			// border: 1px solid var(--box-shadow);
 			padding: 12px 24px;
@@ -301,7 +302,7 @@
 			border-bottom: 1px solid var(--box-shadow);
 			&:not(:nth-child(4n)) {
 				border-right: 1px solid var(--box-shadow);
-			 }
+			}
 			&:hover {
 				background: var(--hoverb);
 				color: var(--bg);
@@ -309,27 +310,24 @@
 			@media (max-width: 768px) {
 				flex: 0 0 100%;
 			}
-		 }
+		}
 		&._active {
 			display: flex;
 		}
 	}
 	@media (min-width: 921px) {
 		.dd-btn:hover {
-			// padding: 8px 16px;
 			color: var(--hover);
-			// background: var(--hoverb);
-			// backdrop-filter: blur(8px);
-			&::after {
-				transform: rotate(270deg);
-			}
+			// &::after {
+			// 	transform: rotate(270deg);
+			// }
 		}
-		.dd-btn:hover+.dd-menu {
-			display: flex;
-		}
-		.dd-menu:hover {
-			display: flex;
-		}
+		// .dd-btn:hover + .dd-menu {
+		// 	display: flex;
+		// }
+		// .dd-menu:hover {
+		// 	display: flex;
+		// }
 	}
 	&._sticky .dd-menu {
 		@media (min-width: 921px) {

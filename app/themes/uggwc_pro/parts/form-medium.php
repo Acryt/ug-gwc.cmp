@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
-		<inputid="email" type="email" name="email" placeholder="E-Mail" required>
+		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
 		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
