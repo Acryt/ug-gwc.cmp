@@ -74,12 +74,12 @@
 			right: 0;
 			
 			color: var(--hoverb);
-			transition: 0.3s all;
+			transition: all .3s;
 			// opacity: 0;
 		}
 		&:hover {
 			background: var(--hoverb);
-			transition: 0.3s all;
+			transition: all .3s;
 			&::before {
 				background: var(--hover);
 				color: var(--bg);

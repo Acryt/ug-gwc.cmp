@@ -25,13 +25,13 @@
 				?>
 			</p>
 
-			<?php if( is_page_template( ['templates/author.php'] )) {
+			<?php if( is_page_template( ['templates/author-f.php'] )) {
 				echo '<a href="#sform" class="btn borda"><span>JETZT BEWERBEN</span></a>';
 			} else {
 				echo '<a class="btn borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>';
 			}?>
 
-			<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php'] )) {
+			<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php', 'templates/price.php'] )) {
 				get_template_part('parts/component-ratings');
 			} ?>
 		</div>
@@ -98,12 +98,12 @@
 			// echo '<img class="" src="' . $pathImg . '" alt="Logo">';
 			// echo '</div>';
 		}
-		else if ( is_page_template( 'templates/price.php' )) { 
-			$pathImg .= '/assets/images/first/price.svg';
-			echo '<div class="first__img">';
-			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
-			echo '</div>';
-		}
+		// else if ( is_page_template( 'templates/price.php' )) { 
+		// 	$pathImg .= '/assets/images/first/price.svg';
+		// 	echo '<div class="first__img">';
+		// 	echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
+		// 	echo '</div>';
+		// }
 		else if ( is_page_template( 'templates/review.php' )) { 
 			// $pathImg .= '/assets/images/ratings/ratings.svg';
 			$pathImg .= '/assets/images/ratings/ratings.svg';
@@ -123,7 +123,7 @@
 			// echo '</div>';
 		}
 		?>
-		<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php'] )) { ?>
+		<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php', 'templates/price.php'] )) { ?>
 		<div class="first__side card shadow">
 			<img class="wow animate__jello first__hat animate__repeat-2 animate__delay-2s" src="<?php echo get_bloginfo('template_url') . '/assets/images/first/hat.svg' ?>" alt="">
 			<?php get_template_part('parts/form-medium') ?>

@@ -179,7 +179,7 @@ p span {
 a {
 	text-decoration: none;
 	color: var(--thead);
-	transition: all 0.3s;
+	transition: all .3s;
 	&:hover {
 		color: var(--hover);
 	}

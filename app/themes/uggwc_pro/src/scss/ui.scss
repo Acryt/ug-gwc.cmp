@@ -14,7 +14,7 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	overflow-x: hidden;
-	transition: all 0.5s;
+	transition: all .5s;
 	color: var(--text);
 	align-items: stretch;
 	scroll-snap-type: y mandatory;
@@ -179,7 +179,7 @@ li {
 		height: 100%;
 		opacity: 0;
 		background: var(--bg-wave);
-		transition: all 0.2s;
+		transition: all .2s;
 	}
 
 	&:hover {
@@ -261,7 +261,7 @@ tbody {
 	justify-content: center;
 	font-weight: 600;
 	border: none;
-	transition: all 0.3s;
+	transition: all .3s;
 	overflow: hidden;
 	background-color: transparent;
 	background: var(--hover);
