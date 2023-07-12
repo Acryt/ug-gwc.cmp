@@ -16,17 +16,17 @@
 			</div>
 			<div class="interview__photo shadow"><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/photo/bella.jpg" alt="Photo"></div>
 			<div class="interview__desc card shadow"><strong>Bella</strong> hat eine Bachelorarbeit bei GhostwriterCompany schreiben lassen. Über die Gründe und Eindrücke hat Bella in einem Kurzinterview erzählt</div>
-			<a href="/bauingenieurswesen" class="interview__link card shadow">
+			<a href="/jura" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Bauingenieurswesen.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Jura.svg" alt="disziplinen image">
 				</div>
-				<span>Bauingenieurswesen</span>
+				<span>Jura</span>
 			</a>
-			<a href="/biologie" class="interview__link card shadow">
+			<a href="/bachelorarbeit" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg" alt="theme image">
 				</div>
-				<span>Biologie</span>
+				<span>Bachelorarbeit</span>
 			</a>
 		</div>
 	</div>
@@ -49,17 +49,17 @@
 				<p><strong>GWC:</strong> Haben Sie Ratschläge für die Studenten, die auch nach einem Ghostwriter suchen?</p>
 				<p><strong>Mikl:</strong> Ja, ich kann was raten. Wir schreiben an der Uni viele arbeiten. Dadurch hat man Kopfschmerzen, also lasst eure Kopfschmerzen weg :). </p>
 			</div>
-			<a href="/bauingenieurswesen" class="interview__link card shadow">
+			<a href="/vwl" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Bauingenieurswesen.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/VWL.svg" alt="disziplinen image">
 				</div>
-				<span>Bauingenieurswesen</span>
+				<span>VWL</span>
 			</a>
-			<a href="/biologie" class="interview__link card shadow">
+			<a href="/hausarbeit" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg" alt="theme image">
 				</div>
-				<span>Biologie</span>
+				<span>Hausarbeit</span>
 			</a>
 		</div>
 	</div>
@@ -83,17 +83,17 @@
 			</div>
 			<div class="interview__photo shadow"><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/photo/benny.jpg" alt="Photo"></div>
 			<div class="interview__desc card shadow"><strong>Benny</strong> hat die Agentur kontaktiert, um Hilfe beim Schreiben einer Masterarbeit im Bereich Ingenieurwesen zu erhalten. Im folgenden Interview berichtet er über seine Erfahrungen mit der Zusammenarbeit mit GhostwriterCompany</div>
-			<a href="/bauingenieurswesen" class="interview__link card shadow">
+			<a href="/ingenieurwissenschaften" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Bauingenieurswesen.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Architektur.svg" alt="disziplinen image">
 				</div>
-				<span>Bauingenieurswesen</span>
+				<span>Ingenieurwissenschaften</span>
 			</a>
-			<a href="/biologie" class="interview__link card shadow">
+			<a href="/masterarbeit" class="interview__link card shadow">
 				<div class="interview__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Biologie.svg" alt="theme image">
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg" alt="theme image">
 				</div>
-				<span>Biologie</span>
+				<span>Masterarbeit</span>
 			</a>
 		</div>
 	</div>
