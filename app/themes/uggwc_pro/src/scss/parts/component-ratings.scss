@@ -50,4 +50,16 @@
 			bottom: 12px;
 		}
 	} 
+	.section__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 24px;
+	}
+	.rate__snippet {
+		display: flex;
+		gap: 24px;
+		flex-wrap: wrap;
+		align-items: center;
+	}
 }

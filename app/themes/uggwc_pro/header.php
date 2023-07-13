@@ -104,7 +104,7 @@
 					<a href="/bewertungen">Bewertungen</a>
 					<a href="/blog">Blog</a>
 					<a class="header__contact btn borda" href="/anfragen">
-						<span>Anfragen</span>
+						<span>Unverbindliche Anfragen</span>
 					</a>
 				</div>
 			</nav>

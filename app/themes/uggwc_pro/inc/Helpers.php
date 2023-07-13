@@ -87,6 +87,9 @@ class Helpers
 		if (in_array($string, ['form-medium'])) {
 			$name = 'Средняя форма';
 		}
+		if (in_array($string, ['form-first'])) {
+			$name = 'Форма 1 экран';
+		}
 		if (in_array($string, ['form-small'])) {
 			$name = 'Малая форма';
 		}
