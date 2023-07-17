@@ -23,7 +23,7 @@
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
 		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30"
-			step="5" required>
+			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
 	<label class="form__deadline req_star">
@@ -52,17 +52,17 @@
 		<input type="text" name="name" placeholder="Name">
 	</label>
 	<label class="form__email req_star">
-		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
-		<input type="email" name="email" placeholder="E-Mail" required>
-	</label>
-	<label class="form__phone">
 		<div class="form__desc">?
 			<div class="form__desc_t">
 				<p>Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
 					können.</p>
 			</div>
 		</div>
-		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
+		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
+		<input type="email" name="email" placeholder="E-Mail" required>
+	</label>
+	<label class="form__phone">
+		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<?php get_template_part('parts/select-calltime') ?>
 	<label class="form__promo">

@@ -23,7 +23,7 @@
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
 		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30"
-			step="5" required>
+			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
 	<label class="form__deadline req_star">
@@ -55,7 +55,7 @@
 		<div class="form__desc">?
 			<div class="form__desc_t"><p>Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen können.</p></div>
 		</div>
-		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
+		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<!-- <label class="form__service">
 		<div class="form__icon"><i class="fa-solid fa-medal"></i></div>

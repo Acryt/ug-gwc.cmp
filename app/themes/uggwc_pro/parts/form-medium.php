@@ -21,7 +21,7 @@
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
 		<input class="count-input" type="number" name="number" min="20" max="3999" placeholder="Seitenzahl" value="30"
-			step="5" required>
+			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
 	<label class="form__deadline req_star">
@@ -47,7 +47,7 @@
 		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
-		<input class="iti_phone" type="tel" name="phone" placeholder="Telefonnummer">
+		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
