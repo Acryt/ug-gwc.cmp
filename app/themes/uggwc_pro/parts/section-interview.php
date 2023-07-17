@@ -2,6 +2,7 @@
 	<div class="wrapper">
 		<div class="section__header">
 			<h2>Interview</h2>
+			<h2>Bachelorarbeit : Ghostwriter Erfahrungsbericht</h2>
 		</div>
 		<div class="section__content int_one">
 			<div class="interview__text content card inv-shadow">
@@ -34,7 +35,7 @@
 <section class="section interview">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2></h2>
+			<h2>Hausarbeit : Ghostwriter Erfahrungsbericht</h2>
 		</div>
 		<div class="section__content int_two">
 			<div class="interview__desc card shadow"><strong>Mikl</strong> hat eine dringende Hausarbeit bei GhostwriterCompany schreiben lassen. Er studiert VWL. Mikl hat in einem kurzen Interview über seine Erfahrung mit der Agentur gesprochen.</div>
@@ -67,7 +68,7 @@
 <section class="section interview">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2></h2>
+			<h2>Masterarbeit : Ghostwriter Erfahrungsbericht</h2>
 		</div>
 		<div class="section__content int_one">
 			<div class="interview__text content card inv-shadow">

@@ -32,6 +32,9 @@
 		<textarea name="Specialization" id="specialization" cols="100" rows="5"
 			placeholder="Fachbereiche & Interessensschwerpunkte"></textarea>
 	</label>
+	<label>
+		<input type="file" name="fileAuthor" placeholder="File">
+	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 		<a href="/unsere-garantien">Unsere Garantien</a>

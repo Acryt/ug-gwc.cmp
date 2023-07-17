@@ -12,7 +12,7 @@
 					<button class="pa-btn price_accrd__btn">Rechtswissenschaften</button>
 					<button class="pa-btn price_accrd__btn">Medizin und Naturwissenschaften</button>
 				</div>
-				<div class="pa-menu price_accrd__desc _active">
+				<div class="pa-menu price_accrd__desc _active" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit">
@@ -192,9 +192,9 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc">
+				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
-					<tbody>
+						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
 								<td class="price_accrd__plus">ab
@@ -372,9 +372,9 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc">
+				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
-					<tbody>
+						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
 								<td class="price_accrd__plus">ab
@@ -552,9 +552,9 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc">
+				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
-					<tbody>
+						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
 								<td class="price_accrd__plus">ab
@@ -732,9 +732,9 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc">
+				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
-					<tbody>
+						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
 								<td class="price_accrd__plus">ab

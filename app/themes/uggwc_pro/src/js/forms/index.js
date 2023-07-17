@@ -161,7 +161,7 @@ export function mailer() {
 				method: "POST",
 				headers: {
 					"Content-Type":
-						"application/x-www-form-urlencoded; charset=utf-8",
+						"multipart/form-data; charset=utf-8",
 				},
 				body: "action=sendForm&" + getQueryString(data),
 				credentials: "same-origin",
