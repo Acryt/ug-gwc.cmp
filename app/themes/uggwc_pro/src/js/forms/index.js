@@ -27,7 +27,6 @@ export function calendarInput() {
 			buttonClass: dateInput,
 			weekStart: 1,
 			minDate: new Date(),
-			// showOnFocus: true,
 			autohide: true,
 		});
 	}
