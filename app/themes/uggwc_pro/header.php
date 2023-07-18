@@ -5,7 +5,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script type="application/ld+json">
 	{
@@ -104,7 +104,7 @@
 					<a href="/bewertungen">Bewertungen</a>
 					<a href="/blog">Blog</a>
 					<a class="header__contact btn borda" href="/anfragen">
-						<span>Unverbindliche Anfragen</span>
+						<span>Unverbindlich Anfragen</span>
 					</a>
 				</div>
 			</nav>

@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
-		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30"
+		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
 			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>

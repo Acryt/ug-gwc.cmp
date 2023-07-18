@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
-		<input class="count-input" type="number" name="number" min="10" max="3999" placeholder="Seitenzahl" value="30"
+		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
 			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
@@ -35,8 +35,8 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" required>
-		<input type="text" name="deadline" class="dp_date s-online__on" placeholder="Datum der Prüfung">
+		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required>
+		<input type="text" name="deadline" class="dp_date s-online__on" placeholder="Datum der Prüfung" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
 	</label>
 	<label class="form__exam_time s-online__on">
 		<div class="form__desc">?
