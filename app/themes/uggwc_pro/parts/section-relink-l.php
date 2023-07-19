@@ -1,9 +1,17 @@
 <section id="relink" class="section relink">
 	<div class="wrapper">
-		<!-- <div class="section__header"> -->
-		<!-- <h2><?php echo carbon_get_theme_option('cf_relink_title') ?></h2> -->
-		<!-- <p><?php echo carbon_get_theme_option('cf_relink_subtitle') ?></p> -->
-		<!-- </div> -->
+		<div class="section__header">
+			<?php
+			if (carbon_get_post_meta(get_the_ID(), 'cf_relink_title')) { 
+				echo '<h2>' . carbon_get_post_meta(get_the_ID(), 'cf_relink_title') . '</h2>';
+			}
+			?>
+			<?php
+			if (carbon_get_post_meta(get_the_ID(), 'cf_relink_subtitle')) { 
+				echo '<p>' . carbon_get_post_meta(get_the_ID(), 'cf_relink_subtitle') . '</p>';
+			}
+			?>
+		</div>
 		<div class="section__content">
 			<a href="/bachelorarbeit">
 				<div class="relink__img">

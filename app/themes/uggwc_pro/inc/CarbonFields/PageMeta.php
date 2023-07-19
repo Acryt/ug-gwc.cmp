@@ -25,6 +25,7 @@ class PageMeta
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 			->add_tab(__('Price'), CommonMeta::priceMeta())
 			->add_tab(__('Rating bottom'), CommonMeta::rateMeta())
+			->add_tab(__('Relink'), CommonMeta::relinkMeta())
 		;
 	}
 	public function postMeta()

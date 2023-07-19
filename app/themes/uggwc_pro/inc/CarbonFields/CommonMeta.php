@@ -771,4 +771,11 @@ class CommonMeta
 				])
 		];
 	}
+	public static function relinkMeta(): array
+	{
+		return [
+			Field::make('text', 'cf_relink_title', __('Заголовок Перелинковки')),
+			Field::make('text', 'cf_relink_subtitle', __('Подаголовок Перелинковки')),
+		];
+	}
 }
