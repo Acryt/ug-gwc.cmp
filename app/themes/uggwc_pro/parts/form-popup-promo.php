@@ -31,8 +31,7 @@
 			<div class="form__desc_t"><p>Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage falls nötig haben.</p></div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" required>
-		<input type="text" name="deadline" class="dp_date s-online__on" placeholder="Datum der Prüfung">
+		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
 	<label class="form__exam_time s-online__on">
 		<div class="form__desc">?

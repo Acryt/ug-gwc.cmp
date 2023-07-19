@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
-		<input class="count-input" type="number" name="number" min="20" max="3999" placeholder="Seitenzahl" value="30"
+		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
 			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required>
+		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
 
 	<label class="form__email req_star">

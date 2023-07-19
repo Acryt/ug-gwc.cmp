@@ -28,6 +28,9 @@ export function calendarInput() {
 			weekStart: 1,
 			minDate: new Date(),
 			autohide: true,
+			// updateOnBlur: true,
+			enableOnReadonly: true,
+			format: 'dd.mm.yyyy',
 		});
 	}
 }
@@ -126,7 +129,10 @@ export function onlineForm() {
 			const selectedOption = select.options[select.selectedIndex];
 
 			// Проверяем, была ли выбрана определенная опция
-			if (selectedOption.value == "Online Prüfung" || selectedOption.value == "Online Klausur") {
+			if (
+				selectedOption.value == "Online Prüfung" ||
+				selectedOption.value == "Online Klausur"
+			) {
 				// Добавляем класс "_active" к форме, содержащей этот селект
 				const form = select.closest("form");
 				form.classList.add("_s-online");
@@ -137,53 +143,4 @@ export function onlineForm() {
 			}
 		});
 	});
-}
-export function mailer() {
-	// const popupBg = document.getElementById('popup-bg');
-	// const popupThanks = document.getElementById('thanks-popup');
-	// const popupThanksCall = document.getElementById('thanks-call-popup');
-	// const popupWraps = document.querySelectorAll('.popup-wrap');
-	const forms = document.forms;
-
-	if (!forms.length) {
-		return;
-	}
-
-	for (let form of forms) {
-		form.addEventListener("submit", function (e) {
-			e.preventDefault();
-			console.log("FormSend");
-			let data = new FormData(form);
-
-			// Класс для визуализации формы при отправке
-			form.classList.add("_sending");
-
-			fetch("/wordpress/wp-admin/admin-ajax.php", {
-				method: "POST",
-				headers: {
-					"Content-Type":
-						"multipart/form-data; charset=utf-8",
-				},
-				body: "action=sendForm&" + getQueryString(data),
-				credentials: "same-origin",
-			}).then((response) => {
-					form.reset();
-					form.classList.remove("_sending");
-					form.classList.add("_disabled");
-					setTimeout(() => {
-						form.classList.remove("_disabled");
-					}, 4000);
-				});
-		});
-	}
-}
-
-function getQueryString(formData) {
-	let pairs = [];
-
-	for (let [key, value] of formData.entries()) {
-		pairs.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
-	}
-
-	return pairs.join("&");
 }

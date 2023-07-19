@@ -29,7 +29,6 @@
 			<?php }} ?>
 			<?php 
 			if(carbon_get_post_meta(get_the_ID(), 'cf_accrd_global')){
-				// Пусто
 			} else {
 				$items = carbon_get_theme_option('cf_accrd');
 				foreach ($items as $key => $item) { 
@@ -51,7 +50,6 @@
 			<?php }} ?>
 			<?php 
 			if(carbon_get_post_meta(get_the_ID(), 'cf_accrd_global')){
-				// Пусто
 			} else {
 				foreach ($items as $key => $item) { 
 					if (($key % 2) == 0) { ?>

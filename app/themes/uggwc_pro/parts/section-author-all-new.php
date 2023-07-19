@@ -18,14 +18,11 @@
 </section>
 
 <script>
-// JavaScript код для контейнера карточек авторов
 const lmCont = document.querySelector("#aauthor-lm-c");
 const lmBtn = document.querySelector("#aauthor-lm-btn");
-// Массив с карточками авторов
 let authors = JSON.parse(<?php echo json_encode(file_get_contents(PATH . '/parts/authors.json')) ?>);
 console.log(authors);
 
-// Функция для создания HTML разметки карточки автора
 function createAuthorCard(author) {
 	let rating = author.cf_author_rating;
 	let ratingScore = rating / 10;
@@ -92,43 +89,33 @@ function getCompetitionValues(ids) {
 	return values;
 }
 
-// Функция для отображения карточек авторов на странице
 function renderAuthorCards(cards) {
 	const cardsHtml = Array.from(cards).map(createAuthorCard).join("");
 	lmCont.innerHTML = cardsHtml;
 }
 
-// Функция для обработки клика на контейнере карточек авторов
 function handleAuthorClick(event) {
-	// Проверяем, что клик был на кнопке "PREIS KALKULIEREN"
 	if (event.target.closest('.aut_btn').classList.contains('aut_btn')) {
-		// Получаем ближайшую карточку автора
 		let card = event.target.closest(".aut_btn");
-		// Делаем что-то с карточкой (например, открываем попап)
 		document.querySelector(card.dataset.slr).classList.add('_active');
 		document.querySelector('.popups').classList.add('_active');
 	}
 }
 
-// Обработчик клика на кнопку "Загрузить еще"
 lmBtn.addEventListener("click", function () {
-	// Добавляем 3 карточки авторов из массива к текущим карточкам
 	const startIndex = lmCont.children.length;
 	const endIndex = startIndex + 3;
 	const newCards = authors.slice(startIndex, endIndex);
 	const newCardsHtml = newCards.map(createAuthorCard).join("");
 
 	lmCont.insertAdjacentHTML("beforeend", newCardsHtml);
-	// Загрузить еще"
 	if (endIndex >= authors.length) {
 		lmBtn.style.display = "none";
 	}
 });
 
-// Отображаем первые 5 карточек авторов при загрузке страницы
 renderAuthorCards(authors.slice(0, 3));
 
-// Навешиваем обработчик клика на контейнер карточек авторов
 lmCont.addEventListener("click", handleAuthorClick);
 
 </script>

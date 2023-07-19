@@ -24,5 +24,3 @@ Template Name: Home
 get_template_part('parts/popups');
 get_footer();
 ?>
-
-<!-- таблица  -->

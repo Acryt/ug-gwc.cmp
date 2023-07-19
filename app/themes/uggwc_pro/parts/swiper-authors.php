@@ -11,7 +11,6 @@
 					<h6 class="author_swiper__name"><?php echo $item['cf_author_name'] ?></h6>
 					<div class="author_swiper__stars">
 					<?php
-						// логика звездочек
 						$rating = $item['cf_author_rating'];
 						echo '<p>' . $item['cf_author_rating']/10 . '</p>';
 						$solidStar = intdiv($rating, 10);

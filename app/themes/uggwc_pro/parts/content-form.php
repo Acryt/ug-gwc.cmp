@@ -23,7 +23,6 @@
 				// 1
 				echo $items[0]['cf_content_content'];
 				get_template_part('parts/section-promo');
-				// проверка на то какой темплейт
 				if (is_page_template( ['templates/leistungen.php'] )) {
 					get_template_part('parts/section-relink-d');
 				} else {

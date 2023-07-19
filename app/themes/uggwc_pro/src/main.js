@@ -25,8 +25,8 @@ import { niceSelectVanilla } from "./js/select";
 import { siteTimer } from "./js/siteTimer";
 import { promo } from "./js/promo";
 import { promoBlockTimer } from "./js/promoBlockTimer";
+import { mailer } from "./js/mailer";
 import {
-	mailer,
 	stepper,
 	calendarInput,
 	phoneInput,

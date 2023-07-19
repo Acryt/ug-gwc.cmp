@@ -9,7 +9,6 @@
 				<h6 class="review_swiper__name"><?php echo $item['cf_review_name'] ?></h6>
 				<div class="review_swiper__stars">
 				<?php
-					// логика звездочек
 					$rating = $item['cf_review_rating'];
 					$solidStar = intdiv($rating, 2);
 					$emptyStar = ((5 - $solidStar) - ($rating % 2));
@@ -26,7 +25,6 @@
 				</div>
 				<p class="review_swiper__text">
 				<?php
-					// укорачиваем текст
 					if(strlen($item['cf_review_text']) > 236) {
 						echo mb_substr($item['cf_review_text'], 0, 236) . '...';
 					} else {

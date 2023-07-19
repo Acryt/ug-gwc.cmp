@@ -35,8 +35,7 @@
 			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
-		<input type="text" name="deadline" class="dp_date s-online__off" placeholder="Liefertermin" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required>
-		<input type="text" name="deadline" class="dp_date s-online__on" placeholder="Datum der Prüfung" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
 	<label class="form__exam_time s-online__on">
 		<div class="form__desc">?
