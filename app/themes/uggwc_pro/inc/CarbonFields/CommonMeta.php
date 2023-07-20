@@ -64,10 +64,16 @@ class CommonMeta
 	public static function menuMeta(): array
 	{
 		return [
-			Field::make('textarea', 'cf_menu_leis', __('Меню Leistungen')),
-			Field::make('textarea', 'cf_menu_lect', __('Меню Lectorat')),
-			Field::make('textarea', 'cf_menu_disz', __('Меню "Disziplinen"')),
-			Field::make('textarea', 'cf_menu_beis', __('Меню "Beispiele"')),
+			Field::make('textarea', 'cf_menu_leis', __('Меню Leistungen'))
+			->set_width(50),
+			Field::make('textarea', 'cf_menu_lect', __('Меню Lectorat'))
+			->set_width(50),
+			Field::make('textarea', 'cf_menu_disz', __('Меню "Disziplinen"'))
+			->set_width(50),
+			Field::make('textarea', 'cf_menu_beis', __('Меню "Beispiele"'))
+			->set_width(50),
+			Field::make('textarea', 'cf_menu_footer_leis', __('Меню Leistungen для футера'))
+			->set_width(50),
 		];
 	}
 	public static function selectsMeta(): array

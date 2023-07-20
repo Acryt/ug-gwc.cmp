@@ -60,6 +60,12 @@
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/unicheck.svg" alt="">
 					</div>
 				</div>
+				<p class=""><strong>NÜTZLICHES</strong></p>
+				<a href="/wie-wir-arbeiten">So geht's!</a>
+				<a href="/uber-uns">Über uns</a>
+				<a href="/faq">FAQ</a>
+				<a href="/blog">Blog</a>
+				<a href="/kontakte">Kontakte</a>
 			</div>
 			<div class="footer__two">
 				<p><strong>ORGANISATIONSDATEN</strong></p>
@@ -67,21 +73,16 @@
 				<p>Eingetragen im Handelsregister des Amtsgerichts Berlin (Charlottenburg)</p>
 				<p>unter der Nummer HRB 195339 B, 10.04.2018</p>
 				<p>Steuernummer: 23/324/20008 UST-ID: DE317425223</p>
-				<p><strong>Links zu offiziellen Quellen:</strong></p>
-				<a target="_blank" class="footer__register" href="https://www.unternehmensregister.de/ureg/result.html;jsessionid=AEF9C46B79D711C5CE2AAD9207EA0410.web03-1"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
-			</div>
-			<div class="footer__three">
-				<p class=""><strong>NÜTZLICHES</strong></p>
-				<a href="/wie-wir-arbeiten">So geht's!</a>
-				<a href="/uber-uns">Über uns</a>
-				<a href="/faq">FAQ</a>
-				<a href="/blog">Blog</a>
-				<a href="/kontakte">Kontakte</a>
 				<p class=""><strong>WIR ARBEITEN IN:</strong></p>
 				<a href="/ghostwriter-berlin">Ghostwriter Berlin</a>
 				<a href="/ghostwriter-deutschland">Ghostwriter Deutschland</a>
 				<a href="/ghostwriter-osterreich">Ghostwriter Österreich</a>
 				<a class="btn fit borda" href="/impressum"><span>IMPRESSUM</span></a>
+
+			</div>
+			<div class="footer__three">
+				<p><strong>LEISTUNGEN</strong></p>
+				<?php echo carbon_get_theme_option('cf_menu_footer_leis') ?>
 			</div>
 			<div class="footer__four">
 				<p class=""><strong>KONTAKTDATEN</strong></p>
@@ -102,6 +103,8 @@
 					<a target="_blank" class="soc__icon" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i
 							class="fa-brands fa-instagram"></i></a>
 				</div>
+				<p><strong>Links zu offiziellen Quellen:</strong></p>
+				<a target="_blank" class="footer__register" href="https://www.unternehmensregister.de/ureg/result.html;jsessionid=AEF9C46B79D711C5CE2AAD9207EA0410.web03-1"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
 				<p class=""><strong>GARANTIEN</strong></p>
 				<div>
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/noai.svg" alt="">

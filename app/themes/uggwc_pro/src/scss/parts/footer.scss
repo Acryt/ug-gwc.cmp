@@ -13,25 +13,28 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		flex: 1 0 120px;
+		flex: 1 0 140px;
+		div + p {
+			margin-top: 4px;
+		}
 	}
 	&__two {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		flex: 1 0 290px;
+		flex: 1 0 280px;
 	}
 	&__three {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-		flex: 1 0 160px;
+		// gap: 8px;
+		flex: 1 0 220px;
 	}
 	&__four {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		flex: 1 0 160px;
+		flex: 1 0 280px;
 	}
 	&__five {
 		flex: 1 1 100%;
@@ -56,7 +59,7 @@
 		flex-wrap: wrap;
 		gap: 4px;
 		justify-content: space-between;
-		&>* {
+		& > * {
 			flex: 1 0 30%;
 		}
 	}
@@ -65,14 +68,14 @@
 		flex-wrap: wrap;
 		gap: 4px;
 		justify-content: space-between;
-		&>* {
+		& > * {
 			flex: 0 0 30%;
 		}
 	}
 	&__review {
 		display: flex;
 		gap: 4px;
-		&>* {
+		& > * {
 			flex: 1 0 45%;
 		}
 	}
@@ -85,7 +88,7 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 8px;
-		
+
 		p {
 			margin-right: auto;
 		}
@@ -99,7 +102,7 @@
 		position: relative;
 		display: flex;
 		border-radius: 8px;
-		transition: all .3s;
+		transition: all 0.3s;
 		font-weight: 600;
 		color: var(--taccent);
 		&::after {
@@ -109,7 +112,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all 0.5s;
 		}
 		&._active {
 			padding: 8px 12px;
@@ -136,13 +139,13 @@
 		border: 1px solid var(--box-shadow);
 		border-radius: 10px;
 		text-align: left;
-		transition: all .5s;
+		transition: all 0.5s;
 		@media (max-width: 920px) {
 			position: relative;
 			flex-direction: column;
 			top: unset;
 		}
-		&>* {
+		& > * {
 			flex: 1 1 25%;
 			border: 1px solid var(--box-shadow);
 			padding: 5px;
@@ -169,12 +172,12 @@
 	border: 2px solid var(--hoverb);
 	padding: 4px 18px;
 	background: none;
-	&>span {
+	& > span {
 		color: var(--hoverb);
 	}
 	&:hover {
 		background: var(--hoverb);
-		>* {
+		> * {
 			color: var(--bg);
 		}
 	}
