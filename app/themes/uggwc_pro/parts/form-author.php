@@ -1,4 +1,4 @@
-<form id="form_author" class="form_author form" accept-charset="utf-8">
+<form id="form_author" class="form_author form">
 	<label class="req_star">
 		<div class="form__icon"><i class="fa-solid fa-user-graduate"></i></div>
 		<input type="text" name="name" placeholder="Name" required>

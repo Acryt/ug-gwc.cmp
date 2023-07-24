@@ -10,28 +10,34 @@
 				"quantityPrices": [5, 10, 15]
 			},
 			{
+				"name": "Seminararbeit",
+				"perOneMin": 50,
+				"perOneMax": 73,
+				"quantityPrices": [5, 10, 15]
+			},
+			{
 				"name": "Bachelorarbeit",
 				"perOneMin": 51,
 				"perOneMax": 76,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [15, 22, 30]
 			},
 			{
 				"name": "Diplomarbeit",
 				"perOneMin": 51,
 				"perOneMax": 78,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [25, 35, 45]
 			},
 			{
 				"name": "Masterarbeit",
 				"perOneMin": 52,
 				"perOneMax": 80,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [30, 40, 50]
 			},
 			{
 				"name": "Doktorarbeit",
 				"perOneMin": 62,
 				"perOneMax": 90,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [20, 40, 60, 100]
 			},
 			{
 				"name": "Facharbeit",
@@ -110,12 +116,6 @@
 				"perOneMin": 50,
 				"perOneMax": "",
 				"quantityPrices": []
-			},
-			{
-				"name": "Seminararbeit",
-				"perOneMin": 50,
-				"perOneMax": 73,
-				"quantityPrices": [5, 10, 15]
 			},
 			{
 				"name": "Statistische Analyse",

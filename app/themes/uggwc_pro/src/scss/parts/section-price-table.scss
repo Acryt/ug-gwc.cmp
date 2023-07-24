@@ -1,0 +1,82 @@
+.price_table {
+	.section__content {
+		display: flex;
+		gap: 24px;
+		align-items: flex-start;
+	}
+	table + table {
+		margin-top: 24px;
+	}
+
+	.price_table__cont {
+		flex: 1 1 500px;
+	}
+	table {
+		tr:first-child {
+			th {
+				padding: 8px;
+				background: var(--hoverb);
+				color: var(--bg);
+				font-weight: 400;
+			}
+		}
+		tbody tr:first-child {
+			td {
+				color: var(--text);
+				font-size: 12px;
+				font-weight: 400;
+				padding: 4px 8px;
+			}
+		}
+		tbody tr:not(:first-child) {
+			td[rowspan] {
+				color: var(--thead);
+				&:first-child {
+					text-transform: uppercase;
+					font-weight: 500;
+				}
+			}
+			td:not([rowspan]) + td:not([rowspan]) {
+				color: var(--thead);
+			}
+			&:hover {
+				td:not([rowspan]) {
+					background: var(--border);
+				}
+			}
+		}
+		th,
+		td {
+			border: 1px solid var(--border);
+		}
+		tfoot {
+			td {
+				border: unset;
+				background: var(--bg);
+				color: var(--text);
+				text-align: start;
+			}
+			span {
+				color: var(--hover);
+				text-decoration: underline;
+			}
+		}
+	}
+	&__two {
+		position: sticky;
+		top: 68px;
+		flex: 1 1 100px;
+		th {
+			background: var(--alert);
+			color: var(--bg);
+		}
+	}
+
+	thead,
+	tfoot {
+		font-size: calc(12px + 2 * (100vw - 320px) / 960);
+		@media (min-width: 1280px) {
+			font-size: 14px;
+		}
+	}
+}
