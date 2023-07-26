@@ -11,12 +11,12 @@ Template Name: Home
 	<?php 
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-numbers');
-	get_template_part('parts/section-price-table');
 	get_template_part('parts/content-manager');
 	get_template_part('parts/section-noai');
 	get_template_part('parts/section-price');
 	get_template_part('parts/section-review-txt');
 	get_template_part('parts/section-form');
+	get_template_part('parts/section-rate');
 	get_template_part('parts/section-faq');
 	?>
 </main>

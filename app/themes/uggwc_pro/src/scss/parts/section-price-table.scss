@@ -3,6 +3,7 @@
 		display: flex;
 		gap: 24px;
 		align-items: flex-start;
+		flex-wrap: wrap;
 	}
 	table + table {
 		margin-top: 24px;
@@ -10,56 +11,71 @@
 
 	.price_table__cont {
 		flex: 1 1 500px;
-	}
-	table {
-		tr:first-child {
-			th {
-				padding: 8px;
-				background: var(--hoverb);
-				color: var(--bg);
-				font-weight: 400;
-			}
-		}
-		tbody tr:first-child {
-			td {
-				color: var(--text);
-				font-size: 12px;
-				font-weight: 400;
-				padding: 4px 8px;
-			}
-		}
-		tbody tr:not(:first-child) {
-			td[rowspan] {
-				color: var(--thead);
-				&:first-child {
-					text-transform: uppercase;
-					font-weight: 500;
+
+		table {
+			tr:first-child {
+				th {
+					padding: 8px;
+					background: var(--hoverb);
+					color: var(--bg);
+					font-weight: 400;
 				}
 			}
-			td:not([rowspan]) + td:not([rowspan]) {
-				color: var(--thead);
+			tbody tr:first-child {
+				td {
+					color: var(--text);
+					font-size: 12px;
+					font-weight: 400;
+					padding: 4px 8px;
+				}
+				td:nth-child(1) {
+					width: 180px;
+				}
+				td:nth-child(3) {
+					width: 220px;
+				}
+				td:nth-child(4) {
+					width: 220px;
+				}
 			}
-			&:hover {
-				td:not([rowspan]) {
-					background: var(--border);
+			tbody tr:not(:first-child) {
+				td[rowspan] {
+					color: var(--thead);
+					&:first-child {
+						text-transform: uppercase;
+						font-weight: 500;
+					}
+				}
+				td:not([rowspan]) + td:not([rowspan]) {
+					color: var(--thead);
+				}
+				&:hover {
+					td:not([rowspan]) {
+						background: var(--border);
+					}
+				}
+			}
+			th,
+			td {
+				border: 1px solid var(--border);
+				transition: all .3s;
+				cursor: pointer;
+			}
+			tfoot {
+				td {
+					border: unset;
+					background: var(--bg);
+					color: var(--text);
+					text-align: start;
+				}
+				span {
+					color: var(--hover);
+					text-decoration: underline;
 				}
 			}
 		}
-		th,
-		td {
-			border: 1px solid var(--border);
-		}
-		tfoot {
-			td {
-				border: unset;
-				background: var(--bg);
-				color: var(--text);
-				text-align: start;
-			}
-			span {
-				color: var(--hover);
-				text-decoration: underline;
-			}
+		.price_accrd__plus {
+			background: unset;
 		}
 	}
 	&__two {
@@ -69,6 +85,9 @@
 		th {
 			background: var(--alert);
 			color: var(--bg);
+		}
+		tr:nth-child(2n) {
+			background: var(--tabhead);
 		}
 	}
 

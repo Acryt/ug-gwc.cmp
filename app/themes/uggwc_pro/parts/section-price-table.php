@@ -6,7 +6,7 @@ $dataPrice = json_decode($jsonString, true);
 <section id="priceTable" class="section price_table">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2>Table</h2>
+			<h2>Ghostwriter Kosten</h2>
 		</div>
 		<div class="section__content">
 			<div class="price_table__cont">
@@ -32,7 +32,7 @@ $dataPrice = json_decode($jsonString, true);
 							</tr>
 							<?php foreach ($value['prices'] as $key => $price) {
 								if ($price['perOneMax'] > 0) { ?>
-									<tr>
+									<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>">
 										<td rowspan="<?php echo count($price['quantityPrices']); ?>">
 											<?php echo $price['name']; ?>
 										</td>
@@ -40,7 +40,7 @@ $dataPrice = json_decode($jsonString, true);
 										<td>
 											<?php echo $price['quantityPrices'][0]; ?> Seiten
 										</td>
-										<td>von
+										<td class="price_accrd__plus">von
 											<?php echo ($price['perOneMin'] * $price['quantityPrices'][0]); ?> € -> bis
 											<?php echo ($price['perOneMax'] * $price['quantityPrices'][0]); ?> €
 										</td>
@@ -57,11 +57,11 @@ $dataPrice = json_decode($jsonString, true);
 									</tr>
 									<?php foreach ($price['quantityPrices'] as $key => $quant) {
 										if ($key >= 1) { ?>
-											<tr>
+											<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>">
 												<td>
 													<?php echo $quant; ?> Seiten
 												</td>
-												<td>von
+												<td class="price_accrd__plus">von
 													<?php echo ($price['perOneMin'] * $quant); ?> € -> bis
 													<?php echo ($price['perOneMax'] * $quant) ?> €
 												</td>
@@ -103,6 +103,51 @@ $dataPrice = json_decode($jsonString, true);
 						<td>Literaturverzeichnis</td>
 						<td>kostenlos</td>
 						<td>60 bis 120 Euro<br>pro Seite</td>
+					</tr>
+					<tr>
+						<td>Abbildungsverzeichnis</td>
+						<td>kostenlos</td>
+						<td>60 bis 120 Euro<br>pro Seite</td>
+					</tr>
+					<tr>
+						<td>Inhaltsverzeichnis</td>
+						<td>kostenlos</td>
+						<td>60 bis 120 Euro<br>pro Seite</td>
+					</tr>
+					<tr>
+						<td>Professioneller<br>Korrekturleser-Check</td>
+						<td>kostenlos</td>
+						<td>Bei der Wahl<br>eines Premium-Service</td>
+					</tr>
+					<tr>
+						<td>Garantie für kostenlose Korrekturen der Arbeit während des gesamten Schreibprozesses und nach der Lieferung der Arbeit</td>
+						<td>Unbefristete Garantie</td>
+						<td>2 Wochen nach der Lieferung, weiter gegen Aufpreis</td>
+					</tr>
+					<tr>
+						<td>Qualitätskontrolleabteilung (Lektorat)</td>
+						<td><i class="fa-solid fa-check"></i></td>
+						<td><i class="fa-solid fa-xmark"></i></td>
+					</tr>
+					<tr>
+						<td>Kontakt mit dem Autor</td>
+						<td>kostenlos</td>
+						<td>kostenlos / 150 Euro pro Stunde</td>
+					</tr>
+					<tr>
+						<td>Plagiatsprüfung + Bericht</td>
+						<td>kostenlos</td>
+						<td>kostenlos / 10 bis 20 Euro</td>
+					</tr>
+					<tr>
+						<td>Anzahl der am Projekt beteiligten Manager</td>
+						<td>2</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>Kundentreueprogramm</td>
+						<td><i class="fa-solid fa-check"></i></td>
+						<td><i class="fa-solid fa-xmark"></i></td>
 					</tr>
 				</tbody>
 			</table>

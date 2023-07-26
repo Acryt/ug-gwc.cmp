@@ -12,6 +12,7 @@ Template Name: Review
 	get_template_part('parts/section-numbers');
 	get_template_part('parts/section-review-page');
 	get_template_part('parts/section-interview');
+	get_template_part('parts/section-rate');
 	get_template_part('parts/section-faq');
 	?>
 </main>
