@@ -58,7 +58,7 @@ export function sliders() {
 		centeredSlidesBounds: true,
 		autoplay: {
 			enabled: true,
-			delay: 1000,
+			delay: 5000,
 		},
 		speed: 500,
 	
@@ -87,7 +87,7 @@ export function sliders() {
 		centeredSlidesBounds: true,
 		autoplay: {
 			enabled: false,
-			delay: 1000,
+			delay: 5000,
 		},
 		speed: 500,
 	

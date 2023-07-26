@@ -1,5 +1,5 @@
 <?php
-$jsonString = file_get_contents(URI . '/data/priceList.json');
+$jsonString = file_get_contents(URI . '/data/pricelist.json');
 $dataPrice = json_decode($jsonString, true);
 ?>
 
