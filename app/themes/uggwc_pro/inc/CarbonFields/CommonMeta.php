@@ -166,7 +166,7 @@ class CommonMeta
 		return [
 			Field::make('text', 'cf_author_title', __('Заголовок')),
 			Field::make('text', 'cf_author_subtitle', __('Подзаголовок')),
-			Field::make('complex', 'cf_author', __('Массив авторов'))
+			Field::make('complex', 'cf_author', __('Массив авторов'))->set_visible_in_rest_api()
 				->set_layout('tabbed-horizontal')
 				->add_fields(
 					array(
