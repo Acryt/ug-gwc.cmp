@@ -154,28 +154,34 @@
 				"quantityPrices": [5, 10, 15]
 			},
 			{
+				"name": "Seminararbeit",
+				"perOneMin": 52,
+				"perOneMax": 76,
+				"quantityPrices": [5, 10, 15]
+			},
+			{
 				"name": "Bachelorarbeit",
 				"perOneMin": 53,
 				"perOneMax": 78,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [15, 22, 30]
 			},
 			{
 				"name": "Diplomarbeit",
 				"perOneMin": 53,
 				"perOneMax": 84,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [25, 35, 45]
 			},
 			{
 				"name": "Masterarbeit",
 				"perOneMin": 54,
 				"perOneMax": 86,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [30, 40, 50]
 			},
 			{
 				"name": "Doktorarbeit",
 				"perOneMin": 64,
 				"perOneMax": 92,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [20, 40, 60, 100]
 			},
 			{
 				"name": "Facharbeit",
@@ -256,12 +262,6 @@
 				"quantityPrices": []
 			},
 			{
-				"name": "Seminararbeit",
-				"perOneMin": 52,
-				"perOneMax": 76,
-				"quantityPrices": [5, 10, 15]
-			},
-			{
 				"name": "Statistische Analyse",
 				"perOneMin": 52,
 				"perOneMax": "",
@@ -298,28 +298,34 @@
 				"quantityPrices": [5, 10, 15]
 			},
 			{
+				"name": "Seminararbeit",
+				"perOneMin": 58,
+				"perOneMax": 81,
+				"quantityPrices": [5, 10, 15]
+			},
+			{
 				"name": "Bachelorarbeit",
 				"perOneMin": 58,
 				"perOneMax": 83,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [15, 22, 30]
 			},
 			{
 				"name": "Diplomarbeit",
 				"perOneMin": 59,
 				"perOneMax": 87,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [25, 35, 45]
 			},
 			{
 				"name": "Masterarbeit",
 				"perOneMin": 60,
 				"perOneMax": 89,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [30, 40, 50]
 			},
 			{
 				"name": "Doktorarbeit",
 				"perOneMin": 67,
 				"perOneMax": 95,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [20, 40, 60, 100]
 			},
 			{
 				"name": "Facharbeit",
@@ -400,12 +406,6 @@
 				"quantityPrices": []
 			},
 			{
-				"name": "Seminararbeit",
-				"perOneMin": 58,
-				"perOneMax": 81,
-				"quantityPrices": [5, 10, 15]
-			},
-			{
 				"name": "Statistische Analyse",
 				"perOneMin": 52,
 				"perOneMax": "",
@@ -442,28 +442,34 @@
 				"quantityPrices": [5, 10, 15]
 			},
 			{
+				"name": "Seminararbeit",
+				"perOneMin": 55,
+				"perOneMax": 78,
+				"quantityPrices": [5, 10, 15]
+			},
+			{
 				"name": "Bachelorarbeit",
 				"perOneMin": 56,
 				"perOneMax": 79,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [15, 22, 30]
 			},
 			{
 				"name": "Diplomarbeit",
 				"perOneMin": 56,
 				"perOneMax": 81,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [25, 35, 45]
 			},
 			{
 				"name": "Masterarbeit",
 				"perOneMin": 59,
 				"perOneMax": 87,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [30, 40, 50]
 			},
 			{
 				"name": "Doktorarbeit",
 				"perOneMin": 66,
 				"perOneMax": 93,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [20, 40, 60, 100]
 			},
 			{
 				"name": "Facharbeit",
@@ -542,12 +548,6 @@
 				"perOneMin": 56,
 				"perOneMax": "",
 				"quantityPrices": []
-			},
-			{
-				"name": "Seminararbeit",
-				"perOneMin": 55,
-				"perOneMax": 78,
-				"quantityPrices": [5, 10, 15]
 			},
 			{
 				"name": "Statistische Analyse",
@@ -586,28 +586,34 @@
 				"quantityPrices": [5, 10, 15]
 			},
 			{
+				"name": "Seminararbeit",
+				"perOneMin": 51,
+				"perOneMax": 76,
+				"quantityPrices": [5, 10, 15]
+			},
+			{
 				"name": "Bachelorarbeit",
 				"perOneMin": 53,
 				"perOneMax": 80,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [15, 22, 30]
 			},
 			{
 				"name": "Diplomarbeit",
 				"perOneMin": 55,
 				"perOneMax": 82,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [25, 35, 45]
 			},
 			{
 				"name": "Masterarbeit",
 				"perOneMin": 55,
 				"perOneMax": 85,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [30, 40, 50]
 			},
 			{
 				"name": "Doktorarbeit",
 				"perOneMin": 64,
 				"perOneMax": 93,
-				"quantityPrices": [5, 10, 15]
+				"quantityPrices": [20, 40, 60, 100]
 			},
 			{
 				"name": "Facharbeit",
@@ -686,12 +692,6 @@
 				"perOneMin": 51,
 				"perOneMax": "",
 				"quantityPrices": []
-			},
-			{
-				"name": "Seminararbeit",
-				"perOneMin": 51,
-				"perOneMax": 76,
-				"quantityPrices": [5, 10, 15]
 			},
 			{
 				"name": "Statistische Analyse",

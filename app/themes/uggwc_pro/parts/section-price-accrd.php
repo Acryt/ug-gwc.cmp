@@ -17,145 +17,145 @@
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit">
 								<td>Hausarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bachelorarbeit">
 								<td>Bachelorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Masterarbeit">
 								<td>Masterarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Diplomarbeit">
 								<td>Diplomarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Doktorarbeit">
 								<td>Doktorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>62 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Facharbeit">
 								<td>Facharbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Online Klausur">
 								<td>Online Klausur</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Abschlussarbeit">
 								<td>Abschlussarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bewerbung">
 								<td>Bewerbung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Biografie">
 								<td>Biografie</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Businessplan">
 								<td>Businessplan</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Danksagung">
 								<td>Danksagung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>40 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Essay">
 								<td>Essay</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Exposé">
 								<td>Exposé</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Forschungsartikel">
 								<td>Forschungsartikel</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Motivationsschreiben">
 								<td>Motivationsschreiben</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>150 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Präsentationen">
 								<td>Präsentationen</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>25 €</span> PRO DIA
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Projektarbeit">
 								<td>Projektarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Referat">
 								<td>Referat</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Seminararbeit">
 								<td>Seminararbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Analyse">
 								<td>Statistische Analyse</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Auswertung">
 								<td>Statistische Auswertung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>120 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Studienarbeit">
 								<td>Studienarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Zusammenfassung">
 								<td>Zusammenfassung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>
@@ -197,145 +197,145 @@
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bachelorarbeit"> 
 								<td>Bachelorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Masterarbeit"> 
 								<td>Masterarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>54 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Diplomarbeit"> 
 								<td>Diplomarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Doktorarbeit"> 
 								<td>Doktorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>64 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Facharbeit"> 
 								<td>Facharbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Online Klausur"> 
 								<td>Online Klausur</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bewerbung"> 
 								<td>Bewerbung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Biografie"> 
 								<td>Biografie</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Businessplan"> 
 								<td>Businessplan</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Danksagung"> 
 								<td>Danksagung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>40 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Essay"> 
 								<td>Essay</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Exposé"> 
 								<td>Exposé</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Forschungsartikel"> 
 								<td>Forschungsartikel</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Motivationsschreiben"> 
 								<td>Motivationsschreiben</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>150 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Präsentationen"> 
 								<td>Präsentationen</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>25 €</span> PRO DIA
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Projektarbeit"> 
 								<td>Projektarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Referat"> 
 								<td>Referat</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Seminararbeit"> 
 								<td>Seminararbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Analyse"> 
 								<td>Statistische Analyse</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Auswertung"> 
 								<td>Statistische Auswertung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>120 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Studienarbeit"> 
 								<td>Studienarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Zusammenfassung"> 
 								<td>Zusammenfassung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>
@@ -377,145 +377,145 @@
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bachelorarbeit"> 
 								<td>Bachelorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Masterarbeit"> 
 								<td>Masterarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Diplomarbeit"> 
 								<td>Diplomarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Doktorarbeit"> 
 								<td>Doktorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>67 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Facharbeit"> 
 								<td>Facharbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Online Klausur"> 
 								<td>Online Klausur</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bewerbung"> 
 								<td>Bewerbung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Biografie"> 
 								<td>Biografie</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Businessplan"> 
 								<td>Businessplan</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Danksagung"> 
 								<td>Danksagung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>40 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Essay"> 
 								<td>Essay</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Exposé"> 
 								<td>Exposé</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Forschungsartikel"> 
 								<td>Forschungsartikel</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Motivationsschreiben"> 
 								<td>Motivationsschreiben</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>150 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Präsentationen"> 
 								<td>Präsentationen</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>25 €</span> PRO DIA
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Projektarbeit"> 
 								<td>Projektarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Referat"> 
 								<td>Referat</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>57 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Seminararbeit"> 
 								<td>Seminararbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Analyse"> 
 								<td>Statistische Analyse</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Auswertung"> 
 								<td>Statistische Auswertung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>120 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Studienarbeit"> 
 								<td>Studienarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Zusammenfassung"> 
 								<td>Zusammenfassung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>
@@ -557,145 +557,145 @@
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bachelorarbeit"> 
 								<td>Bachelorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Masterarbeit"> 
 								<td>Masterarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Diplomarbeit"> 
 								<td>Diplomarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Doktorarbeit"> 
 								<td>Doktorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>66 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Facharbeit"> 
 								<td>Facharbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Online Klausur"> 
 								<td>Online Klausur</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bewerbung"> 
 								<td>Bewerbung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Biografie"> 
 								<td>Biografie</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Businessplan"> 
 								<td>Businessplan</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Danksagung"> 
 								<td>Danksagung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>40 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Essay"> 
 								<td>Essay</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Exposé"> 
 								<td>Exposé</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Forschungsartikel"> 
 								<td>Forschungsartikel</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Motivationsschreiben"> 
 								<td>Motivationsschreiben</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>150 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Präsentationen"> 
 								<td>Präsentationen</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>25 €</span> PRO DIA
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Projektarbeit"> 
 								<td>Projektarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Referat"> 
 								<td>Referat</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Seminararbeit"> 
 								<td>Seminararbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Analyse"> 
 								<td>Statistische Analyse</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Auswertung"> 
 								<td>Statistische Auswertung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>120 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Studienarbeit"> 
 								<td>Studienarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Zusammenfassung"> 
 								<td>Zusammenfassung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>
@@ -737,145 +737,145 @@
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
 								<td>Hausarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bachelorarbeit"> 
 								<td>Bachelorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Masterarbeit"> 
 								<td>Masterarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Diplomarbeit"> 
 								<td>Diplomarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Doktorarbeit"> 
 								<td>Doktorarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>64 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Facharbeit"> 
 								<td>Facharbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Online Klausur"> 
 								<td>Online Klausur</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>54 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Bewerbung"> 
 								<td>Bewerbung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Biografie"> 
 								<td>Biografie</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>49 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Businessplan"> 
 								<td>Businessplan</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>59 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Danksagung"> 
 								<td>Danksagung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>40 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Essay"> 
 								<td>Essay</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>54 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Exposé"> 
 								<td>Exposé</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Forschungsartikel"> 
 								<td>Forschungsartikel</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>56 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Motivationsschreiben"> 
 								<td>Motivationsschreiben</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>150 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Präsentationen"> 
 								<td>Präsentationen</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>25 €</span> PRO DIA
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Projektarbeit"> 
 								<td>Projektarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Referat"> 
 								<td>Referat</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>54 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Seminararbeit"> 
 								<td>Seminararbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>51 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Analyse"> 
 								<td>Statistische Analyse</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Statistische Auswertung"> 
 								<td>Statistische Auswertung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>120 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Studienarbeit"> 
 								<td>Studienarbeit</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Zusammenfassung"> 
 								<td>Zusammenfassung</td>
-								<td class="price_accrd__plus">ab
+								<td class="price__plus">ab
 									<span>60 €</span> PRO SEITE
 								</td>
 							</tr>

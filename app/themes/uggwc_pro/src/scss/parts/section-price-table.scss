@@ -10,9 +10,22 @@
 	}
 
 	.price_table__cont {
-		flex: 1 1 500px;
+		flex: 1 1 300px;
+
+		td[colspan] {
+			display: none;
+			color: var(--thead);
+			font-weight: 500;
+			padding: 12px 8px;
+			text-transform: uppercase;
+		}
 
 		table {
+			.fa-arrow-right-long {
+				color: var(--hoverb);
+				font-size: 12px;
+			}
+			
 			tr:first-child {
 				th {
 					padding: 8px;
@@ -29,16 +42,21 @@
 					padding: 4px 8px;
 				}
 				td:nth-child(1) {
-					width: 180px;
+					width: 20%;
+				}
+				td:nth-child(2) {
+					width: 16%;
 				}
 				td:nth-child(3) {
-					width: 220px;
+					width: 32%;
 				}
 				td:nth-child(4) {
-					width: 220px;
+					width: 32%;
 				}
 			}
 			tbody tr:not(:first-child) {
+				cursor: pointer;
+
 				td[rowspan] {
 					color: var(--thead);
 					&:first-child {
@@ -59,7 +77,6 @@
 			td {
 				border: 1px solid var(--border);
 				transition: all .3s;
-				cursor: pointer;
 			}
 			tfoot {
 				td {
@@ -74,11 +91,30 @@
 				}
 			}
 		}
-		.price_accrd__plus {
+		.price__plus {
 			background: unset;
+		}
+		@media (max-width: 639px) {
+			td[rowspan] {
+				display: none;
+			}
+			td:nth-child(4) {
+				display: none;
+			}
+			td[colspan] {
+				display: table-cell;
+			}
 		}
 	}
 	&__two {
+		.fa-circle-check {
+			color: var(--hoverb);
+			font-size: 20px;
+		}
+		.fa-circle-xmark {
+			color: var(--alert);
+			font-size: 20px;
+		}
 		position: sticky;
 		top: 68px;
 		flex: 1 1 100px;
@@ -89,6 +125,15 @@
 		tr:nth-child(2n) {
 			background: var(--tabhead);
 		}
+		td {
+			padding: 4px;
+		}
+		tr:first-child td {
+			font-size: 12px;
+		 }
+		tr:not(:first-child) td {
+			color: var(--thead);
+		 }
 	}
 
 	thead,

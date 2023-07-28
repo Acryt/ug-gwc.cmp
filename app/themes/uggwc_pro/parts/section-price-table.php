@@ -24,7 +24,7 @@ $dataPrice = json_decode($jsonString, true);
 						</thead>
 						<tbody>
 							<tr>
-								<td>Arbeitstyp</td>
+								<td rowspan>Arbeitstyp</td>
 								<td>Seitenzahl</td>
 								<td>Preis, von .. bis €, <br>
 									je nach dem gewählten Autor*</td>
@@ -32,27 +32,35 @@ $dataPrice = json_decode($jsonString, true);
 							</tr>
 							<?php foreach ($value['prices'] as $key => $price) {
 								if ($price['perOneMax'] > 0) { ?>
+									<tr>
+										<td colspan="2" class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>"><?php echo $price['name'] ?></td>
+									</tr>
 									<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>">
 										<td rowspan="<?php echo count($price['quantityPrices']); ?>">
 											<?php echo $price['name']; ?>
 										</td>
-
 										<td>
 											<?php echo $price['quantityPrices'][0]; ?> Seiten
 										</td>
-										<td class="price_accrd__plus">von
-											<?php echo ($price['perOneMin'] * $price['quantityPrices'][0]); ?> € -> bis
-											<?php echo ($price['perOneMax'] * $price['quantityPrices'][0]); ?> €
+										<td class="price__plus">von
+											<span>
+												<?php echo ($price['perOneMin'] * $price['quantityPrices'][0]); ?> €
+											</span>  <i class="fa-solid fa-arrow-right-long"></i>  bis
+											<span>
+												<?php echo ($price['perOneMax'] * $price['quantityPrices'][0]); ?> €
+											</span>
 										</td>
 										<?php if ($key == 0) { ?>
-											<td rowspan="6">Aktuelle Sonderangebote hier + Angebot
+											<td rowspan="7">Aktuelle Sonderangebote hier + Angebot
 												des Monats</td>
 										<?php } elseif ($key == 1) {
 										} elseif ($key == 2) { ?>
-											<td rowspan="13">Rabatt 5 % bei vollständiger Zahlung
-												auf einmal, zudem wird eine Teillieferung der Arbeit nach dem festgelegten Zeitplan vereinbart. <br><br>
+											<td rowspan="16">Rabatt 5 % bei vollständiger Zahlung
+												auf einmal, zudem wird eine Teillieferung der Arbeit nach dem festgelegten Zeitplan vereinbart.
+												<br><br>
 												Für Arbeiten ab 30 Seiten gibt es auch ein Sonderangebot, stellen Sie eine unverbindliche
-												Anfrage und unsere Manager werden Sie gerne beraten.</td>
+												Anfrage und unsere Manager werden Sie gerne beraten.
+											</td>
 										<?php } ?>
 									</tr>
 									<?php foreach ($price['quantityPrices'] as $key => $quant) {
@@ -61,9 +69,11 @@ $dataPrice = json_decode($jsonString, true);
 												<td>
 													<?php echo $quant; ?> Seiten
 												</td>
-												<td class="price_accrd__plus">von
-													<?php echo ($price['perOneMin'] * $quant); ?> € -> bis
-													<?php echo ($price['perOneMax'] * $quant) ?> €
+												<td class="price__plus">von <span>
+														<?php echo ($price['perOneMin'] * $quant); ?> €
+													</span>  <i class="fa-solid fa-arrow-right-long"></i>  bis <span>
+														<?php echo ($price['perOneMax'] * $quant) ?> €
+													</span>
 												</td>
 											</tr>
 										<?php }
@@ -120,14 +130,15 @@ $dataPrice = json_decode($jsonString, true);
 						<td>Bei der Wahl<br>eines Premium-Service</td>
 					</tr>
 					<tr>
-						<td>Garantie für kostenlose Korrekturen der Arbeit während des gesamten Schreibprozesses und nach der Lieferung der Arbeit</td>
+						<td>Garantie für kostenlose Korrekturen der Arbeit während des gesamten Schreibprozesses und nach der
+							Lieferung der Arbeit</td>
 						<td>Unbefristete Garantie</td>
 						<td>2 Wochen nach der Lieferung, weiter gegen Aufpreis</td>
 					</tr>
 					<tr>
 						<td>Qualitätskontrolleabteilung (Lektorat)</td>
-						<td><i class="fa-solid fa-check"></i></td>
-						<td><i class="fa-solid fa-xmark"></i></td>
+						<td><i class="fa-solid fa-circle-check"></i></td>
+						<td><i class="fa-solid fa-circle-xmark"></i></td>
 					</tr>
 					<tr>
 						<td>Kontakt mit dem Autor</td>
@@ -145,9 +156,9 @@ $dataPrice = json_decode($jsonString, true);
 						<td>1</td>
 					</tr>
 					<tr>
-						<td>Kundentreueprogramm</td>
-						<td><i class="fa-solid fa-check"></i></td>
-						<td><i class="fa-solid fa-xmark"></i></td>
+						<td><span>Kundentreueprogramm</span></td>
+						<td><i class="fa-solid fa-circle-check"></i></td>
+						<td><i class="fa-solid fa-circle-xmark"></i></td>
 					</tr>
 				</tbody>
 			</table>
