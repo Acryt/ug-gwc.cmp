@@ -122,21 +122,6 @@ img {
 	height: 100%;
 }
 // Списки
-ul li {
-	list-style-type: none;
-}
-ol li {
-	padding-left: 4px;
-	list-style-position: outside;
-}
-li {
-	position: relative;
-	display: list-item;
-	width: 100%;
-	padding-left: 16px;
-	font-weight: 500;
-	margin-bottom: 15px;
-}
 .content ul li::before,
 .faq ul li::before,
 .about ul li::before {

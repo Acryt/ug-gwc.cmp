@@ -21,21 +21,26 @@ use Carbon_Fields\Field;
 
 class CommonMeta
 {
-	public static function generalMeta(): array
+	public static function generalMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_phone', __('Телефон'))
 				->help_text('Указывается глобально для всего сайта')
-				->set_width(50),
+				->set_width(30),
 			Field::make('text', 'cf_whatsapp', __('WhatsApp'))
 				->help_text('Указывается глобально для всего сайта')
-				->set_width(50),
+				->set_width(30),
 			Field::make('text', 'cf_mail', __('Почта'))
 				->help_text('Указывается глобально для всего сайта')
-				->set_width(50),
-			Field::make('text', 'cf_address', __('Адрес')),
-			Field::make('text', 'cf_work', __('Режим работы')),
-			Field::make('text', 'cf_copy', __('Копирайт')),
+				->set_width(30),
+			Field::make('text', 'cf_address', __('Адрес'))
+				->set_width(30),
+			Field::make('text', 'cf_work', __('Режим работы'))
+				->set_width(30),
+			Field::make('text', 'cf_copy', __('Копирайт'))
+				->set_width(30),
+			Field::make('text', 'cf_register', __('Ссылка на регистратор'))
+				->set_width(30),
 			Field::make('separator', 'cf_links', __('Социальные сети')),
 			Field::make('text', 'cf_facebook', __('Facebook'))
 				->set_width(30),
@@ -51,7 +56,7 @@ class CommonMeta
 			Field::make("footer_scripts", "cf_footer_script", __('Footer Meta')),
 		];
 	}
-	public static function businesMeta(): array
+	public static function businesMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_busines_title', __('Заголовок')),
@@ -61,22 +66,22 @@ class CommonMeta
 				->set_width(50),
 		];
 	}
-	public static function menuMeta(): array
+	public static function menuMeta (): array
 	{
 		return [
 			Field::make('textarea', 'cf_menu_leis', __('Меню Leistungen'))
-			->set_width(50),
+				->set_width(50),
 			Field::make('textarea', 'cf_menu_lect', __('Меню Lectorat'))
-			->set_width(50),
+				->set_width(50),
 			Field::make('textarea', 'cf_menu_disz', __('Меню "Disziplinen"'))
-			->set_width(50),
+				->set_width(50),
 			Field::make('textarea', 'cf_menu_beis', __('Меню "Beispiele"'))
-			->set_width(50),
+				->set_width(50),
 			Field::make('textarea', 'cf_menu_footer_leis', __('Меню Leistungen для футера'))
-			->set_width(50),
+				->set_width(50),
 		];
 	}
-	public static function selectsMeta(): array
+	public static function selectsMeta (): array
 	{
 		return [
 			Field::make('complex', 'cf_select_competition', __('Список всех компетенции авторов'))
@@ -89,7 +94,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function managerMeta(): array
+	public static function managerMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_manager_title', __('Заголовок')),
@@ -124,7 +129,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function clientMeta(): array
+	public static function clientMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_client_title', __('Заголовок')),
@@ -161,7 +166,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function authorMeta(): array
+	public static function authorMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_author_title', __('Заголовок')),
@@ -214,7 +219,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function devMeta(): array
+	public static function devMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_dev_title', __('Заголовок')),
@@ -251,7 +256,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function recruitMeta(): array
+	public static function recruitMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_recruit_title', __('Заголовок')),
@@ -288,7 +293,7 @@ class CommonMeta
 				),
 		];
 	}
-	public static function bossMeta(): array
+	public static function bossMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_boss_title', __('Заголовок')),
@@ -325,13 +330,13 @@ class CommonMeta
 				),
 		];
 	}
-	public static function switchMeta(): array
+	public static function switchMeta (): array
 	{
 		return [
 			Field::make('checkbox', 'cf_faq_global', __('Скрыть глобальный FAQ на странице')),
 		];
 	}
-	public static function metaMeta(): array
+	public static function metaMeta (): array
 	{
 		return [
 			Field::make('separator', 'cf_meta', __('SotwareApplication Meta (только для коммерческих)')),
@@ -343,7 +348,7 @@ class CommonMeta
 				->set_width(20),
 		];
 	}
-	public static function accrdMeta(): array
+	public static function accrdMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_accrd_title', __('Заголовок')),
@@ -360,7 +365,7 @@ class CommonMeta
 				)
 		];
 	}
-	public static function faqMeta(): array
+	public static function faqMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_faq_title', __('Заголовок')),
@@ -377,7 +382,7 @@ class CommonMeta
 				)
 		];
 	}
-	public static function aboutMeta(): array
+	public static function aboutMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_about_title', __('Заголовок')),
@@ -390,7 +395,7 @@ class CommonMeta
 			Field::make('text', 'cf_about_spec', __('Должность')),
 		];
 	}
-	public static function careMeta(): array
+	public static function careMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_care_title', __('Заголовок (забота о клиентах)')),
@@ -399,7 +404,7 @@ class CommonMeta
 			Field::make('text', 'cf_care_desc', __('Текст под картинкой')),
 		];
 	}
-	public static function whyMeta(): array
+	public static function whyMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_why_title', __('Заголовок')),
@@ -438,7 +443,7 @@ class CommonMeta
 				->set_width(70),
 		];
 	}
-	public static function whyAuthorMeta(): array
+	public static function whyAuthorMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_why_author_title', __('Заголовок')),
@@ -477,7 +482,7 @@ class CommonMeta
 				->set_width(70),
 		];
 	}
-	public static function howMeta(): array
+	public static function howMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_how_title', __('Заголовок')),
@@ -500,7 +505,7 @@ class CommonMeta
 				->set_width(70),
 		];
 	}
-	public static function snippetMeta(): array
+	public static function snippetMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_snippet_title', __('Заголовок')),
@@ -508,7 +513,7 @@ class CommonMeta
 			Field::make('text', 'cf_snippet_text', __('Текст')),
 		];
 	}
-	public static function guarantMeta(): array
+	public static function guarantMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_guarant_title', __('Заголовок')),
@@ -551,14 +556,14 @@ class CommonMeta
 				->set_width(40),
 		];
 	}
-	public static function firstMeta(): array
+	public static function firstMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_first_title', __('Заголовок раздела')),
 			Field::make('textarea', 'cf_first_desc', __('Описание раздела')),
 		];
 	}
-	public static function contentMeta(): array
+	public static function contentMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_content_title', __('Заголовок Контента')),
@@ -573,7 +578,7 @@ class CommonMeta
 				)
 		];
 	}
-	public static function reviewMeta(): array
+	public static function reviewMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_review_title', __('Заголовок для малого блока')),
@@ -626,14 +631,14 @@ class CommonMeta
 				->set_help_text('до 5'),
 		];
 	}
-	public static function rateMeta(): array
+	public static function rateMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_rating_title', __('Заголовок отзывов')),
 			Field::make('textarea', 'cf_rating_sub', __('Подзаголовок отзывов')),
 		];
 	}
-	public static function seoMeta(): array
+	public static function seoMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_seo_title', __('Заголовок')),
@@ -650,7 +655,7 @@ class CommonMeta
 				)
 		];
 	}
-	public static function designMeta(): array
+	public static function designMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_design_title', __('Заголовок раздела')),
@@ -665,14 +670,14 @@ class CommonMeta
 				->set_width(70),
 		];
 	}
-	public static function quotaMeta(): array
+	public static function quotaMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_quota_hltext', __('Выделеный текст в блоке')),
 			Field::make('text', 'cf_quota_text', __('Обычный текст в блоке')),
 		];
 	}
-	public static function servicesMeta(): array
+	public static function servicesMeta (): array
 	{
 		return [
 			Field::make('image', 'cf_services_image', __('Картинка'))
@@ -689,7 +694,7 @@ class CommonMeta
 				])
 		];
 	}
-	public static function projectsMeta(): array
+	public static function projectsMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_projects_title', __('Заголовок')),
@@ -710,7 +715,7 @@ class CommonMeta
 				])
 		];
 	}
-	public static function workMeta(): array
+	public static function workMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_work_title', __('Заголовок')),
@@ -729,7 +734,7 @@ class CommonMeta
 				])
 		];
 	}
-	public static function priceMeta(): array
+	public static function priceMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_price_title', __('Заголовок прайса')),
@@ -749,14 +754,14 @@ class CommonMeta
 				])
 		];
 	}
-	public static function blogMeta(): array
+	public static function blogMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_blog_title', __('Заголовок')),
 			Field::make('text', 'cf_blog_desc', __('Текст')),
 		];
 	}
-	public static function promoMeta(): array
+	public static function promoMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_promo_title', __('Заголовок Предложений')),
@@ -777,7 +782,7 @@ class CommonMeta
 				])
 		];
 	}
-	public static function relinkMeta(): array
+	public static function relinkMeta (): array
 	{
 		return [
 			Field::make('text', 'cf_relink_title', __('Заголовок Перелинковки')),

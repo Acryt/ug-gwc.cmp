@@ -12,7 +12,7 @@
 				<br>
 				<hr>
 				<p><strong>Links zu offiziellen Quellen:</strong></p>
-				<a target="_blank" class="busines__register" href="https://www.unternehmensregister.de/ureg/result.html;jsessionid=AEF9C46B79D711C5CE2AAD9207EA0410.web03-1"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
+				<a target="_blank" class="busines__register" href="<?php echo carbon_get_theme_option('cf_register') ?>"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
 			</div>
 		</div>
 	</div>

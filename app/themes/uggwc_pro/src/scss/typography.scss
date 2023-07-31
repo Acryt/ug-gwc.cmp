@@ -48,17 +48,35 @@ div + h6 {
 p {
 	margin: 0;
 }
+li {
+	position: relative;
+	display: list-item;
+	width: 100%;
+	padding-left: 16px;
+	font-weight: 400;
+	margin-bottom: 15px;
+	&::marker {
+		color: var(--hover);
+		font-weight: 600;
+	}
+}
 ul {
 	padding-left: 10px;
+
+	li {
+		list-style-type: none;
+		color: var(--text);
+		margin: 0px;
+		margin-bottom: 0.5em;
+	}
 }
 ol {
 	padding-left: 24px;
-}
-ul li {
-	color: var(--text);
-	font-weight: 400;
-	margin: 0px;
-	margin-bottom: 0.5em;
+
+	li {
+		padding-left: 4px;
+		list-style-position: outside;
+	}
 }
 * + p {
 	margin-top: 0.5em;
@@ -67,39 +85,36 @@ ul li {
 div + p {
 	margin: 0;
 }
-ul li::marker {
-}
-
 h1 {
-	font-size: calc(32px + (22 * ((100vw - 320px) / (1280 - 320))));
+	font-size: calc(28px + (12 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
-		font-size: 54px;
+		font-size: 40px;
 	}
 }
 
 h2 {
-	font-size: calc(28px + (14 * ((100vw - 320px) / (1280 - 320))));
+	font-size: calc(24px + (10 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
-		font-size: 42px;
+		font-size: 34px;
 	}
 }
 
 h3 {
-	font-size: calc(24px + (8 * ((100vw - 320px) / (1280 - 320))));
+	font-size: calc(22px + (8 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
-		font-size: 32px;
+		font-size: 30px;
 	}
 }
 
 h4 {
-	font-size: calc(22px + (2 * ((100vw - 320px) / (1280 - 320))));
+	font-size: calc(20px + (6 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
-		font-size: 24px;
+		font-size: 26px;
 	}
 }
 
 h5 {
-	font-size: calc(20px + (2 * ((100vw - 320px) / (1280 - 320))));
+	font-size: calc(18px + (4 * ((100vw - 320px) / (1280 - 320))));
 	@media (min-width: 1280px) {
 		font-size: 22px;
 	}

@@ -96,9 +96,6 @@ class Helpers
 		if (in_array($string, ['form-care'])) {
 			$name = 'Форма заботы';
 		}
-		if (in_array($string, ['form-author'])) {
-			$name = 'Форма авторов';
-		}
 		if (in_array($string, ['form-popup'])) {
 			$name = 'Попап форма';
 		}
