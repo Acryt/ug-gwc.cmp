@@ -162,32 +162,32 @@
 						</tbody>
 					</table>
 					<ul class="price_accrd__pros">
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 							Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							des
 							anonymen direkten Kontakts mit dem Autor</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							sowohl der ganzen Arbeit als auch einzelner Teile</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Unbefristete
 							Garantie für die Korrektur der Arbeit*</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Plagiatsprüfung
 							- KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Rechtzeitige
 							Teillieferungen der Arbeit</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							der
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
@@ -342,32 +342,32 @@
 						</tbody>
 					</table>
 					<ul class="price_accrd__pros">
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 							Autoren aus allen Bereichen der Wirtschaftswissenschaften</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							des
 							anonymen direkten Kontakts mit dem Autor</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							sowohl der ganzen Arbeit als auch einzelner Teile</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Unbefristete
 							Garantie für die Korrektur der Arbeit*</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Plagiatsprüfung
 							- KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Rechtzeitige
 							Teillieferungen der Arbeit</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							der
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
@@ -522,32 +522,32 @@
 						</tbody>
 					</table>
 					<ul class="price_accrd__pros">
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 							Arbeit mit speziellen Programmen und Software</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							des
 							anonymen direkten Kontakts mit dem Autor</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							sowohl der ganzen Arbeit als auch einzelner Teile</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Unbefristete
 							Garantie für die Korrektur der Arbeit*</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Plagiatsprüfung
 							- KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Rechtzeitige
 							Teillieferungen der Arbeit</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							der
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
@@ -702,32 +702,32 @@
 						</tbody>
 					</table>
 					<ul class="price_accrd__pros">
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 							Unsere Autoren arbeiten in allen Rechtsbereichen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							des
 							anonymen direkten Kontakts mit dem Autor</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							sowohl der ganzen Arbeit als auch einzelner Teile</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Unbefristete
 							Garantie für die Korrektur der Arbeit*</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Plagiatsprüfung
 							- KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Rechtzeitige
 							Teillieferungen der Arbeit</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							der
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
@@ -882,32 +882,32 @@
 						</tbody>
 					</table>
 					<ul class="price_accrd__pros">
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
 							Autoren mit verschiedenen Abschlüssen aus allen medizinischen Bereichen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							Ihrer
 							Arbeit nach Ihren Wünschen und Anforderungen</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							des
 							anonymen direkten Kontakts mit dem Autor</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Verfassen
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
 							sowohl der ganzen Arbeit als auch einzelner Teile</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Unbefristete
 							Garantie für die Korrektur der Arbeit*</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Plagiatsprüfung
 							- KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit von einem unabhängigen Korrekturleser</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Überprüfung
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
 							Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg"
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 								alt="">Rechtzeitige
 							Teillieferungen der Arbeit</li>
-						<li><img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/icons/check.svg" alt="">Möglichkeit
+						<li><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit
 							der
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
