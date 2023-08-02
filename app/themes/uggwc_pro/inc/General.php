@@ -26,6 +26,7 @@ class General
 		// remove_action('parse_request', 'rest_api_loaded');
 
 		add_action('wp_enqueue_scripts', [$this, 'connectedStylesAndScripts']);
+		add_action('admin_enqueue_scripts', [$this, 'connectedAdminScripts']);
 		add_action('do_robotstxt', [$this, 'addedRobotsTxt']);
 		add_action('init', [$this, 'settingsWordpress']);
 
@@ -115,6 +116,11 @@ class General
 		wp_enqueue_script('main', URI . '/assets/main.bundle.js', [], $scriptV, true);
 		wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $styleV);
 		wp_enqueue_style('second', URI . '/style.css', [], $styleV);
+	}
+	public function connectedAdminScripts ()
+	{
+		$sV = filemtime(get_template_directory() . '/inc/admin.js');
+		wp_enqueue_script('admin', URI . '/inc/admin.js', [], $sV, true);
 	}
 
 	public function addedRobotsTxt ()
