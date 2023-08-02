@@ -1,21 +1,23 @@
 .promoblock {
 	.section__content {
 		display: flex;
-		gap: 0;
+		gap: 12px;
 		flex-wrap: wrap;
 		justify-content: start;
 		align-items: stretch;
 		border-radius: 12px;
 		overflow: hidden;
 		background: linear-gradient(-85deg, white, var(--box-shadow));
+		padding: 8px;
 	}
 	&__image {
 		display: flex;
 		width: 290px;
+		border-radius: 8px;
+		overflow: hidden;
 	}
 	&__text {
 		flex: 1 0 290px;
-		margin: 8px 12px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;

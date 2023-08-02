@@ -1,7 +1,4 @@
 const carbonFieldsImagesFix = (() => {
-	const getImage = (imageUrl) => {
-		return `<img src='${imageUrl}' class='cbImagePlug'/>`;
-	};
 	const insertImageBlocks = (imageBox) => {
 		const inputImageBox = imageBox.querySelector("input");
 		const imageUrl = inputImageBox?.value;

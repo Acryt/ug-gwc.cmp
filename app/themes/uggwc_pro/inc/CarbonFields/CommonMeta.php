@@ -764,8 +764,16 @@ class CommonMeta
 	public static function promoMeta (): array
 	{
 		return [
-			Field::make('text', 'cf_promo_title', __('Заголовок Предложений')),
-			Field::make('text', 'cf_promo_subtitle', __('Подаголовок Предложений')),
+			Field::make('text', 'cf_promo_temporary_title', __('Заголовок акции для красной строки')),
+			Field::make('image', 'cf_promo_temporary_img', __('Картинка временной акции'))
+				->set_type('image')
+				->set_value_type('url')
+				->set_width(10),
+			Field::make('text', 'cf_promo_temporary', __('Временная акция'))
+				->set_width(75),
+			Field::make('text', 'cf_promo_date', __('Дата окончания временной акции'))
+				->help_text('Пример: 2023-07-31')
+				->set_width(10),
 			Field::make('complex', 'cf_promo', __('Список'))
 				->set_layout('tabbed-horizontal')
 				->add_fields([
