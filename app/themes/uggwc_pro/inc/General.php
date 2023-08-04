@@ -29,6 +29,7 @@ class General
 		add_action('admin_enqueue_scripts', [$this, 'connectedAdminScripts']);
 		add_action('do_robotstxt', [$this, 'addedRobotsTxt']);
 		add_action('init', [$this, 'settingsWordpress']);
+		add_action('rest_api_init', [$this, 'register_json_file_route']);
 
 		add_filter('wpseo_locale', [$this, 'locale']);
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
@@ -42,6 +43,29 @@ class General
 			return '...';
 		});
 	}
+
+	public function register_json_file_route ()
+	{
+		function get_json_file ()
+		{
+			// Путь к JSON файлу
+			$file_path = URI . '/data/pricelist.json';
+	
+			// Получаем содержимое файла
+			$file_content = file_get_contents($file_path);
+	
+			// Парсим JSON и возвращаем его
+			$json_data = json_decode($file_content, true);
+	
+			return $json_data;
+		}
+		register_rest_route('my-data/v2', '/pricelist', array(
+			'methods' => 'GET',
+			'callback' => 'get_json_file',
+		));
+	}
+
+
 	public function change_name ($name)
 	{
 		return 'UG-GWC.de';

@@ -774,6 +774,8 @@ class CommonMeta
 			Field::make('text', 'cf_promo_date', __('Дата окончания временной акции'))
 				->help_text('Пример: 2023-07-31')
 				->set_width(10),
+			Field::make('text', 'cf_promo_title', __('Заголовок Предложений')),
+			Field::make('text', 'cf_promo_subtitle', __('Подаголовок Предложений')),
 			Field::make('complex', 'cf_promo', __('Список'))
 				->set_layout('tabbed-horizontal')
 				->add_fields([

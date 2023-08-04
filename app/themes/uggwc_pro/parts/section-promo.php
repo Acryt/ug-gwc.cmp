@@ -39,7 +39,6 @@ if ($items) {
 								<?php echo $item['hashtag']; ?>
 							</p>
 						</div>
-
 					<?php } ?>
 				</fieldset>
 			</div>
