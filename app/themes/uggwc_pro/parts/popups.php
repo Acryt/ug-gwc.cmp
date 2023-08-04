@@ -30,10 +30,10 @@
 			<div></div>
 			<div></div>
 		</div>
-		<h4>Erhalten Sie <span>30 Euro</span> als Geschenk für Ihre erste Bestellung bis 31. Juli!!!</h4>
+		<h4><?php echo carbon_get_theme_option('cf_promo_temporary'); ?></h4>
 		<div class="popup__bigpromo__sub">
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/promo/plane.svg">
+				<img src="<?php echo carbon_get_theme_option('cf_promo_temporary_img'); ?>">
 			</div>
 			<div class="popup__bigpromo__text">
 				<h6>Die Geschenke sind limitiert, holen Sie sich Ihr Geschenk jetzt! ⏱</h6>

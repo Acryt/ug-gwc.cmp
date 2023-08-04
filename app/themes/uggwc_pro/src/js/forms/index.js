@@ -94,6 +94,7 @@ export function stepper() {
 
 	formCounts.forEach((item) => {
 		item.onclick = (e) => {
+			e.preventDefault();
 			const target = e.target;
 
 			if (target.classList.contains("counter-btn")) {
@@ -102,8 +103,8 @@ export function stepper() {
 				let max = input.getAttribute("max");
 				let step = input.getAttribute("step");
 				let val = input.getAttribute("value");
-
 				let id = target.getAttribute("data-id");
+
 				let calcStep = id === "increment" ? step * 1 : step * -1;
 				let newValue = parseInt(val) + calcStep;
 

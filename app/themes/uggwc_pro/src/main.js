@@ -27,6 +27,7 @@ import { promo } from "./js/promo";
 import { promoBlockTimer } from "./js/promoBlockTimer";
 import { mailer } from "./js/mailer";
 import { stepper, calendarInput, phoneInput, onlineForm } from "./js/forms";
+import { calc } from "./js/calc";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	phoneInput();
 	promoBlockTimer();
 	onlineForm();
+	calc();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

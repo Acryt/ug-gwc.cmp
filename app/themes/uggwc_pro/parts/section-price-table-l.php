@@ -18,7 +18,7 @@ function filterPricesByName ($name, $data)
 }
 
 $pageArr = filterPricesByName(get_post_field('post_name', get_post()), $dataPrice);
-if ($pageArr[0]['prices'][0]['perOneMax']) { ?>
+if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
 
 	<section id="priceTable" class="section price_table_l">
 		<div class="wrapper">
@@ -36,7 +36,7 @@ if ($pageArr[0]['prices'][0]['perOneMax']) { ?>
 								if ($k == 0) { ?>
 									<tr>
 										<td colspan="2">
-											<?php echo $v['name']; ?>
+											<?php echo $v['category']; ?>
 											<div class="form__desc">?
 												<div class="form__desc_t">
 													<p>
@@ -75,10 +75,12 @@ if ($pageArr[0]['prices'][0]['perOneMax']) { ?>
 								<?php } else { ?>
 									<tr>
 										<td colspan="2">
-											<?php echo $v['name']; ?>
+											<?php echo $v['category']; ?>
 											<div class="form__desc">?
 												<div class="form__desc_t">
-													<p><?php echo $v['description']; ?></p>
+													<p>
+														<?php echo $v['description']; ?>
+													</p>
 												</div>
 											</div>
 										</td>
@@ -102,7 +104,7 @@ if ($pageArr[0]['prices'][0]['perOneMax']) { ?>
 										</tr>
 									<?php } ?>
 								<?php } ?>
-						<?php } ?>
+							<?php } ?>
 						</tbody>
 					</table>
 				</div>

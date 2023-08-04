@@ -1,5 +1,5 @@
 <?php
-$jsonString = file_get_contents(URI . '/data/discs.json');
+$jsonString = file_get_contents(URI . '/data/spec.json');
 $data = json_decode($jsonString, true);
 ?>
 <div class="form_select form__specialization req_star">

@@ -1,4 +1,4 @@
-<form id="form_first" class="form_medium form" accept-charset="utf-8">
+<form id="form_first" class="form_medium form js-calc" accept-charset="utf-8">
 	<h4 class="form__heading">Anruf Bestellen</h4>
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
@@ -49,6 +49,7 @@
 	<label class="form__phone">
 		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
+	<div class="form__price js-price">ab <span>0,00 €</span></div>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 		<a href="/unsere-garantien">Unsere Garantien</a>

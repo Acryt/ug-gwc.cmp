@@ -1,11 +1,12 @@
 const fs = require("fs");
 
-fs.readFile("diszs.json", "utf8", function (err, data) {
+fs.readFile("spec.json", "utf8", function (err, data) {
 	if (err) {
 		console.error(err);
 		return;
 	}
-	let json = JSON.parse(data).sort();
+	let datas = JSON.parse(data);
+	let json = datas.sort();
 	let toJson = JSON.stringify(json);
 	console.log(toJson);
 });
