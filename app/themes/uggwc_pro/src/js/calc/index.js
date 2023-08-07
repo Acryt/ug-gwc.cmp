@@ -1,26 +1,9 @@
-let pricelistData = null;
-
-function fetchPricelist() {
-  if (pricelistData) {
-    return Promise.resolve(pricelistData);
-  }
-
-  return fetch(window.location.origin + '/wp-json/my-data/v2/pricelist') // Используем относительный путь
-    .then((response) => response.json())
-    .then((data) => {
-      pricelistData = data;
-      return data;
-    })
-    .catch((error) => {
-      console.error("Failed to fetch pricelist:", error);
-      return null;
-    });
-}
+import { fetchData } from "../fetchData";
 
 export function calc() {
   const calcElements = document.querySelectorAll('.js-calc');
 
-  fetchPricelist()
+  fetchData()
     .then((data) => {
       if (!data) {
         return;
