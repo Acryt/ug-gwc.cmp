@@ -1,4 +1,4 @@
-<form id="form_big" class="form_big form" accept-charset="utf-8">
+<form id="form_big" class="form_big form js-calc" accept-charset="utf-8">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme req_star">
@@ -67,6 +67,7 @@
 	<label class="form__promo">
 		<input type="text" name="promo" placeholder="Promocode">
 	</label>
+	<div class="form__price js-price">ab <span>49,00 €</span></div>
 	<div class="form__text">
 		<p class="s"><span>*</span> Pflichtfeld</p>
 		<p class="s">Vor dem Abschicken des Formulars prüfen Sie bitte die Korrektheit Ihrer E-Mail-Adresse</p>

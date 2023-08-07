@@ -49,7 +49,7 @@
 	<label class="form__phone">
 		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
-	<div class="form__price js-price">ab <span>0,00 €</span></div>
+	<div class="form__price js-price">ab <span>49,00 €</span></div>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 		<a href="/unsere-garantien">Unsere Garantien</a>
