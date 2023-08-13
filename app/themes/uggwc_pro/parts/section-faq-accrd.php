@@ -1,5 +1,5 @@
 <?php if (carbon_get_theme_option('cf_faq_accrd')) { ?>
-	<section id="faq" class="section afaq accrd-js">
+	<section id="afaq" class="section afaq accrd-js">
 		<div class="wrapper">
 			<div class="section__header">
 				<?php
