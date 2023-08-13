@@ -5,12 +5,12 @@ use Carbon_Fields\Field;
 
 class GeneralMeta
 {
-	public function __construct()
+	public function __construct ()
 	{
 		add_action('carbon_fields_register_fields', [$this, 'generalOptionsMeta']);
 	}
 
-	public function generalOptionsMeta()
+	public function generalOptionsMeta ()
 	{
 		Container::make('theme_options', __('Options'))
 			->add_tab(__('Global Options'), CommonMeta::generalMeta())
@@ -36,6 +36,9 @@ class GeneralMeta
 		;
 		Container::make('theme_options', __('Authors'))
 			->add_tab(__('Author'), CommonMeta::authorMeta())
+		;
+		Container::make('theme_options', __('FAQ'))
+			->add_tab(__('FAQ'), CommonMeta::faqAccrdMeta())
 		;
 	}
 }

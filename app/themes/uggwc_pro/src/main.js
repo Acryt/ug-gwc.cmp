@@ -19,7 +19,7 @@ import { mobileMenu } from "./js/mobileMenu";
 import { stickyHeader } from "./js/scroll";
 import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
-import { priceAccrd } from "./js/priceAccrd";
+import { accrd } from "./js/priceAccrd";
 import { closePopups, openPopup, cookieClose } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer } from "./js/siteTimer";
@@ -28,6 +28,7 @@ import { promoBlockTimer } from "./js/promoBlockTimer";
 import { mailer } from "./js/mailer";
 import { stepper, calendarInput, phoneInput, onlineForm } from "./js/forms";
 import { calc } from "./js/calc";
+import { toc } from "./js/toc";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	stepper();
 	calendarInput();
 	dropdown();
-	priceAccrd();
+	accrd();
 	closePopups();
 	openPopup();
 	cookieClose();
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	promoBlockTimer();
 	onlineForm();
 	calc();
+	toc();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

@@ -13,6 +13,10 @@ h6 {
 	margin: 0px;
 	font-weight: 600;
 	line-height: 130%;
+
+	scroll-margin-top: 64px;
+	scroll-snap-align: start;
+	scroll-snap-stop: normal;
 }
 * + h2 {
 	margin-top: 0.8em;
@@ -194,7 +198,7 @@ p span {
 a {
 	text-decoration: none;
 	color: var(--thead);
-	transition: all .3s;
+	transition: all 0.3s;
 	&:hover {
 		color: var(--hover);
 	}

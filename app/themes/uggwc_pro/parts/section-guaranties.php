@@ -1,4 +1,4 @@
-<section class="section guaranties">
+<section id="guaranties" class="section guaranties">
 	<div class="wrapper container">
 		<div class="section__header">
 			<h2><?php echo carbon_get_theme_option('cf_guarant_title') ?></h2>

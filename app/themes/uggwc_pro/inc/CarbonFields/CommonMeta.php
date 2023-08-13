@@ -172,7 +172,7 @@ class CommonMeta
 			Field::make('text', 'cf_author_title', __('Заголовок')),
 			Field::make('text', 'cf_author_subtitle', __('Подзаголовок')),
 			Field::make('complex', 'cf_author', __('Массив авторов'))->set_visible_in_rest_api()
-				->set_layout('tabbed-horizontal')
+				->set_layout('tabbed-vertical')
 				->add_fields(
 					array(
 						Field::make('image', 'cf_author_photo', __('Фото'))
@@ -216,7 +216,14 @@ class CommonMeta
 							->set_options(Helpers::get_competition_options()),
 						Field::make('rich_text', 'cf_author_desc', __('Описание')),
 					)
-				),
+				)
+				->set_header_template('
+				<% if (cf_author_name) { %>
+					<%- cf_author_name %>
+			  	<% } else { %>
+					<%- "Name" %>
+				<% } %>
+				'),
 		];
 	}
 	public static function devMeta (): array
@@ -380,6 +387,38 @@ class CommonMeta
 							->set_width(40),
 					)
 				)
+		];
+	}
+	public static function faqAccrdMeta (): array
+	{
+		return [
+			Field::make('text', 'cf_afaq_title', __('Заголовок')),
+			Field::make('text', 'cf_afaq_subtitle', __('Подзаголовок')),
+			Field::make('complex', 'cf_afaq_accrd', __('Вкладки FAQ'))
+				->set_layout('tabbed-vertical')
+				->set_width(10)
+				->add_fields(
+					array(
+						Field::make('textarea', 'cf_afaq_t', __('Название вкладки')),
+						Field::make('complex', 'cf_afaq_qa', __('Вопрос - Ответ'))
+							->set_layout('tabbed-horizontal')
+							->add_fields(
+								array(
+									Field::make('textarea', 'cf_afaq_quest', __('Вопрос'))
+										->set_width(20),
+									Field::make('rich_text', 'cf_afaq_answer', __('Ответ'))
+										->set_width(70),
+								)
+							)
+					)
+				)
+				->set_header_template('
+				<% if (cf_afaq_t) { %>
+					<%- cf_afaq_t %>
+			  	<% } else { %>
+					<%- "Name" %>
+				<% } %>
+				')
 		];
 	}
 	public static function aboutMeta (): array

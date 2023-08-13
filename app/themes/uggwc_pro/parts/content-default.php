@@ -11,7 +11,7 @@
 		}
 		?>
 		<div class="section__content">
-			<div class="content__container"><?php echo get_the_content(); ?></div>
+			<div class="content__container"><?php the_content(); ?></div>
 		</div>
 	</div>
 </section>

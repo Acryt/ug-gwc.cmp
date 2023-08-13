@@ -103,8 +103,8 @@
 					</div>
 					<a href="/bewertungen">Bewertungen</a>
 					<a href="/blog">Blog</a>
-					<div class="popup__menu" href="#priceAccrd">Ghostwriter Preise pro Seite</div>
-					<a class="popup__menu" href="#priceAccrd">Ghostwriter Kosten</a>
+					<div class="popup__menu toc_list">
+					</div>
 					<a class="header__contact btn borda" href="/anfragen">
 						<span>Unverbindlich Anfragen</span>
 					</a>

@@ -1,4 +1,4 @@
-<section id="priceAccrd" class="section price_accrd">
+<section id="priceAccrd" class="section price_accrd accrd-js">
 	<div class="wrapper">
 		<div class="section__header">
 			<h2>Ghostwriter Preise pro Seite</h2>
@@ -6,13 +6,13 @@
 		<div class="section__content">
 			<div class="price_accrd__cont shadow">
 				<div class="price_accrd__nav">
-					<button class="pa-btn price_accrd__btn _active">Geisteswissenschaften</button>
-					<button class="pa-btn price_accrd__btn">Wirtschaftswissenschaften</button>
-					<button class="pa-btn price_accrd__btn">Ingenieurwissenschaften</button>
-					<button class="pa-btn price_accrd__btn">Rechtswissenschaften</button>
-					<button class="pa-btn price_accrd__btn">Medizin und Naturwissenschaften</button>
+					<button class="accrd-b price_accrd__btn _active">Geisteswissenschaften</button>
+					<button class="accrd-b price_accrd__btn">Wirtschaftswissenschaften</button>
+					<button class="accrd-b price_accrd__btn">Ingenieurwissenschaften</button>
+					<button class="accrd-b price_accrd__btn">Rechtswissenschaften</button>
+					<button class="accrd-b price_accrd__btn">Medizin und Naturwissenschaften</button>
 				</div>
-				<div class="pa-menu price_accrd__desc _active" itemscope itemtype="https://schema.org/Table">
+				<div class="accrd-m price_accrd__desc _active" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit">
@@ -192,7 +192,7 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
+				<div class="accrd-m price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
@@ -372,7 +372,7 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
+				<div class="accrd-m price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
@@ -552,7 +552,7 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
+				<div class="accrd-m price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
@@ -732,7 +732,7 @@
 							Teilzahlung ohne Zusatzkosten</li>
 					</ul>
 				</div>
-				<div class="pa-menu price_accrd__desc" itemscope itemtype="https://schema.org/Table">
+				<div class="accrd-m price_accrd__desc" itemscope itemtype="https://schema.org/Table">
 					<table class="price_accrd__table">
 						<tbody>
 							<tr class="js_btn" data-slr=".popup__bigform" data-type="Hausarbeit"> 
