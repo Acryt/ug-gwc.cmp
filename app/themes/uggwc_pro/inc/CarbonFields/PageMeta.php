@@ -14,7 +14,7 @@ class PageMeta
 	public function pageMeta()
 	{
 		Container::make('post_meta', 'cf_page', 'Page Options')
-			->set_context('carbon_fields_after_title')
+			// ->set_context('carbon_fields_after_title')
 			->where('post_type', '=', 'page')
 			->add_tab(__('Switches'), CommonMeta::switchMeta())
 			->add_tab(__('Meta'), CommonMeta::metaMeta())
@@ -31,7 +31,7 @@ class PageMeta
 	public function postMeta()
 	{
 		Container::make('post_meta', 'cf_post', 'Post Options')
-			->set_context('carbon_fields_after_title')
+			// ->set_context('carbon_fields_after_title')
 			->where('post_type', '=', 'post')
 			->add_tab(__('Switches'), CommonMeta::switchMeta())
 			->add_tab(__('First Screen'), CommonMeta::firstMeta())
