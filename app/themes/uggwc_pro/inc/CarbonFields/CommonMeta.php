@@ -375,7 +375,7 @@ class CommonMeta
 	public static function faqMeta (): array
 	{
 		return [
-			Field::make('text', 'cf_faq_title', __('Заголовок')),
+			Field::make('text', 'cf_faq_title', __('Кастомный заголовок блока')),
 			Field::make('text', 'cf_faq_t', __('Название вкладки')),
 			Field::make('complex', 'cf_faq', __('FAQ'))
 				->set_layout('tabbed-horizontal')
@@ -393,7 +393,6 @@ class CommonMeta
 	{
 		return [
 			Field::make('text', 'cf_afaq_title', __('Заголовок')),
-			Field::make('text', 'cf_afaq_subtitle', __('Подзаголовок')),
 			Field::make('complex', 'cf_afaq_accrd', __('Вкладки FAQ'))
 				->set_layout('tabbed-vertical')
 				->set_width(10)

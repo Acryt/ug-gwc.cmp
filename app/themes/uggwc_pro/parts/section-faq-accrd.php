@@ -3,11 +3,10 @@
 		<div class="wrapper">
 			<div class="section__header">
 				<?php
-				if (carbon_get_post_meta(get_the_ID(), 'cf_afaq_title')) {
-					echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_afaq_title') . '</h2>';
-				}
-				if (carbon_get_post_meta(get_the_ID(), 'cf_afaq_subtitle')) {
-					echo '<p class="section__subheading">' . carbon_get_post_meta(get_the_ID(), 'cf_afaq_subtitle') . '</p>';
+				if (carbon_get_post_meta(get_the_ID(), 'cf_faq_title')) {
+					echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_faq_title') . '</h2>';
+				} else {
+					echo '<h2 class="section__heading">' . carbon_get_theme_option('cf_afaq_title') . '</h2>';
 				} ?>
 			</div>
 			<div class="section__content">
