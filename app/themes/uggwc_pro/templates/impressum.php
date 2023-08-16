@@ -22,7 +22,7 @@ get_header();
 	get_template_part('parts/section-care');
 	get_template_part('parts/section-busines');
 	get_template_part('parts/section-form');
-	get_template_part('parts/section-faq');
+	get_template_part('parts/section-faq-accrd');
 	?>
 </main>
 

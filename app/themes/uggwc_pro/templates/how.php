@@ -14,7 +14,7 @@ the_post();
 	// get_template_part('parts/section-crumbs');
 	get_template_part('parts/section-how');
 	get_template_part('parts/section-form');
-	get_template_part('parts/section-faq');
+	get_template_part('parts/section-faq-accrd');
 	?>
 </main>
 

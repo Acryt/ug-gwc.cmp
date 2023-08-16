@@ -17,7 +17,7 @@ Template Name: Home
 	get_template_part('parts/section-review-txt');
 	get_template_part('parts/section-form');
 	get_template_part('parts/section-rate');
-	get_template_part('parts/section-faq');
+	get_template_part('parts/section-faq-accrd');
 	?>
 </main>
 

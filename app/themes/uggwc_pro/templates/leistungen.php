@@ -17,7 +17,7 @@ Template Name: Leistungen
 	get_template_part('parts/section-price-table-l');
 	get_template_part('parts/section-form');
 	get_template_part('parts/section-rate');
-	get_template_part('parts/section-faq');
+	get_template_part('parts/section-faq-accrd');
 	?>
 </main>
 <?php get_template_part('parts/meta-software-app'); ?>
