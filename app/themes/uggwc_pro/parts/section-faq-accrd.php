@@ -14,6 +14,8 @@
 				<div class="afaq__accordion card shadow">
 					<div class="afaq__left">
 						<?php
+						$cfaq = carbon_get_post_meta(get_the_ID(), 'cf_faq');
+						$cfaq_t = carbon_get_post_meta(get_the_ID(), 'cf_faq_t');
 						$faq = carbon_get_theme_option('cf_afaq_accrd');
 						foreach ($faq as $k => $v) {
 							if ($k == 0) { ?>
@@ -25,7 +27,13 @@
 									<?php echo $v['cf_afaq_t'] ?>
 								</div>
 							<?php }
-						} ?>
+						}
+						if ($cfaq_t) { ?>
+							<div class="afaq__btn accrd-b">
+								<?php echo $cfaq_t ?>
+							</div>
+						<?php }
+						?>
 					</div>
 					<div class="afaq__right inv-shadow">
 						<?php foreach ($faq as $k => $v) { ?>
@@ -65,6 +73,18 @@
 								</div>
 							<?php }
 						} ?>
+						<div class="afaq__section accrd-m">
+							<h4 class="card">
+								<?php echo $cfaq_t ?>
+							</h4>
+							<?php foreach ($cfaq as $ck => $cv) { ?>
+								<div class="afaq__item shadow">
+									<input class="afaq__check" type="checkbox" name="afaq" id="cfaq<?php echo $ck; ?>">
+									<label class="afaq__question" for="cfaq<?php echo $ck; ?>"><?php echo $cv['cf_faq_quest'] ?></label>
+									<div class="afaq__answer"><?php echo $cv['cf_faq_answer'] ?></div>
+								</div>
+							<?php } ?>
+						</div>
 					</div>
 				</div>
 			</div>
