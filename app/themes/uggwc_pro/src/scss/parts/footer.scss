@@ -2,6 +2,11 @@
 	// padding-bottom: 32px;
 	box-shadow: 0 2px 16px var(--shadow-header);
 	width: 100%;
+	margin-top: responsive(32, 64);
+	@media (min-width: 1280px) {
+		margin-top: 64px;
+	}
+	padding: 12px 0;
 
 	&__content {
 		display: flex;

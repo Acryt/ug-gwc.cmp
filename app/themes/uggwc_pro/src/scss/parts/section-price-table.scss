@@ -138,9 +138,6 @@
 
 	thead,
 	tfoot {
-		font-size: calc(12px + 2 * (100vw - 320px) / 960);
-		@media (min-width: 1280px) {
-			font-size: 14px;
-		}
+		@include responsiveFont(12, 14);
 	}
 }

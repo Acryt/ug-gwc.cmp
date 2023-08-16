@@ -26,7 +26,7 @@ body {
 	flex-direction: column;
 	width: 100%;
 	& > :first-child {
-		margin-top: 160px;
+		margin-top: 128px;
 		margin-bottom: 0;
 		@media (max-width: 920px) {
 			margin-top: 90px;
@@ -37,7 +37,7 @@ body {
 	position: relative;
 	max-width: 1280px;
 	margin: auto;
-	padding: 12px;
+	padding: 0 12px;
 }
 .content__container .wrapper {
 	padding: 0;
@@ -46,17 +46,17 @@ body {
 	overflow: unset;
 }
 .section {
-	margin: 28px 0;
 	scroll-margin-top: 64px;
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
 	overflow-x: clip;
+	margin-top: 80px;
 }
 .section__header {
 	// max-width: 800px;
 	width: fit-content;
 	margin: 0 auto 16px auto;
-	padding: 4px 16px;
+	// padding: 4px 16px;
 	text-align: center;
 	position: relative;
 	background: var(--bg-opacity);
@@ -64,6 +64,12 @@ body {
 	z-index: 1;
 }
 
+.first + .section {
+	margin-top: 64px;
+}
+.section + *:not(section) {
+	margin-top: 80px;
+}
 // Переключатели
 .white {
 	display: flex;
@@ -107,8 +113,7 @@ img {
 }
 .card {
 	border-radius: 12px;
-	padding: calc(12px + (12 * ((100vw - 320px) / (1280 - 320))))
-		calc(16px + (16 * ((100vw - 320px) / (1280 - 320))));
+	padding: responsive(12, 24) responsive(16, 32);
 	@media (min-width: 1280px) {
 		padding: 24px 32px;
 	}
@@ -184,15 +189,10 @@ thead,
 tfoot {
 	background: var(--tabhead);
 	color: var(--hover);
-	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
 	text-align: center;
 	height: 16px;
-	@media (min-width: 1280px) {
-		font-size: 16px;
-	}
+	@include responsiveFont(14, 16);
 
-	tr {
-	}
 	th {
 		padding: 4px 8px;
 	}
@@ -220,10 +220,8 @@ tbody {
 		td {
 			// border: 1px solid var(--tabhead);
 			padding: 8px;
-			font-size: calc(12px + (2 * ((100vw - 320px) / (1280 - 320))));
-			@media (min-width: 1280px) {
-				font-size: 14px;
-			}
+			@include responsiveFont(12, 14);
+
 			:first-child {
 			}
 			:last-child {
@@ -236,8 +234,7 @@ tbody {
 	position: relative;
 	display: flex;
 	margin: 0;
-	padding: calc(8px + (4 * ((100vw - 320px) / (1280 - 320))))
-		calc(16px + (12 * ((100vw - 320px) / (1280 - 320))));
+	padding: responsive(8, 12) responsive(16, 28);
 	@media (min-width: 1280px) {
 		padding: 12px 28px;
 	}

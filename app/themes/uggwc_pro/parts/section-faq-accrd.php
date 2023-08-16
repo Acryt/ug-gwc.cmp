@@ -28,9 +28,12 @@
 						} ?>
 					</div>
 					<div class="afaq__right inv-shadow">
-						<?php foreach ($faq as $k => $v) {
-							if ($k == 0) { ?>
+						<?php foreach ($faq as $k => $v) { ?>
+							<?php if ($k == 0) { ?>
 								<div class="afaq__section accrd-m _active">
+									<h4 class="card">
+										<?php echo $v['cf_afaq_t'] ?>
+									</h4>
 									<?php foreach ($v['cf_afaq_qa'] as $kq => $vq) { ?>
 										<div class="afaq__item shadow">
 											<input class="afaq__check" type="checkbox" name="afaq" id="afaq<?php echo $k;
@@ -45,6 +48,9 @@
 								</div>
 							<?php } else { ?>
 								<div class="afaq__section accrd-m">
+									<h4 class="card">
+										<?php echo $v['cf_afaq_t'] ?>
+									</h4>
 									<?php foreach ($v['cf_afaq_qa'] as $kq => $vq) { ?>
 										<div class="afaq__item shadow">
 											<input class="afaq__check" type="checkbox" name="afaq" id="afaq<?php echo $k;

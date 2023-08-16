@@ -3,7 +3,7 @@
 		margin: 24px auto;
 	}
 	.section__content {
-		padding: calc(12px + 12*(100vw - 320px)/960);
+		padding: responsive(12,24);
 		border-radius: 12px;
 		background: var(--bg);
 		box-shadow: inset 0 2px 12px 0px var(--box-shadow);
@@ -55,8 +55,8 @@
 		display: flex;
 		background: var(--border);
 		border-radius: 12px;
-		padding: calc(8px + (4 * ((100vw - 320px) / (1280 - 320))));
-		gap: calc(4px + (4 * ((100vw - 320px) / (1280 - 320))));
+		padding: responsive(8, 12);
+		gap: responsive(4, 8);
 		justify-content: space-between;
 
 		padding: 8px;

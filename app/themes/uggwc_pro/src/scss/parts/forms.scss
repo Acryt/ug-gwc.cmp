@@ -13,10 +13,7 @@
 		position: relative;
 		// max-width: 800px;
 		// margin: auto;
-		gap: calc(12px + 12 * (100vw - 320px) / 960);
-		@media (min-width: 1280px) {
-			gap: 24px;
-		}
+		@include responsiveGap(12, 24);
 		// backdrop-filter: blur(8px);
 
 		label,

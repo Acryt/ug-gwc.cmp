@@ -1,0 +1,40 @@
+@function responsive(
+	$min-size,
+	$max-size,
+	$min-width: 320,
+	$max-width: 1280,
+	$unit: px
+) {
+	$size-range: $max-size - $min-size;
+	$width-range: $max-width - $min-width;
+
+	@return unquote(
+		"calc(#{$min-size}#{$unit} + (#{$size-range} * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width}))))"
+	);
+}
+
+@mixin responsiveFont(
+	$min-size,
+	$max-size,
+	$min-width: 320,
+	$max-width: 1280,
+	$unit: px
+) {
+	font-size: responsive($min-size, $max-size, $min-width, $max-width, $unit);
+	@media (min-width: #{$max-width}#{$unit}) {
+		font-size: #{$max-size}#{$unit};
+	}
+}
+
+@mixin responsiveGap(
+	$min-size,
+	$max-size,
+	$min-width: 320,
+	$max-width: 1280,
+	$unit: px
+) {
+	gap: responsive($min-size, $max-size, $min-width, $max-width, $unit);
+	@media (min-width: #{$max-width}#{$unit}) {
+		gap: $max-size#{$unit};
+	}
+}

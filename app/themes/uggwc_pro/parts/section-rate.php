@@ -3,7 +3,7 @@ $title = 'Erfahrung';
 if (carbon_get_post_meta(get_the_ID(), 'cf_rating_title')) {
 	$title = carbon_get_post_meta(get_the_ID(), 'cf_rating_title');
 } ?>
-<section id="rate" class="rate">
+<section id="rate" class="rate section">
 	<div class="wrapper">
 		<div class="section__header">
 			<?php

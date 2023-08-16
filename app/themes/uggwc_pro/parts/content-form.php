@@ -1,21 +1,14 @@
 <section class="section content">
 	<div class="wrapper">
-		<?php
-		if (carbon_get_post_meta(get_the_ID(), 'cf_content_title')) {
-			?>
-			<div class="section__header">
-				<h2>
-					<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_title'); ?>
-				</h2>
-				<p>
-					<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle'); ?>
-				</p>
-			</div>
-		<?php
-		}
-		?>
 		<div class="section__content">
 			<div class="content__container">
+				<?php
+				if (carbon_get_post_meta(get_the_ID(), 'cf_content_title')) {
+					echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_content_title') . '</h2>';
+				}
+				if (carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle')) {
+					echo '<p class="section__subheading">' . carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle') . '</p>';
+				} ?>
 				<?php
 				$items = carbon_get_post_meta(get_the_ID(), 'cf_content');
 
@@ -26,7 +19,7 @@
 				}
 				// 1
 				echo apply_filters('the_content', $items[0]['cf_content_content']);
-				
+
 				get_template_part('parts/section-promo');
 				if (is_page_template(['templates/leistungen.php'])) {
 					get_template_part('parts/section-relink-d');
@@ -58,7 +51,7 @@
 				the_content();
 
 				// echo get_the_content();
-
+				
 				if (is_single()) {
 					get_template_part('parts/component-underpost');
 				}

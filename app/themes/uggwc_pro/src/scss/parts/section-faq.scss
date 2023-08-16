@@ -38,11 +38,16 @@
 	  }
 	}
 	&__answer {
-		max-height: 0;
+		display: grid;
+		grid-template-rows: 0fr;
 		padding: 0;
 		transition: all .5s;
 		color: var(--text-default);
 		overflow: hidden;
+
+		& > * {
+			min-height: 0px;
+		}
 	}
 	input {
 		position: absolute;
@@ -59,8 +64,8 @@
 				}
 			}
 			~ .faq__answer {
-				max-height: 350vh;
 				padding: 12px 0 0 0;
+				grid-template-rows: 1fr;
 			}
 		}
 	}

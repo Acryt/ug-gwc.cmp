@@ -12,8 +12,7 @@ h6 {
 	color: var(--thead);
 	margin: 0px;
 	font-weight: 600;
-	line-height: 130%;
-
+	line-height: 140%;
 	scroll-margin-top: 64px;
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
@@ -90,94 +89,55 @@ div + p {
 	margin: 0;
 }
 h1 {
-	font-size: calc(28px + (12 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 40px;
-	}
+	@include responsiveFont(28, 48);
 }
 
 h2 {
-	font-size: calc(24px + (10 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 34px;
-	}
+	@include responsiveFont(24, 34);
 }
 
 h3 {
-	font-size: calc(22px + (8 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 30px;
-	}
+	@include responsiveFont(22, 30);
 }
 
 h4 {
-	font-size: calc(20px + (6 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 26px;
-	}
+	@include responsiveFont(20, 26);
 }
 
 h5 {
-	font-size: calc(18px + (4 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 22px;
-	}
+	@include responsiveFont(18, 22);
 }
 
 h6 {
-	font-size: calc(16px + (2 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 18px;
-	}
+	@include responsiveFont(16, 18);
 }
+
 tbody {
 	h2 {
-		font-size: calc(16px + (4 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 20px;
-		}
+		@include responsiveFont(16, 20);
 	}
 	h3 {
-		font-size: calc(15px + (3 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 18px;
-		}
+		@include responsiveFont(15, 18);
 	}
 	h4 {
-		font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 16px;
-		}
+		@include responsiveFont(14, 16);
 	}
 	h5 {
-		font-size: calc(13px + (2 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 15px;
-		}
+		@include responsiveFont(13, 15);
 	}
 	h6 {
-		font-size: calc(12px + (2 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 14px;
-		}
+		@include responsiveFont(12, 14);
 	}
 }
 p,
 ul li,
 ol li,
 option {
-	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 16px;
-	}
+	@include responsiveFont(14, 16);
 }
 strong {
-	font-size: calc(16px + (2 * ((100vw - 320px) / (1280 - 320))));
 	font-weight: 600;
-
-	@media (min-width: 1280px) {
-		font-size: 18px;
-	}
+	@include responsiveFont(16, 18);
 }
 .si {
 	font-size: 12px;
@@ -187,10 +147,7 @@ strong {
 	font-size: 12px;
 }
 .header_mob_contact {
-	font-size: calc(14px + (2 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 16px;
-	}
+	@include responsiveFont(14, 16);
 }
 p span {
 	color: var(--stars);
@@ -206,10 +163,7 @@ a {
 	}
 }
 .aauthor__two {
-	font-size: calc(11px + (5 * ((100vw - 320px) / (1280 - 320))));
-	@media (min-width: 1280px) {
-		font-size: 16px;
-	}
+	@include responsiveFont(11, 16);
 }
 
 .c-alert {

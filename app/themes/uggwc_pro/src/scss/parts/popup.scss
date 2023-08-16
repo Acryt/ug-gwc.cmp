@@ -60,10 +60,7 @@
 	overflow-y: auto;
 	width: 800px;
 	.form_big {
-		gap: calc(12px + (12 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			gap: 24px;
-		}
+		@include responsiveGap(12px, 24px);
 	}
 }
 .popup__bigpromo {
@@ -185,10 +182,7 @@
 		text-align: center;
 		color: var(--thead);
 		font-weight: 600;
-		font-size: calc(12px + (8 * ((100vw - 320px) / (1280 - 320))));
-		@media (min-width: 1280px) {
-			font-size: 20px;
-		}
+		@include responsiveFont(12px, 20px);
 	}
 	&_btn {
 		background: var(--hoverb);

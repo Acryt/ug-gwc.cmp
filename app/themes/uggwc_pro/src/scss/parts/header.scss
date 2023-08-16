@@ -40,10 +40,7 @@
 		justify-content: space-around;
 		align-items: center;
 		flex: 1 0 200px;
-		font-size: calc(12px + (4 * ((100vw - 920px) / (1280 - 920))));
-		@media (min-width: 1280px) {
-			font-size: 16px;
-		}
+		@include responsiveFont(12, 16);
 		@media (max-width: 920px) {
 			display: none;
 		}
@@ -77,13 +74,10 @@
 		align-items: flex-end;
 		z-index: 1;
 		background: var(--bg);
-		font-size: calc(12px + (4 * ((100vw - 320px) / (1280 - 320))));
 		height: 25px;
-
-		@media (min-width: 1280px) {
-			font-size: 16px;
-		}
 		gap: 4px;
+		@include responsiveFont(12, 16);
+
 		@media (max-width: 920px) {
 			display: flex;
 		}
