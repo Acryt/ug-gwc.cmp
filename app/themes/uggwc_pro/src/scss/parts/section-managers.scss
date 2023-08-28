@@ -12,6 +12,7 @@
 		border-radius: 8px;
 		overflow: hidden;
 		flex: 0 1 230px;
+		justify-content: space-between;
 	}
 	&__image {
 		height: 240px;
@@ -23,6 +24,7 @@
 	}
 	&__spec {
 		margin: 0.5em 0px 1em;
+		text-align: center;
 	}
 	&__time {
 		margin: 0;

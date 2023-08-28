@@ -82,8 +82,15 @@ ol {
 	}
 }
 * + p {
-	margin-top: 0.5em;
+	margin-top: responsive(8, 16);
+	@media (min-width: 1280px) {
+		margin-top: 16px;
+		
+	}
 	margin-bottom: 0;
+}
+footer p {
+	margin: 0;
 }
 div + p {
 	margin: 0;

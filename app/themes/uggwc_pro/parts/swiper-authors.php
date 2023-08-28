@@ -55,4 +55,4 @@
   <div class="swiper-button-next"></div>
   <div class="swiper-pagination"></div>
 </div>
-<a class="btn wave_effect aauthor__btn" href="/unsere-autoren"><span>Unsere Autoren</span></a>
+<a class="btn wave_effect aauthor__btn" href="/unsere-autoren/"><span>Unsere Autoren</span></a>

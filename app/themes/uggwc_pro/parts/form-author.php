@@ -37,7 +37,7 @@
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
-		<a href="/unsere-garantien">Unsere Garantien</a>
+		<a href="/unsere-garantien/">Unsere Garantien</a>
 	</div>
 
 	<input type="hidden" name="form-id" value="form-author">

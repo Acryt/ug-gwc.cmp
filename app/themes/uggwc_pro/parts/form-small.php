@@ -7,7 +7,7 @@
 	<label><span>Deadline</span><input type="text" name="deadline" class="dp_date"></label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
-		<a href="/unsere-garantien">Unsere Garantien</a>
+		<a href="/unsere-garantien/">Unsere Garantien</a>
 	</div>
 
 	<input type="hidden" id="fc_campaign" name="fc_campaign">

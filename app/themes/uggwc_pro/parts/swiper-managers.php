@@ -19,7 +19,7 @@
 				<a class="soc__icon" href="mailto:<?php echo $item['cf_manager_mail'] ?>"><i class="fa-solid fa-envelope"></i></a>
 				<?php } ?>
 				<?php if ($item['cf_manager_phone']) { ?>
-				<a class="soc__icon" href="tel:<?php echo $item['cf_manager_phone'] ?>"><i class="fa-solid fa-phone-volume"></i></a>
+				<a class="soc__icon" href="tel:+<?php echo $item['cf_manager_phone'] ?>"><i class="fa-solid fa-phone-volume"></i></a>
 				<?php } ?>
 			</div>
 			<a class="sm_swiper__btn btn wave_effect" href="#" data-bs-toggle="modal" data-bs-target="#Modal"><span>JETZT ANFRAGEN</span></a>

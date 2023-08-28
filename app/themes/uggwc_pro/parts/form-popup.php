@@ -69,7 +69,7 @@
 		<p class="s">Vor dem Abschicken des Formulars prüfen Sie bitte die Korrektheit Ihrer E-Mail-Adresse</p>
 		<div class="form__guarant">
 			<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
-			<a href="/unsere-garantien">Unsere Garantien</a>
+			<a href="/unsere-garantien/">Unsere Garantien</a>
 		</div>
 	</div>
 

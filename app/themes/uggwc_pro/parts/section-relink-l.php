@@ -13,133 +13,133 @@
 			?>
 		</div>
 		<div class="section__content">
-			<a href="/bachelorarbeit">
+			<a href="/bachelorarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Bachelorarbeit</span>
 			</a>
-			<a href="/hausarbeit">
+			<a href="/hausarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Hausarbeit</span>
 			</a>
-			<a href="/dissertation">
+			<a href="/dissertation/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Doktorarbeit</span>
 			</a>
-			<a href="/online-klausur">
+			<a href="/online-klausur/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Online Klausur</span>
 			</a>
-			<a href="/seminararbeit">
+			<a href="/seminararbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Seminararbeit</span>
 			</a>
-			<a href="/essay">
+			<a href="/essay/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Essay</span>
 			</a>
-			<a href="/praesentation">
+			<a href="/praesentation/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Praesentation</span>
 			</a>
-			<a href="/projektarbeit">
+			<a href="/projektarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Projektarbeit</span>
 			</a>
-			<a href="/danksagung">
+			<a href="/danksagung/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Danksagung</span>
 			</a>
-			<a href="/facharbeit">
+			<a href="/facharbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Facharbeit</span>
 			</a>
-			<a href="/expose">
+			<a href="/expose/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Exposé</span>
 			</a>
-			<a href="/biografie">
+			<a href="/biografie/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Biografie</span>
 			</a>
-			<a href="/diplomarbeit">
+			<a href="/diplomarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Diplomarbeit</span>
 			</a>
-			<a href="/masterarbeit">
+			<a href="/masterarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Masterarbeit</span>
 			</a>
-			<a href="/businessplan">
+			<a href="/businessplan/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Businessplan</span>
 			</a>
-			<a href="/studienarbeit">
+			<a href="/studienarbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Studienarbeit</span>
 			</a>
-			<a href="/referat">
+			<a href="/referat/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Referat</span>
 			</a>
-			<a href="/motivationsschreiben">
+			<a href="/motivationsschreiben/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Motivationsschreiben</span>
 			</a>
-			<a href="/bewerbung">
+			<a href="/bewerbung/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Bewerbung</span>
 			</a>
-			<a href="/fallstudie">
+			<a href="/fallstudie/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Fallstudie</span>
 			</a>
-			<a href="/praktikumsbericht">
+			<a href="/praktikumsbericht/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>
 				<span>Praktikumsbericht</span>
 			</a>
-			<a href="/VWA">
+			<a href="/vwa/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
 				</div>

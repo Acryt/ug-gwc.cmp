@@ -3,7 +3,9 @@
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme req_star">
 		<div class="form__desc">?
-			<div class="form__desc_t"><p>Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.</p></div>
+			<div class="form__desc_t">
+				<p>Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.</p>
+			</div>
 		</div>
 		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
 		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
@@ -67,26 +69,61 @@
 	<label class="form__promo">
 		<input type="text" name="promo" placeholder="Promocode">
 	</label>
-	<div class="form__price js-price">ab <span>49,00 €</span></div>
+
 	<div class="form__text">
 		<p class="s"><span>*</span> Pflichtfeld</p>
 		<p class="s">Vor dem Abschicken des Formulars prüfen Sie bitte die Korrektheit Ihrer E-Mail-Adresse</p>
 		<div class="form__guarant">
 			<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
-			<a href="/unsere-garantien">Unsere Garantien</a>
+			<a href="/unsere-garantien/">Unsere Garantien</a>
 		</div>
 	</div>
 
 	<input type="hidden" name="form-id" value="form-big">
 	<input type="hidden" name="recaptchaResponse" class="recaptchaResponse">
-	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif" alt="">
+	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif"
+			alt="">
 	</div>
 	<div class="form__disabled">
 		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
 		<div class="form__sent">
 			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
 		</div>
-		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
+		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung
+			setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und
+				Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
+
+	<div class="form__price js-price">ab <span>49,00 €</span></div>
 	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken...</span></button>
+
+	<div class="form__payments">
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visa">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/visa.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="MasterCard">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/mastercard.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="GiroPay">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/giropay.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stripe">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/stripe.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="GPay">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="ApplePay">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/applepay.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Klarna">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/klarna.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="wise">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/wise.svg" alt="">
+		</div>
+		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="PayPal">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/paypal.svg" alt="">
+		</div>
+	</div>
 </form>
