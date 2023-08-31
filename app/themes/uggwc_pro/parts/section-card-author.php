@@ -21,7 +21,7 @@ if ($items) {
 				<p class="worker__day"><?php echo $item['cf_author_day'] ?></p>
 				<div class="worker__flex">
 				<?php if ($item['cf_author_whatsapp']) { ?>
-					<a target="_blank" href="https://wa.me/<?php echo $item['cf_author_whatsapp'] ?>"><div class="worker__whats"></div></a>
+					<a target="_blank" href="https://wa.me/<?php echo Helpers::del_space($item['cf_author_whatsapp']) ?>"><div class="worker__whats"></div></a>
 				<?php } ?>
 				<?php if ($item['cf_author_mail']) { ?>
 					<a href="mailto:<?php echo $item['cf_author_mail'] ?>"><div class="worker__mail"></div></a>
