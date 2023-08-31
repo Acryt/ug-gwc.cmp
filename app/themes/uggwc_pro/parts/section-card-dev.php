@@ -27,7 +27,7 @@ if ($items) {
 					<a href="mailto:<?php echo $item['cf_dev_mail'] ?>"><div class="worker__mail"></div></a>
 				<?php } ?>
 				<?php if ($item['cf_dev_phone']) { ?>
-					<a href="tel:<?php echo $item['cf_dev_phone'] ?>"><div class="worker__phone"></div></a>
+					<a href="tel:+<?php echo Helpers::del_space($item['cf_dev_phone']) ?>"><div class="worker__phone"></div></a>
 				<?php } ?>
 				</div>
 			</div>
