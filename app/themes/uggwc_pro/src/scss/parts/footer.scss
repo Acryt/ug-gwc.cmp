@@ -6,7 +6,7 @@
 	@media (min-width: 1280px) {
 		margin-top: 64px;
 	}
-	padding: 12px 0;
+	padding: 32px 0;
 
 	&__content {
 		display: flex;
@@ -14,26 +14,56 @@
 		// flex-direction: column;
 		gap: 32px;
 	}
+	svg {
+		height: auto;
+		width: 100%;
+		path {
+			transition: all .3s;
+			fill: var(--thead);
+		}
+		&:hover {
+			path {
+				fill: var(--hover);
+			}
+		}
+	}
+	strong {
+		display: block;
+		width: 100%;
+		text-transform: uppercase;
+	}
+	strong:not(.footer__content > * > strong:first-child) {
+		margin-top: 24px;
+	}
+
 	&__one {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		flex: 1 0 280px;
-		div + p {
-			margin-top: 4px;
-		}
+		flex: 1 0 200px;
 	}
 	&__two {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		flex: 1 0 280px;
+		flex: 1 0 200px;
 	}
 	&__three {
-		display: flex;
+		display: block;
 		flex-direction: column;
 		// gap: 8px;
-		flex: 1 0 280px;
+		flex: 1 1 480px;
+		column-count: 2;
+		@media (max-width: 768px) {
+			column-count: 1;
+		}
+
+		a {
+			display: block;
+		}
+		* + a {
+			margin-top: 8px;
+		}
 	}
 	&__four {
 		display: flex;
@@ -45,19 +75,8 @@
 		flex: 1 1 100%;
 		text-align: center;
 	}
-
-	// &__top {}
-	// &__mid {
-	// 	display: flex;
-	// 	&>* {
-	// 		flex: 1 1 300px;
-	// 	}
-	// }
-	// &__bot {
-	// 	text-align: center;
-	// }
 	&__logo {
-		margin-bottom: 16px;
+		width: 240px;
 	}
 	&__payments {
 		display: flex;
@@ -91,23 +110,24 @@
 	}
 	&__icons {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		gap: 8px;
-
-		p {
-			margin-right: auto;
-		}
+		flex-wrap: wrap;
 	}
 	&__shield {
 		width: 50px;
 		float: left;
 		margin-right: 10px;
 	}
+	&__guar {
+		display: flex;
+		align-items: center;
+	}
 	.dd-btn {
 		position: relative;
 		display: flex;
 		border-radius: 8px;
-		transition: all 0.3s;
+		transition: all .3s;
 		font-weight: 600;
 		color: var(--taccent);
 		&::after {
@@ -117,7 +137,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all 0.5s;
+			transition: all .5s;
 		}
 		&._active {
 			padding: 8px 12px;
@@ -144,7 +164,7 @@
 		border: 1px solid var(--box-shadow);
 		border-radius: 10px;
 		text-align: left;
-		transition: all 0.5s;
+		transition: all .5s;
 		@media (max-width: 920px) {
 			position: relative;
 			flex-direction: column;

@@ -1,5 +1,5 @@
 // Путь к FA
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
+// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import
 // RESET
 "reset",
@@ -9,10 +9,10 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 "variables",
 
 // FA
-"~@fortawesome/fontawesome-free/scss/fontawesome",
-"~@fortawesome/fontawesome-free/scss/solid",
-"~@fortawesome/fontawesome-free/scss/regular",
-"~@fortawesome/fontawesome-free/scss/brands",
+// "~@fortawesome/fontawesome-free/scss/fontawesome",
+// "~@fortawesome/fontawesome-free/scss/solid",
+// "~@fortawesome/fontawesome-free/scss/regular",
+// "~@fortawesome/fontawesome-free/scss/brands",
 
 // LIBS
 "~@fancyapps/ui/src/Fancybox/Fancybox",
@@ -30,6 +30,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 "parts/component-ratings",
 "parts/component-underpost",
 "parts/component-promoline",
+"parts/component-toc",
 
 // Секции
 "parts/section-first",

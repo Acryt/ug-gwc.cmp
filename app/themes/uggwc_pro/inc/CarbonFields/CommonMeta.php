@@ -806,12 +806,20 @@ class CommonMeta
 			Field::make('image', 'cf_promo_temporary_img', __('Картинка временной акции'))
 				->set_type('image')
 				->set_value_type('url')
-				->set_width(10),
-			Field::make('text', 'cf_promo_temporary', __('Временная акция'))
-				->set_width(75),
+				->set_width(5),
 			Field::make('text', 'cf_promo_date', __('Дата окончания временной акции'))
 				->help_text('Пример: 2023-07-31')
 				->set_width(10),
+			Field::make('text', 'cf_promo_temporary', __('Временная акция'))
+				->set_width(75),
+			Field::make('image', 'cf_promo_temporary_imgp', __('Картинка временной акции POPUP'))
+				->set_type('image')
+				->set_value_type('url')
+				->set_width(5),
+			Field::make('text', 'cf_promo_popup_temp', __('Временная акция в POPUP'))
+				->set_width(42),
+			Field::make('text', 'cf_promo_popup_temp_sub', __('Подзаголовок для POPUP'))
+				->set_width(42),
 			Field::make('text', 'cf_promo_title', __('Заголовок Предложений')),
 			Field::make('text', 'cf_promo_subtitle', __('Подаголовок Предложений')),
 			Field::make('complex', 'cf_promo', __('Список'))

@@ -1,10 +1,12 @@
 // LIBS
+import "@fortawesome/fontawesome-free/css/all.css";
 import "@fancyapps/ui/dist/fancybox.css";
 import "intl-tel-input/build/css/intlTelInput.css";
 import "nice-select2/src/scss/nice-select2.scss";
 import "vanillajs-datepicker/sass/datepicker.scss";
 import "animate.css";
 import { WOW } from "wowjs";
+
 // Swiper SCSS
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,7 +30,8 @@ import { promoBlockTimer } from "./js/promoBlockTimer";
 import { mailer } from "./js/mailer";
 import { stepper, calendarInput, phoneInput, onlineForm } from "./js/forms";
 import { calc } from "./js/calc";
-import { toc } from "./js/toc";
+// import { handleAnchorLinks } from "./js/href";
+import { toc, prcBtn } from "./js/toc";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	onlineForm();
 	calc();
 	toc();
+	prcBtn();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

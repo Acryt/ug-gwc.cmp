@@ -1,0 +1,14 @@
+.toc {
+	padding: 12px 0;
+	&_sum {
+		padding: 12px;
+		border-radius: 12px;
+		color: var(--thead);
+		box-shadow: 0 2px 12px 0px var(--box-shadow);
+	}
+	&_list {
+		padding: 12px;
+		border-radius: 12px;
+		box-shadow: inset 0 2px 12px 0px var(--box-shadow);
+	}
+}

@@ -33,11 +33,11 @@
 		<h4><?php echo carbon_get_theme_option('cf_promo_temporary'); ?></h4>
 		<div class="popup__bigpromo__sub">
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo carbon_get_theme_option('cf_promo_temporary_img'); ?>">
+				<img src="<?php echo carbon_get_theme_option('cf_promo_temporary_imgp'); ?>">
 			</div>
 			<div class="popup__bigpromo__text">
-				<h6>Die Geschenke sind limitiert, holen Sie sich Ihr Geschenk jetzt! ⏱</h6>
-				<p>*die Werbeaktion gilt nicht für das Coaching und für schriftliche Arbeiten unter 7 Seiten</p>
+				<h6><?php echo carbon_get_theme_option('cf_promo_popup_temp'); ?></h6>
+				<p><?php echo carbon_get_theme_option('cf_promo_popup_temp_sub'); ?></p>
 			</div>
 		</div>
 		<?php get_template_part('parts/form-popup-promo') ?>

@@ -11,6 +11,7 @@ module.exports = {
 		path: path.resolve(__dirname, "./assets/"),
 		filename: "[name].bundle.js",
 	},
+	devtool: 'source-map',
 	module: {
 		rules: [
 			{
