@@ -66,7 +66,7 @@ export function prcBtn() {
 		let text = "";
 		switch (el.id) {
 			case "priceAccrd":
-				text = "Preis";
+				text = "Preise";
 				break;
 			case "priceTable":
 				text = "Kosten";

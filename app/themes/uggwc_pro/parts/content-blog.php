@@ -31,18 +31,18 @@
 
 				// 2
 				echo apply_filters('the_content', $items[1]['cf_content_content']);
-				get_template_part('parts/section-why');
+				// get_template_part('parts/section-why');
 
 
 				// 3
 				echo apply_filters('the_content', $items[2]['cf_content_content']);
-				get_template_part('parts/section-guaranties');
+				// get_template_part('parts/section-guaranties');
 				get_template_part('parts/section-snippet');
 
 
 				// 4
 				echo apply_filters('the_content', $items[3]['cf_content_content']);
-				get_template_part('parts/section-how');
+				// get_template_part('parts/section-how');
 				// get_template_part('parts/section-price');
 				
 				// 5
