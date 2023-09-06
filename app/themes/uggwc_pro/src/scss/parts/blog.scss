@@ -40,12 +40,12 @@
 		gap: 24px 2%;
 		height: 824px;
 		&:nth-child(2n+1) {
-			grid-template: "a a c" auto
-								"b d e" auto / 32% 1fr 1fr;
+			grid-template: "a a b" auto
+								"c d e" auto / 32% 1fr 1fr;
 		}
 		&:nth-child(2n) {
 			grid-template: "b a a" auto
-								"d e c" auto / 32% 1fr 1fr;
+								"c d e" auto / 32% 1fr 1fr;
 		}
 		&>a {
 			height: 400px;
