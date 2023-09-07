@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<strong>Links zu offiziellen Quellen:</strong>
-				<a target="_blank" class="footer__register" href="<?php echo carbon_get_theme_option('cf_register') ?>">
+				<a target="_blank" rel="noopener" class="footer__register" href="<?php echo carbon_get_theme_option('cf_register') ?>">
 					<svg version="1.1" id="svg2" xml:space="preserve" width="490" height="84" viewBox="0 0 490 84"
 						sodipodi:docname="logo_unternehmensregister_de_DE.svg"
 						inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -72,7 +72,7 @@
 				<p>Adresse: Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland</p>
 				<div class="footer__icons">
 					<strong>Wir im Netz:</strong>
-					<a target="_blank" class="soc__icon"
+					<a target="_blank" rel="noopener" class="soc__icon"
 						href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>"><i
 							class="fa-brands fa-whatsapp"></i></a>
 					<a class="soc__icon" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>"><i
@@ -80,7 +80,7 @@
 					<a class="soc__icon"
 						href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><i
 							class="fa-solid fa-phone-volume"></i></a>
-					<a target="_blank" class="soc__icon" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i
+					<a target="_blank" rel="noopener" class="soc__icon" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i
 							class="fa-brands fa-instagram"></i></a>
 				</div>
 				<strong>GARANTIEN</strong>

@@ -44,7 +44,7 @@
 	</div>
 </div>
 <a class="popup__lift shadow wave_effect" href="#top"><i class="fa-solid fa-up-long"></i></a>
-<a target="_blank" class="popup__call shadow wave_effect" href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- <a target="_blank" class="popup__call shadow wave_effect" href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>"><i class="fa-brands fa-whatsapp"></i></a> -->
 <div class="popup__cookie">
 	<p>Im Interesse der Benutzerfreundlichkeit und zur Verbesserung unseres Services verwenden wir Cookies</p>
 	<div class="popup__cookie_btn btn wave_effect"><span>AKZEPTIEREN</span></div>

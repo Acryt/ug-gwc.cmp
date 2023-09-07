@@ -153,6 +153,10 @@
 		border: 2px solid var(--hoverb);
 	}
 }
+.b24-widget-button-wrapper.b24-widget-button-position-bottom-right {
+	right: 36px;
+	bottom: 24px;
+}
 .popup__lift {
 	display: none;
 	left: 36px;
@@ -176,7 +180,7 @@
 	padding: 0;
 	background: var(--border);
 	overflow: hidden;
-	transition: all .5s;
+	transition: all 0.5s;
 	z-index: 5;
 	p {
 		text-align: center;
