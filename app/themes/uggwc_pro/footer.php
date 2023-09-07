@@ -52,13 +52,13 @@
 				<strong>PLAGIATSSOFTWARE</strong>
 				<div class="footer__scan">
 					<div class="review-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/plagscan.svg" alt="">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/plagscan.svg" alt="plagscan">
 					</div>
 					<div class="review-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/turnitin.svg" alt="">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/turnitin.svg" alt="turnitin">
 					</div>
 					<div class="review-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/unicheck.svg" alt="">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/review/unicheck.svg" alt="unicheck">
 					</div>
 				</div>
 

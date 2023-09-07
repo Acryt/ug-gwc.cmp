@@ -81,47 +81,57 @@ if ($items) {
 								</strong> PRO SEITE</div>
 							<ul class="price__extras">
 								<li style="min-height: 70px;max-height: 70px;"><span><img
-										src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">
-									<?php
-									switch ($key) {
-										case '0':
-											?>Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften<?php
-											break;
-										case '1':
-											?>Autoren aus allen Bereichen der Wirtschaftswissenschaften<?php
-											break;
-										case '2':
-											?>Arbeit mit speziellen Programmen und Software<?php
-											break;
-										case '3':
-											?>Unsere Autoren arbeiten in allen Rechtsbereichen<?php
-											break;
-										default:
-											?>...<?php
-											break;
-									}
-									?>
-								</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen Ihrer
-									Arbeit nach Ihren Wünschen und Anforderungen</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit des
-									anonymen direkten Kontakts mit dem Autor</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Verfassen
-									sowohl der ganzen Arbeit als auch einzelner Teile</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Unbefristete
-									Garantie für die Korrektur der Arbeit*</span></li>
+											src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="check">
+										<?php
+										switch ($key) {
+											case '0':
+												?>Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften<?php
+												break;
+											case '1':
+												?>Autoren aus allen Bereichen der Wirtschaftswissenschaften<?php
+												break;
+											case '2':
+												?>Arbeit mit speziellen Programmen und Software<?php
+												break;
+											case '3':
+												?>Unsere Autoren arbeiten in allen Rechtsbereichen<?php
+												break;
+											default:
+												?>...<?php
+												break;
+										}
+										?>
+									</span></li>
 								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
-										alt="">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis - KOSTENLOS</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Plagiatsprüfung
-									- KOSTENLOS</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
-									Ihrer Arbeit von einem unabhängigen Korrekturleser</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Überprüfung
-									Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Rechtzeitige
-									Teillieferungen der Arbeit</span></li>
-								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg" alt="">Möglichkeit der
-									Teilzahlung ohne Zusatzkosten</span></li>
+											alt="check">Verfassen Ihrer
+										Arbeit nach Ihren Wünschen und Anforderungen</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Möglichkeit des
+										anonymen direkten Kontakts mit dem Autor</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Verfassen
+										sowohl der ganzen Arbeit als auch einzelner Teile</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Unbefristete
+										Garantie für die Korrektur der Arbeit*</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Inhaltsverzeichnis, Literaturverzeichnis, Abbildungsverzeichnis -
+										KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Plagiatsprüfung
+										- KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Überprüfung
+										Ihrer Arbeit von einem unabhängigen Korrekturleser</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Überprüfung
+										Ihrer Arbeit in der Qualitätskontrolleabteilung - KOSTENLOS</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Rechtzeitige
+										Teillieferungen der Arbeit</span></li>
+								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
+											alt="check">Möglichkeit der
+										Teilzahlung ohne Zusatzkosten</span></li>
 								<div class="price__footer">
 									<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigform"><span>
 											<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
@@ -129,7 +139,7 @@ if ($items) {
 								</div>
 							</ul>
 						</div>
-					<?php
+						<?php
 					}
 					?>
 				</div>
@@ -137,6 +147,6 @@ if ($items) {
 		</div>
 	</section>
 
-<?php
+	<?php
 }
 ?>

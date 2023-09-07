@@ -39,12 +39,18 @@ class General
 
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
+		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);
 
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
 	}
 
+	// remove yoast rel="next"
+	function remove_wpseo_next_rel_link ($link)
+	{
+		return '';
+	}
 	public function register_json_file_route ()
 	{
 		function get_json_file ()
@@ -60,10 +66,13 @@ class General
 
 			return $json_data;
 		}
-		register_rest_route('my-data/v2', '/pricelist', array(
-			'methods' => 'GET',
-			'callback' => 'get_json_file',
-		)
+		register_rest_route(
+			'my-data/v2',
+			'/pricelist',
+			array(
+				'methods' => 'GET',
+				'callback' => 'get_json_file',
+			)
 		);
 	}
 
