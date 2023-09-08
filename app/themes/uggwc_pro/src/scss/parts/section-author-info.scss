@@ -3,7 +3,7 @@
 		display: flex;
 		gap: 16px;
 		flex-wrap: wrap;
-
+		align-items: center;
 		& > h3 {
 			flex: 1 0 280px;
 		}
@@ -25,10 +25,15 @@
 	}
 	&__title {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		flex: 1 0 280px;
 		max-width: 700px;
+		height: fit-content;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 16px;
+		& > *:not(:nth-child(1), :nth-child(2)) {
+			flex: 0 0 100%;
+		}
 	}
 	&__desc {
 		width: 100%;
