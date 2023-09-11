@@ -134,13 +134,13 @@
 				</div>
 				<span>Mathematik</span>
 			</a>
-			<div href="">
+			<a href="/medienwissenschaften/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Medienwissenschaften.svg"
 						alt="theme image">
 				</div>
 				<span>Medienwissenschaften</span>
-			</div>
+			</a>
 			<a href="/medizin/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Medizin.svg" alt="theme image">
@@ -153,13 +153,13 @@
 				</div>
 				<span>Pädagogik</span>
 			</a>
-			<div href="">
+			<a href="/pflegewissenschaften/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Pflegewissenschaften.svg"
 						alt="theme image">
 				</div>
 				<span>Pflegewissenschaften</span>
-			</div>
+			</a>
 			<div href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Philosophie.svg" alt="theme image">

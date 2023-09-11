@@ -13,6 +13,6 @@ $userMeta = get_user_meta(get_the_author_meta('ID'));
 		</div>
 	</div>
 	<div class="post-date">
-		<p><?php the_date(); ?></p>
+		<p><?php echo get_the_date('d.m.Y'); ?></p>
 	</div>
 </div>
