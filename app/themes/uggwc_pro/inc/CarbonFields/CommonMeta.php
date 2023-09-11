@@ -781,10 +781,6 @@ class CommonMeta
 			Field::make('complex', 'cf_price', __('Список'))
 				->set_max(4)
 				->add_fields([
-					// Field::make('text', 'title', __('Заголовок'))
-					// 	->set_width(40),
-					// Field::make('text', 'subtitle', __('Мелким шрифтом'))
-					// 	->set_width(40),
 					Field::make('text', 'cost', __('Цена'))
 						->set_width(40),
 					// Field::make('text', 'custom1', __('Изменяющийся пункт'))

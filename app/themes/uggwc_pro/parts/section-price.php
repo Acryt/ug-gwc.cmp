@@ -20,13 +20,6 @@ if ($items) {
 						?>
 						<div class="price__item">
 							<div class="price__name">
-								<!-- <h6>
-									<?php echo $value['title']; ?>
-								</h6>
-								<p>
-									<?php echo $value['subtitle']; ?>
-								</p> -->
-
 								<?php
 								switch ($key) {
 									case '0':
