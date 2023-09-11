@@ -35,11 +35,3 @@ $userFacebook = $user_id ? get_user_meta($user_id, 'facebook', true) : null;
 		</div>
 	</div>
 </section>
-
-
-<?php
-// Получение имени пользователя из URL
-$user_id = get_user_by('slug', get_query_var('author_name'))->ID ?? null;
-$userFacebook = $user_id ? get_user_meta($user_id, 'facebook', true) : null;
-echo $userFacebook;
-?>

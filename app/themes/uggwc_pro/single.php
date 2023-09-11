@@ -4,8 +4,8 @@ Template Name: Single
 */ 
 ?>
 
-<?php get_header(); ?>
 <?php the_post(); ?>
+<?php get_header(); ?>
 
 <main class="main">
 	<?php

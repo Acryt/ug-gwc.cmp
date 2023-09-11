@@ -10,28 +10,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 	<script src="https://www.google.com/recaptcha/api.js"></script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Organization",
-		"url": "https://ug-gwc.de",
-		"name": "GWC Ghost-writerservice UG",
-		"legalName": "GWC Ghost-writerservice UG (haftungsbeschränkt)",
-		"address": "Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland",
-		"email": "info@ug-gwc.de",
-		"foundingDate": "10.04.2018",
-		"foundingLocation": "Amtsgericht Charlottenburg (Berlin)",
-		"description": "Ghostwriting-Dienste",
-		"slogan": "Ihre Arbeit ist unser Problem",
-		"contactPoint": [
+
+
+	<?php
+	if (is_single()) { ?>
+		<script type="application/ld+json">
 			{
-				"@type": "ContactPoint",
-				"telephone": "+49-30-223-898-44",
-				"contactType": "Kundenbetreuung"
+				"@context": "https://schema.org",
+				"@type": "Article",
+				"headline": "<?php
+				if (carbon_get_post_meta(get_the_ID(), 'cf_first_title')) {
+					echo carbon_get_post_meta(get_the_ID(), 'cf_first_title');
+				} else {
+					the_title();
+				}
+				?>",
+				"datePublished": "<?php the_date() ?>",
+				"dateModified": "<?php the_modified_date(); ?>",
+				"author": [{
+					"@type": "Person",
+					"name": "<?php the_author(); ?>",
+					"url": "<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
+				}]
 			}
-		]
-	}
-	</script>
+		</script>
+	<?php } ?>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"url": "https://ug-gwc.de",
+			"name": "GWC Ghost-writerservice UG",
+			"legalName": "GWC Ghost-writerservice UG (haftungsbeschränkt)",
+			"address": "Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland",
+			"email": "info@ug-gwc.de",
+			"foundingDate": "10.04.2018",
+			"foundingLocation": "Amtsgericht Charlottenburg (Berlin)",
+			"description": "Ghostwriting-Dienste",
+			"slogan": "Ihre Arbeit ist unser Problem",
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"telephone": "+49-30-223-898-44",
+					"contactType": "Kundenbetreuung"
+				}
+			]
+		}
+		</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -63,7 +88,7 @@
 					</div>
 					<div class="header__item header__phones s">
 						<a href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><?php echo carbon_get_theme_option('cf_phone'); ?></a>
-						<a target="_blank" rel="noopener" 
+						<a target="_blank" rel="noopener"
 							href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>">Unser
 							WhatsApp</a>
 					</div>

@@ -6,7 +6,6 @@ Template Name: Impressum
 
 <?php 
 get_header();
-
 ?>
 
 <main class="main">

@@ -5,8 +5,8 @@ Template Name: Blog
 ?>
 
 <?php
-get_header();
 the_post();
+get_header();
 ?>
 
 <main class="main">
