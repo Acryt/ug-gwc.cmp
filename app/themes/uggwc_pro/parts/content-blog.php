@@ -20,7 +20,9 @@
 					get_template_part('parts/component-toc');
 				}
 				// 1
-				echo apply_filters('the_content', $items[0]['cf_content_content']);
+				if (isset($items[0])) {
+					echo apply_filters('the_content', $items[0]['cf_content_content']);
+				}
 
 				get_template_part('parts/section-promo');
 				if (is_page_template(['templates/leistungen.php'])) {
@@ -30,23 +32,31 @@
 				}
 
 				// 2
-				echo apply_filters('the_content', $items[1]['cf_content_content']);
+				if (isset($items[1])) {
+					echo apply_filters('the_content', $items[1]['cf_content_content']);
+				}
 				// get_template_part('parts/section-why');
 
 
 				// 3
-				echo apply_filters('the_content', $items[2]['cf_content_content']);
+				if (isset($items[2])) {
+					echo apply_filters('the_content', $items[2]['cf_content_content']);
+				}
 				// get_template_part('parts/section-guaranties');
 				get_template_part('parts/section-snippet');
 
 
 				// 4
-				echo apply_filters('the_content', $items[3]['cf_content_content']);
+				if (isset($items[3])) {
+					echo apply_filters('the_content', $items[3]['cf_content_content']);
+				}
 				// get_template_part('parts/section-how');
 				// get_template_part('parts/section-price');
 				
 				// 5
-				echo apply_filters('the_content', $items[4]['cf_content_content']);
+				if (isset($items[4])) {
+					echo apply_filters('the_content', $items[4]['cf_content_content']);
+				}
 				get_template_part('parts/section-promoblock');
 
 				// 6

@@ -44,7 +44,25 @@ class General
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
+
+		// динамический роутинг авторов
+		add_action('init', function () {
+			add_rewrite_rule('authors/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
+		});
+		add_filter('query_vars', function ($query_vars) {
+			$query_vars[] = 'authorID';
+			return $query_vars;
+		});
+		add_action('template_include', function ($template) {
+			if (get_query_var('authorID') == false || get_query_var('authorID') == '') {
+				 return $template;
+			}
+			return get_template_directory() . '/templates/author.php';
+		});
 	}
+
+
+
 
 	// remove yoast rel="next"
 	function remove_wpseo_next_rel_link ($link)

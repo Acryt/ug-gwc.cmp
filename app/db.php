@@ -1,0 +1,1 @@
+C:/OSPanel/domains/ug-gwc.cmp/app/plugins/query-monitor/wp-content/db.php
