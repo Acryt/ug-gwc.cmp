@@ -218,8 +218,8 @@ class CommonMeta
 					)
 				)
 				->set_header_template('
-				<% if (cf_author_name) { %>
-					<%- cf_author_name %>
+				<% if (cf_author_id) { %>
+					<%- cf_author_id %>
 			  	<% } else { %>
 					<%- "Name" %>
 				<% } %>

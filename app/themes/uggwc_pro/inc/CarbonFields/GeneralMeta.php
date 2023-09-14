@@ -1,7 +1,6 @@
 <?php
 
 use Carbon_Fields\Container;
-use Carbon_Fields\Field;
 
 class GeneralMeta
 {
@@ -35,7 +34,7 @@ class GeneralMeta
 			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
 		;
 		Container::make('theme_options', __('Authors'))
-			->add_tab(__('Author'), CommonMeta::authorMeta())
+			->add_tab(__('Authors'), CommonMeta::authorMeta())
 		;
 		Container::make('theme_options', __('FAQ'))
 			->add_tab(__('FAQ'), CommonMeta::faqAccrdMeta())
