@@ -95,8 +95,6 @@
 					<a href="/ruckgaberichtlinien/">Rückgaberichtlinien</a>
 				</div>
 
-
-
 				<strong>ZAHLUNGSMETHODEN</strong>
 				<div class="footer__payments">
 					<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visa">

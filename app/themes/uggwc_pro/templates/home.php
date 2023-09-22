@@ -1,14 +1,14 @@
 <?php
 /*
 Template Name: Home
-*/ 
+*/
 ?>
 
 
 <?php get_header(); ?>
 
 <main class="main">
-	<?php 
+	<?php
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-numbers');
 	get_template_part('parts/content-manager');
@@ -21,7 +21,7 @@ Template Name: Home
 	?>
 </main>
 
-<?php 
+<?php
 get_template_part('parts/popups');
 get_footer();
 ?>

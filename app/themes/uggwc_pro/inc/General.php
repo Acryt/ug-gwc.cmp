@@ -31,7 +31,6 @@ class General
 		add_action('init', [$this, 'settingsWordpress']);
 		add_action('init', [$this, 'geo']);
 		add_action('rest_api_init', [$this, 'register_json_file_route']);
-
 		add_filter('wpseo_locale', [$this, 'locale']);
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
 		add_filter('upload_mimes', [$this, 'svgUploadAllow']);
@@ -40,14 +39,15 @@ class General
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
 		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);
-
+		add_filter('wpseo_sitemap_index', [$this, 'add_sitemap_custom_items']);
+		
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
 
 		// динамический роутинг авторов
 		add_action('init', function () {
-			add_rewrite_rule('authors/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
+			add_rewrite_rule('autoren/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
 		});
 		add_filter('query_vars', function ($query_vars) {
 			$query_vars[] = 'authorID';
@@ -55,14 +55,21 @@ class General
 		});
 		add_action('template_include', function ($template) {
 			if (get_query_var('authorID') == false || get_query_var('authorID') == '') {
-				 return $template;
+				return $template;
 			}
 			return get_template_directory() . '/templates/author.php';
 		});
 	}
 
-
-
+	function add_sitemap_custom_items ($sitemap_custom_items)
+	{
+		$sitemap_custom_items .= '
+		<sitemap>
+			<loc>http://ug-gwc.cmp/authors.xml</loc>
+			<lastmod>2023-05-22T23:12:27+00:00</lastmod>
+		</sitemap>';
+		return $sitemap_custom_items;
+	}
 
 	// remove yoast rel="next"
 	function remove_wpseo_next_rel_link ($link)

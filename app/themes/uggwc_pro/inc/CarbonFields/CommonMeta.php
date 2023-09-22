@@ -215,6 +215,16 @@ class CommonMeta
 						Field::make('multiselect', 'cf_author_competition', __('Selected Options'))
 							->set_options(Helpers::get_competition_options()),
 						Field::make('rich_text', 'cf_author_desc', __('Описание')),
+						Field::make('complex', 'cf_author_faq', __('FAQ'))
+							->set_layout('tabbed-horizontal')
+							->add_fields(
+								array(
+									Field::make('textarea', 'cf_author_faq_quest', __('Вопрос'))
+										->set_width(40),
+									Field::make('rich_text', 'cf_author_faq_answer', __('Ответ'))
+										->set_width(40),
+								)
+							)
 					)
 				)
 				->set_header_template('

@@ -32,6 +32,7 @@ import { stepper, calendarInput, phoneInput, onlineForm } from "./js/forms";
 import { calc } from "./js/calc";
 // import { handleAnchorLinks } from "./js/href";
 import { toc, prcBtn } from "./js/toc";
+import { progressBar } from "./js/progress";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	calc();
 	toc();
 	prcBtn();
+	progressBar();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

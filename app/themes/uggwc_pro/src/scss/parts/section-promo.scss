@@ -1,6 +1,11 @@
 .promo {
 	.section__header {
-		h1,h2,h3,h4,h5,h6 {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			text-align: start;
 		}
 	}
@@ -22,7 +27,7 @@
 		border: 2px solid var(--border);
 		border-radius: 12px;
 		width: 100%;
-		transition: all .3s;
+		transition: all 0.3s;
 		// height: 256px;
 		background: var(--bg-wave);
 		// @media (max-width: 1200px) {
@@ -48,7 +53,7 @@
 		font-weight: 600;
 		padding: 12px;
 		z-index: 1;
-		transition: all .3s;
+		transition: all 0.3s;
 		@media (max-width: 920px) {
 			width: 100%;
 		}
@@ -61,11 +66,18 @@
 		right: 0px;
 		width: calc(100% - 290px);
 		padding: 12px;
-		transition: all .3s;
+		transition: all 0.3s;
 		overflow: hidden;
-		background: linear-gradient(160deg, #fff 0%, #fff 45%, #f7dcff 70%, #d2fffe 100%);
+		background: linear-gradient(
+			160deg,
+			#fff 0%,
+			#fff 45%,
+			#f7dcff 70%,
+			#d2fffe 100%
+		);
 		color: var(--thead);
 		height: 100%;
+
 		@media (max-width: 920px) {
 			// display: block;
 			position: relative;
@@ -78,7 +90,7 @@
 	&__cimg {
 		height: 160px;
 		float: left;
-		margin: .5em .5em 0 0;
+		margin: 0.5em 0.5em 0 0;
 		width: 160px;
 		border-bottom-right-radius: 50px;
 		overflow: hidden;
@@ -86,12 +98,13 @@
 			object-fit: cover;
 		}
 	}
-	&__txt {}
+	&__txt {
+	}
 	&__hashtag {
 		margin-top: auto;
 		display: block;
 		color: var(--hover);
-	 }
+	}
 	&__input:checked + .promo__elem {
 		background: white;
 		color: var(--hover);
