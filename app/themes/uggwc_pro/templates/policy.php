@@ -7,7 +7,9 @@ Template Name: Policy
 
 <?php get_header(); ?>
 <main class="main">
-	<?php get_template_part('parts/content-default'); ?>
+	<?php
+	get_template_part('parts/content-default');
+	?>
 </main>
 
 <?php 

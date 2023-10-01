@@ -1,10 +1,15 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+
 #This Apache config file was created by Duplicator Installer on 2023-01-18 14:32:18.
 #The original can be found in archived file with the name .htaccess__[HASH]
 
 # BEGIN WordPress
-# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
-# созданы автоматически и подлежат изменению только через фильтры WordPress.
-# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -16,6 +21,16 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+# http -> https
+RewriteEngine On
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
 
 # Leistungen
 Redirect 301 /essay-vom-ghostwriter-bestellen-sie-ihren-aufsatz-aus-jedem-fachbereich/ /essay/
@@ -32,14 +47,10 @@ Redirect 301 /studienarbeit-schreiben/ /studienarbeit/
 Redirect 301 /businessplan-schreiben-lassen/ /businessplan/
 Redirect 301 /eine-danksagung-passt-in-jede-studienarbeit/ /danksagung/
 
-# Disziplinen
-Redirect 301 /ghostwriter-fur-statistik/ /statistik/
-
-# Политики
-Redirect 301 /allgemeine-geschaftsbedingungen/ /statistik/
-
 # blog
 Redirect 301 /was-ist-handout/ /blog/was-ist-handout/
+Redirect 301 /die-besten-bachelorarbeit-im-fach-logistik-schritt-fur-schritt-anleitung-und-themenvorschlage/ /blog/die-besten-bachelorarbeit-im-fach-logistik/
+Redirect 301 /einen-juristischen-aufsatz-schreiben-wie-schreibt-man-einen-guten-juristischen-aufsatz/ /blog/einen-juristischen-aufsatz-schreiben-wie-schreibt-man-einen-guten-juristischen-aufsatz/
 Redirect 301 /bildquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/ /blog/bildquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/
 Redirect 301 /quellenangabe-buch-buchquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/ /blog/quellenangabe-buch-buchquellen-in-wissenschaftlichen-arbeiten-korrekt-angeben/
 Redirect 301 /richtig-zitieren-in-deutsch-mit-fusnoten-zitieren-an-der-uni/ /blog/richtig-zitieren-in-deutsch-mit-fusnoten-zitieren-an-der-uni/
@@ -70,9 +81,3 @@ Redirect 301 /das-fazit-der-bachelorarbeit/ /blog/das-fazit-der-bachelorarbeit/
 Redirect 301 /akademisches-ghostwriting-die-hausarbeit/ /blog/akademisches-ghostwriting-die-hausarbeit/
 Redirect 301 /die-stufen-der-prufungsvorbereitung/ /blog/die-stufen-der-prufungsvorbereitung/
 Redirect 301 /das-schreiben-einer-seminararbeit/ /blog/das-schreiben-einer-seminararbeit/
-
-Redirect 301 /einen-juristischen-aufsatz-schreiben-wie-schreibt-man-einen-guten-juristischen-aufsatz/ /
-Redirect 301 /mini-lease-test/blog/resource/p-3000-kroner-selvrisiko/ /
-
-Redirect 301 /die-besten-bachelorarbeit-im-fach-logistik-schritt-fur-schritt-anleitung-und-themenvorschlage/ /blog/die-besten-bachelorarbeit-im-fach-logistik/
-Redirect 301 /blog/die-besten-bachelorarbeit-im-fach-logistik-schritt-fur-schritt-anleitung-und-themenvorschlage/ /blog/die-besten-bachelorarbeit-im-fach-logistik/
