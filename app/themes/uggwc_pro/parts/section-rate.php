@@ -23,9 +23,6 @@ if (carbon_get_post_meta(get_the_ID(), 'cf_rating_title')) {
 						alt="Customer reviews &amp; experiences for Ghost Writer. Show more information."
 						style="border:0" /></a>
 				<div id="kundennoteWidgetw2"></div>
-				<script type="text/javascript"
-					src="https://kundennote.com/app/widget/v2/w2/c4f31c183a3e9a0e6da49231d149cebe1630463013.js"
-					async></script>
 			</div>
 		</div>
 	</div>

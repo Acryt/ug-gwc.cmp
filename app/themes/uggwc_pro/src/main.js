@@ -33,6 +33,7 @@ import { calc } from "./js/calc";
 // import { handleAnchorLinks } from "./js/href";
 import { toc, prcBtn } from "./js/toc";
 import { progressBar } from "./js/progress";
+import "./js/kundenote/c4f31c183a3e9a0e6da49231d149cebe1630463013.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
