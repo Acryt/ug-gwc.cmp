@@ -35,6 +35,7 @@ class General
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
 		add_filter('upload_mimes', [$this, 'svgUploadAllow']);
 		add_filter('upload_mimes', [$this, 'add_custom_mime_types']);
+		// add_filter( 'litespeed_ucss_per_pagetype', '__return_true' );
 
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
@@ -168,14 +169,12 @@ class General
 
 	public function connectedStylesAndScripts ()
 	{
-		$styleV = filemtime(get_template_directory() . '/assets/main.bundle.css');
-		$scriptV = filemtime(get_template_directory() . '/assets/main.bundle.js');
-
-		wp_dequeue_style('wp-block-library');
-
-		wp_enqueue_script('main', URI . '/assets/main.bundle.js', [], $scriptV, true);
-		wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $styleV);
-		wp_enqueue_style('second', URI . '/style.css', [], $styleV);
+		$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
+		wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $ver);
+		$ver = filemtime(get_template_directory() . '/assets/main.bundle.js');
+		wp_enqueue_script('main', URI . '/assets/main.bundle.js', [], $ver, true);
+		$ver = filemtime(get_template_directory() . '/style.css');
+		wp_enqueue_style('second', URI . '/style.css', [], $ver);
 	}
 	public function connectedAdminScripts ()
 	{
