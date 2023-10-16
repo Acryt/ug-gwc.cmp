@@ -12,7 +12,7 @@ Template Name: About Us
 	get_template_part('parts/section-about');
 	get_template_part('parts/section-card-manager');
 	get_template_part('parts/section-card-client');
-	get_template_part('parts/section-card-author');
+	// get_template_part('parts/section-card-author');
 	get_template_part('parts/section-card-dev');
 	get_template_part('parts/section-card-recruit');
 	get_template_part('parts/section-card-boss');

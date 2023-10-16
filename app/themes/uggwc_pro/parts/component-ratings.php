@@ -3,19 +3,20 @@
 		<img class="" src="<?php bloginfo('template_url'); ?>/assets/images/review/google.svg" alt="Logo">
 		<div class="ratings__stars">
 			<?php
-			$rating = floatval(carbon_get_theme_option('cf_rating_one')) * 2;
-			$solidStar = intdiv($rating, 2);
-			$emptyStar = ((5 - $solidStar) - ($rating % 2));
-			for ($i = 0; $i < $solidStar; $i++) {
-				echo '<i class="fa-solid fa-star"></i>';
+			$rating = floatval(carbon_get_theme_option('cf_rating_one')) * 2; // 9.8
+			$ratingConst = $rating;
+			for ($i = 0; $i < 5; $i++) {
+				if ($rating >= 2) {
+					echo '<i class="fa-solid fa-star"></i>';
+					$rating -= 2; // Уменьшаем рейтинг на 2
+				} elseif ($rating > 0) {
+					echo '<i class="fa-solid fa-star-half-stroke"></i>';
+					$rating = 0; // Устанавливаем рейтинг в 0
+				} else {
+					echo '<i class="fa-regular fa-star"></i>';
+				}
 			}
-			if ($rating % 2 != 0) {
-				echo '<i class="fa-solid fa-star-half-stroke"></i>';
-			}
-			for ($i = 0; $i < $emptyStar; $i++) {
-				echo '<i class="fa-regular fa-star"></i>';
-			}
-			echo '<span>' . $rating / 2 . ' / 5</span>';
+			echo '<span>' . $ratingConst / 2 . ' / 5</span>';
 			?>
 		</div>
 	</div>
@@ -40,22 +41,23 @@
 		<div class="ratings__stars">
 			<?php
 			$rating = floatval(carbon_get_theme_option('cf_rating_two')) * 2;
-			if ($result -> ratingValue) {
-				$rating = $result -> ratingValue * 2;
+			if ($result->ratingValue) {
+				$rating = $result->ratingValue * 2;
 				$rating = number_format($rating, 1, '.', '');
 			}
-			$solidStar = intdiv($rating, 2);
-			$emptyStar = ((5 - $solidStar) - ($rating % 2));
-			for ($i = 0; $i < $solidStar; $i++) {
-				echo '<i class="fa-solid fa-star"></i>';
+			$ratingConst = $rating;
+			for ($i = 0; $i < 5; $i++) {
+				if ($rating >= 2) {
+					echo '<i class="fa-solid fa-star"></i>';
+					$rating -= 2; // Уменьшаем рейтинг на 2
+				} elseif ($rating > 0) {
+					echo '<i class="fa-solid fa-star-half-stroke"></i>';
+					$rating = 0; // Устанавливаем рейтинг в 0
+				} else {
+					echo '<i class="fa-regular fa-star"></i>';
+				}
 			}
-			if ($rating % 2 != 0) {
-				echo '<i class="fa-solid fa-star-half-stroke"></i>';
-			}
-			for ($i = 0; $i < $emptyStar; $i++) {
-				echo '<i class="fa-regular fa-star"></i>';
-			}
-			echo '<span>' . $rating / 2 . ' / 5</span>';
+			echo '<span>' . $ratingConst / 2 . ' / 5</span>';
 			?>
 		</div>
 	</a>
@@ -64,18 +66,19 @@
 		<div class="ratings__stars">
 			<?php
 			$rating = floatval(carbon_get_theme_option('cf_rating_three')) * 2;
-			$solidStar = intdiv($rating, 2);
-			$emptyStar = ((5 - $solidStar) - ($rating % 2));
-			for ($i = 0; $i < $solidStar; $i++) {
-				echo '<i class="fa-solid fa-star"></i>';
+			$ratingConst = $rating;
+			for ($i = 0; $i < 5; $i++) {
+				if ($rating >= 2) {
+					echo '<i class="fa-solid fa-star"></i>';
+					$rating -= 2; // Уменьшаем рейтинг на 2
+				} elseif ($rating > 0) {
+					echo '<i class="fa-solid fa-star-half-stroke"></i>';
+					$rating = 0; // Устанавливаем рейтинг в 0
+				} else {
+					echo '<i class="fa-regular fa-star"></i>';
+				}
 			}
-			if ($rating % 2 != 0) {
-				echo '<i class="fa-solid fa-star-half-stroke"></i>';
-			}
-			for ($i = 0; $i < $emptyStar; $i++) {
-				echo '<i class="fa-regular fa-star"></i>';
-			}
-			echo '<span>' . $rating / 2 . ' / 5</span>';
+			echo '<span>' . $ratingConst / 2 . ' / 5</span>';
 			?>
 		</div>
 	</div>
