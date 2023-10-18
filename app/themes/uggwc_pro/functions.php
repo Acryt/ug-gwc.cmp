@@ -40,3 +40,5 @@ add_shortcode('test_1', 'test_code');
 $content = get_the_content();
 $output = apply_filters('do_shortcode', $content);
 echo $output;
+
+add_filter( 'litespeed_ucss_per_pagetype', '__return_true' );

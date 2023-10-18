@@ -9,7 +9,7 @@
 	<meta name="referrer" content="strict-origin-when-cross-origin">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 
 	<?php
@@ -133,7 +133,7 @@
 					<a href="/blog/">Blog</a>
 
 					<a class="header__contact btn borda" href="/anfragen/">
-						<span>Unverbindlich Anfragen</span>
+						<span>Unverbindliche Anfrage</span>
 					</a>
 				</div>
 			</nav>

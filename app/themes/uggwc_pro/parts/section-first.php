@@ -2,7 +2,7 @@
 	<?php get_template_part('parts/component-promoline'); ?>
 	<div class="wrapper first__container">
 		<div class="first__header">
-			<h1 class="wow animate__lightSpeedInLeft" style="visibility: hidden;">
+			<h1>
 				<?php 
 				if (is_category()) {
 					echo single_term_title();

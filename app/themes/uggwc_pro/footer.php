@@ -165,22 +165,6 @@
 </footer>
 <?php wp_footer(); ?>
 
-<!-- Google Recaptcha v3 -->
-<script src='https://www.google.com/recaptcha/api.js?render=6LcRqAQmAAAAAGCVprFNFdsJ5KBC7FhLJwfQ_QRQ'></script>
-
-<script>
-	grecaptcha.ready(function () {
-		grecaptcha.execute('6LcRqAQmAAAAAGCVprFNFdsJ5KBC7FhLJwfQ_QRQ', {
-			action: 'contact'
-		}).then(function (token) {
-			let recaptchaResponse = document.querySelectorAll('.recaptchaResponse');
-			recaptchaResponse.forEach(element => {
-				element.value = token;
-			});
-		});
-	});
-</script>
-
 </body>
 
 </html>

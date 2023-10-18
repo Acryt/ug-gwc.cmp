@@ -30,7 +30,7 @@
 					<i class="numbers__icon fa-globe-asia fas  wow animate__backInUp" aria-hidden="true" style="animation-delay: 1.2s;"></i>
 					<div class="numbers__number">5</div>
 					<div class="numbers__name">Niederlassungen</div>
-					<div class="numbers__text">Wir arbeiten in 5 Ländern: Deutschland, USA, Frankreich, Italien und Spanien. Wir können leicht einen muttersprachlichen Experten für Ihre Arbeit finden.</div>
+					<div class="numbers__text">Wir arbeiten in 5 Ländern: Deutschland, USA, Frankreich, Italien und Spanien. <br> Wir können leicht einen muttersprachlichen Experten für Ihre Arbeit finden.</div>
 				</div>
 			</div>
 		</div>
