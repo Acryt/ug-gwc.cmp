@@ -28,7 +28,7 @@
 			<?php if( is_page_template( ['templates/author-f.php'] )) {
 				echo '<a href="#sform" class="btn borda"><span>JETZT BEWERBEN</span></a>';
 			} else {
-				echo '<a class="btn borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>';
+				echo '<button class="btn borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></button>';
 			}?>
 
 			<?php if( is_page_template( ['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php', 'templates/price.php'] )) {
