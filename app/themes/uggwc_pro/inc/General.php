@@ -311,8 +311,8 @@ class General
 
 		// реферальная ссылка
 		if (!isset($_COOKIE['refer'])) {
-			if (isset($_SERVER["HTTP_REFERER"])) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 365, '/');
+			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
+				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 7, '/');
 			} else {
 				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
 			}
@@ -329,7 +329,7 @@ class General
 
 		// запись утм
 		if (!isset($_COOKIE['fc_utm'])) {
-			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 365, '/');
+			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 3, '/');
 			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
 		} else {
 			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
@@ -338,7 +338,7 @@ class General
 		// Страница
 		if (!strpos($_SERVER['REQUEST_URI'], 'wp-json')) {
 			if (!isset($_COOKIE['fc_page'])) {
-				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 365, '/');
+				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 3, '/');
 				setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
 			} else {
 				setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
