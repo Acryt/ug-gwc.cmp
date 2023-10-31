@@ -41,7 +41,7 @@ class General
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
 		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);
 		add_filter('wpseo_sitemap_index', [$this, 'add_sitemap_custom_items']);
-		
+
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
@@ -321,11 +321,12 @@ class General
 		// органика - директ - реклама
 		if (isset($utm['utm_medium'])) {
 			$utm['utm_channel'] = 'cpc';
-		} else if (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) == 'none')) {
+		} elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) == 'none')) {
 			$utm['utm_channel'] = 'direct';
 		} else {
 			$utm['utm_channel'] = 'organic';
 		}
+
 
 		// запись утм
 		if (!isset($_COOKIE['fc_utm'])) {
