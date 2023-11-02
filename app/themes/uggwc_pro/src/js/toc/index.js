@@ -57,7 +57,7 @@ export function prcBtn() {
 	let divElement = document.createElement("div");
 	divElement.classList.add("popup__menu", "prc_list");
 
-	let anchorElement = document.querySelector("a.header__contact");
+	let anchorElement = document.querySelector(".popup__cookie");
 	anchorElement.parentNode.insertBefore(divElement, anchorElement);
 
 	const prcContainer = document.querySelector(".prc_list");

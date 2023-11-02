@@ -22,7 +22,7 @@ import { stickyHeader } from "./js/scroll";
 import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
 import { accrd } from "./js/priceAccrd";
-import { closePopups, openPopup, cookieClose } from "./js/popups";
+import { closePopups, openPopup, cookieClose, liftPopup, giftTag } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer } from "./js/siteTimer";
 import { promo } from "./js/promo";
@@ -55,7 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	calc();
 	toc();
 	prcBtn();
+	liftPopup();
 	progressBar();
+	giftTag();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

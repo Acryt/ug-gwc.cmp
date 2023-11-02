@@ -66,8 +66,8 @@ class General
 	{
 		$sitemap_custom_items .= '
 		<sitemap>
-			<loc>http://ug-gwc.de/authors.xml</loc>
-			<lastmod>2023-05-22T23:12:27+00:00</lastmod>
+			<loc>https://ug-gwc.de/authors.xml</loc>
+			<lastmod>2023-10-22T23:12:27+00:00</lastmod>
 		</sitemap>';
 		return $sitemap_custom_items;
 	}

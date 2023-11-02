@@ -49,6 +49,8 @@
 					echo apply_filters('the_content', $items[4]['cf_content_content']);
 				}
 				get_template_part('parts/section-promoblock');
+				get_template_part('parts/section-promoblock-add');
+				
 				// 6
 				the_content();
 				// echo get_the_content();

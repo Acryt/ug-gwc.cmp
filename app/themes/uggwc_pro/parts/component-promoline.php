@@ -1,4 +1,4 @@
-<div class="promoline js_btn" data-slr=".popup__bigpromo">
+<div class="promoline js_btn js_giftbtn" data-slr=".popup__bigpromo">
 	<div class="promoline__img">
 		<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/promo/left.svg" alt="">
 	</div>

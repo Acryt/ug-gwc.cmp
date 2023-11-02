@@ -15,6 +15,7 @@ Template Name: Unsere Autoren
 	get_template_part('parts/section-how');
 	get_template_part('parts/section-review-img');
 	get_template_part('parts/section-promoblock');
+	get_template_part('parts/section-promoblock-add');
 	get_template_part('parts/section-form');
 	?>
 </main>

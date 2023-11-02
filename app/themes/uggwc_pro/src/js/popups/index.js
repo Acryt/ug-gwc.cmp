@@ -53,3 +53,22 @@ export function cookieClose() {
 		});
 	}
 }
+
+export function liftPopup() {
+	const lift = document.querySelector(".popup__lift");
+	lift.addEventListener("click", () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		})
+	})
+}
+
+export function giftTag() {
+	const gift = document.querySelectorAll(".js_giftbtn");
+	gift.forEach(element => {
+		element.addEventListener("click", () => {
+			document.cookie = "gift=true";
+		})
+	});
+}

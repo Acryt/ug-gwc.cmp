@@ -13,6 +13,7 @@ Template Name: Promo
 	get_template_part('parts/section-promo');
 	get_template_part('parts/section-guaranties');
 	get_template_part('parts/section-promoblock');
+	get_template_part('parts/section-promoblock-add');
 	get_template_part('parts/section-faq-accrd');
 	?>
 </main>

@@ -84,13 +84,13 @@
 	}
 }
 // Попапчики
-.header .popup__menu {
+.popup__menu {
 	position: fixed;
 	display: none;
 	flex-direction: column;
 	top: 128px;
-	left: 36px;
-	z-index: 5;
+	left: 24px;
+	z-index: 1;
 	background: var(--bg-opacity);
 	padding: 8px;
 	border-radius: 12px;
@@ -140,13 +140,13 @@
 	// backdrop-filter: blur(8px);
 	overflow: hidden;
 	z-index: 2;
-	@media (min-width: 1280px) {
-		z-index: 5;
-	}
+	// @media (min-width: 1280px) {
+	// 	z-index: 4;
+	// }
 }
 .popup__call {
 	display: flex;
-	right: 36px;
+	right: 24px;
 	font-size: 24px;
 	&:hover {
 		color: var(--bg);
@@ -154,12 +154,13 @@
 	}
 }
 .b24-widget-button-wrapper.b24-widget-button-position-bottom-right {
-	right: 36px;
+	right: 24px;
 	bottom: 24px;
+	z-index: 2;
 }
 .popup__lift {
 	display: none;
-	left: 36px;
+	left: 24px;
 	&:hover {
 		color: var(--bg);
 		border: 2px solid var(--hoverb);
@@ -167,6 +168,51 @@
 	&._sticky {
 		display: flex;
 	}
+}
+.popup__box {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 100px;
+	left: 22px;
+	border: unset;
+	background: unset;
+	z-index: 2;
+	&-img {
+		animation: swinging 3s infinite;
+	}
+	&-text {
+		position: fixed;
+		display: none;
+		flex-direction: column;
+		bottom: 150px;
+		left: 40px;
+		width: 280px;
+		background: var(--thead);
+		padding: 8px 12px;
+		border-radius: 4px;
+		p,
+		span {
+			color: var(--bg);
+		}
+		li::before {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background-color: var(--bg);
+		}
+	}
+	.btn {
+		align-self: center;
+	}
+}
+.popup__box:hover .popup__box-text {
+	display: flex;
 }
 .popup__cookie {
 	position: fixed;
@@ -207,5 +253,31 @@
 	.option {
 		margin: 0;
 		padding-left: 12px;
+	}
+}
+@keyframes swinging {
+	0% {
+		transform-origin: center 30px;
+		transform: rotate(0deg);
+	}
+	10% {
+		transform-origin: center 30px;
+		transform: rotate(20deg);
+	}
+	20% {
+		transform-origin: center 30px;
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform-origin: center 30px;
+		transform: rotate(10deg);
+	}
+	40% {
+		transform-origin: center 30px;
+		transform: rotate(-5deg);
+	}
+	50% {
+		transform-origin: center 30px;
+		transform: rotate(0deg);
 	}
 }

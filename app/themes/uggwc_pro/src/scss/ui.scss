@@ -232,7 +232,9 @@ tbody {
 		}
 	}
 }
-
+button, a {
+	cursor: pointer;
+}
 .btn {
 	position: relative;
 	display: flex;
