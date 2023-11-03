@@ -7,7 +7,13 @@ export function openPopup() {
 			const type = el.dataset.type;
 			const popup = document.querySelector(el.dataset.slr);
 			const select = popup.querySelector("select.type");
-			console.log(select);
+
+			const popupsContainer = document.querySelector(".popups");
+			const popups = document.querySelectorAll(".popup");
+			popupsContainer.classList.remove("_active");
+			popups.forEach((el) => {
+				el.classList.remove("_active");
+			});
 
 			if (type) {
 				select.querySelectorAll("option").forEach((option) => {
@@ -71,4 +77,14 @@ export function giftTag() {
 			document.cookie = "gift=true";
 		})
 	});
+}
+
+export function delayedGift() {
+	function gift() {
+		document.querySelector(".popup__delayed-gift").classList.add("_active");
+		document.querySelector(".popups").classList.add("_active");
+	}
+	if (window.innerWidth >= 720) {
+		setTimeout(gift, 5000);
+	}
 }

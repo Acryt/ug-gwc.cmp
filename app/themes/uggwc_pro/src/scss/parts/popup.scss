@@ -9,14 +9,15 @@
 	top: 0px;
 	z-index: 5;
 
-	display: none;
-
+	transition: all 0.5s;
+	visibility: hidden;
+	opacity: 0;
 	& > * {
 		display: none;
 	}
-
 	&._active {
-		display: flex;
+		visibility: visible;
+		opacity: 1;
 	}
 	& :first-child {
 	}
@@ -187,7 +188,7 @@
 		display: none;
 		flex-direction: column;
 		bottom: 150px;
-		left: 40px;
+		left: 20px;
 		width: 280px;
 		background: var(--thead);
 		padding: 8px 12px;
@@ -210,9 +211,32 @@
 	.btn {
 		align-self: center;
 	}
+	&:hover .popup__box-text {
+		display: flex;
+	}
+	@media (min-width: 720px) {
+		display: none;
+	}
 }
-.popup__box:hover .popup__box-text {
-	display: flex;
+.popup__delayed-gift {
+	position: fixed;
+	width: 629px;
+	height: 635px;
+	z-index: 2;
+	& > img {
+		position: absolute;
+	}
+	.btn {
+		bottom: 20px;
+		position: absolute;
+		left: calc(50% - 86px);
+	}
+	.popup__box-img {
+		height: 120px;
+		width: unset;
+		right: 60px;
+		bottom: 128px;
+	}
 }
 .popup__cookie {
 	position: fixed;

@@ -51,6 +51,15 @@
 		</div>
 		<?php get_template_part('parts/form-popup-promo') ?>
 	</div>
+	<div class="popup popup__delayed-gift">
+		<div class="popup_x">
+			<div></div>
+			<div></div>
+		</div>
+		<img src="<?php echo URI . '/assets/images/promo/promo-bach-alt.jpg' ?>" alt="">
+		<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
+		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigform"><span>Jetzt erhalten!</span></button>
+	</div>
 </div>
 <div class="popup__box">
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">

@@ -17,7 +17,6 @@ export function niceSelectVanilla() {
 
 	let obs = new MutationObserver(() => {
 		if (popups.classList.contains("_active")) {
-			console.log('tuk tuk');
 			instSelect.forEach(el => {
 				el.update();
 			})
