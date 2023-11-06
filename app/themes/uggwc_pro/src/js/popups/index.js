@@ -82,7 +82,6 @@ export function giftTag() {
 export function delayedGift() {
 	function gift() {
 		document.querySelector(".popup__delayed-gift").classList.add("_active");
-		document.querySelector(".popups").classList.add("_active");
 	}
 	if (window.innerWidth >= 720) {
 		setTimeout(gift, 5000);

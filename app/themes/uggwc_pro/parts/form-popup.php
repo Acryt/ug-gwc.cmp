@@ -83,5 +83,5 @@
 		</div>
 		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
-	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken...</span></button>
+	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken</span></button>
 </form>

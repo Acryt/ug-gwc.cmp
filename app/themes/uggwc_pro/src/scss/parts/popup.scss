@@ -157,7 +157,6 @@
 .b24-widget-button-wrapper.b24-widget-button-position-bottom-right {
 	right: 24px;
 	bottom: 24px;
-	z-index: 2;
 }
 .popup__lift {
 	display: none;
@@ -223,6 +222,12 @@
 	width: 629px;
 	height: 635px;
 	z-index: 2;
+	bottom: 100px;
+	transition: all 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.7);
+	transform-origin: left bottom;
 	& > img {
 		position: absolute;
 	}
@@ -236,6 +241,13 @@
 		width: unset;
 		right: 60px;
 		bottom: 128px;
+	}
+	&._active {
+		visibility: visible;
+		opacity: 1;
+	}
+	.popup_x {
+		top: 24px;
 	}
 }
 .popup__cookie {

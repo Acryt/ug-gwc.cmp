@@ -22,9 +22,11 @@
 		.form_select {
 			flex: 1 1 300px;
 		}
-		.form__number,
+		.form__number {
+			flex: 0 0 124px;
+		}
 		.form__deadline {
-			flex: 1 1 110px;
+			flex: 1 1 154px;
 		}
 	}
 	&_medium {

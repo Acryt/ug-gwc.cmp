@@ -95,7 +95,7 @@
 	</div>
 
 	<div class="form__price js-price">ab <span>49,00 €</span></div>
-	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken...</span></button>
+	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken</span></button>
 
 	<div class="form__payments">
 		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visa">
