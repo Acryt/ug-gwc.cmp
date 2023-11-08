@@ -1,13 +1,13 @@
 <?php
 class Helpers
 {
-	public function __construct()
+	public function __construct ()
 	{
 		add_filter('determine_current_user', [$this, 'jsonBasicAuthHandler'], 20);
 		add_filter('rest_authentication_errors', [$this, 'jsonBasicAuthError']);
 	}
 
-	public function jsonBasicAuthHandler($user)
+	public function jsonBasicAuthHandler ($user)
 	{
 		global $wp_json_basic_auth_error;
 		$wp_json_basic_auth_error = null;
@@ -38,7 +38,7 @@ class Helpers
 		return $user->ID;
 	}
 
-	public function jsonBasicAuthError($error)
+	public function jsonBasicAuthError ($error)
 	{
 		if (!empty($error)) {
 			return $error;
@@ -52,13 +52,13 @@ class Helpers
 	 * Выводит домен сайта без протокола
 	 * @return string
 	 */
-	public static function siteUri(): string
+	public static function siteUri (): string
 	{
 		$uri = get_site_url(get_current_blog_id());
 		$uri = explode('//', $uri);
 		return end($uri);
 	}
-	public static function siteNumber(): string
+	public static function siteNumber (): string
 	{
 		$number = get_current_blog_id();
 		$number = explode('//', $number);
@@ -69,7 +69,7 @@ class Helpers
 	 * @param string $string
 	 * @return string
 	 */
-	public static function siteFormName($string = ''): string
+	public static function siteFormName ($string = ''): string
 	{
 		if (!$string) {
 			return '';
@@ -108,7 +108,7 @@ class Helpers
 	 * Выводит массив с данными о всех лендингах
 	 * @return array
 	 */
-	public static function sites(): array
+	public static function sites (): array
 	{
 		return [
 			18 => [
@@ -241,7 +241,7 @@ class Helpers
 	/**
 	 * Добавляет код после открывающегося тега BODY
 	 */
-	public static function addedCodeBeforeBody()
+	public static function addedCodeBeforeBody ()
 	{
 		if (is_user_logged_in()) {
 			return;
@@ -350,7 +350,7 @@ class Helpers
 	/**
 	 * Добавляет код перед закрывающемся тегом BODY
 	 */
-	public static function addedCodeAfterBody()
+	public static function addedCodeAfterBody ()
 	{
 		if (is_user_logged_in()) {
 			return;
@@ -583,7 +583,7 @@ class Helpers
 	 * Получает ID Яндекс.Метрике для блога
 	 * @return int
 	 */
-	public static function getIdYM(): int
+	public static function getIdYM (): int
 	{
 		$id = 0;
 
@@ -614,7 +614,7 @@ class Helpers
 		return $id;
 	}
 
-	public static function urlPathFromRef(): string
+	public static function urlPathFromRef (): string
 	{
 		$str = wp_get_referer();
 		if ($str) {
@@ -626,12 +626,12 @@ class Helpers
 			return $site;
 		}
 	}
-	public static function del_space($item)
+	public static function del_space ($item)
 	{
 		$sp = array(' ' => '', '+' => '', '(' => '', ')' => '', '-' => '');
 		return strtr($item, $sp);
 	}
-	public static function get_competition_options()
+	public static function get_competition_options ()
 	{
 		$options = carbon_get_theme_option('cf_select_competition');
 		$checkbox_options = array();
@@ -640,7 +640,7 @@ class Helpers
 		}
 		return $checkbox_options;
 	}
-	public static function get_competition_values($competition_ids)
+	public static function get_competition_values ($competition_ids)
 	{
 		$values = array();
 		$arr_select = carbon_get_theme_option('cf_select_competition');
@@ -652,6 +652,21 @@ class Helpers
 			}
 		}
 		return $values;
+	}
+	public static function customContent ($cont)
+	{
+		if (!$cont) {
+			return '';
+		} else {
+			echo '<section class="section content">
+			<div class="wrapper">
+				<div class="section__content">
+					<div class="content__container">' . $cont . '</div>
+				</div>
+			</div>
+		</section>';
+		}
+
 	}
 }
 

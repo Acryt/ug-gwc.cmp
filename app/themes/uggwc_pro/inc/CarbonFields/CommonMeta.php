@@ -618,7 +618,7 @@ class CommonMeta
 			Field::make('textarea', 'cf_content_subtitle', __('Подзаголовок Контента')),
 			Field::make('complex', 'cf_content', __('Повторитель контента'))
 				->set_layout('tabbed-horizontal')
-				->set_max(5)
+				->set_max(8)
 				->add_fields(
 					array(
 						Field::make('rich_text', 'cf_content_content', __('Блок')),
