@@ -370,7 +370,7 @@ class General
 
 
 
-	// Allow SVG
+// Allow SVG
 // add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 // 	global $wp_version;
 // 	if ( $wp_version !== '4.7.1' ) {
@@ -423,7 +423,6 @@ class General
 //   // unset( $mimes['mp4a'] );
 //   return $mimes;
 // }
-
 }
 
 new General();

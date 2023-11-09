@@ -666,7 +666,6 @@ class Helpers
 			</div>
 		</section>';
 		}
-
 	}
 }
 

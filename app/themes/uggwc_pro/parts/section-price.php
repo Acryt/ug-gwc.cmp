@@ -139,7 +139,6 @@ if ($items) {
 			</div>
 		</div>
 	</section>
-
 	<?php
 }
 ?>
