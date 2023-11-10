@@ -23,9 +23,18 @@ if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
 	<section id="priceTable" class="section price_table_l">
 		<div class="wrapper">
 			<div class="section__header">
-				<h2>Preise für
-					<?php echo $pageArr[0]['prices'][0]['name']; ?>
-				</h2>
+				<?php
+				if (carbon_get_post_meta(get_the_ID(), 'cf_price_tablel_title')) {
+					echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_price_tablel_title') . '</h2>';
+				} else {
+					echo '<h2 class="section__heading">Preise für ' . $pageArr[0]['prices'][0]['name']  . '</h2>';
+				}
+
+				if (carbon_get_post_meta(get_the_ID(), 'cf_price_tablel_subtitle')) {
+					echo '<p class="section__subheading">' . carbon_get_post_meta(get_the_ID(), 'cf_price_tablel_subtitle') . '</p>';
+				} else {
+					echo '<p class="section__subheading">' . carbon_get_theme_option('cf_faq_subtitle') . '</p>';
+				} ?>
 			</div>
 			<div class="section__content">
 				<div class="price_table_l__cont">

@@ -785,8 +785,8 @@ class CommonMeta
 	public static function priceMeta (): array
 	{
 		return [
-			Field::make('text', 'cf_price_title', __('Заголовок прайса')),
-			Field::make('text', 'cf_price_subtitle', __('Подаголовок прайса')),
+			Field::make('text', 'cf_price_title', __('Заголовок прайс карточки')),
+			Field::make('text', 'cf_price_subtitle', __('Подаголовок прайс карточки')),
 			Field::make('text', 'cf_price_btn', __('Текст на Кнопке')),
 			Field::make('complex', 'cf_price', __('Список'))
 				->set_max(4)
@@ -795,7 +795,9 @@ class CommonMeta
 						->set_width(40),
 					// Field::make('text', 'custom1', __('Изменяющийся пункт'))
 					// 	->set_width(40),
-				])
+				]),
+			Field::make('text', 'cf_price_tablel_title', __('Заголовок прайc-таблица')),
+			Field::make('text', 'cf_price_tablel_subtitle', __('Подаголовок прайс-таблица')),
 		];
 	}
 	public static function blogMeta (): array
