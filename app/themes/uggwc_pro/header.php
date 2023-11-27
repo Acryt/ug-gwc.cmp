@@ -131,7 +131,7 @@
 					</div>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
-					<a href="/worter-zu-seiten/">Wörter zu Seiten</a>
+					<a class="no-wide" href="/worter-zu-seiten/">Wörter zu Seiten</a>
 
 					<a class="header__contact btnh borda wave_effect" href="/anfragen/">
 						<span>Unverbindliche Anfrage</span>
