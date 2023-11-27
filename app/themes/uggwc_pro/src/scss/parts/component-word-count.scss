@@ -1,0 +1,70 @@
+.wc {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	padding: 24px 0 68px;
+	align-items: flex-start;
+
+	.wc__card {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 16px;
+
+		.s {
+			width: 100%;
+		}
+	}
+	&__img {
+		width: 64px;
+		height: 64px;
+		padding: 12px;
+		border-radius: 50%;
+		overflow: hidden;
+		background: var(--bg-icon);
+	}
+	& > * {
+		flex: 1 1 310px;
+	}
+	&__in,
+	&__out {
+		border: none;
+		background: var(--border);
+		padding: 4px 12px;
+		border-radius: 4px;
+		width: 100%;
+	}
+	strong {
+		color: var(--thead);
+	}
+	&__table {
+		border-collapse: collapse;
+
+		thead {
+			background: var(--tabhead-alt);
+			color: var(--bg);
+		}
+
+		th,
+		td {
+			border: 1px solid var(--tabhead);
+			padding: 8px 24px;
+			&:first-child {
+				text-align: start;
+			}
+			&:last-child {
+				text-align: end;
+			}
+		}
+		td {
+			color: var(--thead);
+		}
+	}
+	&__tcard {
+		border-left: 2px solid var(--hover);
+		border-radius: 4px;
+		margin: 24px 0;
+		padding: 24px 16px;
+		color: var(--thead);
+	}
+}

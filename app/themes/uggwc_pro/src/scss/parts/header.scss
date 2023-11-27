@@ -327,4 +327,23 @@
 			top: 64px;
 		}
 	}
+	.btnh {
+		position: relative;
+		border: 2px solid var(--hoverb);
+		border-radius: 8px;
+		background: var(--hoverb);
+		& > span {
+			color: var(--bg);
+		}
+		&:active {
+			background: var(--bg);
+
+			& > span {
+				color: var(--hoverb);
+			}
+			&::before {
+				content: unset;
+			}
+		}
+	}
 }

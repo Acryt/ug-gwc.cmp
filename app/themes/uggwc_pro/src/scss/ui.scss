@@ -221,7 +221,7 @@ tbody {
 			// }
 		}
 		td {
-			// border: 1px solid var(--tabhead);
+			border: 1px solid var(--tabhead);
 			padding: 8px;
 			@include responsiveFont(12, 14);
 

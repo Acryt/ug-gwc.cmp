@@ -631,6 +631,20 @@ class Helpers
 		$sp = array(' ' => '', '+' => '', '(' => '', ')' => '', '-' => '');
 		return strtr($item, $sp);
 	}
+	public static function mgr_whatsapp(): string
+	{
+		$day = date('N');
+		$mgrArr = [
+			'1' => '49(304)669-02-86',
+			'2' => '49(304)669-04-49',
+			'3' => '49(304)669-04-29',
+			'4' => '49(304)669-04-48',
+			'5' => '49(304)669-04-48',
+			'6' => '49(304)669-04-49',
+			'7' => '49(304)669-02-86',
+		];
+		return $mgrArr[$day];
+	}
 	public static function get_competition_options ()
 	{
 		$options = carbon_get_theme_option('cf_select_competition');

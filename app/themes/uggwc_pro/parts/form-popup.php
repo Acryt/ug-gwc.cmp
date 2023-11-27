@@ -54,7 +54,8 @@
 		<div class="form__desc">?
 			<div class="form__desc_t"><p>Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen können.</p></div>
 		</div>
-		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
+		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<!-- <label class="form__service">
 		<div class="form__icon"><i class="fa-solid fa-medal"></i></div>

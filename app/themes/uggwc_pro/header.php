@@ -94,7 +94,7 @@
 					</div>
 				</div>
 
-				<a class="header_mob_contact btn borda" href="/anfragen/">
+				<a class="header_mob_contact btnh borda wave_effect" href="/anfragen/">
 					<span>Anfragen</span>
 				</a>
 
@@ -131,8 +131,9 @@
 					</div>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
+					<a href="/worter-zu-seiten/">Wörter zu Seiten</a>
 
-					<a class="header__contact btn borda" href="/anfragen/">
+					<a class="header__contact btnh borda wave_effect" href="/anfragen/">
 						<span>Unverbindliche Anfrage</span>
 					</a>
 				</div>

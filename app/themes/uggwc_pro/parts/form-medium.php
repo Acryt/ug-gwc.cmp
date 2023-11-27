@@ -47,7 +47,8 @@
 		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
-		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
+		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">

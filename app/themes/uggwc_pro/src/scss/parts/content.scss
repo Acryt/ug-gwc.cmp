@@ -9,6 +9,12 @@
 		justify-content: center;
 		gap: 32px;
 		flex-wrap: wrap;
+
+		.content__container {
+			& > *:first-child {
+				margin-top: 0;
+			}
+		}
 	}
 	&__container, .about__description {
 		flex: 1 1 400px;

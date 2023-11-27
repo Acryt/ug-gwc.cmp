@@ -93,7 +93,7 @@
 			echo '</div>';
 		}
 		else if ( is_page_template( 'templates/lectorat.php' )) { 
-			$pathImg .= '/assets/images/how/how3.svg';
+			// $pathImg .= '/assets/images/how/how3.svg';
 			// echo '<div class="first__img">';
 			// echo '<img class="" src="' . $pathImg . '" alt="Logo">';
 			// echo '</div>';
@@ -109,6 +109,12 @@
 			$pathImg .= '/assets/images/ratings/ratings.svg';
 			echo '<div class="first__img">';
 			echo '<img class="wow animate__jello animate__delay-1s" src="' . $pathImg . '" alt="Logo">';
+			echo '</div>';
+		}
+		else if ( is_page_template( 'templates/word-count.php' )) { 
+			$pathImg .= '/assets/images/first/word-count.svg';
+			echo '<div class="first__img">';
+			echo '<img class="" src="' . $pathImg . '" alt="Logo">';
 			echo '</div>';
 		}
 		else if ( is_single()) { 

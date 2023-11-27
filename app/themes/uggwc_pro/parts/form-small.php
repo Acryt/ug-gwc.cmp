@@ -2,7 +2,7 @@
 	<label><span>Theme</span><input type="text" name="theme"></label>
 	<label><span>Type</span><input type="text" name="specialization"></label>
 	<label><span>Name</span><input type="text" name="name"></label>
-	<label><span>Whatsapp</span><input class="iti_phone" type="tel" name="whatsapp"></label>
+	<label><span>Whatsapp</span><input type="tel" name="whatsapp"></label>
 	<label><span>Email</span><input type="email" name="email"></label>
 	<label><span>Deadline</span><input type="text" name="deadline" class="dp_date"></label>
 	<div class="form__guarant">

@@ -33,6 +33,7 @@ import { calc } from "./js/calc";
 // import { handleAnchorLinks } from "./js/href";
 import { toc, prcBtn } from "./js/toc";
 import { progressBar } from "./js/progress";
+import { wordCount } from "./js/word";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	sliders();
 	siteTimer();
 	promo();
-	phoneInput();
+	// phoneInput();
 	promoBlockTimer();
 	onlineForm();
 	calc();
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	progressBar();
 	giftTag();
 	delayedGift();
+	wordCount();
 
 	let wow = new WOW({
 		boxClass: "wow", // default

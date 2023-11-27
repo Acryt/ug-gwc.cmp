@@ -8,7 +8,8 @@
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label>
-		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
+		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 
 	<?php $items = carbon_get_theme_option('cf_select_quality'); ?>

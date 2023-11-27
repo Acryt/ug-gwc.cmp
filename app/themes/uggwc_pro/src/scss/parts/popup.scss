@@ -129,15 +129,15 @@
 .popup__call,
 .popup__lift {
 	position: fixed;
-	width: 60px;
 	height: 60px;
+	width: 60px;
 	bottom: 24px;
-	background: var(--bg);
 	border: 2px solid var(--thead);
 	border-radius: 50%;
 	box-shadow: 0px 2px 8px var(--shadow-header);
 	justify-content: center;
 	align-items: center;
+	transition: all .5s;
 	// backdrop-filter: blur(8px);
 	overflow: hidden;
 	z-index: 2;
@@ -147,11 +147,37 @@
 }
 .popup__call {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0px;
 	right: 24px;
 	font-size: 24px;
+	background: var(--thead);
+	color: var(--bg);
+	padding: 4px 12px;
+
+	span {
+		position: absolute;
+		left: 44px;
+		visibility: hidden;
+		width: 128px;
+		opacity: 0;
+		transition: opacity 1s;
+		font-size: 14px;
+		// font-weight: 600;
+	}
 	&:hover {
 		color: var(--bg);
+		width: 200px;
 		border: 2px solid var(--hoverb);
+		border-radius: 8px;
+		gap: 12px;
+		justify-content: flex-start;
+
+		span {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
 }
 .b24-widget-button-wrapper.b24-widget-button-position-bottom-right {
@@ -161,6 +187,7 @@
 .popup__lift {
 	display: none;
 	left: 24px;
+	background: var(--bg);
 	&:hover {
 		color: var(--bg);
 		border: 2px solid var(--hoverb);

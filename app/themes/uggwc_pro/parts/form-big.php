@@ -63,7 +63,8 @@
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
-		<input class="iti_phone" type="tel" name="phone" placeholder="WhatsApp">
+		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<?php get_template_part('parts/select-calltime') ?>
 	<label class="form__promo">
