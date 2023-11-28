@@ -45,7 +45,7 @@
 				if (isset($items[3])) {
 					echo apply_filters('the_content', $items[3]['cf_content_content']);
 				}
-				get_template_part('parts/section-how');
+				get_template_part('parts/section-how-alt');
 				// get_template_part('parts/section-price');
 				
 				// 5

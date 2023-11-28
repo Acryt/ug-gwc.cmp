@@ -28,8 +28,7 @@
 				if (isset($items[2])) {
 					echo $items[2]['cf_content_content'];
 				}
-				// get_template_part('parts/section-how');
-				get_template_part('parts/section-how');
+				get_template_part('parts/section-how-alt');
 
 				// 4
 				if (isset($items[3])) {
