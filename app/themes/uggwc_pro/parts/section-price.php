@@ -78,19 +78,24 @@ if ($items) {
 										<?php
 										switch ($key) {
 											case '0':
-												?>Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften<?php
+												?>Zahlreiche Autoren aus verschiedenen Bereichen der Geisteswissenschaften
+												<?php
 												break;
 											case '1':
-												?>Autoren aus allen Bereichen der Wirtschaftswissenschaften<?php
+												?>Autoren aus allen Bereichen der Wirtschaftswissenschaften
+												<?php
 												break;
 											case '2':
-												?>Arbeit mit speziellen Programmen und Software<?php
+												?>Arbeit mit speziellen Programmen und Software
+												<?php
 												break;
 											case '3':
-												?>Unsere Autoren arbeiten in allen Rechtsbereichen<?php
+												?>Unsere Autoren arbeiten in allen Rechtsbereichen
+												<?php
 												break;
 											default:
-												?>...<?php
+												?>...
+												<?php
 												break;
 										}
 										?>
@@ -125,12 +130,12 @@ if ($items) {
 								<li><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icons/check.svg"
 											alt="check">Möglichkeit der
 										Teilzahlung ohne Zusatzkosten</span></li>
-								<div class="price__footer">
-									<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigform"><span>
-											<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
-										</span></a>
-								</div>
 							</ul>
+							<div class="price__footer">
+								<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigform"><span>
+										<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
+									</span></a>
+							</div>
 						</div>
 						<?php
 					}

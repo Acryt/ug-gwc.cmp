@@ -7,6 +7,9 @@ import "vanillajs-datepicker/sass/datepicker.scss";
 import "animate.css";
 import { WOW } from "wowjs";
 
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+
 // Swiper SCSS
 import "swiper/css";
 import "swiper/css/navigation";
@@ -61,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	giftTag();
 	delayedGift();
 	wordCount();
+	tippy('[data-tippy-content]');
 
 	let wow = new WOW({
 		boxClass: "wow", // default

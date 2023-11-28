@@ -61,7 +61,7 @@
 </head>
 
 <body>
-	<header class="header" name="top">
+	<header class="header">
 		<div class="header__content">
 			<div class="header__a_links">
 				<a href="/impressum/">Impressum</a>
@@ -98,11 +98,11 @@
 					<span>Anfragen</span>
 				</a>
 
-				<div id="ham_btn" class="header__toggler nav-btn" type="button">
+				<button id="ham_btn" class="header__toggler nav-btn">
 					<div></div>
 					<div></div>
 					<div></div>
-				</div>
+				</button>
 			</div>
 			<nav class="header__nav nav-menu">
 				<div class="header__nav_wrap">
