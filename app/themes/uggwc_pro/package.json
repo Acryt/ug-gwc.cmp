@@ -30,6 +30,7 @@
 		"select2": "^4.1.0-rc.0",
 		"style-loader": "^3.3.1",
 		"swiper": "^8",
+		"tippy.js": "^6.3.7",
 		"ts-node": ">=10",
 		"typescript": ">=3",
 		"vanillajs-datepicker": "^1.2.0",

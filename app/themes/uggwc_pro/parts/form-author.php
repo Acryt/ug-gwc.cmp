@@ -23,13 +23,8 @@
 		</select>
 	</div>
 
-	<label class="form__spec">
-		<div class="form__desc">?
-			<div class="form__desc_t">
-				<p> Bauwesen, Nachhaltig Bauen, Architektur & Design (Architekturstudium),
-					Persönlichkeitsentwicklung/psychische Erkrankungen (nur Erfahrungswissen), Fachbereich BWL</p>
-			</div>
-		</div>
+	<label class="form__spec" data-tippy-content="Bauwesen, Nachhaltig Bauen, Architektur & Design (Architekturstudium),
+					Persönlichkeitsentwicklung/psychische Erkrankungen (nur Erfahrungswissen), Fachbereich BWL">
 		<textarea name="Specialization" id="specialization" cols="100" rows="5"
 			placeholder="Fachbereiche & Interessensschwerpunkte"></textarea>
 	</label>

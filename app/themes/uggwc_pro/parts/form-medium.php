@@ -3,46 +3,26 @@
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
-	<label class="form__theme req_star">
-		<div class="form__desc">?
-			<div class="form__desc_t">
-				<p>Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.</p>
-			</div>
-		</div>
+	<label class="form__theme req_star" data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Psr Thema jetzt richtig zu schreiben.">
 		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
 		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
 	</label>
 
-	<label class="form__number req_star form-counter">
-		<div class="form__desc">?
-			<div class="form__desc_t">
-				<p>Seitenzahl</p>
-			</div>
-		</div>
+	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
 		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
 			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
-	<label class="form__deadline req_star">
-		<div class="form__desc">?
-			<div class="form__desc_t">
-				<p>Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein
+	<label class="form__deadline req_star" data-tippy-content="Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein
 					paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage
-					falls nötig haben.</p>
-			</div>
-		</div>
+					falls nötig haben.">
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
 		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
 
-	<label class="form__email req_star">
-		<div class="form__desc">?
-			<div class="form__desc_t">
-				<p>Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
-					können.</p>
-			</div>
-		</div>
+	<label class="form__email req_star" data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
+					können.">
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
 		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
