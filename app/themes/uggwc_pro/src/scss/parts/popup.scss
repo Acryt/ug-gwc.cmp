@@ -85,47 +85,6 @@
 	}
 }
 // Попапчики
-.popup__menu {
-	position: fixed;
-	display: none;
-	flex-direction: column;
-	top: 128px;
-	left: 24px;
-	z-index: 1;
-	background: var(--bg-opacity);
-	padding: 8px;
-	border-radius: 12px;
-	gap: 4px;
-
-	& > * {
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-	@media (max-width: 920px) {
-		display: flex;
-		position: relative;
-		top: unset;
-		left: unset;
-		padding: 8px 16px;
-	}
-	@media (min-width: 1800px) {
-		display: flex;
-		width: 240px;
-
-		& > * {
-			box-shadow: inset 0 2px 12px 0px var(--box-shadow);
-			padding: 4px 8px;
-			border-radius: 12px;
-			background: var(--bg);
-
-			&.popup__btn {
-				padding: 12px 8px;
-				box-shadow: 0 2px 12px 0px var(--box-shadow);
-			}
-		}
-	}
-}
 .popup__call,
 .popup__lift {
 	position: fixed;

@@ -27,6 +27,11 @@ export function toc() {
 		// Создаем ссылку на заголовок с измененным значением
 		let li = document.createElement("li");
 		let link = document.createElement("a");
+		if (el.tagName  === 'H2') {
+			li.classList.add("toc-h2");
+		} else if (el.tagName  === 'H3') {
+			li.classList.add("toc-h3");
+		}
 		link.textContent = text;
 		link.title = text;
 		link.href = `#${id}`;
@@ -54,14 +59,9 @@ export function prcBtn() {
 		return;
 	}
 
-	let divElement = document.createElement("div");
-	divElement.classList.add("popup__menu", "prc_list");
-
-	let anchorElement = document.querySelector(".popup__cookie");
-	anchorElement.parentNode.insertBefore(divElement, anchorElement);
-
-	const prcContainer = document.querySelector(".prc_list");
-
+	let divElement = document.createElement("nav");
+	divElement.classList.add("toc-prc__menu");
+	
 	sections.forEach((el) => {
 		let text = "";
 		switch (el.id) {
@@ -83,8 +83,8 @@ export function prcBtn() {
 		link.href = "#" + el.id;
 		link.classList.add("popup__btn");
 
-		prcContainer.appendChild(link);
-		prcContainer.querySelectorAll("a").forEach(function (elem) {
+		divElement.appendChild(link);
+		divElement.querySelectorAll("a").forEach(function (elem) {
 			elem.addEventListener("click", function (event) {
 				const anch = this.hash.slice(0);
 				if (!anch || !anch[0] === "#") return;
@@ -95,6 +95,16 @@ export function prcBtn() {
 			});
 		});
 	});
+
+	let anchorElement;
+	if (document.querySelector(".content__container")) {
+		anchorElement = document.querySelector(".content__container")
+		anchorElement.insertAdjacentElement("afterbegin", divElement);
+	} else {
+		anchorElement = document.querySelector(".crumbs > .wrapper")
+		anchorElement.insertAdjacentElement("beforeend", divElement);
+	};
+
 }
 function scrollToBlock(selector) {
 	const targetElement = document.querySelector(selector);

@@ -348,4 +348,11 @@
 			}
 		}
 	}
+	&__lamps {
+		position: absolute;
+		height: 50px;
+		width: 1920px;
+		bottom: -32px;
+		z-index: -1;
+	}
 }
