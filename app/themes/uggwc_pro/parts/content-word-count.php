@@ -26,8 +26,8 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/wc-1.svg"
 								alt="word count">
 						</div>
-						<strong>Symbole → Wörter</strong>
-						<p class="s">Anzahl der Seiten eingeben</p>
+						<strong>Zeichen → Wörter</strong>
+						<p class="s">Anzahl der Zeichen eingeben</p>
 						<input class="wc__in js-wc-in" type="number" placeholder="0">
 						<p class="s">Anzahl der Wörter abrufen</p>
 						<div class="wc__out js-wc-out">0</div>
@@ -37,10 +37,10 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/wc-2.svg"
 								alt="word count">
 						</div>
-						<strong>Wörter → Symbole</strong>
+						<strong>Wörter → Zeichen</strong>
 						<p class="s">Anzahl der Wörter eingeben</p>
 						<input class="wc__in js-wc-in" type="number" placeholder="0">
-						<p class="s">Anzahl der Seiten abrufen</p>
+						<p class="s">Anzahl der Zeichen abrufen</p>
 						<div class="wc__out js-wc-out">0</div>
 					</div>
 				</div>
@@ -59,10 +59,10 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/wc-2.svg"
 								alt="word count">
 						</div>
-						<strong>Seiten → Symbole</strong>
+						<strong>Seiten → Zeichen</strong>
 						<p class="s">Anzahl der Seiten eingeben</p>
 						<input class="wc__in js-wc-in" type="number" placeholder="0">
-						<p class="s">Anzahl der Wörter abrufen</p>
+						<p class="s">Anzahl der Zeichen abrufen</p>
 						<div class="wc__out js-wc-out">0</div>
 					</div>
 					<div class="wc__card js-wc card shadow" data-wc="sp">
@@ -70,8 +70,8 @@
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/wc-3.svg"
 								alt="word count">
 						</div>
-						<strong>Symbole → Seiten</strong>
-						<p class="s">Anzahl der Wörter eingeben</p>
+						<strong>Zeichen → Seiten</strong>
+						<p class="s">Anzahl der Zeichen eingeben</p>
 						<input class="wc__in js-wc-in" type="number" step="500" placeholder="0">
 						<p class="s">Anzahl der Seiten abrufen</p>
 						<div class="wc__out js-wc-out">0</div>
@@ -264,7 +264,7 @@
 				}
 				?>
 				<div class="wc__tcard card shadow">
-					<span>Ghostwriter Texte steht Ihnen auch für weitere Hilfestellungen für Ihre studentische Laufbahn zur
+					<span>UG-GWC steht Ihnen auch für weitere Hilfestellungen für Ihre studentische Laufbahn zur
 						Verfügung. Mit uns können Sie sämtliche universitäre Leistungen meistern, auch die schwersten. Denn
 						unser Team von über 830 Experten meistert für Studenten jeden Faches deren Hausarbeiten, und sogar
 						Bachelor-, Master– und Doktorarbeiten. Dabei haben alle unsere Experten akademische Laufbahnen in den
