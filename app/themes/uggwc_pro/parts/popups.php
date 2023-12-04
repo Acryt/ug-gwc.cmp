@@ -55,7 +55,7 @@
 <div class="popup__box">
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<div class="popup__box-text">
-		<p>Bestellen Sie eine Bachelorarbeit bis 30. November und wählen Sie selbst ein Geschenk!</p>
+		<p>Bestellen Sie eine Arbeit bis zum 31. Dezember und wählen Sie selbst ein Geschenk!</p>
 		<ul>
 			<li><span>Expose</span> bis 3 Seiten</li>
 			<li><span>Coaching</span> 30 Min.</li>
@@ -70,7 +70,7 @@
 		<div></div>
 		<div></div>
 	</div>
-	<img src="<?php echo URI . '/assets/images/promo/promo-bach-alt.jpg' ?>" alt="">
+	<img src="<?php echo URI . '/assets/images/promo/promo-ny1.svg' ?>" alt="">
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigform"><span>Jetzt erhalten!</span></button>
 </div>
