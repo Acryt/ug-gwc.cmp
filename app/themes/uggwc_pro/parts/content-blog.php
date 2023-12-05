@@ -67,7 +67,6 @@
 				if (isset($items[6])) {
 					echo apply_filters('the_content', $items[6]['cf_content_content']);
 				}
-				get_template_part('parts/section-promoblock-add');
 
 				// 0
 				the_content();

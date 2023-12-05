@@ -70,13 +70,32 @@
 		<div></div>
 		<div></div>
 	</div>
-	<img src="<?php echo URI . '/assets/images/promo/promo-ny1.svg' ?>" alt="">
+	<?php
+	switch (get_the_ID()) {
+		case '123':
+			echo '<img src="' . URI . '/assets/images/promo/promo-ny2.svg" alt="">'; //bach
+			break;
+
+		case '154':
+			echo '<img src="' . URI . '/assets/images/promo/promo-ny3.svg" alt="">'; //haus
+			break;
+
+		case '161':
+			echo '<img src="' . URI . '/assets/images/promo/promo-ny4.svg" alt="">'; //master
+			break;
+
+		default:
+			echo '<img src="' . URI . '/assets/images/promo/promo-ny1.svg" alt="">';
+			break;
+	}
+	?>
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigform"><span>Jetzt erhalten!</span></button>
 </div>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>
-<a target="_blank" class="popup__call shadow wave_effect" href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
+<a target="_blank" class="popup__call shadow wave_effect"
+	href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>
 </a>
