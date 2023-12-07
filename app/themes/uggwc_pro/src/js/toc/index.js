@@ -1,7 +1,7 @@
 export function toc() {
 	// Getting all the h1-h6 header tags
 	const headings = document.querySelectorAll(
-		".content__container > :not(section) h2, .content__container > h2, .content__container > :not(section) h3, .content__container > h3"
+		"main h2, main h3"
 	);
 	if (!headings) {
 		return;
@@ -27,9 +27,9 @@ export function toc() {
 		// Создаем ссылку на заголовок с измененным значением
 		let li = document.createElement("li");
 		let link = document.createElement("a");
-		if (el.tagName  === 'H2') {
+		if (el.tagName === "H2") {
 			li.classList.add("toc-h2");
-		} else if (el.tagName  === 'H3') {
+		} else if (el.tagName === "H3") {
 			li.classList.add("toc-h3");
 		}
 		link.textContent = text;
@@ -45,7 +45,7 @@ export function toc() {
 				if (!anch || !anch[0] === "#") return;
 				event.preventDefault();
 				window.location.hash = "";
-		
+
 				scrollToBlock(anch);
 			});
 		});
@@ -53,7 +53,7 @@ export function toc() {
 }
 export function prcBtn() {
 	const sections = document.querySelectorAll(
-		"#priceAccrd, #price, #priceTable"
+		"#priceAccrd, #price, #priceTable, #priceTableL"
 	);
 	if (sections.length == 0) {
 		return;
@@ -61,18 +61,21 @@ export function prcBtn() {
 
 	let divElement = document.createElement("nav");
 	divElement.classList.add("toc-prc__menu");
-	
+
 	sections.forEach((el) => {
 		let text = "";
 		switch (el.id) {
-			case "priceAccrd":
+			case "price":
+				text = "Kosten";
+				break;
+			case "priceTableL":
 				text = "Preise";
 				break;
 			case "priceTable":
 				text = "Kosten";
 				break;
-			case "price":
-				text = "Kaufen";
+			case "priceAccrd":
+				text = "Preise";
 				break;
 			default:
 				break;
@@ -90,7 +93,7 @@ export function prcBtn() {
 				if (!anch || !anch[0] === "#") return;
 				event.preventDefault();
 				window.location.hash = "";
-		
+
 				scrollToBlock(anch);
 			});
 		});
@@ -98,13 +101,12 @@ export function prcBtn() {
 
 	let anchorElement;
 	if (document.querySelector(".content__container")) {
-		anchorElement = document.querySelector(".content__container")
+		anchorElement = document.querySelector(".content__container");
 		anchorElement.insertAdjacentElement("afterbegin", divElement);
 	} else {
-		anchorElement = document.querySelector(".crumbs > .wrapper")
+		anchorElement = document.querySelector(".crumbs > .wrapper");
 		anchorElement.insertAdjacentElement("beforeend", divElement);
-	};
-
+	}
 }
 function scrollToBlock(selector) {
 	const targetElement = document.querySelector(selector);

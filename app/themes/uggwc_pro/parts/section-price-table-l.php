@@ -20,7 +20,7 @@ function filterPricesByName ($name, $data)
 $pageArr = filterPricesByName(get_post_field('post_name', get_post()), $dataPrice);
 if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
 
-	<section id="priceTable" class="section price_table_l">
+	<section id="priceTableL" class="section price_table_l">
 		<div class="wrapper">
 			<div class="section__header">
 				<?php

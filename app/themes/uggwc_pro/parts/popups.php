@@ -94,7 +94,7 @@
 </div>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>
-<a target="_blank" class="popup__call shadow wave_effect"
+<a target="_blank" class="popup__call shadow"
 	href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>

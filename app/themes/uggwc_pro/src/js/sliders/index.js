@@ -1,4 +1,5 @@
-import {Swiper, Navigation, Autoplay, Pagination} from 'swiper';
+import { Swiper } from 'swiper';
+import { Navigation, Autoplay, Pagination, FreeMode } from "swiper/modules";
 
 export function sliders() {
 	const sManagerSwiper = new Swiper('.sm_swiper', {
@@ -21,32 +22,6 @@ export function sliders() {
 		},
 	});
 
-	// const bManagerSwiper = new Swiper('.big_m_swiper', {
-	// 	modules: [Navigation, Autoplay],
-	// 	// Optional parameters
-	// 	direction: 'horizontal',
-	// 	slidesPerView: 1,
-	// 	loop: true,
-	// 	centeredSlides: false,
-	// 	centeredSlidesBounds: true,
-	// 	autoplay: {
-	// 		enabled: true,
-	// 		delay: 5000,
-	// 	},
-	// 	speed: 500,
-	
-	// 	// If we need pagination
-	// 	pagination: {
-	// 		el: '.swiper-pagination',
-	// 	},
-	
-	// 	// Navigation arrows
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	}
-	// });
-
 	const reviewSwiper = new Swiper('.review_swiper', {
 		modules: [Navigation, Autoplay, Pagination],
 		// Optional parameters
@@ -68,6 +43,77 @@ export function sliders() {
 			type: 'bullets',
 			clickable: true,
 		},
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+	const reviewAltSwiper = new Swiper('.js-rsa', {
+		modules: [Navigation, Autoplay, Pagination, FreeMode],
+		// Optional parameters
+		direction: 'horizontal',
+		slidesPerView: "auto",
+		slidesPerGroup: 1,
+		loop: true,
+		centeredSlides: true,
+		autoplay: {
+			enabled: true,
+			delay: 5000,
+			pauseOnMouseEnter: true,
+		},
+		freeMode: {
+			enabled: true,
+			minimumVelocity: 0.5,
+			momentum: true,
+			sticky: true,
+		},
+		speed: 500,
+	
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+	const reviewAltRevSwiper = new Swiper('.js-rsar', {
+		modules: [Navigation, Autoplay, Pagination, FreeMode],
+		// Optional parameters
+		direction: 'horizontal',
+		slidesPerView: "auto",
+		slidesPerGroup: 1,
+		loop: true,
+		centeredSlides: true,
+		autoplay: {
+			enabled: true,
+			delay: 5000,
+			reverseDirection: true,
+			pauseOnMouseEnter: true,
+		},
+		freeMode: {
+			enabled: true,
+			minimumVelocity: 0.5,
+			momentum: true,
+			sticky: true,
+		},
+		speed: 500,
+	
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		
 	
 		// Navigation arrows
 		navigation: {

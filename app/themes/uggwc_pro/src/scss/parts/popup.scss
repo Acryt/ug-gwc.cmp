@@ -111,7 +111,8 @@
 	gap: 0px;
 	right: 24px;
 	font-size: 24px;
-	background: var(--thead);
+	background: var(--whatsapp);
+	border: 2px solid var(--hoverb);
 	color: var(--bg);
 	padding: 4px 12px;
 
@@ -128,7 +129,6 @@
 	&:hover {
 		color: var(--bg);
 		width: 200px;
-		border: 2px solid var(--hoverb);
 		border-radius: 8px;
 		gap: 12px;
 		justify-content: flex-start;
