@@ -118,9 +118,9 @@ img {
 }
 .card {
 	border-radius: 12px;
-	padding: responsive(12, 24) responsive(16, 32);
+	padding: responsive(12, 16) responsive(16, 24);
 	@media (min-width: 1280px) {
-		padding: 24px 32px;
+		padding: 16px 24px;
 	}
 }
 .fit {
