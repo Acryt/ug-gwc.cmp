@@ -1,0 +1,19 @@
+.iis {
+	&__cont {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+	&__lside {
+		flex: 1 1 500px;
+	}
+	&__rside {
+		flex: 1 1 300px;
+	}
+	&__payments {
+		margin-top: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+}

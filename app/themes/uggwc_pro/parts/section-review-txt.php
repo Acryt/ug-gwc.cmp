@@ -10,6 +10,6 @@
 			<!-- <div class="review__text"></div> -->
 			<!-- <img class="review__img" src="<?php bloginfo('template_url'); ?>/assets/images/ratings/ratings.svg" alt="rating-table"> -->
 		</div>
+		<?php get_template_part('parts/swiper-review-txt-alt'); ?>
 	</div>
-	<?php get_template_part('parts/swiper-review-txt'); ?>
 </section>

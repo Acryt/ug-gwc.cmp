@@ -51,7 +51,7 @@ export function sliders() {
 		},
 	});
 	const reviewAltSwiper = new Swiper('.js-rsa', {
-		modules: [Navigation, Autoplay, Pagination, FreeMode],
+		modules: [Navigation, Autoplay, Pagination],
 		// Optional parameters
 		direction: 'horizontal',
 		slidesPerView: "auto",
@@ -60,16 +60,16 @@ export function sliders() {
 		centeredSlides: true,
 		autoplay: {
 			enabled: true,
-			delay: 5000,
+			delay: 0,
 			pauseOnMouseEnter: true,
 		},
-		freeMode: {
-			enabled: true,
-			minimumVelocity: 0.5,
-			momentum: true,
-			sticky: true,
-		},
-		speed: 500,
+		// freeMode: {
+		// 	enabled: true,
+		// 	minimumVelocity: 0.2,
+		// 	momentum: true,
+		// 	sticky: true,
+		// },
+		speed: 5000,
 	
 		// If we need pagination
 		pagination: {
@@ -86,7 +86,7 @@ export function sliders() {
 		},
 	});
 	const reviewAltRevSwiper = new Swiper('.js-rsar', {
-		modules: [Navigation, Autoplay, Pagination, FreeMode],
+		modules: [Navigation, Autoplay, Pagination],
 		// Optional parameters
 		direction: 'horizontal',
 		slidesPerView: "auto",
@@ -95,17 +95,17 @@ export function sliders() {
 		centeredSlides: true,
 		autoplay: {
 			enabled: true,
-			delay: 5000,
+			delay: 0,
 			reverseDirection: true,
 			pauseOnMouseEnter: true,
 		},
-		freeMode: {
-			enabled: true,
-			minimumVelocity: 0.5,
-			momentum: true,
-			sticky: true,
-		},
-		speed: 500,
+		// freeMode: {
+		// 	enabled: true,
+		// 	minimumVelocity: 0.5,
+		// 	momentum: true,
+		// 	sticky: true,
+		// },
+		speed: 5000,
 	
 		// If we need pagination
 		pagination: {

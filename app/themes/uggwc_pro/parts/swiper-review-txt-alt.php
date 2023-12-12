@@ -9,9 +9,9 @@
 						<div class="review_swiper_alt__icon">
 							<img src="<?php bloginfo('template_url'); ?>/assets/images/logos/logo_s.svg" alt="img">
 						</div>
-						<h6 class="review_swiper_alt__name">
-							<?php echo $item['cf_review_name'] ?>
-						</h6>
+						<a href="<?php echo $item['cf_review_link'] ?>" class="review_swiper_alt__name">
+							<?php echo $item['cf_review_fba'] ?>
+						</a>
 						<div class="review_swiper_alt__stars">
 							<?php
 							$rating = $item['cf_review_rating'];
@@ -40,7 +40,7 @@
 					</p>
 					<div class="review_swiper_alt__footer">
 						<p class="review_swiper_alt__usr">
-							Name
+							<?php echo $item['cf_review_name'] ?>
 						</p>
 						<p class="review_swiper_alt__date">
 							<?php echo $item['cf_review_date'] ?>

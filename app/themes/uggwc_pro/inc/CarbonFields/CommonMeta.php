@@ -638,13 +638,16 @@ class CommonMeta
 				->set_layout('tabbed-horizontal')
 				->add_fields(
 					array(
+						Field::make('text', 'cf_review_fba', __('Отзовик'))
+							->set_width(45),
+						Field::make('text', 'cf_review_link', __('Ссылка на отзыв'))
+							->set_width(45),
 						Field::make('text', 'cf_review_name', __('Имя пользователя'))
 							->set_width(20),
 						Field::make('text', 'cf_review_city', __('Страна пользователя'))
 							->set_width(20),
 						Field::make('text', 'cf_review_rating', __('Оценка'))
 							->set_help_text('Rating')
-							->set_label('label')
 							->set_width(10)
 							->set_attribute('type', 'number')
 							->set_attribute('min', '0')
@@ -851,6 +854,12 @@ class CommonMeta
 		return [
 			Field::make('text', 'cf_relink_title', __('Заголовок Перелинковки')),
 			Field::make('text', 'cf_relink_subtitle', __('Подаголовок Перелинковки')),
+		];
+	}
+	public static function iisMeta (): array
+	{
+		return [
+			Field::make('rich_text', 'cf_iis_content', __('Текст возле Инвойса')),
 		];
 	}
 }

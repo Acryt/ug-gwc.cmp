@@ -54,32 +54,47 @@
 	<button type="submit" class="btn wave_effect"><span>UNVERBINDLICH ANFRAGEN</span></button>
 
 	<div class="form__payments">
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Visa">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/visa.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/applepay.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="MasterCard">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/mastercard.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/bitcoin.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="GiroPay">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/giropay.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/giropay.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Stripe">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/stripe.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="GPay">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/klarna.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="ApplePay">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/applepay.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/mastercard.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="Klarna">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/klarna.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/paypal.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="wise">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/wise.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/sepa.png" alt="">
 		</div>
-		<div class="payment-icon" data-toggle="tooltip" data-placement="top" title="" data-original-title="PayPal">
-			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/paypal.svg" alt="">
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/sofort.png" alt="">
+		</div>
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/stripe.png" alt="">
+		</div>
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/tether.png" alt="">
+		</div>
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/unionpay.png" alt="">
+		</div>
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/visa.png" alt="">
+		</div>
+		<div class="payment-icon">
+			<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/wise.png" alt="">
 		</div>
 	</div>
 </form>

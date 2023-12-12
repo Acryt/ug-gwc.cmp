@@ -39,7 +39,7 @@
 		float: left;
 	}
 	&__stars {
-		color: var(--promo);
+		color: var(--stars);
 	}
 	&__text {
 		@include responsiveFont(12, 14);

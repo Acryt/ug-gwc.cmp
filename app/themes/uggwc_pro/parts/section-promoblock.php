@@ -4,9 +4,9 @@
 			<div class="promoblock__image">
 				<img src="<?php echo carbon_get_theme_option('cf_promo_temporary_img'); ?>" alt="promoblock image">
 			</div>
-			<div class="promoblock__text">
+			<div class="promoblock__text content">
 				<div class="promoblock__timer timer" data-end="<?php echo carbon_get_theme_option('cf_promo_date'); ?>"></div>
-				<h5 class="promoblock__t"><?php echo carbon_get_theme_option('cf_promo_temporary'); ?></h5>
+				<span class="promoblock__t h5"><?php echo carbon_get_theme_option('cf_promo_temporary'); ?></span>
 			</div>
 		</div>
 	</div>
