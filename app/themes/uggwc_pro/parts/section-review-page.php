@@ -8,9 +8,10 @@
 				<?php echo carbon_get_theme_option('cf_review_subtitle') ?>
 			</p>
 		</div>
+		<?php get_template_part('parts/swiper-review-img-alt'); ?>
+		<?php get_template_part('parts/swiper-review-txt-alt'); ?>
 	</div>
-	<?php get_template_part('parts/swiper-review-img-alt'); ?>
-	<?php get_template_part('parts/swiper-review-txt-alt'); ?>
+
 </section>
 <!-- <?php echo carbon_get_theme_option('') ?>
 <?php echo carbon_get_theme_option('') ?> -->

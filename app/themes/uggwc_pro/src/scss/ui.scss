@@ -330,3 +330,15 @@ hr {
 	height: 100%;
 	object-fit: cover;
 }
+
+.tippy {
+	&-box {}
+	&-arrow {
+		color: var(--thead);
+	}
+	&-content {
+		background: var(--thead);
+		font-size: 12px;
+		border-radius: 4px;
+	}
+}

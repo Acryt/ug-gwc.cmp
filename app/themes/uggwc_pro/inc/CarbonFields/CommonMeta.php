@@ -602,6 +602,18 @@ class CommonMeta
 				->set_width(30),
 			Field::make('textarea', 'cf_guarant_annotation6', __('Аннотация №6'))
 				->set_width(40),
+			Field::make('complex', 'cf_guarant', __('Повторитель'))
+				->set_layout('tabbed-horizontal')
+				->add_fields(
+					array(
+						Field::make('text', 'cf_guarant_n', __('Гарантия'))
+							->set_width(20),
+						Field::make('textarea', 'cf_guarant_s', __('Подзаголовок гарантии'))
+							->set_width(30),
+						Field::make('textarea', 'cf_guarant_d', __('Описание гарантии'))
+							->set_width(40),
+					)
+				)
 		];
 	}
 	public static function firstMeta (): array

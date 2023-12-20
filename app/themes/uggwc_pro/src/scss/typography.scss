@@ -23,6 +23,16 @@ h6,
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
 * + h2 {
 	margin-top: 0.8em;
 }
@@ -100,27 +110,33 @@ footer p {
 div + p {
 	margin: 0;
 }
-h1, .h1 {
+h1,
+.h1 {
 	@include responsiveFont(28, 48);
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	@include responsiveFont(24, 34);
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	@include responsiveFont(22, 30);
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	@include responsiveFont(20, 26);
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	@include responsiveFont(18, 22);
 }
 
-h6, .h6 {
+h6,
+.h6 {
 	@include responsiveFont(16, 18);
 }
 

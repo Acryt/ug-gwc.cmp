@@ -11,13 +11,17 @@ Template Name: Home
 	<?php
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-numbers');
-	get_template_part('parts/content-manager');
-	get_template_part('parts/section-noai');
+	get_template_part('parts/section-video');
+	get_template_part('parts/section-process');
+	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[0]['cf_content_content']);
+	get_template_part('parts/section-rate-alt');
 	get_template_part('parts/section-price');
+	get_template_part('parts/section-guaranties');
+	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[1]['cf_content_content']);
 	get_template_part('parts/section-review-page');
-	get_template_part('parts/section-form');
-	get_template_part('parts/section-rate');
+	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[2]['cf_content_content']);
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

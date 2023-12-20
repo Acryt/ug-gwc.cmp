@@ -56,7 +56,7 @@ export function sliders() {
 	const reviewAltSwiper = new Swiper(".js-rsa", {
 		modules: [Autoplay],
 		slidesPerView: "auto",
-		centeredSlides: true,
+		// centeredSlides: true,
 		loop: true,
 		autoplay: {
 			enabled: true,
@@ -68,7 +68,7 @@ export function sliders() {
 	const reviewAltRevSwiper = new Swiper(".js-rsar", {
 		modules: [Autoplay],
 		slidesPerView: "auto",
-		centeredSlides: true,
+		// centeredSlides: true,
 		loop: true,
 		autoplay: {
 			enabled: true,

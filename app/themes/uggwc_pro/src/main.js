@@ -64,7 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	giftTag();
 	delayedGift();
 	wordCount();
-	tippy('[data-tippy-content]');
+	tippy('[data-tippy-content]', {
+		// hideOnClick: false,
+		// trigger: 'click',
+		allowHTML: true,
+	});
 
 	let wow = new WOW({
 		boxClass: "wow", // default

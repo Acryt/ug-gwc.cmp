@@ -28,6 +28,13 @@
 		.form__deadline {
 			flex: 1 1 154px;
 		}
+		.form__payments {
+			margin: auto;
+			gap: 4px 16px;
+			& > * {
+				flex: 0 1 72px;
+			}
+		}
 	}
 	&_medium {
 		height: 100%;
@@ -261,7 +268,7 @@
 		// border-left: 1px solid #0000;
 		border: 1px solid var(--border);
 		width: 100%;
-		transition: all .5s;
+		transition: all 0.5s;
 		color: var(--thead);
 		font-weight: 500;
 		height: 40px;
@@ -416,11 +423,10 @@
 		gap: 4px;
 		justify-content: center;
 		width: 100%;
-		&>* {
-			width: 74px;
+		& > * {
+			flex: 1 1 52px;
 		}
 	}
-
 }
 
 // Удаляем стандартные стрелочки

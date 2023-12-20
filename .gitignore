@@ -2,7 +2,6 @@ vendor
 wordpress
 node_modules
 wp-config1.php
-robot*
 composer.lock
 yarn.lock
 **/cache/

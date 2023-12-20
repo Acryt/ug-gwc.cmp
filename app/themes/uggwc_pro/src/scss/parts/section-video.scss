@@ -1,0 +1,15 @@
+.video {
+	.section__content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		justify-content: center;
+	}
+	&__img {
+		flex: 0 1 360px;
+	}
+	iframe {
+		width: 824px;
+		height: 458px;
+	}
+}
