@@ -61,7 +61,7 @@ $filteredValues = Helpers::get_competition_values($compAuthor);
 							</span></div>
 					</div>
 					<div class="abauthor__three">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/paper1.svg">
+						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/wettkampfe.svg">
 						<p>Wettkämpfe:</p>
 						<div class="abauthor__block">
 							<?php
@@ -72,7 +72,7 @@ $filteredValues = Helpers::get_competition_values($compAuthor);
 						</div>
 					</div>
 					<div class="abauthor__three">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/translating1.svg">
+						<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/icons/sprachen.svg">
 						<p>Sprachen:</p>
 						<div class="abauthor__block">
 							<span>Deutsch</span>

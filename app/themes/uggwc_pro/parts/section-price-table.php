@@ -31,7 +31,9 @@ $dataPrice = json_decode($jsonString, true);
 								<td>Sonderangebote</td>
 							</tr>
 							<?php foreach ($value['prices'] as $key => $price) {
-								if ((bool) $price['quantityPrices']) { ?>
+								if ($key >= 6) {
+									break;
+								} else if ((bool) $price['quantityPrices']) { ?>
 									<tr>
 										<td colspan="2" class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>"><?php echo $price['name'] ?></td>
 									</tr>

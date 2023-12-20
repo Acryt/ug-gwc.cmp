@@ -1,7 +1,8 @@
 <form id="form_promo" class="form_big form" accept-charset="utf-8">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
-	<label class="form__theme req_star" data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Psr Thema jetzt richtig zu schreiben.">
+	<label class="form__theme req_star"
+		data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Psr Thema jetzt richtig zu schreiben.">
 		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
 		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
 	</label>
@@ -13,7 +14,8 @@
 			step="1" required>
 		<div data-id="increment" class="counter-btn c_btn__right">+</div>
 	</label>
-	<label class="form__deadline req_star" data-tippy-content="Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage falls nötig haben.">
+	<label class="form__deadline req_star"
+		data-tippy-content="Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage falls nötig haben.">
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
 		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
@@ -29,7 +31,8 @@
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
-	<label class="form__phone" data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die könnenste Änderung Ihrer Arbeit sicherstellen können.">
+	<label class="form__phone"
+		data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die könnenste Änderung Ihrer Arbeit sicherstellen können.">
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
@@ -52,13 +55,16 @@
 
 	<input type="hidden" name="form-id" value="form-promo">
 	<input type="hidden" name="recaptchaResponse" class="recaptchaResponse">
-	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif" alt=""></div>
+	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif"
+			alt=""></div>
 	<div class="form__disabled">
 		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
 		<div class="form__sent">
 			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
 		</div>
-		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
+		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung
+			setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und
+				Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
 	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken</span></button>
 </form>

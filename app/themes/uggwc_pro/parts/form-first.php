@@ -31,7 +31,6 @@
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
-	<div class="form__price js-price">ab <span>49,00 €</span></div>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 		<a href="/unsere-garantien/">Unsere Garantien</a>

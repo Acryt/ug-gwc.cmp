@@ -37,7 +37,7 @@
 					echo apply_filters('the_content', $items[2]['cf_content_content']);
 				}
 				get_template_part('parts/section-guaranties');
-				get_template_part('parts/section-snippet');
+				// get_template_part('parts/section-snippet');
 				// 4
 				if (isset($items[3])) {
 					echo apply_filters('the_content', $items[3]['cf_content_content']);
@@ -48,8 +48,8 @@
 				if (isset($items[4])) {
 					echo apply_filters('the_content', $items[4]['cf_content_content']);
 				}
-				get_template_part('parts/section-promoblock');
-				get_template_part('parts/section-promoblock-add');
+				// get_template_part('parts/section-promoblock');
+				// get_template_part('parts/section-promoblock-add');
 				
 				// 6
 				the_content();

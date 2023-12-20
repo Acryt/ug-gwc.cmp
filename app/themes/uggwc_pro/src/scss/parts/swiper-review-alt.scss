@@ -1,4 +1,6 @@
 .review_swiper_alt {
+	width: calc(100% - 36px);
+
 	&__item, &__item_img {
 		display: flex;
 		flex-wrap: wrap;

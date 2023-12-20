@@ -12,8 +12,8 @@ Template Name: Price
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/section-price-accrd');
-	get_template_part('parts/section-promoblock');
-	get_template_part('parts/section-promoblock-add');
+	// get_template_part('parts/section-promoblock');
+	// get_template_part('parts/section-promoblock-add');
 	get_template_part('parts/section-price-table');
 	get_template_part('parts/section-accrd');
 	get_template_part('parts/section-promo');

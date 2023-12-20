@@ -1,33 +1,36 @@
-import { Swiper } from 'swiper';
-import { Navigation, Autoplay, Pagination, FreeMode } from "swiper/modules";
+import { Swiper } from "swiper";
+import {
+	Navigation,
+	Autoplay,
+	Pagination,
+	FreeMode,
+	EffectCube,
+} from "swiper/modules";
 
 export function sliders() {
-	const sManagerSwiper = new Swiper('.sm_swiper', {
-		modules: [Navigation, Autoplay, Pagination],
-		// Optional parameters
-		direction: 'horizontal',
-		slidesPerView: 1,
-		slidesPerGroup: 1,
-		spaceBetween: 20,
-		preloadImages: false,
-		lazy: true,
-		loop: false,
+	const sManagerSwiper = new Swiper(".sm_swiper", {
+		modules: [Navigation, Autoplay, Pagination, EffectCube],
+		// effect: "flip",
+		direction: "horizontal",
+		slidesPerView: "auto",
+		loop: true,
 		autoplay: {
-			 delay: 5000,
+			delay: 5000,
+			pauseOnMouseEnter: true,
 		},
 		pagination: {
-			 el: '.swiper-pagination',
-			 type: 'bullets',
-			 clickable: true,
+			el: ".swiper-pagination",
+			type: "bullets",
+			clickable: true,
 		},
 	});
 
-	const reviewSwiper = new Swiper('.review_swiper', {
+	const reviewSwiper = new Swiper(".review_swiper", {
 		modules: [Navigation, Autoplay, Pagination],
 		// Optional parameters
-		direction: 'horizontal',
+		direction: "horizontal",
 		slidesPerView: "auto",
-		slidesPerGroup: 1,
+		// slidesPerGroup: 1,
 		loop: true,
 		centeredSlides: true,
 		centeredSlidesBounds: true,
@@ -36,96 +39,50 @@ export function sliders() {
 			delay: 5000,
 		},
 		speed: 500,
-	
+
 		// If we need pagination
 		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
+			el: ".swiper-pagination",
+			type: "bullets",
 			clickable: true,
 		},
-	
+
 		// Navigation arrows
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
 	});
-	const reviewAltSwiper = new Swiper('.js-rsa', {
-		modules: [Navigation, Autoplay, Pagination],
-		// Optional parameters
-		direction: 'horizontal',
+	const reviewAltSwiper = new Swiper(".js-rsa", {
+		modules: [Autoplay],
 		slidesPerView: "auto",
-		slidesPerGroup: 1,
-		loop: true,
 		centeredSlides: true,
+		loop: true,
 		autoplay: {
 			enabled: true,
-			delay: 0,
+			delay: 3000,
 			pauseOnMouseEnter: true,
 		},
-		// freeMode: {
-		// 	enabled: true,
-		// 	minimumVelocity: 0.2,
-		// 	momentum: true,
-		// 	sticky: true,
-		// },
-		speed: 5000,
-	
-		// If we need pagination
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		
-	
-		// Navigation arrows
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
+		speed: 2000,
 	});
-	const reviewAltRevSwiper = new Swiper('.js-rsar', {
-		modules: [Navigation, Autoplay, Pagination],
-		// Optional parameters
-		direction: 'horizontal',
+	const reviewAltRevSwiper = new Swiper(".js-rsar", {
+		modules: [Autoplay],
 		slidesPerView: "auto",
-		slidesPerGroup: 1,
-		loop: true,
 		centeredSlides: true,
+		loop: true,
 		autoplay: {
 			enabled: true,
-			delay: 0,
+			delay: 3000,
+			pauseOnMouseEnter: true,
 			reverseDirection: true,
-			pauseOnMouseEnter: true,
 		},
-		// freeMode: {
-		// 	enabled: true,
-		// 	minimumVelocity: 0.5,
-		// 	momentum: true,
-		// 	sticky: true,
-		// },
-		speed: 5000,
-	
-		// If we need pagination
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		
-	
-		// Navigation arrows
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
+		speed: 2000,
 	});
 
-	const authorSwiper = new Swiper('.author_swiper', {
+	const authorSwiper = new Swiper(".author_swiper", {
 		modules: [Navigation, Autoplay, Pagination],
 		// Optional parameters
-		direction: 'horizontal',
+		direction: "horizontal",
 		slidesPerView: "auto",
 		slidesPerGroup: 1,
 		loop: true,
@@ -136,18 +93,18 @@ export function sliders() {
 			delay: 5000,
 		},
 		speed: 500,
-	
+
 		// If we need pagination
 		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
+			el: ".swiper-pagination",
+			type: "bullets",
 			clickable: true,
 		},
-	
+
 		// Navigation arrows
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
 		},
 	});
 }
