@@ -9,14 +9,29 @@
 	h4 {
 		width: 100%;
 	}
-
+	&__c {
+		top: -16px;
+		font-size: 12px;
+		font-weight: 400;
+	}
 	&_big {
 		position: relative;
 		// max-width: 800px;
 		// margin: auto;
-		@include responsiveGap(12, 20);
+		gap: 8px;
 		justify-content: space-between;
 		// backdrop-filter: blur(8px);
+		&-c {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			justify-content: space-between;
+			position: relative;
+			@include responsiveGap(12, 20);
+		}
 
 		label,
 		.form_select {
@@ -35,6 +50,9 @@
 				flex: 0 1 72px;
 			}
 		}
+		.form__email, .form__phone, .form__kontakt {
+			flex: 1 1 200px;
+		}
 	}
 	&_medium {
 		height: 100%;
@@ -49,12 +67,23 @@
 		.form__phone {
 			flex: 1 1 150px;
 		}
+		.form__kontakt {
+			flex: 1 1 100%;
+			padding: 0 0 0 calc(50% + 8px);
+			display: flex;
+			@media screen and (max-width: 698px) {
+				padding: 0;
+			}
+		}
 	}
 	&_small {
 		label,
 		.form_select {
 			flex: 1 1 200px;
 		}
+	}
+	&__kontakt {
+		font-size: 12px;
 	}
 	&_care {
 		width: 100%;
@@ -216,11 +245,12 @@
 	label {
 		position: relative;
 		display: flex;
-		justify-content: space-between;
+		// justify-content: space-between;
 		align-items: center;
-		margin-bottom: auto;
+		// margin-bottom: auto;
 		flex-wrap: wrap;
 		width: 100%;
+		gap: 8px;
 	}
 	textarea {
 		width: 100%;
@@ -228,22 +258,35 @@
 	}
 	&__text {
 		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 
-		span {
+		&-c {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		p > span {
 			color: red;
 		}
-	}
-	&__price {
-		width: auto;
-		text-align: center;
-		font-size: 26px;
-		font-weight: 500;
-		color: var(--hoverb);
-
-		span {
-			font-size: 44px;
+		&-p {
+			width: auto;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--hoverb);
+			margin-left: 32px;
+			margin-right: 32px;
+			flex: 1 1 200px;
+			span {
+				font-size: 44px;
+			}
+		}
+		&-s {
+			flex: 1 1 400px;
 		}
 	}
+	
 	&__guarant {
 		width: auto;
 		display: flex;
@@ -258,7 +301,7 @@
 		height: 20px;
 		width: 20px;
 	}
-	input:not([type="submit"]) {
+	input:not([type="submit"]):not([type="checkbox"]) {
 		background: var(--border);
 		padding: 8px 12px;
 		border-radius: 8px;
@@ -282,9 +325,6 @@
 			border: 1px solid var(--hover);
 			background: var(--bg);
 		}
-	}
-	input[type="tel"] {
-		padding-left: 48px;
 	}
 	input[type="number"] {
 		text-align: center;
@@ -377,23 +417,23 @@
 	// Отступы если иконка
 	.form__icon ~ input,
 	.form__icon ~ .form_select__title {
-		padding-left: 32px;
+		padding-left: 32px !important;
 	}
 	.form__theme {
 		flex: 1 1 100%;
 	}
 
 	// ITI
-	.iti__country,
-	.iti__divider {
-		display: list-item;
-		&::before {
-			content: unset;
-		}
-	}
-	.iti {
-		width: 100%;
-	}
+	// .iti__country,
+	// .iti__divider {
+	// 	display: list-item;
+	// 	&::before {
+	// 		content: unset;
+	// 	}
+	// }
+	// .iti {
+	// 	width: 100%;
+	// }
 
 	// DatePicker
 	.datepicker .datepicker-picker {
@@ -424,7 +464,37 @@
 		justify-content: center;
 		width: 100%;
 		& > * {
-			flex: 1 1 52px;
+			flex: 0 1 54px;
+		}
+	}
+	&__pluses {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		justify-content: center;
+		width: 100%;
+		margin-top: 8px;
+		&-item {
+			position: relative;
+			display: flex;
+			flex: 0 1 176px;
+			border: 1px solid var(--border);
+			border-radius: 8px;
+			background: var(--tabhead);
+			color: var(--thead);
+			padding: 8px 8px 8px 16px;
+			align-items: center;
+		}
+		&-c {
+			display: flex;
+			width: 100%;
+			align-items: flex-start;
+		}
+		&-i {
+			position: relative;
+			min-width: 20px;
+			max-width: 20px;
+			height: 20px;
 		}
 	}
 }

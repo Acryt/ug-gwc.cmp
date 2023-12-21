@@ -265,11 +265,45 @@ a {
 .left {
 	text-align: left;
 }
+.center {
+	text-align: center;
+	margin: auto;
+}
+.right {
+	text-align: right;
+}
 .icons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 8px;
+}
+.pa {
+	position: absolute;
+}
+.p0 {
+	padding: 0;
+}
+.m0 {
+	margin: 0;
+}
+.t0 {
+	top: 0;
+}
+.b0 {
+	bottom: 0;
+}
+.l0 {
+	left: 0;
+}
+.r0 {
+	right: 0;
+}
+.w100 {
+	width: 100%;
+}
+.ma {
+	margin: auto;
 }
 .soc {
 	&__icon {

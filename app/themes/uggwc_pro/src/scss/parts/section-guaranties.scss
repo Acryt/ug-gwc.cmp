@@ -15,7 +15,7 @@
 		justify-content: stretch;
 		border-radius: 8px;
 		border: 1px solid var(--pop-brd);
-		box-shadow: 0px 0px 0px 0px var(--pop-brd);
+		// box-shadow: 0px 0px 0px 0px var(--pop-brd);
 		transition: all 0.3s;
 	}
 	&__l {
@@ -78,7 +78,7 @@
 		display: none;
 	}
 	&__c:checked + &__item {
-		box-shadow: 0px 2px 12px 0px var(--pop-brd);
+		// box-shadow: 0px 2px 12px 0px var(--pop-brd);
 		.guaranties__l::before {
 			transform: rotate(270deg);
 		}

@@ -34,6 +34,7 @@ class GeneralMeta
 			->add_tab(__('Promo'), CommonMeta::promoMeta())
 			->add_tab(__('Selectors'), CommonMeta::selectsMeta())
 			->add_tab(__('IIS'), CommonMeta::iisMeta())
+			->add_tab(__('Form'), CommonMeta::bigFormMeta())
 		;
 		Container::make('theme_options', __('Authors'))
 			->add_tab(__('Authors'), CommonMeta::authorMeta())

@@ -31,6 +31,10 @@
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
+	<label class="form__kontakt">
+		<input class="kontakt" type="checkbox" name="kontakt">
+		<span class="form__kontakt_text">Kontakt nur über WhatsApp</span>
+	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 		<a href="/unsere-garantien/">Unsere Garantien</a>

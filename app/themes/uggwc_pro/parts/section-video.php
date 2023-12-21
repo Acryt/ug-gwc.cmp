@@ -7,7 +7,7 @@
 			<div class="video__img">
 				<img src="<?php echo URI . '/assets/images/video/video.svg' ?>" alt="">
 			</div>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/SdILWnuiMOY?si=TXLfYtGpy7yyYrV3"
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/2J5vog4Zhmc?si=AjmIC1uZLhkXuD1v"
 				title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen></iframe>

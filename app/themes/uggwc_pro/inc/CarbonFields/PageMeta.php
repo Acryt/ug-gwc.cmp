@@ -26,6 +26,7 @@ class PageMeta
 			->add_tab(__('Price'), CommonMeta::priceMeta())
 			->add_tab(__('Rating bottom'), CommonMeta::rateMeta())
 			->add_tab(__('Relink'), CommonMeta::relinkMeta())
+			->add_tab(__('Form'), CommonMeta::bigFormMeta())
 		;
 	}
 	public function postMeta()
@@ -39,6 +40,7 @@ class PageMeta
 			->add_tab(__('Accordion'), CommonMeta::accrdMeta())
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
+			->add_tab(__('Form'), CommonMeta::bigFormMeta())
 		;
 	}
 }

@@ -874,4 +874,11 @@ class CommonMeta
 			Field::make('rich_text', 'cf_iis_content', __('Текст возле Инвойса')),
 		];
 	}
+	public static function bigFormMeta (): array
+	{
+		return [
+			Field::make('text', 'cf_bigform_t', __('Заголовок большой формы')),
+			Field::make('text', 'cf_bigform_s', __('Подзаголовок большой формы')),
+		];
+	}
 }
