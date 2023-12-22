@@ -7,7 +7,7 @@
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
-	<label>
+	<label class="req_star">
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
@@ -25,7 +25,8 @@
 
 	<label class="form__spec" data-tippy-content="Bauwesen, Nachhaltig Bauen, Architektur & Design (Architekturstudium),
 					Persönlichkeitsentwicklung/psychische Erkrankungen (nur Erfahrungswissen), Fachbereich BWL">
-		<textarea name="Specialization" id="specialization" cols="100" rows="5"
+		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
+		<textarea name="Specialization" id="specialization" cols="100" rows="3"
 			placeholder="Fachbereiche & Interessensschwerpunkte"></textarea>
 	</label>
 	<label>
@@ -38,11 +39,13 @@
 
 	<input type="hidden" name="form-id" value="form-author">
 	<input type="hidden" name="recaptchaResponse" class="recaptchaResponse">
-	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif" alt="">
+	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif"
+			alt="">
 	</div>
 	<div class="form__disabled">
 		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
-		<h6>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit.Wir werden uns in Kürze mit Ihnen in Verbindung setzen.</h6>
+		<h6>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit.Wir werden uns in Kürze mit Ihnen in Verbindung
+			setzen.</h6>
 	</div>
 	<button type="submit" class="btn wave_effect"><span>Das Formular abschicken</span></button>
 </form>

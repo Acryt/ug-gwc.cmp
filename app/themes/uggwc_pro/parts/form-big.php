@@ -3,11 +3,12 @@
 		<?php get_template_part('parts/select-type') ?>
 		<?php get_template_part('parts/select-specialization') ?>
 
-		<label class="form__theme req_star"
+		<label class="form__theme"
 			data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
 			<span class="pa form__c">Thema der Arbeit</span>
 			<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
-			<input type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required>
+			<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"
+				required></textarea>
 		</label>
 		<?php get_template_part('parts/select-quote') ?>
 		<?php get_template_part('parts/select-quality') ?>
@@ -36,7 +37,7 @@
 			<span class="form__icon"><i class="fa-solid fa-at"></i></span>
 			<input type="email" name="email" placeholder="E-Mail" required>
 		</label>
-		<label class="form__phone">
+		<label class="form__phone req_star">
 			<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
 			<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 		</label>
@@ -53,7 +54,8 @@
 		<p class="s w100"><span>*</span> Pflichtfeld</p>
 		<div class="form__text-c">
 			<div class="form__text-p js-price">ab <span>49,00 €</span></div>
-			<p class="s form__text-s"><span>*</span> Der Preis hängt von der Fachrichtung und der Anzahl der Seiten ab. Rabatte
+			<p class="s form__text-s"><span>*</span> Der Preis hängt von der Fachrichtung und der Anzahl der Seiten ab.
+				Rabatte
 				werden separat berechnet. Erhalten Sie ein Angebot</p>
 		</div>
 	</div>

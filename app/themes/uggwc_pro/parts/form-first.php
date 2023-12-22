@@ -3,11 +3,11 @@
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
-	<label class="form__theme req_star"
+	<label class="form__theme"
 		data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
 		<span class="pa form__c">Thema der Arbeit</span>
 		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
-		<input type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required>
+		<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required></textarea>
 	</label>
 
 	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
@@ -28,7 +28,7 @@
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
 		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
-	<label class="form__phone">
+	<label class="form__phone req_star">
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
