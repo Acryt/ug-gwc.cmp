@@ -2,10 +2,10 @@
 	&__img {
 		position: absolute;
 		max-width: 100%;
-		width: 500px;
+		width: 480px;
 		height: auto;
-		top: 0px;
-		left: 0px;
+		top: 80px;
+		right: calc(50% + 220px);
 	}
 	&__cont {
 		width: fit-content;

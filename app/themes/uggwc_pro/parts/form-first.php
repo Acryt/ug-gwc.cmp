@@ -5,8 +5,9 @@
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme req_star"
 		data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
-		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
-		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
+		<span class="pa form__c">Thema der Arbeit</span>
+		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
+		<input type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required>
 	</label>
 
 	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
@@ -54,7 +55,7 @@
 			setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und
 				Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
-	<button type="submit" class="btn wave_effect"><span>UNVERBINDLICH ANFRAGEN</span></button>
+	<button type="submit" class="btn wave_effect"><span>JETZT ANFRAGEN</span></button>
 
 	<div class="form__payments">
 		<div class="payment-icon">

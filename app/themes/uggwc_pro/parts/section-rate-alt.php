@@ -23,46 +23,46 @@ if (carbon_get_post_meta(get_the_ID(), 'cf_rating_title')) {
 				<p><strong>All dies macht die Arbeit mit Ghost Writer Company risikolos und vorteilhaft!</strong></p>
 				<div class="rate__payments">
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/applepay.png" alt="">
+						<img src="<?php echo URI . '/assets/images/payments/applepay.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/bitcoin.png" alt="">
+						<img src="<?php echo URI . '/assets/images/payments/bitcoin.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/giropay.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/giropay.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/gpay.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/gpay.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/klarna.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/klarna.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/mastercard.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/mastercard.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/paypal.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/paypal.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/sepa.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/sepa.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/sofort.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/sofort.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/stripe.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/stripe.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/tether.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/tether.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/unionpay.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/unionpay.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/visa.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/visa.png'; ?>" alt="">
 					</div>
 					<div class="payment-icon">
-						<img src="http://ug-gwc.cmp/app/themes/uggwc_pro/assets/images/payments/wise.png" alt="">
+					<img src="<?php echo URI . '/assets/images/payments/wise.png'; ?>" alt="">
 					</div>
 				</div>
 			</div>
