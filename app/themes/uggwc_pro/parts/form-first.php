@@ -1,5 +1,5 @@
 <form id="form_first" class="form_medium form js-calc" accept-charset="utf-8">
-	<h4 class="form__heading">Anruf bestellen</h4>
+	<h4 class="form__heading">Schnellanfrage stellen</h4>
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
@@ -9,7 +9,6 @@
 		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
 		<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required></textarea>
 	</label>
-
 	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
 		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
@@ -22,7 +21,6 @@
 		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
 		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
-
 	<label class="form__email req_star" data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
 					können.">
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
