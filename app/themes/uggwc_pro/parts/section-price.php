@@ -25,41 +25,25 @@ if ($items) {
 									case '0':
 										?>
 										<h6>Geisteswissenschaften</h6>
-										<div class="form__desc">?
-											<div class="form__desc_t">
-												<p>(Pädagogik, Psychologie, Germanistik, Politikwissenschaft, Sozialarbeit usw.)</p>
-											</div>
-										</div>
+										<div class="form__desc" data-tippy-content="Picturedagogik, Psychologie, Germanistik, Politikwissenschaft, Sozialarbeit usw.">?</div>
 										<?php
 										break;
 									case '1':
 										?>
 										<h6>Wirtschaftswissenschaften</h6>
-										<div class="form__desc">?
-											<div class="form__desc_t">
-												<p>(BWL, Wirtschaft, Management, Marketing, Logistik, Rechnungswesen, VWL usw.)</p>
-											</div>
-										</div>
+										<div class="form__desc" data-tippy-content="BWL, Wirtschaft, Management, Marketing, Logistik, Rechnungswesen, VWL usw.">?</div>
 										<?php
 										break;
 									case '2':
 										?>
 										<h6>Ingenieurwissenschaften</h6>
-										<div class="form__desc">?
-											<div class="form__desc_t">
-												<p>(Informatik, Maschinenbau, Systems Engineering, Bauingenieurwesen usw.)</p>
-											</div>
-										</div>
+										<div class="form__desc" data-tippy-content="Informatik, Maschinenbau, Systems Engineering, Lauingenieurwesen usw.">?</div>
 										<?php
 										break;
 									case '3':
 										?>
 										<h6>Rechtswissenschaften</h6>
-										<div class="form__desc">?
-											<div class="form__desc_t">
-												<p>(Arbeitsrecht, Jura, Europäisches Wirtschaftsrecht, Versicherungsrecht usw.)</p>
-											</div>
-										</div>
+										<div class="form__desc" data-tippy-content="Arbeitsrecht, Jura, Europäisches Wirtschaftsrecht, Versicherungsrecht usw.">?</div>
 										<?php
 										break;
 									default:
