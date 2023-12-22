@@ -13,8 +13,8 @@ Template Name: City
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/content-form');
 	get_template_part('parts/section-price');
-	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

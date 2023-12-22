@@ -14,8 +14,8 @@ Template Name: Lektorat & Korrektorat
 	get_template_part('parts/content-commerc');
 	get_template_part('parts/section-noai');
 	get_template_part('parts/section-price');
-	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 <?php get_template_part('parts/meta-software-app'); ?>

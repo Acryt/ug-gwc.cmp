@@ -20,8 +20,8 @@ Template Name: Price
 	get_template_part('parts/section-noai');
 	get_template_part('parts/section-guaranties');
 	get_template_part('parts/section-iis');
-	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

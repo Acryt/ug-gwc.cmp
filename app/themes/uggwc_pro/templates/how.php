@@ -13,8 +13,8 @@ get_header();
 	<?php
 	// get_template_part('parts/section-crumbs');
 	get_template_part('parts/section-how');
-	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

@@ -17,8 +17,8 @@ Template Name: About Us
 	get_template_part('parts/section-card-recruit');
 	get_template_part('parts/section-card-boss');
 	
-	get_template_part('parts/section-form');
 	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

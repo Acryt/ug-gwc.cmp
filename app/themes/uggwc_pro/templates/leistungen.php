@@ -22,7 +22,7 @@ Template Name: Leistungen
 	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[6]['cf_content_content']);
 	
 	get_template_part('parts/section-form');
-	get_template_part('parts/section-rate');
+	get_template_part('parts/section-rate-alt');
 
 	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content']);
 
