@@ -14,7 +14,7 @@
 		<?php get_template_part('parts/select-quality') ?>
 		<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
 			<span data-id="decrement" class="counter-btn c_btn__left">-</span>
-			<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
+			<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="5"
 				step="1" required>
 			<span data-id="increment" class="counter-btn c_btn__right">+</span>
 		</label>

@@ -16,7 +16,7 @@
 				if (isset($items[0])) {
 					echo $items[0]['cf_content_content'];
 				}
-				get_template_part('parts/section-why');
+				// get_template_part('parts/section-why');
 
 				// 2
 				if (isset($items[1])) {

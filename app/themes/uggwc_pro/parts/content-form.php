@@ -31,7 +31,7 @@
 				if (isset($items[1])) {
 					echo apply_filters('the_content', $items[1]['cf_content_content']);
 				}
-				get_template_part('parts/section-why');
+				// get_template_part('parts/section-why');
 				// 3
 				if (isset($items[2])) {
 					echo apply_filters('the_content', $items[2]['cf_content_content']);

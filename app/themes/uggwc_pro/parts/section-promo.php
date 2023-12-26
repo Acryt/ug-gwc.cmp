@@ -27,7 +27,7 @@ if ($items) {
 								echo 'checked';
 							} ?>>
 						<label class="promo__elem" for="promo<?php echo $key; ?>"><?php echo $item['title']; ?></label>
-						<div class="promo__block">
+						<div class="promo__block content">
 							<?php if ($item['image']) { ?>
 								<div class="promo__cimg">
 									<img class="" src="<?php echo $item['image']; ?>" alt="promo image">

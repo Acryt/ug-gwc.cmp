@@ -11,7 +11,7 @@ Template Name: Examples
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/section-review-txt');
-	get_template_part('parts/section-why');
+	// get_template_part('parts/section-why');
 	get_template_part('parts/section-faq-accrd');
 	?>
 </main>
