@@ -1,3 +1,6 @@
+<?php
+wp_enqueue_style('aauthor', URI . '/assets/aauthor.bundle.css');
+?>
 <section id="aauthor" class="section aauthor">
 	<div class="wrapper">
 		<div class="section__header">

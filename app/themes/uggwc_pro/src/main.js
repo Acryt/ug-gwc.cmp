@@ -1,10 +1,10 @@
 // LIBS
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fancyapps/ui/dist/fancybox.css";
-import "intl-tel-input/build/css/intlTelInput.css";
+// import "intl-tel-input/build/css/intlTelInput.css";
 import "nice-select2/src/scss/nice-select2.scss";
 import "vanillajs-datepicker/sass/datepicker.scss";
-import "animate.css";
+// import "animate.css";
 import { WOW } from "wowjs";
 
 import tippy from 'tippy.js';

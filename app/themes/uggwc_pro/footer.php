@@ -78,8 +78,9 @@
 				<div>
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg"
 						alt="">
-					<a href="/unsere-garantien/">Unsere Garantien</a>
-					<a href="/ruckgaberichtlinien/">Rückgaberichtlinien</a>
+					<a href="/unsere-garantien/">Unsere Garantien</a><br>
+					<a href="/ruckgaberichtlinien/">Rückgaberichtlinien</a><br>
+					<a href="/agb/">AGB</a>
 				</div>
 
 				<strong>PLAGIATSSOFTWARE</strong>

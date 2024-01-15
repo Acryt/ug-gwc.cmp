@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'paccrd', URI . '/assets/paccrd.bundle.css' );
+?>
 <section id="priceAccrd" class="section price_accrd accrd-js">
 	<div class="wrapper">
 		<div class="section__header">

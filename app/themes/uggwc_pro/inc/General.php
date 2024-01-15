@@ -24,6 +24,7 @@ class General
 		// remove_action('init', 'rest_api_init');
 		remove_action('rest_api_init', 'rest_api_default_filters', 10);
 		// remove_action('parse_request', 'rest_api_loaded');
+		add_action('wp_enqueue_scripts', [$this, 'remove_block_styles'], 100);
 
 		add_action('wp_enqueue_scripts', [$this, 'connectedStylesAndScripts']);
 		add_action('admin_enqueue_scripts', [$this, 'connectedAdminScripts']);
@@ -61,7 +62,12 @@ class General
 			return get_template_directory() . '/templates/author.php';
 		});
 	}
-
+	function remove_block_styles ()
+	{
+		wp_dequeue_style('wp-block-library');
+		wp_dequeue_style('wp-block-library-theme');
+		wp_dequeue_style('wc-blocks-style'); // Remove WooCommerce block CSS
+	}
 	function add_sitemap_custom_items ($sitemap_custom_items)
 	{
 		$sitemap_custom_items .= '
@@ -77,7 +83,7 @@ class General
 	{
 		return '';
 	}
-	public function register_json_file_route ()
+	function register_json_file_route ()
 	{
 		function get_json_file ()
 		{
@@ -103,17 +109,17 @@ class General
 	}
 
 
-	public function change_name ($name)
+	function change_name ($name)
 	{
 		return 'UG-GWC.de';
 	}
-	public function change_email ($email)
+	function change_email ($email)
 	{
 		return 'kommunikation@ug-gwc.de';
 	}
 
 	# Исправление MIME типа для SVG файлов.
-	public function fix_svg_mime_type ($data, $file, $filename, $mimes, $real_mime = '')
+	function fix_svg_mime_type ($data, $file, $filename, $mimes, $real_mime = '')
 	{
 
 		// WP 5.1 +
@@ -141,12 +147,12 @@ class General
 		}
 		return $data;
 	}
-	public function svgUploadAllow ($mimes)
+	function svgUploadAllow ($mimes)
 	{
 		$mimes['svg'] = 'image/svg+xml';
 		return $mimes;
 	}
-	public function add_custom_mime_types ($mimes)
+	function add_custom_mime_types ($mimes)
 	{
 		return array_merge(
 			$mimes,
@@ -156,18 +162,16 @@ class General
 			)
 		);
 	}
-	public function settingsWordpress ()
+	function settingsWordpress ()
 	{
 		register_nav_menu('top-menu', 'Top menu');
 		add_theme_support('post-thumbnails', ['post']);
 	}
-
-	public function locale (): string
+	function locale (): string
 	{
 		return 'de-DE';
 	}
-
-	public function connectedStylesAndScripts ()
+	function connectedStylesAndScripts ()
 	{
 		$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
 		wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $ver);
@@ -176,13 +180,12 @@ class General
 		$ver = filemtime(get_template_directory() . '/style.css');
 		wp_enqueue_style('second', URI . '/style.css', [], $ver);
 	}
-	public function connectedAdminScripts ()
+	function connectedAdminScripts ()
 	{
 		$sV = filemtime(get_template_directory() . '/inc/admin.js');
 		wp_enqueue_script('admin', URI . '/inc/admin.js', [], $sV, true);
 	}
-
-	public function addedRobotsTxt ()
+	function addedRobotsTxt ()
 	{
 		$data[] = 'User-agent: *';
 		$data[] = 'Disallow: /cgi-bin';
@@ -216,7 +219,7 @@ class General
 		die;
 	}
 
-	public function refactoringFilesArray (): array
+	function refactoringFilesArray (): array
 	{
 		$files = [];
 
@@ -228,7 +231,7 @@ class General
 
 		return $files;
 	}
-	public static function geo ()
+	function geo ()
 	{
 		function getOS ($userAgent)
 		{
@@ -367,62 +370,6 @@ class General
 			setcookie('user_agent', $user_agent, time() + 60 * 60 * 24, '/');
 		}
 	}
-
-
-
-// Allow SVG
-// add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
-// 	global $wp_version;
-// 	if ( $wp_version !== '4.7.1' ) {
-// 		return $data;
-// 	}
-// 	$filetype = wp_check_filetype( $filename, $mimes );
-// 	return [
-// 		 'ext'             => $filetype['ext'],
-// 		 'type'            => $filetype['type'],
-// 		 'proper_filename' => $data['proper_filename']
-// 	];
-//  }, 10, 4 );
-//  function cc_mime_types( $mimes ){
-// 	$mimes['svg'] = 'image/svg+xml';
-// 	return $mimes;
-//  }
-//  add_filter( 'upload_mimes', 'cc_mime_types' );
-//  function fix_svg() {
-// 	echo '<style type="text/css">
-// 			.attachment-266x266, .thumbnail img {
-// 				  width: 100% !important;
-// 				  height: auto !important;
-// 			}
-// 			</style>';
-//  }
-//  add_action( 'admin_head', 'fix_svg' );
-
-
-	// add_filter('upload_mimes','add_custom_mime_types');
-// function add_custom_mime_types($mimes){
-// 	 return array_merge($mimes,array (
-// 		  'svg' => 'image/svg+xml',
-// 		  'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-// 	 ));
-// }
-
-
-	// add_filter( 'upload_mimes', 'upload_allow_types' );
-// function upload_allow_types( $mimes ) {
-//   // разрешаем новые типы
-//   $mimes['doc']  = 'application/msword';
-//   //$mimes['woff'] = 'font/woff';
-//   $mimes['psd']  = 'image/vnd.adobe.photoshop';
-//   $mimes['djv']  = 'image/vnd.djvu';
-//   $mimes['djvu'] = 'image/vnd.djvu';
-//   $mimes['webp'] = 'image/webp';
-//   //$mimes['fb2']  = 'text/xml';
-//   //$mimes['epub'] = 'application/epub+zip';
-//   // запрещаем (отключаем) имеющиеся
-//   // unset( $mimes['mp4a'] );
-//   return $mimes;
-// }
 }
 
 new General();

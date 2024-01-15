@@ -1,5 +1,3 @@
-// Путь к FA
-// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts/";
 @import
 // RESET
 "reset",
@@ -7,16 +5,6 @@
 "mixins",
 "typography",
 "variables",
-
-// FA
-// "~@fortawesome/fontawesome-free/scss/fontawesome",
-// "~@fortawesome/fontawesome-free/scss/solid",
-// "~@fortawesome/fontawesome-free/scss/regular",
-// "~@fortawesome/fontawesome-free/scss/brands",
-
-// LIBS
-"~@fancyapps/ui/src/Fancybox/Fancybox",
-"/node_modules/vanillajs-datepicker/sass/datepicker",
 
 // ОСНОВНАЯ ЧАСТЬ!
 "ui",
@@ -36,45 +24,45 @@
 // Секции
 "parts/section-first",
 "parts/section-notfound",
-"parts/section-faq",
+// "parts/section-faq",
 "parts/section-accrd",
 "parts/section-numbers",
 "parts/section-how",
 "parts/section-how-alt",
 "parts/section-guaranties",
-"parts/section-price",
+// "parts/section-price",
 "parts/section-pricelist",
 "parts/section-review",
 "parts/section-why",
 "parts/section-form",
 "parts/section-managers",
-"parts/section-about",
+// "parts/section-about",
 "parts/section-care",
 "parts/section-busines",
-"parts/section-promo",
+// "parts/section-promo",
 "parts/section-promoblock",
 "parts/section-relink",
 "parts/section-snippet",
 "parts/section-author",
-"parts/section-author-all",
+// "parts/section-author-all",
 "parts/section-author-info",
 "parts/section-crumbs",
 "parts/section-noai",
-"parts/section-price-accrd",
-"parts/section-price-table",
-"parts/section-price-table-l",
+// "parts/section-price-accrd",
+// "parts/section-price-table",
+// "parts/section-price-table-l",
 "parts/section-interview",
-"parts/section-faq-accrd",
-"parts/section-author-about",
+// "parts/section-faq-accrd",
+// "parts/section-author-about",
 "parts/section-iis",
 "parts/section-video",
-"parts/section-process",
+// "parts/section-process",
 
 // Слайдеры
 "parts/swiper-small-managers",
-"parts/swiper-review",
-"parts/swiper-authors",
-"parts/swiper-review-alt",
+// "parts/swiper-review",
+// "parts/swiper-authors",
+// "parts/swiper-review-alt",
 
 "parts/popup",
 "parts/forms",

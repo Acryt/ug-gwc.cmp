@@ -138,5 +138,4 @@
 				</div>
 			</nav>
 		</div>
-		<img class="header__lamps" src="<?php bloginfo('template_url'); ?>/assets/images/promo/ny-lamps.svg" alt="lamps">
 	</header>

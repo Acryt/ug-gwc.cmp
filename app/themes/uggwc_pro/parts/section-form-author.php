@@ -6,7 +6,7 @@
 		</div>
 		<div class="section__content">
 			<div class="sform__cont card shadow">
-				<img class="first__hat" src="<?php echo get_bloginfo('template_url') . '/assets/images/first/hat.svg' ?>" alt="">
+				<img class="first__hat" src="<?php echo URI . '/assets/images/first/hat.svg' ?>" alt="">
 				<?php get_template_part('parts/form-author') ?>
 			</div>
 		</div>

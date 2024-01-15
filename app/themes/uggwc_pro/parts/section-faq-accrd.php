@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'faq', URI . '/assets/faq.bundle.css' );
+?>
 <?php if (carbon_get_theme_option('cf_afaq_accrd')) { ?>
 	<section id="afaq" class="section afaq accrd-js">
 		<div class="wrapper">

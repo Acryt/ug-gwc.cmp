@@ -22,7 +22,7 @@ define( 'WP_CACHE', false ); // Added by WP Rocket
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'ug-gwc_cmp' );
+define( 'DB_NAME', 'ug_gwc_cmp' );
 
 /** Database username */
 define( 'DB_USER', 'root' );

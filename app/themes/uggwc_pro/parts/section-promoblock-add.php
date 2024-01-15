@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="section__content">
 			<div class="promoblock__image">
-				<img src="<?php echo URI . '/assets/images/promo/promo-ny1.svg' ?>" alt="promoblock image">
+				<img src="<?php echo URI . '/assets/images/promo/promo1.jpg' ?>" alt="promoblock image">
 			</div>
 			<div class="promoblock__text content">
 				<span class="promoblock__t h5">Sonderangebot für Masterarbeiten und Bachelorarbeiten!</span><hr>

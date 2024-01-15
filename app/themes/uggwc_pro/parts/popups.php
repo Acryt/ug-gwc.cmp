@@ -73,19 +73,19 @@
 	<?php
 	switch (get_the_ID()) {
 		case '123':
-			echo '<img src="' . URI . '/assets/images/promo/promo-ny2.svg" alt="">'; //bach
+			echo '<img src="' . URI . '/assets/images/promo/promo2.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
 			break;
 
-		case '154':
-			echo '<img src="' . URI . '/assets/images/promo/promo-ny3.svg" alt="">'; //haus
+		case '154': //master
+			echo '<img src="' . URI . '/assets/images/promo/promo3.jpg" alt="temporäre Aktion Masterarbeit">';
 			break;
 
-		case '161':
-			echo '<img src="' . URI . '/assets/images/promo/promo-ny4.svg" alt="">'; //master
+		case '161': //haus
+			echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion Hausarbeit">'; 
 			break;
 
 		default:
-			echo '<img src="' . URI . '/assets/images/promo/promo-ny1.svg" alt="">';
+			echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion">';
 			break;
 	}
 	?>

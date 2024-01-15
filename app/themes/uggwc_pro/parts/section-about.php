@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'about', URI . '/assets/about.bundle.css' );
+?>
 <section id="about" class="section about">
 	<div class="wrapper">
 		<div class="section__header">

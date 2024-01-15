@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'process', URI . '/assets/process.bundle.css' );
+?>
 <section id="process" class="section process">
 	<div class="wrapper">
 		<div class="section__header">

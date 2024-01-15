@@ -1,4 +1,6 @@
 <?php
+wp_enqueue_style('price', URI . '/assets/price.bundle.css');
+
 $items = carbon_get_post_meta(get_the_ID(), 'cf_price');
 if ($items) {
 	?>

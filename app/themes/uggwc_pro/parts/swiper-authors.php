@@ -1,3 +1,7 @@
+<?php 
+	wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css');
+?>
+
 <div class="swiper author_swiper">
 	<div class="swiper-wrapper">
 		<?php

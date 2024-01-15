@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'blog', URI . '/assets/blog.bundle.css' );
+?>
 <section class="section blog">
 	<div class="wrapper">
 		<div class="section__header">

@@ -1,4 +1,6 @@
 <?php
+wp_enqueue_style( 'abauthor', URI . '/assets/author-about.bundle.css' );
+
 $authorInfo = carbon_get_theme_option('cf_author');
 $filteredAuthors = [];
 $authorID = intval(get_query_var('authorID'));

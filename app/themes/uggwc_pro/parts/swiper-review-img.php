@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'sw_review', URI . '/assets/sw_review.bundle.css' );
+?>
 <div class="swiper review_swiper">
 	<div class="swiper-wrapper">
 		<?php 

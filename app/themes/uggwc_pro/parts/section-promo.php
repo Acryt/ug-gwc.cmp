@@ -1,4 +1,6 @@
 <?php
+wp_enqueue_style('promo', URI . '/assets/promo.bundle.css');
+
 $items = carbon_get_theme_option('cf_promo');
 if ($items) {
 	?>
@@ -7,7 +9,7 @@ if ($items) {
 		<div class="wrapper">
 			<div class="section__header">
 				<div class="header_c">
-					<div class="header_img"><img class="" src="<?php bloginfo('template_url'); ?>/assets/images/icons/aktionen.svg" alt=""></div>
+					<div class="header_img"><img class="" src="<?php bloginfo('template_url'); ?>/assets/images/promo/aktionen.jpg" alt=""></div>
 					<h2>
 						<?php echo carbon_get_theme_option('cf_promo_title') ?>
 					</h2>

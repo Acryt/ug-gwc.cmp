@@ -17,7 +17,7 @@ Template Name: Price
 	get_template_part('parts/section-price-table');
 	get_template_part('parts/section-accrd');
 	get_template_part('parts/section-promo');
-	get_template_part('parts/section-noai');
+	// get_template_part('parts/section-noai');
 	get_template_part('parts/section-guaranties');
 	get_template_part('parts/section-iis');
 	get_template_part('parts/section-faq-accrd');

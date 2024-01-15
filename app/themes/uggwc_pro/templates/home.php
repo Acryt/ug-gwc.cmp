@@ -4,7 +4,6 @@ Template Name: Home
 */
 ?>
 
-
 <?php get_header(); ?>
 
 <main class="main">
@@ -24,7 +23,6 @@ Template Name: Home
 	get_template_part('parts/section-form');
 	?>
 </main>
-
 <?php
 get_template_part('parts/popups');
 get_footer();

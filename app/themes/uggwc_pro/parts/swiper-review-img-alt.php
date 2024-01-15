@@ -1,3 +1,6 @@
+<?php
+	wp_enqueue_style( 'sw_review_alt', URI . '/assets/sw_review_alt.bundle.css' );
+?>
 <div class="swiper review_swiper_alt js-rsar">
 	<div class="swiper-wrapper">
 		<?php
