@@ -118,7 +118,7 @@ if ($items) {
 										Teilzahlung ohne Zusatzkosten</span></li>
 							</ul>
 							<div class="price__footer">
-								<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigform"><span>
+								<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigpromo"><span>
 										<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
 									</span></a>
 							</div>

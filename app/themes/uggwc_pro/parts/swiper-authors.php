@@ -86,7 +86,7 @@
 						<span>Deutsch</span>
 						<span>Englisch</span>
 					</div>
-					<a class="btn fit borda js_btn" data-slr=".popup__bigform"><span>Bestellen</span></a>
+					<a class="btn fit borda js_btn" data-slr=".popup__bigpromo"><span>Bestellen</span></a>
 				</div>
 			</div>
 		<?php } ?>

@@ -21,13 +21,6 @@
 				Institutseinweihung.</li>
 		</ul>
 	</div>
-	<div class="popup popup__bigform card shadow">
-		<div class="popup_x">
-			<div></div>
-			<div></div>
-		</div>
-		<?php get_template_part('parts/form-popup') ?>
-	</div>
 	<div class="popup popup__bigpromo card shadow">
 		<div class="popup_x">
 			<div></div>
@@ -61,7 +54,7 @@
 			<li><span>Coaching</span> 30 Min.</li>
 			<li><span>Präsentation</span> 7 Folien</li>
 		</ul>
-		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigform"><span>Jetzt erhalten!</span></button>
+		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
 	</div>
 </div>
 
@@ -90,7 +83,7 @@
 	}
 	?>
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
-	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigform"><span>Jetzt erhalten!</span></button>
+	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
 </div>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>

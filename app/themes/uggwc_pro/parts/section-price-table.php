@@ -36,9 +36,9 @@ $dataPrice = PRICE;
 									break;
 								} else if ((bool) $price['quantityPrices']) { ?>
 									<tr>
-										<td colspan="2" class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>"><?php echo $price['name'] ?></td>
+										<td colspan="2" class="js_btn" data-slr=".popup__bigpromo" data-type="<?php echo $price['name']; ?>"><?php echo $price['name'] ?></td>
 									</tr>
-									<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>">
+									<tr class="js_btn" data-slr=".popup__bigpromo" data-type="<?php echo $price['name']; ?>">
 										<td rowspan="<?php echo count($price['quantityPrices']); ?>">
 											<?php echo $price['name']; ?>
 										</td>
@@ -68,7 +68,7 @@ $dataPrice = PRICE;
 									</tr>
 									<?php foreach ($price['quantityPrices'] as $key => $quant) {
 										if ($key >= 1) { ?>
-											<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $price['name']; ?>">
+											<tr class="js_btn" data-slr=".popup__bigpromo" data-type="<?php echo $price['name']; ?>">
 												<td>
 													<?php echo $quant; ?> Seiten
 												</td>

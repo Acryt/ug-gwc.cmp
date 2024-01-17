@@ -25,7 +25,7 @@ Template Name: 404
 					<br><br>
 					<p>Wenn Sie Fragen an uns haben, kontaktieren Sie uns bitte unter <br><a href="mailto:info@ug-gwc.de">info@ug-gwc.de</a></p>
 					<br><br>
-					<a class="btn wave_effect js_btn fit" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></a>
+					<a class="btn wave_effect js_btn fit" data-slr=".popup__bigpromo"><span>PREIS KALKULIEREN</span></a>
 				</div>
 				<div class="notfound__img">
 					<img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/first/notfound.svg" alt="not found">

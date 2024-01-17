@@ -65,7 +65,7 @@ if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
 											je nach dem gewählten Autor*</td>
 									</tr>
 									<?php foreach ($v['prices'][0]['quantityPrices'] as $kp => $vp) { ?>
-										<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $v['prices'][0]['name']; ?>">
+										<tr class="js_btn" data-slr=".popup__bigpromo" data-type="<?php echo $v['prices'][0]['name']; ?>">
 											<td>
 												<?php echo $vp; ?> Seiten
 											</td>
@@ -103,7 +103,7 @@ if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
 											je nach dem gewählten Autor*</td>
 									</tr>
 									<?php foreach ($v['prices'][0]['quantityPrices'] as $kp => $vp) { ?>
-										<tr class="js_btn" data-slr=".popup__bigform" data-type="<?php echo $v['prices'][0]['name']; ?>">
+										<tr class="js_btn" data-slr=".popup__bigpromo" data-type="<?php echo $v['prices'][0]['name']; ?>">
 											<td>
 												<?php echo $vp; ?> Seiten
 											</td>
