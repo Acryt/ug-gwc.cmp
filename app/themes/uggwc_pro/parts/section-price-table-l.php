@@ -1,6 +1,8 @@
 <?php
-$jsonString = file_get_contents(URI . '/data/pricelist.json');
-$dataPrice = json_decode($jsonString, true);
+wp_enqueue_style('pltable', URI . '/assets/pltable.bundle.css');
+wp_enqueue_style('ptable', URI . '/assets/ptable.bundle.css');
+
+$dataPrice = PRICE;
 
 function filterPricesByName ($name, $data)
 {

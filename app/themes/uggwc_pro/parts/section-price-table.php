@@ -1,6 +1,7 @@
 <?php
-$jsonString = file_get_contents(URI . '/data/pricelist.json');
-$dataPrice = json_decode($jsonString, true);
+wp_enqueue_style('ptable', URI . '/assets/ptable.bundle.css');
+
+$dataPrice = PRICE;
 ?>
 
 <section id="priceTable" class="section price_table">

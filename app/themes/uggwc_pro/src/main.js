@@ -1,9 +1,9 @@
 // LIBS
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fancyapps/ui/dist/fancybox.css";
-// import "intl-tel-input/build/css/intlTelInput.css";
 import "nice-select2/src/scss/nice-select2.scss";
 import "vanillajs-datepicker/sass/datepicker.scss";
+
 // import "animate.css";
 import { WOW } from "wowjs";
 
@@ -19,6 +19,7 @@ import "./scss/_index.scss";
 
 import NiceSelect from "nice-select2/dist/js/nice-select2.js";
 import { Fancybox } from "@fancyapps/ui";
+
 // JS
 import { mobileMenu } from "./js/mobileMenu";
 import { stickyHeader } from "./js/scroll";
@@ -27,7 +28,7 @@ import { dropdown } from "./js/dropdown";
 import { accrd } from "./js/priceAccrd";
 import { closePopups, openPopup, cookieClose, liftPopup, giftTag, delayedGift } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
-import { siteTimer } from "./js/siteTimer";
+import { siteTimer, geoCookie } from "./js/siteTimer";
 import { promo } from "./js/promo";
 import { promoBlockTimer } from "./js/promoBlockTimer";
 import { mailer } from "./js/mailer";
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	cookieClose();
 	sliders();
 	siteTimer();
+	geoCookie();
 	promo();
 	// phoneInput();
 	promoBlockTimer();

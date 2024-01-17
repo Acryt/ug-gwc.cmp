@@ -107,8 +107,6 @@ class General
 			)
 		);
 	}
-
-
 	function change_name ($name)
 	{
 		return 'UG-GWC.de';
@@ -218,7 +216,6 @@ class General
 		echo implode("\r\n", $data);
 		die;
 	}
-
 	function refactoringFilesArray (): array
 	{
 		$files = [];
@@ -284,70 +281,66 @@ class General
 			return $browser;
 		}
 
-		function getGeo ()
-		{
-			$client_ip = $_SERVER['REMOTE_ADDR'];
-			// проверка для локалки
-			// $client_ip = '84.244.8.172';
+		// function getGeo ()
+		// {
+		// 	// $client_ip = $_SERVER['REMOTE_ADDR'];
+		// 	// проверка для локалки
+		// 	// $client_ip = '84.244.8.172';
 
-			$api = 'https://json.geoiplookup.io/' . $client_ip;
+		// 	// $api = 'https://json.geoiplookup.io/' . $client_ip;
+		// 	$api = 'https://json.geoiplookup.io/';
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_URL, $api);
+		// 	$ch = curl_init();
+		// 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		// 	curl_setopt($ch, CURLOPT_URL, $api);
 
-			$response = curl_exec($ch);
-			curl_close($ch);
+		// 	$response = curl_exec($ch);
+		// 	curl_close($ch);
 
-			$response = json_decode($response);
+		// 	$response = json_decode($response);
 
-			$geo = [
-				'ip' => $response->ip,
-				'country_name' => $response->country_name,
-				'region' => $response->region
-			];
-			return $geo;
-		}
-
-		//  куки
-		$utm = $_GET;
-
-		// реферальная ссылка
-		if (!isset($_COOKIE['refer'])) {
-			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 7, '/');
-			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
-			}
-		}
-
-		// органика - директ - реклама
-		if (isset($utm['utm_medium'])) {
-			$utm['utm_channel'] = 'cpc';
-		} elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) == 'none')) {
-			$utm['utm_channel'] = 'direct';
-		} else {
-			$utm['utm_channel'] = 'organic';
-		}
+		// 	$geo = [
+		// 		'ip' => $response->ip,
+		// 		'country_name' => $response->country_name,
+		// 		'region' => $response->region
+		// 	];
+		// 	return $geo;
+		// }
 
 
-		// запись утм
-		if (!isset($_COOKIE['fc_utm'])) {
-			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 3, '/');
-			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-		} else {
-			setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-		}
+		// // реферальная ссылка
+		// if (!isset($_COOKIE['refer'])) {
+		// 	if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
+		// 		setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 7, '/');
+		// 	} else {
+		// 		setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
+		// 	}
+		// }
+		// //  куки
+		// $utm = $_GET;
+		// // органика - директ - реклама
+		// if (isset($utm['utm_medium']) || isset($utm['utm_source'])) {
+		// 	$utm['utm_channel'] = 'cpc';
+		// } elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) == 'none')) {
+		// 	$utm['utm_channel'] = 'direct';
+		// } else {
+		// 	$utm['utm_channel'] = 'organic';
+		// }
 
-		// Страница
-		if (!strpos($_SERVER['REQUEST_URI'], 'wp-json')) {
-			if (!isset($_COOKIE['fc_page'])) {
-				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 3, '/');
-				setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
-			} else {
-				setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
-			}
-		}
+
+		// // запись утм
+		// if (!isset($_COOKIE['fc_utm'])) {
+		// 	setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 3, '/');
+		// }
+		// setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
+
+		// // Страница
+		// if (!strpos($_SERVER['REQUEST_URI'], 'wp-json')) {
+		// 	if (!isset($_COOKIE['fc_page'])) {
+		// 		setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 3, '/');
+		// 	}
+		// 	setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
+		// }
 
 		//OS
 		if (!isset($_COOKIE['os'])) {
@@ -362,9 +355,9 @@ class General
 			setcookie('is_mobile', (wp_is_mobile() ? 'yes' : 'no'), time() + 60 * 60 * 24, '/');
 		}
 		// GEO параметры
-		if (!isset($_COOKIE['geo'])) {
-			setcookie('geo', json_encode(getGeo()), time() + 60 * 60 * 24, '/');
-		}
+		// if (!isset($_COOKIE['geo'])) {
+		// 	setcookie('geo', json_encode(getGeo()), time() + 60 * 60 * 24, '/');
+		// }
 		if (!isset($_COOKIE['user_agent'])) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
 			setcookie('user_agent', $user_agent, time() + 60 * 60 * 24, '/');

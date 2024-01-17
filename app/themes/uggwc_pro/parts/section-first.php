@@ -28,7 +28,6 @@
 			<?php if (is_page_template(['templates/author-f.php'])) {
 				echo '<a href="#sform" class="btn borda"><span>JETZT BEWERBEN</span></a>';
 			} else { ?>
-				<!-- echo '<button class="btn borda js_btn" data-slr=".popup__bigform"><span>PREIS KALKULIEREN</span></button>'; -->
 				<div class="first__guarantees">
 					<span data-tippy-content="- 100% Diskretion<br>- Verschlüsselte SSL/TLS 1.3 Kommunikation<br>- Geheimhaltungsvereinbarung für unsere Mitarbeiter"><img src="<?php echo URI . '/assets/images/icons/spy.svg'; ?>" alt="spy icon"> 100% Anonymität</span>
 					<span data-tippy-content="- Termingerecht oder sogar früher<br>- 100% Geld-zurück-Garantie, wenn Sie Ihre Arbeit nicht rechtzeitig erhalten."><img src="<?php echo URI . '/assets/images/icons/calendar.svg'; ?>" alt="calendar icon">Termingerechte Lieferung</span>

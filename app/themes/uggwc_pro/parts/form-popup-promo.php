@@ -23,7 +23,7 @@
 	<label class="form__email req_star" data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
 					können.">
 		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
-		<input id="email" type="email" name="email" placeholder="E-Mail" required>
+		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone req_star">
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
