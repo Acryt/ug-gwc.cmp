@@ -61,8 +61,13 @@ export function geoCookie() {
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const utm = Object.fromEntries(urlParams.entries());
-
-	if (utm["utm_medium"] || utm["utm_source"]) {
+	if (utm["utm_source"] === "instagram" || utm["utm_source"] === "facebook") {
+		utm["utm_channel"] = "media";
+	} else if (
+		utm["utm_source"] ||
+		document.cookie.includes("fc_page=utm_source") ||
+		window.location.search.includes("utm_source")
+	) {
 		utm["utm_channel"] = "cpc";
 	} else if (!document.referrer || document.cookie.includes("refer=none")) {
 		utm["utm_channel"] = "direct";

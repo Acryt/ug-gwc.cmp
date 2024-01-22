@@ -15,17 +15,20 @@ Template Name: Leistungen
 	get_template_part('parts/section-process');
 	get_template_part('parts/section-price');
 
-	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[5]['cf_content_content']);
-
+	if (!empty(carbon_get_post_meta(get_the_ID(), 'cf_content')[5]['cf_content_content'])) {
+		Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[5]['cf_content_content']);
+	}
 	// get_template_part('parts/section-noai');
 	get_template_part('parts/section-price-table-l');
 
-	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[6]['cf_content_content']);
-	
+	if (!empty(carbon_get_post_meta(get_the_ID(), 'cf_content')[6]['cf_content_content'])) {
+		Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[6]['cf_content_content']);
+	}
 	get_template_part('parts/section-rate-alt');
 	
-	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content']);
-	
+	if (!empty(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content'])) {
+		Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content']);
+	}
 	get_template_part('parts/section-faq-accrd');
 	get_template_part('parts/section-form');
 	?>

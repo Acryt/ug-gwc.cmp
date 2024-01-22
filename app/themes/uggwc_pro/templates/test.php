@@ -8,7 +8,8 @@ Template Name: ForDEV
 <?php get_header(); ?>
 <main class="main">
 	<?php
-	phpinfo()
+	phpinfo();
+	var_dump($_SERVER);
 	?>
 </main>
 
