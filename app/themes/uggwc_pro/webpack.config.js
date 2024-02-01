@@ -20,6 +20,7 @@ module.exports = {
 		sw_authors: path.resolve(__dirname, "./src/scss/parts/swiper-authors.scss"),
 		sw_review: path.resolve(__dirname, "./src/scss/parts/swiper-review.scss"),
 		sw_review_alt: path.resolve(__dirname, "./src/scss/parts/swiper-review-alt.scss"),
+		sw_photo: path.resolve(__dirname, "./src/scss/parts/swiper-photo.scss"),
 		blog: path.resolve(__dirname, "./src/scss/parts/blog.scss"),
 	},
 	output: {
