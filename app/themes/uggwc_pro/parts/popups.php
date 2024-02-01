@@ -78,7 +78,7 @@
 	// 		break;
 
 	// 	default:
-			echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion">';
+			echo '<img src="' . URI . '/assets/images/promo/promo-f.jpg" alt="temporäre Aktion">';
 	// 		break;
 	// }
 	?>
