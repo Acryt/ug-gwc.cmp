@@ -8,9 +8,14 @@
 		height: 500px;
 		flex: 1 0 290px;
 	}
+	&__photo {
+		flex: 1 0 290px;
+		display: flex;
+		align-items: center;
+		height: 500px;
+	}
 	&__text {
 		flex: 0 0 100%;
-
 
 		div {
 			column-count: 2;
@@ -19,6 +24,7 @@
 			}
 		}
 	}
+
 	&__register {
 		display: flex;
 		height: fit-content;

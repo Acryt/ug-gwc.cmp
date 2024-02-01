@@ -1,0 +1,11 @@
+.swiper_photo {
+	&__item {
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	&__img {
+		img {
+			object-fit: cover;
+		}
+	}
+}
