@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('price', URI . '/assets/price.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/price.bundle.css');
+wp_enqueue_style('price', URI . '/assets/price.bundle.css' ,[], $ver);
 
 $items = carbon_get_post_meta(get_the_ID(), 'cf_price');
 if ($items) {
@@ -118,9 +119,9 @@ if ($items) {
 										Teilzahlung ohne Zusatzkosten</span></li>
 							</ul>
 							<div class="price__footer">
-								<a class="section__btn-cities wave_effect js_btn" data-slr=".popup__bigpromo"><span>
+								<button class=" btn section__btn-cities wave_effect js_btn" data-slr=".popup__bigpromo"><span>
 										<?php echo carbon_get_post_meta(get_the_ID(), 'cf_price_btn') ?>
-									</span></a>
+									</span></button>
 							</div>
 						</div>
 						<?php

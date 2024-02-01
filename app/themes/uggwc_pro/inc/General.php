@@ -171,8 +171,8 @@ class General
 	}
 	function connectedStylesAndScripts ()
 	{
-		$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
-		wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $ver);
+		$ver = filemtime(get_template_directory() . '/assets/header.bundle.css');
+		wp_enqueue_style('header', URI . '/assets/header.bundle.css', [], $ver);
 		$ver = filemtime(get_template_directory() . '/assets/main.bundle.js');
 		wp_enqueue_script('main', URI . '/assets/main.bundle.js', [], $ver, true);
 		$ver = filemtime(get_template_directory() . '/style.css');

@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('aauthor', URI . '/assets/aauthor.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/aauthor.bundle.css');
+wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css',[], $ver);
 ?>
 <section id="aauthor" class="section aauthor">
 	<div class="wrapper">
@@ -75,7 +76,7 @@ wp_enqueue_style('aauthor', URI . '/assets/aauthor.bundle.css');
 			`</div>
 			 <details class="aauthor__det">
 				<summary class="aauthor__sum">
-				  <h6>Beschreibung:</h6>
+				  <p class="h6">Beschreibung:</p>
 				</summary>
 				<div class="aauthor__desc content">${desc}</div>
 			 </details>

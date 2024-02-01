@@ -10,29 +10,32 @@
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 
-
+	<?php
+	$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
+	wp_enqueue_style('main', URI . '/assets/main.bundle.css',[], $ver);
+	?>
 	<?php
 	if (is_single()) { ?>
 		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Article",
-				"headline": "<?php
-				if (carbon_get_post_meta(get_the_ID(), 'cf_first_title')) {
-					echo carbon_get_post_meta(get_the_ID(), 'cf_first_title');
-				} else {
-					the_title();
+				{
+					"@context": "https://schema.org",
+					"@type": "Article",
+					"headline": "<?php
+					if (carbon_get_post_meta(get_the_ID(), 'cf_first_title')) {
+						echo carbon_get_post_meta(get_the_ID(), 'cf_first_title');
+					} else {
+						the_title();
+					}
+					?>",
+					"datePublished": "<?php the_date() ?>",
+					"dateModified": "<?php the_modified_date(); ?>",
+					"author": [{
+						"@type": "Person",
+						"name": "<?php the_author(); ?>",
+						"url": "<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
+					}]
 				}
-				?>",
-				"datePublished": "<?php the_date() ?>",
-				"dateModified": "<?php the_modified_date(); ?>",
-				"author": [{
-					"@type": "Person",
-					"name": "<?php the_author(); ?>",
-					"url": "<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
-				}]
-			}
-		</script>
+			</script>
 	<?php } ?>
 	<script type="application/ld+json">
 		{
@@ -83,10 +86,14 @@
 						<p class="s">
 							<?php echo carbon_get_theme_option('cf_work'); ?>
 						</p>
-						<a class="s" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>"><?php echo carbon_get_theme_option('cf_mail'); ?></a>
+						<a class="s" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>">
+							<?php echo carbon_get_theme_option('cf_mail'); ?>
+						</a>
 					</div>
 					<div class="header__item header__phones s">
-						<a href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><?php echo carbon_get_theme_option('cf_phone'); ?></a>
+						<a href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>">
+							<?php echo carbon_get_theme_option('cf_phone'); ?>
+						</a>
 						<a target="_blank" rel="noopener"
 							href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>">Unser
 							WhatsApp</a>
@@ -97,7 +104,7 @@
 					<span>Anfragen</span>
 				</a>
 
-				<button id="ham_btn" class="header__toggler nav-btn">
+				<button id="ham_btn" class="header__toggler nav-btn" aria-label="Hamburger Menu">
 					<div></div>
 					<div></div>
 					<div></div>

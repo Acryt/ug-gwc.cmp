@@ -9,11 +9,28 @@
 		flex: 1 0 290px;
 	}
 	&__text {
-		flex: 2 1 290px;
+		flex: 0 0 100%;
+
+
+		div {
+			column-count: 2;
+			@media (max-width: 768px) {
+				column-count: 1;
+			}
+		}
 	}
 	&__register {
 		display: flex;
 		height: fit-content;
 		max-width: 320px;
+	}
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px 24px;
+		a {
+			height: 52px;
+		}
 	}
 }

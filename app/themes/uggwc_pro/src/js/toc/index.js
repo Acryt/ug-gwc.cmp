@@ -52,6 +52,9 @@ export function toc() {
 	});
 }
 export function prcBtn() {
+	if(document.querySelector(".toc_list")) {
+		return;
+	}
 	const sections = document.querySelectorAll(
 		"#priceAccrd, #price, #priceTable, #priceTableL"
 	);

@@ -6,6 +6,7 @@ module.exports = {
 	mode: "production",
 	entry: {
 		main: path.resolve(__dirname, "./src/main.js"),
+		header: path.resolve(__dirname, "./src/header.js"),
 		faq: path.resolve(__dirname, "./src/faq.js"),
 		about: path.resolve(__dirname, "./src/scss/parts/section-about.scss"),
 		process: path.resolve(__dirname, "./src/scss/parts/section-process.scss"),

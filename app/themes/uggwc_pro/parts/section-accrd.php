@@ -23,7 +23,7 @@
 			foreach ($itemsp as $key => $item) { 
 				if (($key % 2) == 0) { ?>
 				<div id="hl_accrdp<?php echo $key; ?>" class="accrd__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-					<input type="checkbox" id="accrdp<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrdp<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_accrd_quest']; ?></h6></label>
+					<input type="checkbox" id="accrdp<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrdp<?php echo $key; ?>" itemprop="name"><p class="h6"><?php echo $item['cf_accrd_quest']; ?></p></label>
 					<div class="accrd__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_accrd_answer']; ?></div></div>
 				</div>
 			<?php }} ?>
@@ -34,7 +34,7 @@
 				foreach ($items as $key => $item) { 
 					if (($key % 2) == 1) { ?>
 					<div id="hl_accrd<?php echo $key; ?>" class="accrd__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<input type="checkbox" id="accrd<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrd<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_accrd_quest']; ?></h6></label>
+						<input type="checkbox" id="accrd<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrd<?php echo $key; ?>" itemprop="name"><p class="h6"><?php echo $item['cf_accrd_quest']; ?></p></label>
 						<div class="accrd__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_accrd_answer']; ?></div></div>
 					</div>
 			<?php }}} ?>
@@ -44,7 +44,7 @@
 			foreach ($itemsp as $key => $item) { 
 				if (($key % 2) == 1) { ?>
 				<div id="hl_accrdp<?php echo $key; ?>" class="accrd__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-					<input type="checkbox" id="accrdp<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrdp<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_accrd_quest']; ?></h6></label>
+					<input type="checkbox" id="accrdp<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrdp<?php echo $key; ?>" itemprop="name"><p class="h6"><?php echo $item['cf_accrd_quest']; ?></p></label>
 					<div class="accrd__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_accrd_answer']; ?></div></div>
 				</div>
 			<?php }} ?>
@@ -54,7 +54,7 @@
 				foreach ($items as $key => $item) { 
 					if (($key % 2) == 0) { ?>
 					<div id="hl_accrd<?php echo $key; ?>" class="accrd__tab card shadow" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-						<input type="checkbox" id="accrd<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrd<?php echo $key; ?>" itemprop="name"><h6><?php echo $item['cf_accrd_quest']; ?></h6></label>
+						<input type="checkbox" id="accrd<?php echo $key; ?>" name="accrd"><label class="accrd__label" for="accrd<?php echo $key; ?>" itemprop="name"><p class="h6"><?php echo $item['cf_accrd_quest']; ?></p></label>
 						<div class="accrd__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><?php echo $item['cf_accrd_answer']; ?></div></div>
 					</div>
 			<?php }}} ?>

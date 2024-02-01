@@ -13,7 +13,6 @@
 			</div>
 			<div class="blog__aside">
 				<div class="first__side card shadow">
-					<h4 class="form__heading">Anruf Bestellen</h4>
 					<?php get_template_part('parts/form-medium'); ?>
 				</div>
 			</div>

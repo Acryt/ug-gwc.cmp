@@ -1,5 +1,5 @@
 <form id="form_medium" class="form_medium form" accept-charset="utf-8">
-	<h4 class="form__heading">Anruf Bestellen</h4>
+	<h4 class="form__heading">Anruf bestellen</h4>
 	<input type="hidden" type="text" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>

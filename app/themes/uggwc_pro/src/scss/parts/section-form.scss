@@ -8,6 +8,9 @@
 		right: calc(50% + 220px);
 	}
 	&__cont {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
 		width: fit-content;
 		position: relative;
 		position: relative;

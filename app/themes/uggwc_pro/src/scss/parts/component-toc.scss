@@ -1,5 +1,8 @@
+* .toc {
+	
+}
 .toc {
-	padding: 12px 0;
+	padding-bottom: 12px;
 	&_sum {
 		padding: 8px 12px;
 		border-radius: 12px;
@@ -34,6 +37,7 @@
 	gap: 12px;
 	display: flex;
 	flex-wrap: wrap;
+	padding-bottom: 12px;
 
 	& > * {
 		padding: 8px 12px;

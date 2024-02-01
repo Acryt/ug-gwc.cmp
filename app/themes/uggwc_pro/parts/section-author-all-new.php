@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/aauthor.bundle.css');
+wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css',[], $ver);
 ?>
 <section id="aauthor" class="section aauthor">
 	<div class="wrapper">

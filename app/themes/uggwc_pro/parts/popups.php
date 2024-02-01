@@ -64,23 +64,23 @@
 		<div></div>
 	</div>
 	<?php
-	switch (get_the_ID()) {
-		case '123':
-			echo '<img src="' . URI . '/assets/images/promo/promo2.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
-			break;
+	// switch (get_the_ID()) {
+	// 	case '123':
+	// 		echo '<img src="' . URI . '/assets/images/promo/promo2.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
+	// 		break;
 
-		case '154': //master
-			echo '<img src="' . URI . '/assets/images/promo/promo3.jpg" alt="temporäre Aktion Masterarbeit">';
-			break;
+	// 	case '154': //master
+	// 		echo '<img src="' . URI . '/assets/images/promo/promo3.jpg" alt="temporäre Aktion Masterarbeit">';
+	// 		break;
 
-		case '161': //haus
-			echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion Hausarbeit">'; 
-			break;
+	// 	case '161': //haus
+	// 		echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion Hausarbeit">'; 
+	// 		break;
 
-		default:
+	// 	default:
 			echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion">';
-			break;
-	}
+	// 		break;
+	// }
 	?>
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
