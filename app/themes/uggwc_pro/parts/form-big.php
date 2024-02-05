@@ -49,8 +49,25 @@
 		<label class="form__promo">
 			<input type="text" name="promo" placeholder="Promocode">
 		</label>
+		<label class="form__file">
+			<input type="file" name="file">
+			<div class="form__icon"><i class="fa-solid fa-file-export"></i></div>
+			<span class="form__file_text">ZIP, DOCX oder PDF (&lt;50mb)</span>
+		</label>
+		<script>
+			document.querySelectorAll('.form__file').forEach(function (label) {
+				label.querySelector('input[type="file"]').addEventListener('change', function () {
+					const fileName = this.files[0].name;
+					const extension = fileName.split('.').pop();
+					const nameWithoutExtension = fileName.substring(0, fileName.length - extension.length - 1);
+					const shortenedFileName = (nameWithoutExtension.length > 12) ? nameWithoutExtension.substr(0, 12) + '...' + extension : fileName;
+					label.querySelector('.form__file_text').textContent = shortenedFileName;
+					label.classList.add('loaded');
+				});
+			});
+		</script>
 	</div>
-	
+
 	<input type="hidden" name="form-id" value="form-big">
 	<input type="hidden" name="recaptchaResponse" class="recaptchaResponse">
 	<div class="form__text">
@@ -113,8 +130,12 @@
 		</div>
 	</div> -->
 	<div class="w100 icons">
-	<div class="form__btn" data-tippy-form1><div><img src="<?php echo URI . '/assets/images/icons/gift.svg' ?>" alt="icon"></div>Unsere Boni</div>
-	<div class="form__btn" data-tippy-form2><div><img src="<?php echo URI . '/assets/images/icons/payment-method.svg' ?>" alt="icon"></div>Zahlungsmethoden</div>
+		<div class="form__btn" data-tippy-form1>
+			<div><img src="<?php echo URI . '/assets/images/icons/gift.svg' ?>" alt="icon"></div>Unsere Boni
+		</div>
+		<div class="form__btn" data-tippy-form2>
+			<div><img src="<?php echo URI . '/assets/images/icons/payment-method.svg' ?>" alt="icon"></div>Zahlungsmethoden
+		</div>
 	</div>
 	<!-- <div class="form__payments">
 		<div class="payment-icon" data-tippy-form2>

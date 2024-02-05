@@ -52,7 +52,10 @@
 		}
 		.form__email,
 		.form__phone,
-		.form__kontakt {
+		.form__kontakt,
+		.form__file,
+		.form__calltime,
+		.form__promo {
 			flex: 1 1 200px;
 		}
 	}
@@ -70,8 +73,9 @@
 			flex: 1 1 150px;
 		}
 		.form__kontakt {
-			flex: 1 1 100%;
-			padding: 0 0 0 calc(50% + 8px);
+			// flex: 1 1 100%;
+			// padding: 0 0 0 calc(50% + 8px);
+			flex: 1 1 150px;
 			display: flex;
 			@media screen and (max-width: 698px) {
 				padding: 0;
@@ -303,6 +307,36 @@
 		height: 20px;
 		width: 20px;
 	}
+	&__file {
+		input {
+			display: none;
+		}
+	}
+	.form__file {
+		background: var(--border);
+		border-radius: 8px;
+		outline: none;
+		// border-top: 1px solid #0000;
+		// border-right: 1px solid #0000;
+		// border-left: 1px solid #0000;
+		border: 1px solid var(--border);
+		width: 100%;
+		transition: all 0.5s;
+		color: var(--text);
+		height: 40px;
+		span {
+			font-size: 12px;
+			font-weight: 400;
+		}
+
+		&.loaded {
+			span {
+				font-size: 14px;
+				font-weight: 400;
+				color: var(--thead);
+			}
+		}
+	}
 	input:not([type="submit"]):not([type="checkbox"]) {
 		background: var(--border);
 		padding: 8px 12px;
@@ -419,7 +453,8 @@
 
 	// Отступы если иконка
 	.form__icon ~ input,
-	.form__icon ~ .form_select__title {
+	.form__icon ~ .form_select__title,
+	.form__icon ~ span {
 		padding-left: 32px !important;
 	}
 	.form__theme {
@@ -485,7 +520,7 @@
 			background: linear-gradient(180deg, #fafafa, #ffffff);
 			color: var(--alert);
 			transition: all 0.5s;
-	
+
 			div {
 				height: 16px;
 			}

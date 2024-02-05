@@ -7,7 +7,8 @@
 		data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
 		<span class="pa form__c">Thema der Arbeit</span>
 		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
-		<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -" required></textarea>
+		<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"
+			required></textarea>
 	</label>
 	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
 		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
@@ -29,6 +30,11 @@
 	<label class="form__phone req_star">
 		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+	</label>
+	<label class="form__file">
+		<input type="file" name="file">
+		<div class="form__icon"><i class="fa-solid fa-file-export"></i></div>
+		<span class="form__file_text">ZIP,DOCX oder PDF(&lt;50mb)</span>
 	</label>
 	<label class="form__kontakt">
 		<input class="kontakt" type="checkbox" name="kontakt">

@@ -46,7 +46,6 @@ class General
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
-
 		// динамический роутинг авторов
 		add_action('init', function () {
 			add_rewrite_rule('autoren/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
@@ -317,7 +316,7 @@ class General
 		//  куки
 		$utm = $_GET;
 		// органика - директ - реклама
-		if (isset($utm['utm_source']) || strpos($_COOKIE['fc_page'], 'utm_source') !== false || strpos($_SERVER["REQUEST_URI"], 'utm_source') !== false ) {
+		if (isset($utm['utm_source']) || strpos($_COOKIE['fc_page'], 'utm_source') !== false || strpos($_SERVER["REQUEST_URI"], 'utm_source') !== false) {
 			$utm['utm_channel'] = 'cpc';
 		} elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) === 'none')) {
 			$utm['utm_channel'] = 'direct';
