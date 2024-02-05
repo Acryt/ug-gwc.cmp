@@ -9,11 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-
-	<?php
-	$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
-	wp_enqueue_style('main', URI . '/assets/main.bundle.css',[], $ver);
-	?>
 	<?php
 	if (is_single()) { ?>
 		<script type="application/ld+json">
