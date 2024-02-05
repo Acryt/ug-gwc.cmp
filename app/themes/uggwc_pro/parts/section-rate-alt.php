@@ -79,7 +79,7 @@ if (carbon_get_post_meta(get_the_ID(), 'cf_rating_title')) {
 			<div class="section__content rate__b">
 				<?php get_template_part('parts/component-ratings'); ?>
 				<div class="rate__snippet">
-					<a href="https://www.provenexpert.com/ghost-writer2/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
+					<a href="https://www.provenexpert.com/gwc-ghost-writer-company/?utm_source=Widget&utm_medium=Widget&utm_campaign=Widget"
 						title="Customer reviews &amp; experiences for Ghost Writer. Show more information." target="_blank"
 						rel="noopener noreferrer"><img
 							src="https://images.provenexpert.com/a2/29/b47f5af8652c82103ae17475eede/widget_recommendation_465_0.png?t=1689259569703"

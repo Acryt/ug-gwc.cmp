@@ -36,7 +36,7 @@
 
 	curl_close($ch);
 	?>
-	<a href="https://www.provenexpert.com/ghost-writer2/" class="ratings__two">
+	<a href="https://www.provenexpert.com/gwc-ghost-writer-company/" class="ratings__two">
 		<img class="" src="<?php bloginfo('template_url'); ?>/assets/images/review/proven.svg" alt="Logo">
 		<div class="ratings__stars">
 			<?php
