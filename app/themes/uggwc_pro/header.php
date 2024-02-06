@@ -129,6 +129,7 @@
 						<a href="/wie-wir-arbeiten/">So geht's!</a>
 						<a href="/werbeaktionen/">Werbeaktionen und Rabatte</a>
 						<a href="/fur-autoren/">Für Autoren</a>
+						<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 					</div>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>

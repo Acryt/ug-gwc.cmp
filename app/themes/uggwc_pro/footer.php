@@ -109,6 +109,7 @@
 				<a href="/faq/">FAQ</a>
 				<a href="/blog/">Blog</a>
 				<a href="/kontakte/">Kontakte</a>
+				<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 
 				<strong>WIR ARBEITEN IN:</strong>
 				<a href="/ghostwriter-berlin/">Ghostwriter Berlin</a>
