@@ -4,9 +4,9 @@ wp_enqueue_style('sabout', URI . '/assets/about.bundle.css');
 <section id="impressum" class="section about">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2>
+			<h1>
 				<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_title'); ?>
-			</h2>
+			</h1>
 			<p>
 				<?php echo carbon_get_post_meta(get_the_ID(), 'cf_content_subtitle'); ?>
 			</p>
