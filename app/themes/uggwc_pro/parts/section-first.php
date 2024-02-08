@@ -125,7 +125,7 @@
 			// echo '</div>';
 		}
 		?>
-		<?php if (is_page_template(['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php', 'templates/price.php'])) { ?>
+		<?php if (is_page_template(['templates/home.php', 'templates/disziplinen.php', 'templates/leistungen.php', 'templates/leistungen1.php', 'templates/leistungen2.php', 'templates/leistungen3.php', 'templates/lektorat.php', 'templates/city.php', 'templates/beispiele.php', 'templates/price.php'])) { ?>
 			<div class="first__side card shadow">
 				<img class="wow animate__jello first__hat animate__repeat-2 animate__delay-2s"
 					src="<?php echo URI . '/assets/images/first/hat.svg' ?>" alt="">
