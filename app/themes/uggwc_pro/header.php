@@ -119,18 +119,14 @@
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_disz') ?>
 					</div>
-					<div class="dd-btn">Beispiele</div>
-					<div class="dd-menu">
-						<?php echo carbon_get_theme_option('cf_menu_beis') ?>
-					</div>
 					<div class="dd-btn">Über uns</div>
 					<div class="dd-menu">
 						<a href="/uber-uns/">Über uns</a>
 						<a href="/wie-wir-arbeiten/">So geht's!</a>
-						<a href="/werbeaktionen/">Werbeaktionen und Rabatte</a>
 						<a href="/fur-autoren/">Für Autoren</a>
 						<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 					</div>
+					<a href="/werbeaktionen/">Rabatte</a>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
 					<a class="no-wide" href="/worter-zu-seiten/">Wörter zu Seiten</a>
