@@ -7,8 +7,7 @@
 			data-tippy-content="<i>Das ist Thema Ihrer Arbeit</i>. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
 			<span class="pa form__c">Thema der Arbeit</span>
 			<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
-			<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"
-				required></textarea>
+			<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"></textarea>
 		</label>
 		<?php get_template_part('parts/select-quote') ?>
 		<?php get_template_part('parts/select-quality') ?>
