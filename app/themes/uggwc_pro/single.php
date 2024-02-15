@@ -16,6 +16,7 @@ Template Name: Single
 	?>
 </main>
 
+
 <?php 
 get_template_part('parts/popups');
 get_footer();
