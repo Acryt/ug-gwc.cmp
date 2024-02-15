@@ -9,5 +9,5 @@ app/plugins/
 !app/plugins/carbon-fields/
 !app/plugins/wp-rocket/
 app/upgrade/
-**/inc/Ajax*
 **/assets/*.*
+**PrivateConstants.php

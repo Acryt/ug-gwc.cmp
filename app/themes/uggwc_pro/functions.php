@@ -9,10 +9,13 @@ define('TYPES', json_decode(file_get_contents(URI . '/data/types.json'), true));
 define('SPEC', json_decode(file_get_contents(URI . '/data/spec.json'), true));
 define('PRICE', json_decode(file_get_contents(URI . '/data/pricelist.json'), true));
 
+require_once PATH . 'inc/PrivateConstants.php';
+
 require_once PATH . 'inc/General.php';
 require_once PATH . 'inc/Helpers.php';
 require_once PATH . 'inc/Ajax.php';
 // require_once DE_PATH .'inc/Shortcodes.php';
+
 
 /** Settings meta fields */
 require_once 'inc/CarbonFields/CommonMeta.php';
