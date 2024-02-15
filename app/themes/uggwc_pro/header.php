@@ -56,7 +56,10 @@
 		</script>
 	<?php wp_head(); ?>
 </head>
-
+<?php
+	$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
+	wp_enqueue_style('main', URI . '/assets/main.bundle.css',[], $ver);
+?>
 <body>
 	<header class="header">
 		<div class="header__content">

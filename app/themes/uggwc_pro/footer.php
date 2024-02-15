@@ -1,7 +1,3 @@
-<?php
-	$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
-	wp_enqueue_style('main', URI . '/assets/main.bundle.css',[], $ver);
-?>
 <footer class="footer">
 	<div class="wrapper">
 		<div class="footer__content">

@@ -28,7 +28,7 @@ export function mailer() {
 					form.classList.add("_disabled");
 					setTimeout(() => {
 						form.classList.remove("_disabled");
-					}, 4000);
+					}, 3000);
 				})
 				.catch((error) => {
 					console.log(error);
