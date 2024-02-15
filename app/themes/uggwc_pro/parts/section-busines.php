@@ -14,7 +14,15 @@
 				<hr>
 				<div class="busines__link">
 					<p><strong>Links zu offiziellen Quellen:</strong></p>
-					<a target="_blank" rel="noopener" class="busines__register" href="<?php echo carbon_get_theme_option('cf_register') ?>"><img src="<?php bloginfo('template_url'); ?>/assets/images/review/register.svg" alt=""></a>
+					<a target="_blank" rel="noopener" class="busines__register" href="https://www.unternehmensregister.de/">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/logos/unternehmensregister.svg" alt="">
+					</a>
+					<a target="_blank" rel="noopener" class="busines__register" href="https://www.online-handelsregister.de/">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/logos/onlinehandelsregister.svg" alt="">
+					</a>
+					<a target="_blank" rel="noopener" class="busines__register" href="https://www.handelsregister.de/">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/logos/handelsregister.svg" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
