@@ -16,7 +16,6 @@ export function mailer() {
 			// Класс для визуализации формы при отправке
 			form.classList.add("_sending");
 
-			// fetch("/app/themes/uggwc_pro/inc/AjaxTest2.php", {
 			fetch("/wordpress/wp-admin/admin-ajax.php", {
 				method: "POST",
 				body: data,
@@ -34,7 +33,7 @@ export function mailer() {
 					console.log(error);
 				});
 
-			console.log("FormSend");
+			console.log("FormSent");
 		});
 	}
 }

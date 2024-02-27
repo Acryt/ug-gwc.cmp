@@ -18,7 +18,7 @@
 					<i class="numbers__icon fa-book-open fas  wow animate__backInUp" aria-hidden="true" style="animation-delay: .6s;"></i>
 					<div class="numbers__number">700+</div>
 					<div class="numbers__name">Autoren</div>
-					<div class="numbers__text">Wir haben das größte Autorenteam. 350+ Bachelors, 200+ Masters, 150+ Doktoren. Abteilungen für Eilaufträge und Online-Prüfungen.</div>
+					<div class="numbers__text">Wir haben das größte Autorenteam. 350+ Bachelors, 200+ Masters, 150+ Doktoren. Abteilungen für Eilaufträge.</div>
 				</div>
 				<div class="numbers__item">
 					<i class="numbers__icon fa-chalkboard-teacher fas  wow animate__backInUp" aria-hidden="true" style="animation-delay: .9s;"></i>

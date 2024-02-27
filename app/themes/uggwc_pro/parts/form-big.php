@@ -50,21 +50,9 @@
 		</label>
 		<label class="form__file">
 			<input type="file" name="file">
-			<div class="form__icon"><i class="fa-solid fa-file-export"></i></div>
+			<i class="form__icon fa-solid fa-file-export"></i>
 			<span class="form__file_text">ZIP, DOCX oder PDF (&lt;50mb)</span>
 		</label>
-		<script>
-			document.querySelectorAll('.form__file').forEach(function (label) {
-				label.querySelector('input[type="file"]').addEventListener('change', function () {
-					const fileName = this.files[0].name;
-					const extension = fileName.split('.').pop();
-					const nameWithoutExtension = fileName.substring(0, fileName.length - extension.length - 1);
-					const shortenedFileName = (nameWithoutExtension.length > 12) ? nameWithoutExtension.substr(0, 12) + '...' + extension : fileName;
-					label.querySelector('.form__file_text').textContent = shortenedFileName;
-					label.classList.add('loaded');
-				});
-			});
-		</script>
 	</div>
 
 	<input type="hidden" name="form-id" value="form-big">

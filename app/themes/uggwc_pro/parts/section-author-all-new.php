@@ -26,7 +26,7 @@ wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css',[], $ver);
 <script>
 	const lmCont = document.querySelector("#aauthor-lm-c");
 	const lmBtn = document.querySelector("#aauthor-lm-btn");
-	let authors = JSON.parse(<?php echo json_encode(file_get_contents(PATH . '/parts/authors.json')) ?>);
+	let authors = JSON.parse(<?php echo json_encode(file_get_contents(PATH . 'parts/authors.json')) ?>);
 	console.log(authors);
 
 	function createAuthorCard(author) {

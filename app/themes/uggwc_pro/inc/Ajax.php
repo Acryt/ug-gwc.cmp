@@ -274,14 +274,14 @@ class Ajax
 			//  $mail->addBCC('bcc@example.com');
 
 			//Attachments
-			$mail->addAttachment(PATH . '/assets/docs/Warum wählt man uns.pdf');         //Add attachments
+			$mail->addAttachment(PATH . 'assets/docs/Warum wählt man uns.pdf');         //Add attachments
 			// $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 			$sbjForClient = 'Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!';
-			$messForClient = '<p>Hallo! Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!</p>
+			$messForClient = '<p><strong>Hallo! Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!</strong></p>
 			<p>Wir haben Ihre Anfrage erhalten und prüfen sie derzeit. Sobald wir alle Ihre Anforderungen geprüft haben, wird sich Ihr persönlicher Manager mit Ihnen in Verbindung setzen. Wenn Sie vor 18:00 Uhr eine Anfrage gesendet haben, wird sich Ihr persönlicher Manager innerhalb von 15 Minuten mit Ihnen in Verbindung setzen. Wenn nach 18.00 Uhr, dann am nächsten Tag morgens.</p>
-			<p><strong>Ihre Anfragenummer:' . $id . '</strong></p>
+			<p style="text-align: center;"><strong>Ihre Anfragenummer:' . $id . '</strong></p>
 			<br>
-			<p><b>Wenn Sie keine E-Mail erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner und markieren Sie unsere E-Mail als „Kein Spam“.</b></p>
+			<p><strong>Wenn Sie keine E-Mail erhalten haben, überprüfen Sie bitte Ihren Spam-Ordner und markieren Sie unsere E-Mail als „Kein Spam“.</strong></p>
 			<p style="text-decoration: underline;">Wenn Sie unser neuer Kunde sind oder zum ersten Mal die Hilfe eines Ghostwriters in Anspruch nehmen, finden Sie unten eine kurze Beschreibung unserer Arbeitsweise:</p>
 			<ol>
 				<li aria-level="1">Ihr persönlicher Manager wird sich in jeder genehmen Weise mit Ihnen in Verbindung setzen, um die Wünsche und Anforderungen betreffs Ihres Antrags zu präzisieren.</li>
@@ -296,11 +296,10 @@ class Ajax
 			<p>Während der Erstellung Ihrer Arbeit stehen Ihnen 2 persönliche Betreuer zur Seite, die mit Ihnen in Kontakt bleiben, gerne alle Ihre Fragen beantworten und Sie über den aktuellen Stand Ihrer Bestellung informieren.</p>
 			<p>Wenn Sie eine dringende Frage haben, kontaktieren Sie uns bitte auf eine der folgenden Arten:</p>
 			<br>
-			<p>Email: info@ug-gwc.de</p>
-			<br>
+			<p>Email: <a href="mailto:info@ug-gwc.de">info@ug-gwc.de</a></p>
 			<p>WhatsApp: <a href="https://wa.me/493046690297">493046690297</a></p>
 			<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
-			<p>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</p>';
+			<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 			//Content
 			$mail->isHTML(true); //Set email format to HTML
 			$mail->Subject = $sbjForClient;

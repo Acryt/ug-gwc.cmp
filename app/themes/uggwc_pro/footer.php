@@ -82,12 +82,11 @@
 			<div class="footer__three">
 
 				<strong>NÜTZLICHES</strong>
+				<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 				<a href="/wie-wir-arbeiten/">So geht's!</a>
 				<a href="/uber-uns/">Über uns</a>
 				<a href="/faq/">FAQ</a>
 				<a href="/blog/">Blog</a>
-				<a href="/kontakte/">Kontakte</a>
-				<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 
 				<strong>WIR ARBEITEN IN:</strong>
 				<a href="/ghostwriter-berlin/">Ghostwriter Berlin</a>

@@ -32,7 +32,7 @@
 	</label>
 	<label class="form__file">
 		<input type="file" name="file">
-		<div class="form__icon"><i class="fa-solid fa-file-export"></i></div>
+		<i class="form__icon fa-solid fa-file-export"></i>
 		<span class="form__file_text">ZIP,DOCX oder PDF(&lt;50mb)</span>
 	</label>
 	<label class="form__kontakt">

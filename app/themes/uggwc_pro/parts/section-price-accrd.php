@@ -54,12 +54,6 @@
 									<span>50 €</span> PRO SEITE
 								</td>
 							</tr>
-							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Online Klausur">
-								<td>Online Klausur</td>
-								<td class="price__plus">ab
-									<span>170 €</span> / 30 min
-								</td>
-							</tr>
 							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Abschlussarbeit">
 								<td>Abschlussarbeit</td>
 								<td class="price__plus">ab
@@ -232,12 +226,6 @@
 								<td>Facharbeit</td>
 								<td class="price__plus">ab
 									<span>52 €</span> PRO SEITE
-								</td>
-							</tr>
-							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Online Klausur"> 
-								<td>Online Klausur</td>
-								<td class="price__plus">ab
-									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Abschlussarbeit"> 
@@ -414,12 +402,6 @@
 									<span>58 €</span> PRO SEITE
 								</td>
 							</tr>
-							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Online Klausur"> 
-								<td>Online Klausur</td>
-								<td class="price__plus">ab
-									<span>170 €</span> / 30 min
-								</td>
-							</tr>
 							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
 								<td class="price__plus">ab
@@ -594,12 +576,6 @@
 									<span>55 €</span> PRO SEITE
 								</td>
 							</tr>
-							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Online Klausur"> 
-								<td>Online Klausur</td>
-								<td class="price__plus">ab
-									<span>170 €</span> / 30 min
-								</td>
-							</tr>
 							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Abschlussarbeit"> 
 								<td>Abschlussarbeit</td>
 								<td class="price__plus">ab
@@ -772,12 +748,6 @@
 								<td>Facharbeit</td>
 								<td class="price__plus">ab
 									<span>53 €</span> PRO SEITE
-								</td>
-							</tr>
-							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Online Klausur"> 
-								<td>Online Klausur</td>
-								<td class="price__plus">ab
-									<span>170 €</span> / 30 min
 								</td>
 							</tr>
 							<tr class="js_btn" data-slr=".popup__bigpromo" data-type="Abschlussarbeit"> 

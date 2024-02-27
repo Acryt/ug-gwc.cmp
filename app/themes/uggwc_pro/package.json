@@ -42,5 +42,6 @@
 	"dependencies": {
 		"-": "^0.0.1"
 	},
-	"description": ""
+	"description": "",
+	"packageManager": "yarn@4.1.0"
 }

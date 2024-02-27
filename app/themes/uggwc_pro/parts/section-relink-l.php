@@ -31,12 +31,6 @@
 				</div>
 				<span>Doktorarbeit</span>
 			</a>
-			<a href="/online-klausur/">
-				<div class="relink__img">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
-				</div>
-				<span>Online Klausur</span>
-			</a>
 			<a href="/seminararbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/icons/checkb.svg">
