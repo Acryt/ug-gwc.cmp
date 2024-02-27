@@ -1,8 +1,14 @@
 <section id="how" class="section how">
 	<div class="wrapper">
 		<div class="section__header">
-			<h2><?php echo carbon_get_theme_option('cf_how_title') ?></h2>
-			<p><?php echo carbon_get_theme_option('cf_how_subtitle') ?></p>
+			<?php 
+
+				if (is_page_template('templates/how.php')) {
+					echo '<h1>Wie Wir Arbeiten</h1>';
+				} else {
+					echo '<h2>' . carbon_get_theme_option('cf_how_title') . '</h2>';
+					echo '<p>'. carbon_get_theme_option('cf_how_subtitle') . '</p>';
+				} ?>
 		</div>
 		<div class="section__content">
 			<div class="how__list">

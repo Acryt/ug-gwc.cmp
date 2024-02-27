@@ -10,9 +10,14 @@ if ($items) {
 			<div class="section__header">
 				<div class="header_c">
 					<div class="header_img"><img class="" src="<?php bloginfo('template_url'); ?>/assets/images/promo/aktionen.jpg" alt=""></div>
-					<h2>
-						<?php echo carbon_get_theme_option('cf_promo_title') ?>
-					</h2>
+					<?php 
+						if (is_page_template('templates/promo.php')) {
+							echo '<h1 class="section__heading">'. carbon_get_theme_option('cf_promo_title') .'</h1>';
+						} else {
+							echo '<h2>' . carbon_get_theme_option('cf_promo_title') . '</h2>';
+						}
+					?>
+
 				</div>
 				<?php if (carbon_get_theme_option('cf_promo_subtitle')) { ?>
 				<p>

@@ -6,10 +6,14 @@
 		<div class="wrapper">
 			<div class="section__header">
 				<?php
-				if (carbon_get_post_meta(get_the_ID(), 'cf_faq_title')) {
-					echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_faq_title') . '</h2>';
+				if (is_page_template('templates/faq.php')) {
+					echo '<h1>FAQ</h1>';
 				} else {
-					echo '<h2 class="section__heading">' . carbon_get_theme_option('cf_afaq_title') . '</h2>';
+					if (carbon_get_post_meta(get_the_ID(), 'cf_faq_title')) {
+						echo '<h2 class="section__heading">' . carbon_get_post_meta(get_the_ID(), 'cf_faq_title') . '</h2>';
+					} else {
+						echo '<h2 class="section__heading">' . carbon_get_theme_option('cf_afaq_title') . '</h2>';
+					}
 				} ?>
 			</div>
 			<div class="section__content">
