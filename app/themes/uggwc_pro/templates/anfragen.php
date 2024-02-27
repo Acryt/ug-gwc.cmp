@@ -10,7 +10,7 @@ Template Name: Anfragen
 	<section class="section">
 		<div class="wrapper container">
 			<div class="section__header">
-				<h2>Anfragen</h2>
+				<h1>Anfragen</h1>
 			</div>
 		</div>
 	</section>

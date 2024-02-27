@@ -94,3 +94,16 @@ export function onlineForm() {
 		});
 	});
 }
+
+export function fileInput() {
+	document.querySelectorAll('.form__file').forEach(function (label) {
+		label.querySelector('input[type="file"]').addEventListener('change', function () {
+			const fileName = this.files[0].name;
+			const extension = fileName.split('.').pop();
+			const nameWithoutExtension = fileName.substring(0, fileName.length - extension.length - 1);
+			const shortenedFileName = (nameWithoutExtension.length > 14) ? nameWithoutExtension.substr(0, 14) + '...' + extension : fileName;
+			label.querySelector('.form__file_text').textContent = shortenedFileName;
+			label.classList.add('loaded');
+		});
+	});
+}

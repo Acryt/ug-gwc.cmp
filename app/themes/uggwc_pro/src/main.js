@@ -32,7 +32,7 @@ import { siteTimer, geoCookie } from "./js/siteTimer";
 import { promo } from "./js/promo";
 import { promoBlockTimer } from "./js/promoBlockTimer";
 import { mailer } from "./js/mailer";
-import { stepper, calendarInput, phoneInput, onlineForm } from "./js/forms";
+import { stepper, calendarInput, phoneInput, onlineForm, fileInput } from "./js/forms";
 import { calc } from "./js/calc";
 // import { handleAnchorLinks } from "./js/href";
 import { toc, prcBtn } from "./js/toc";
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	giftTag();
 	delayedGift();
 	wordCount();
+	fileInput();
 	tippy('[data-tippy-content]', {
 		// hideOnClick: false,
 		// trigger: 'click',
