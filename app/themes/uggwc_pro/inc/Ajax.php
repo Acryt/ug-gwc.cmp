@@ -16,13 +16,17 @@ class Ajax
 {
 	public function __construct ()
 	{
-		add_action('wp_ajax_sendForm', [$this, 'sendAll']);
-		add_action('wp_ajax_nopriv_sendForm', [$this, 'sendAll']);
+		if (is_user_logged_in()) {
+			// Если пользователь аутентифицирован, используем wp_ajax
+			add_action('wp_ajax_sendForm', [$this, 'sendAll']);
+			add_action('wp_ajax_sendWapp', [$this, 'sendWapp']);
+	  } else {
+			// Если пользователь не аутентифицирован, используем wp_ajax_nopriv
+			add_action('wp_ajax_nopriv_sendForm', [$this, 'sendAll']);
+			add_action('wp_ajax_nopriv_sendWapp', [$this, 'sendWapp']);
+	  }
 	}
-	/**
-	 * Summary of sendAll
-	 * @return void
-	 */
+
 	public function sendAll ()
 	{
 		if (empty($_POST)) {
@@ -207,6 +211,7 @@ class Ajax
 		file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
 		return true;
 	}
+
 	private function sendToTG ($id, $subject, $score, $title, $fc_source)
 	{
 		$text = "<b>$title</b>\r\n\n";
@@ -234,6 +239,7 @@ class Ajax
 		file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
 		return true;
 	}
+
 	private function sendFileToTG ($id, $file)
 	{
 		$data = [
@@ -249,6 +255,7 @@ class Ajax
 		$fileResult = curl_exec($ch);
 		curl_close($ch);
 	}
+
 	private function sendToClient ($id)
 	{
 		$mail = new PHPMailer(true);
@@ -313,6 +320,7 @@ class Ajax
 		}
 		return true;
 	}
+
 	public function facebookAds ($id)
 	{
 		$api = Api::init(null, null, FACEBOOK_TOKEN);
@@ -352,6 +360,29 @@ class Ajax
 			->setEvents($events);
 		$response = $request->execute();
 		return true;
+	}
+
+	public function sendWapp ()
+	{
+		$channel = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
+		$clientGeo = json_decode(stripslashes($_COOKIE['geo']));
+		date_default_timezone_set('Europe/Minsk');
+		$clickTime = new DateTime();
+
+		$text = "<b>Кто-то кликнул 🥸</b>\r\n\n";
+		$text .= "<b>👣 : {$channel}</b>\r\n";
+		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
+		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
+		$text .= "<b>🏠 : {$clientGeo->region}</b>\r\n";
+		$text .= "<b>⌚️ : {$clickTime->format('Y-m-d H:i:s')}</b>";
+
+		$data = [
+			'parse_mode' => 'html',
+			'chat_id' => -1002070615080,
+			'text' => $text
+		];
+		$res = file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
+		return $res;
 	}
 }
 

@@ -13,7 +13,7 @@
 			<p class="sm_swiper__day"><?php echo $item['cf_manager_day'] ?></p>
 			<div class="sm_swiper__icons icons">
 				<?php if ($item['cf_manager_whatsapp']) { ?>
-				<a target="_blank" rel="noopener" class="soc__icon" href="https://wa.me/<?php echo Helpers::del_space($item['cf_manager_whatsapp']) ?>"><i class="fa-brands fa-whatsapp"></i></a>
+				<a class="soc__icon js-wapp" target="_blank" rel="noopener" href="https://wa.me/<?php echo Helpers::del_space($item['cf_manager_whatsapp']) ?>"><i class="fa-brands fa-whatsapp"></i></a>
 				<?php } ?>
 				<?php if ($item['cf_manager_mail']) { ?>
 				<a class="soc__icon" href="mailto:<?php echo $item['cf_manager_mail'] ?>"><i class="fa-solid fa-envelope"></i></a>

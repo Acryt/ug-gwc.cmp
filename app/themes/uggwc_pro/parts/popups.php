@@ -31,15 +31,13 @@
 		</h4>
 		<div class="popup__bigpromo__sub">
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo carbon_get_theme_option('cf_promo_temporary_imgp'); ?>">
+				<img src="<?php echo URI . '/assets/images/promo/promo-marz-b.jpg' ?>" alt="temporäre Aktion Baucharbeit">
 			</div>
-			<div class="popup__bigpromo__text">
-				<h6>
-					<?php echo carbon_get_theme_option('cf_promo_popup_temp'); ?>
-				</h6>
-				<p>
-					<?php echo carbon_get_theme_option('cf_promo_popup_temp_sub'); ?>
-				</p>
+			<div class="popup__bigpromo__img">
+				<img src="<?php echo URI . '/assets/images/promo/promo-marz.jpg' ?>" alt="temporäre Aktion Hausarbeit">
+			</div>
+			<div class="popup__bigpromo__img">
+				<img src="<?php echo URI . '/assets/images/promo/promo-marz-m.jpg' ?>" alt="temporäre Aktion Masterarbeit">
 			</div>
 		</div>
 		<?php get_template_part('parts/form-popup-promo') ?>
@@ -64,30 +62,30 @@
 		<div></div>
 	</div>
 	<?php
-	// switch (get_the_ID()) {
-	// 	case '123':
-	// 		echo '<img src="' . URI . '/assets/images/promo/promo2.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
-	// 		break;
+	switch (get_the_ID()) {
+		case '123': //bach
+			echo '<img src="' . URI . '/assets/images/promo/promo-marz-b.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
+			break;
 
-	// 	case '154': //master
-	// 		echo '<img src="' . URI . '/assets/images/promo/promo3.jpg" alt="temporäre Aktion Masterarbeit">';
-	// 		break;
+		case '154': //master
+			echo '<img src="' . URI . '/assets/images/promo/promo-marz-m.jpg" alt="temporäre Aktion Masterarbeit">';
+			break;
 
-	// 	case '161': //haus
-	// 		echo '<img src="' . URI . '/assets/images/promo/promo1.jpg" alt="temporäre Aktion Hausarbeit">'; 
-	// 		break;
+		// case '161': //haus
+		// 	echo '<img src="' . URI . '/assets/images/promo/promo-marz-h.jpg" alt="temporäre Aktion Hausarbeit">'; 
+		// 	break;
 
-	// 	default:
-			echo '<img src="' . URI . '/assets/images/promo/promo-f.jpg" alt="temporäre Aktion">';
-	// 		break;
-	// }
+		default:
+			echo '<img src="' . URI . '/assets/images/promo/promo-marz.jpg" alt="temporäre Aktion">';
+			break;
+	}
 	?>
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
 </div>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>
-<a target="_blank" class="popup__call shadow"
+<a target="_blank" class="popup__call shadow js-wapp"
 	href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>

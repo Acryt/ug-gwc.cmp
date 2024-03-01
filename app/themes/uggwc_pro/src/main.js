@@ -38,6 +38,7 @@ import { calc } from "./js/calc";
 import { toc, prcBtn } from "./js/toc";
 import { progressBar } from "./js/progress";
 import { wordCount } from "./js/word";
+import { handleLinkClickAndSendWapp } from "./js/whatsapp";
 
 document.addEventListener("DOMContentLoaded", () => {
 	niceSelectVanilla();
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	delayedGift();
 	wordCount();
 	fileInput();
+	handleLinkClickAndSendWapp();
 	tippy('[data-tippy-content]', {
 		// hideOnClick: false,
 		// trigger: 'click',

@@ -92,7 +92,7 @@
 						<a href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>">
 							<?php echo carbon_get_theme_option('cf_phone'); ?>
 						</a>
-						<a target="_blank" rel="noopener"
+						<a class="js-wapp" target="_blank" rel="noopener"
 							href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>">Unser
 							WhatsApp</a>
 					</div>

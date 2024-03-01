@@ -75,14 +75,14 @@
 		flex-wrap: wrap;
 	}
 	&__img {
-		flex: 1 0 80px;
+		flex: 1 0 200px;
 		padding: 16px;
 	}
 	&__text {
-		flex: 1 0 280px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		flex: 1 0 480px;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
 	}
 }
 // Попапчики

@@ -41,7 +41,7 @@
 				<p>Adresse: Bessemerstraße 82,10. OG Süd, 12103 Berlin, Deutschland</p>
 				<div class="footer__icons">
 					<strong>Wir im Netz:</strong>
-					<a target="_blank" rel="noopener" class="soc__icon"
+					<a class="soc__icon js-wapp" target="_blank" rel="noopener"
 						href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>"><i
 							class="fa-brands fa-whatsapp"></i></a>
 					<a class="soc__icon" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>"><i
@@ -49,7 +49,7 @@
 					<a class="soc__icon"
 						href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><i
 							class="fa-solid fa-phone-volume"></i></a>
-					<a target="_blank" rel="noopener" class="soc__icon" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i
+					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i
 							class="fa-brands fa-instagram"></i></a>
 				</div>
 				<strong>GARANTIEN</strong>
