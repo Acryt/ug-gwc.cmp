@@ -199,16 +199,16 @@ class Ajax
 
 	private function sendToTGTest ($id)
 	{
-		$token = TELEGRAM_TOKEN;
+		$token = TG_TOKEN;
 		$text = "<b>$id</b>\r\n\n";
 
 
 		$data = [
 			'parse_mode' => 'html',
-			'chat_id' => TELEGRAM_CHAT_ID,
+			'chat_id' => TG_CHAT_ID,
 			'text' => $text
 		];
-		file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
+		file_get_contents("https://api.telegram.org/bot" . TG_TOKEN . "/sendMessage?" . http_build_query($data));
 		return true;
 	}
 
@@ -233,22 +233,22 @@ class Ajax
 
 		$data = [
 			'parse_mode' => 'html',
-			'chat_id' => TELEGRAM_CHAT_ID,
+			'chat_id' => TG_CHAT_ID,
 			'text' => $text
 		];
-		file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
+		file_get_contents("https://api.telegram.org/bot" . TG_TOKEN . "/sendMessage?" . http_build_query($data));
 		return true;
 	}
 
 	private function sendFileToTG ($id, $file)
 	{
 		$data = [
-			'chat_id' => TELEGRAM_CHAT_ID,
+			'chat_id' => TG_CHAT_ID,
 			'caption' => "🗃 : " . $id,
 			'document' => new \CURLFile($file)
 		];
 
-		$ch = curl_init("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendDocument");
+		$ch = curl_init("https://api.telegram.org/bot" . TG_TOKEN . "/sendDocument");
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -369,7 +369,7 @@ class Ajax
 		date_default_timezone_set('Europe/Minsk');
 		$clickTime = new DateTime();
 
-		$text = "<b>Кто-то кликнул 🥸</b>\r\n\n";
+		$text = "<b>UG-GWC.de WhatsApp клик 🥸</b>\r\n\n";
 		$text .= "<b>👣 : {$channel}</b>\r\n";
 		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
 		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
@@ -378,10 +378,10 @@ class Ajax
 
 		$data = [
 			'parse_mode' => 'html',
-			'chat_id' => -1002070615080,
+			'chat_id' => TG_CHANNEL_ID,
 			'text' => $text
 		];
-		$res = file_get_contents("https://api.telegram.org/bot" . TELEGRAM_TOKEN . "/sendMessage?" . http_build_query($data));
+		$res = file_get_contents("https://api.telegram.org/bot" . TG_TOKEN . "/sendMessage?" . http_build_query($data));
 		return $res;
 	}
 }
