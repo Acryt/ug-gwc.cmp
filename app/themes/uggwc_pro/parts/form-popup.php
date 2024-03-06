@@ -1,18 +1,18 @@
 <form id="form_popup" class="form_big form" accept-charset="utf-8">
-<input type="hidden" type="text" name="name" value="">
+<input type="hidden" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme"
 		data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Ihr Thema jetzt richtig zu schreiben.">
 		<span class="pa form__c">Thema der Arbeit</span>
 		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
-		<textarea rows="2" type="text" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"></textarea>
+		<textarea rows="2" name="theme" placeholder="Wenn Sie noch kein Thema haben, geben Sie -"></textarea>
 	</label>
 	<label class="form__number req_star form-counter" data-tippy-content="Seitenzahl oder Stundenzahl.">
-		<div data-id="decrement" class="counter-btn c_btn__left">-</div>
+		<span data-id="decrement" class="counter-btn c_btn__left">-</span>
 		<input class="count-input" type="number" name="number" min="1" max="3999" placeholder="Seitenzahl" value="30"
 			step="1" required>
-		<div data-id="increment" class="counter-btn c_btn__right">+</div>
+		<span data-id="increment" class="counter-btn c_btn__right">+</span>
 	</label>
 	<label class="form__deadline req_star" data-tippy-content="Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein
 					paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage

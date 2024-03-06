@@ -22,7 +22,7 @@
 ) {
 	font-size: responsive($min-size, $max-size, $min-width, $max-width, $unit);
 	@media (min-width: #{$max-width}#{$unit}) {
-		font-size: unquote(#{$max-size}#{$unit});
+		font-size: unquote("#{$max-size}#{$unit}");
 	}
 }
 
@@ -35,6 +35,6 @@
 ) {
 	gap: responsive($min-size, $max-size, $min-width, $max-width, $unit);
 	@media (min-width: #{$max-width}#{$unit}) {
-		gap: unquote($max-size + $unit);
+		gap: unquote("#{$max-size}#{$unit}");
 	}
 }

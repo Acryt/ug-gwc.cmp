@@ -138,7 +138,7 @@
 			& > .dd-menu {
 				display: flex;
 				border: none;
-				border-radius: none;
+				border-radius: unset;
 			}
 			& > a {
 				padding: 8px 16px;
@@ -168,6 +168,9 @@
 		justify-content: center;
 		flex-direction: column;
 		z-index: 10;
+		& > * {
+			margin: 0;
+		}
 		@media (max-width: 920px) {
 			display: flex;
 		}

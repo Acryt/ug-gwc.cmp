@@ -97,7 +97,7 @@ ol {
 		list-style-position: outside;
 	}
 }
-* + p {
+* + p, * + span {
 	margin-top: responsive(8, 16);
 	@media (min-width: 1280px) {
 		margin-top: 16px;

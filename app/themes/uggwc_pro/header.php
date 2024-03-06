@@ -4,7 +4,6 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="X-Content-Type-Options" content="nosniff">
 	<meta name="referrer" content="strict-origin-when-cross-origin">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -103,9 +102,9 @@
 				</a>
 
 				<button id="ham_btn" class="header__toggler nav-btn" aria-label="Hamburger Menu">
-					<div></div>
-					<div></div>
-					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
 			</div>
 			<nav class="header__nav nav-menu">

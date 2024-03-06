@@ -21,9 +21,9 @@
 							</span>
 							<?php echo $value['cf_guarant_n'] ?>
 						</span>
-						<p class="guaranties__s">
+						<span class="guaranties__s">
 							<?php echo $value['cf_guarant_s'] ?>
-						</p>
+						</span>
 					</label>
 					<div class="guaranties__d">
 						<p>

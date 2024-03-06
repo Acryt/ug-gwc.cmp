@@ -160,12 +160,12 @@
 				</div>
 				<span>Pflegewissenschaften</span>
 			</a>
-			<div href="">
+			<!-- <a href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Philosophie.svg" alt="theme image">
 				</div>
 				<span>Philosophie</span>
-			</div>
+			</a> -->
 			<a href="/physik/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Physik.svg" alt="theme image">
@@ -178,36 +178,36 @@
 				</div>
 				<span>Psychologie</span>
 			</a>
-			<div href="">
+			<!-- <a href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Publizistik.svg" alt="theme image">
 				</div>
 				<span>Publizistik</span>
-			</div>
+			</a> -->
 			<a href="/romanistik/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Romanistik.svg" alt="theme image">
 				</div>
 				<span>Romanistik</span>
 			</a>
-			<div href="">
+			<a href="/soziale-arbeit/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sozialarbeit.svg" alt="theme image">
 				</div>
 				<span>Sozialarbeit</span>
-			</div>
+			</a>
 			<a href="/sozialwissenschaften/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sozialwissenschaften.svg" alt="theme image">
 				</div>
 				<span>Sozialwissenschaften</span>
 			</a>
-			<div href="">
+			<!-- <a href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Soziologie.svg" alt="theme image">
 				</div>
 				<span>Soziologie</span>
-			</div>
+			</a> -->
 			<a href="/sportwissenschaften/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Sport.svg" alt="theme image">
@@ -251,13 +251,13 @@
 				</div>
 				<span>Wirtschaftsinformatik</span>
 			</a>
-			<div href="">
+			<!-- <a href="">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Wirtschaftswissenschaften.svg"
 						alt="theme image">
 				</div>
 				<span>Wirtschaftswissenschaften</span>
-			</div>
+			</a> -->
 		</div>
 	</div>
 </section>

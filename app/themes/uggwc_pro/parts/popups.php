@@ -22,10 +22,10 @@
 		</ul>
 	</div>
 	<div class="popup popup__bigpromo card shadow">
-		<div class="popup_x">
-			<div></div>
-			<div></div>
-		</div>
+		<button class="popup_x">
+			<span></span>
+			<span></span>
+		</button>
 		<h4>
 			<?php echo carbon_get_theme_option('cf_promo_temporary'); ?>
 		</h4>
@@ -67,10 +67,10 @@ $pageID = [
 if (array_key_exists(get_the_ID(), $pageID)) {
 	?>
 	<div class="popup popup__delayed-gift">
-		<div class="popup_x">
-			<div></div>
-			<div></div>
-		</div>
+		<button class="popup_x">
+			<span></span>
+			<span></span>
+		</button>
 		<?php
 		switch (get_the_ID()) {
 			case '123': //bach

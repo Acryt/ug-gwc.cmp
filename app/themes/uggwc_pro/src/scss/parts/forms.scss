@@ -257,6 +257,10 @@
 		flex-wrap: wrap;
 		width: 100%;
 		gap: 8px;
+
+		span {
+			margin:unset;
+		}
 	}
 	textarea {
 		width: 100%;
