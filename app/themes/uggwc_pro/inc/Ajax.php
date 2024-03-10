@@ -371,7 +371,7 @@ class Ajax
 
 		$text = "<b>UG-GWC.de WhatsApp клик 🥸</b>\r\n\n";
 		$text .= "<b>👣 : {$channel}</b>\r\n";
-		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
+		$text .= "<b>📱 : {$_SERVER['REMOTE_ADDR']}</b>\r\n\n";
 		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
 		$text .= "<b>🏠 : {$clientGeo->region}</b>\r\n";
 		$text .= "<b>⌚️ : {$clickTime->format('Y-m-d H:i:s')}</b>";

@@ -52,6 +52,12 @@ class CommonMeta
 				->set_width(30),
 			Field::make('text', 'cf_instagram', __('Instagram'))
 				->set_width(30),
+			Field::make('text', 'cf_youtube', __('Youtube'))
+				->set_width(30),
+			Field::make('text', 'cf_pinterest', __('Pinterest'))
+				->set_width(30),
+			Field::make('text', 'cf_flickr', __('Flickr'))
+				->set_width(30),
 			Field::make("header_scripts", "cf_header_script", __('Head Meta')),
 			Field::make("footer_scripts", "cf_footer_script", __('Footer Meta')),
 		];
