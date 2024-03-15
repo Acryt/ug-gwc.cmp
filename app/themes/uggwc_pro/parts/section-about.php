@@ -36,7 +36,6 @@ wp_enqueue_style('sabout', URI . '/assets/about.bundle.css');
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_flickr'); ?>"><i class="fa-brands fa-flickr"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_pinterest'); ?>"><i class="fa-brands fa-pinterest-p"></i></a>
-					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_linkedin'); ?>"><i class="fa-brands fa-linkedin-in"></i></a>
 				</div>
 				<p class="about__address">
 					<?php echo carbon_get_theme_option('cf_address') ?>

@@ -42,15 +42,12 @@
 				<div class="footer__icons">
 					<strong>Wir im Netz:</strong>
 					<a class="soc__icon js-wapp" target="_blank" rel="noopener" href="https://wa.me/<?php echo Helpers::del_space(carbon_get_theme_option('cf_whatsapp')); ?>"><i class="fa-brands fa-whatsapp"></i></a>
-					<a class="soc__icon" target="_blank" rel="noopener" href="mailto:<?php echo carbon_get_theme_option('cf_mail'); ?>"><i class="fa-solid fa-envelope"></i></a>
-					<a class="soc__icon" target="_blank" rel="noopener" href="tel:+<?php echo Helpers::del_space(carbon_get_theme_option('cf_phone')); ?>"><i class="fa-solid fa-phone-volume"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_instagram'); ?>"><i class="fa-brands fa-instagram"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_youtube'); ?>"><i class="fa-brands fa-youtube"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_twitter'); ?>"><i class="fa-brands fa-x-twitter"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_facebook'); ?>"><i class="fa-brands fa-facebook-f"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_flickr'); ?>"><i class="fa-brands fa-flickr"></i></a>
 					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_pinterest'); ?>"><i class="fa-brands fa-pinterest-p"></i></a>
-					<a class="soc__icon" target="_blank" rel="noopener" href="<?php echo carbon_get_theme_option('cf_linkedin'); ?>"><i class="fa-brands fa-linkedin-in"></i></a>
 				</div>
 				<strong>GARANTIEN</strong>
 				<div class="footer__guar">
