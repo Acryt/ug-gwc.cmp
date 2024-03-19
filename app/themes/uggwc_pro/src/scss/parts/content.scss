@@ -49,6 +49,9 @@
 			border-radius: 12px;
 			overflow: hidden;
 		}
+		.post_img + .toc {
+			margin-top: 16px;
+		}
 	}
 	&__aside {
 		position: sticky;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" style="margin-top: 0px !important;">
+<html lang="de-DE" style="margin-top: 0px !important;">
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
