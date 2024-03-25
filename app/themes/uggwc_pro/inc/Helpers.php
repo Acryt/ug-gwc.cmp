@@ -192,49 +192,6 @@ class Helpers
 				'link' => 'https://gwrites-exposee.de/',
 				'kontekst' => '5',
 			]
-
-			// 101 => [
-			//     'name' => 'Diplomarbeit',
-			//     'image' => URI . '/assets/pic/01.png',
-			//     'link' => 'https://gwrites.de/?utm_term=diplomarbeit',
-			// ],
-
-			// 103 => [
-			//     'name' => 'Online Prüfung',
-			//     'image' => '',
-			//     'link' => 'https://gwrites.de/?utm_term=online',
-			// ],
-
-
-			// 104 => [
-			//     'name' => 'Hausarbeit',
-			//     'image' => URI . '/assets/pic/06.png',
-			//     'link' => 'https://gwrites.de/?utm_term=hausarbeit-schreiben',
-			// ],
-
-			// 19 => [
-			//     'name' => 'gwrites-ha',
-			//     'image' => URI . '/assets/pic/10.png',
-			//     'link' => 'https://gwrites-ha.de/',
-			// ],
-
-			// 102 => [
-			//     'name' => 'Bachelorarbeit',
-			//     'image' => URI . '/assets/pic/02.png',
-			//     'link' => 'https://gwrites.de/?utm_term=bachelorarbeit',
-			// ],
-
-			// 109 => [
-			//     'name' => 'Exposé',
-			//     'image' => URI . '/assets/pic/14.png',
-			//     'link' => 'https://gwrites.de/?utm_term=exposeeschreiben',
-			// ],
-			// 110 => [
-			//     'name' => 'Zusammenfassung',
-			//     'image' => URI . '/assets/pic/15.png',
-			//     'link' => '',
-			// ]
-
 		];
 	}
 
