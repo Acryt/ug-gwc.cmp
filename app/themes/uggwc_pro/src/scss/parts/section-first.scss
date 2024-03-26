@@ -46,7 +46,7 @@
 		}
 		img {
 			height: 24px;
-			width: auto;
+			width: 24px;
 		}
 	}
 	&__side {
@@ -80,5 +80,12 @@
 		top: -60px;
 		right: -41px;
 		height: 180px;
+
+		@media (max-width: 920px) {
+			width: 100px;
+			top: -38px;
+			right: 0;
+			height: 110px;
+		}
 	}
 }
