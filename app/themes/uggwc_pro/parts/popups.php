@@ -1,26 +1,4 @@
 <div id="popups" class="popups">
-	<div class="popup popup__callback">
-		<ul>
-			<li><strong>Vergrößern Schlafenszeit</strong> Der Online-Kauf von Papier fördert das Zeitmanagement. Wenn Sie
-				spüren, wie Sie in einem Pool endloser Kleingärten ertrinken, wird es Ihnen einen Schluck frische Luft
-				geben.
-				Machen Sie eine Verschnaufpause, während jemand anderes Ihre Hausaufgaben macht.</li>
-			<li><strong>Steigern Sie den GPA</strong> Ich möchte eine College-Zeitung kaufen, was ist mit Noten? Plagen Sie
-				nicht, diejenigen, die maßgeschneiderte Arbeiten beschaffen, arbeiten scharf. Zwei bis drei Kerben höher als
-				die, die über Lehrbüchern in der Bibliothek liegen.</li>
-			<li><strong>Vermögenswerte wahren</strong> Es ist nicht kostenlos, Persönlichkeiten zu haben, die sich mit
-				Ihrem
-				Essay beschäftigen. Eine gewisse Investitur ist für den Erfolg erforderlich. Kaufen Sie einfach Essays über
-				JBE. Kümmere dich nicht darum, wie viel du auszahlst.</li>
-			<li><strong>Lernen &amp; erziehen</strong> Wenn Sie nicht wissen, wie man Unternehmungen durchführt, suchen Sie
-				nach Beispielen. Kaufen Sie einen schriftlichen Aufsatz, er wird als wunderbares Beispiel dienen. Sehen Sie,
-				wie erfahrene Wortschmiede es tun, dann tun Sie es auch. Oder einfach kaufen!</li>
-			<li><strong>Makellos abschließen</strong> Egal, ob Sie eine müde Mutter sind, die mit dem Lernen zu kämpfen
-				hat,
-				oder Carl, der Partyliebhaber, jede online gekaufte Zeitung führt Sie direkt zur erfolgreichen
-				Institutseinweihung.</li>
-		</ul>
-	</div>
 	<div class="popup popup__bigpromo card shadow">
 		<button class="popup_x">
 			<span></span>
@@ -40,7 +18,12 @@
 				<img src="<?php echo URI . '/assets/images/promo/promo-marz-m.jpg' ?>" alt="temporäre Aktion Masterarbeit">
 			</div>
 		</div>
-		<?php get_template_part('parts/form-popup-promo') ?>
+		<?php
+		if (!wp_is_mobile()) {
+			get_template_part('parts/form-popup-promo');
+		} else { ?>
+			<a class="btn wave_effect center popup_btn_x" href="#sform"><span>JETZT ANFRAGEN</span></a>
+		<?php } ?>
 	</div>
 </div>
 <div class="popup__box">
@@ -52,11 +35,12 @@
 			<li><span>Coaching</span> 30 Min.</li>
 			<li><span>Präsentation</span> 7 Folien</li>
 		</ul>
-		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
+		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt
+				erhalten!</span></button>
 	</div>
 </div>
 
-<?php 
+<?php
 $pageID = [
 	'9' => 'home',
 	'123' => 'bach',
@@ -82,7 +66,7 @@ if (array_key_exists(get_the_ID(), $pageID)) {
 				break;
 
 			case '161': //haus
-				echo '<img src="' . URI . '/assets/images/promo/promo-marz.jpg" alt="temporäre Aktion Hausarbeit">'; 
+				echo '<img src="' . URI . '/assets/images/promo/promo-marz.jpg" alt="temporäre Aktion Hausarbeit">';
 				break;
 
 			default:
@@ -93,7 +77,7 @@ if (array_key_exists(get_the_ID(), $pageID)) {
 		<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
 	</div>
-	<?php 
+	<?php
 }
 ?>
 

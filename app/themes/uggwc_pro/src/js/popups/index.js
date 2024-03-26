@@ -33,7 +33,7 @@ export function openPopup() {
 
 export function closePopups() {
 	const popupsContainer = document.querySelector(".popups");
-	const button = document.querySelectorAll(".popup_x");
+	const button = document.querySelectorAll(".popup_x, .popup_btn_x");
 	const popups = document.querySelectorAll(".popup");
 	button.forEach((el) => {
 		el.addEventListener("click", () => {
