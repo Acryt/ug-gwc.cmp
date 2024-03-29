@@ -172,7 +172,8 @@ class Ajax
 		if ($this->fc_source !== null) {
 			$text .= "<b>👣 :</b> " . $this->fc_source . "\r\n";
 		}
-		$text .= "<b>🗃 :</b> " . $id . "\r\n\n";
+		$text .= "<b>🗃 :</b> " . $id . "\r\n";
+		$text .= "<b>⌚️ :</b> " . date('d.m.Y H:i:s') . "\r\n\n";
 		$text .= "{$this->score} \r\n";
 		$text .= "<a href='https://akademily.de/wp-admin/post.php?post=" . $id . "&action=edit'><b>Клац</b></a>";
 

@@ -197,7 +197,7 @@
 						<thead>
 							<tr>
 								<th>Zeichen</th>
-								<th>Wörter</th>
+								<th>Seiten</th>
 							</tr>
 						</thead>
 						<tfoot></tfoot>
