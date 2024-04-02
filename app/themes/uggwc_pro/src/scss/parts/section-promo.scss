@@ -88,6 +88,8 @@
 		}
 	}
 	&__cimg {
+		position: relative;
+		z-index: 1;
 		height: 160px;
 		float: left;
 		margin: 0.5em 0.5em 0 0;
@@ -98,12 +100,14 @@
 			object-fit: cover;
 		}
 	}
-	&__txt {
+	&__ctxt {
+		flex: 1 1 300px;
 	}
 	&__hashtag {
-		margin-top: auto;
 		display: block;
+		margin-top: auto;
 		color: var(--hover);
+		width: 100%;
 	}
 	&__input:checked + .promo__elem {
 		background: white;
@@ -117,6 +121,8 @@
 	}
 	&__input:checked + .promo__elem + .promo__block {
 		// display: block;
+		display: flex;
+		flex-wrap: wrap;
 		border-top-right-radius: 8px;
 		border-bottom-right-radius: 8px;
 		opacity: 1;
