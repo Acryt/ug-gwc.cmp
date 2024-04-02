@@ -16,3 +16,4 @@ app/plugins/
 app/upgrade/
 **/assets/*.*
 **PrivateConstants.php
+ajax**.php
