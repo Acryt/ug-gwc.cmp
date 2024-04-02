@@ -9,13 +9,13 @@
 		</h4>
 		<div class="popup__bigpromo__sub">
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/promo-marz-b.jpg' ?>" alt="temporäre Aktion Baucharbeit">
+				<img src="<?php echo URI . '/assets/images/promo/apr-prm-bach.jpg' ?>" alt="temporäre Aktion Baucharbeit">
 			</div>
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/promo-marz.jpg' ?>" alt="temporäre Aktion Hausarbeit">
+				<img src="<?php echo URI . '/assets/images/promo/apr-prm-haus.jpg' ?>" alt="temporäre Aktion Hausarbeit">
 			</div>
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/promo-marz-m.jpg' ?>" alt="temporäre Aktion Masterarbeit">
+				<img src="<?php echo URI . '/assets/images/promo/apr-prm-mast.jpg' ?>" alt="temporäre Aktion Masterarbeit">
 			</div>
 		</div>
 		<?php
@@ -50,7 +50,7 @@ $pageID = [
 
 if (array_key_exists(get_the_ID(), $pageID)) {
 	?>
-	<div class="popup popup__delayed-gift">
+	<div class="popup popup__delayed-gift"  <?php if (get_the_ID() === 9) echo 'style="height: 765px; width: 625px"' ?>>
 		<button class="popup_x">
 			<span></span>
 			<span></span>
@@ -58,19 +58,19 @@ if (array_key_exists(get_the_ID(), $pageID)) {
 		<?php
 		switch (get_the_ID()) {
 			case '123': //bach
-				echo '<img src="' . URI . '/assets/images/promo/promo-marz-b.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
+				echo '<img src="' . URI . '/assets/images/promo/apr-bach.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
 				break;
 
 			case '154': //master
-				echo '<img src="' . URI . '/assets/images/promo/promo-marz-m.jpg" alt="temporäre Aktion Masterarbeit">';
+				echo '<img src="' . URI . '/assets/images/promo/apr-mast.jpg" alt="temporäre Aktion Masterarbeit">';
 				break;
 
 			case '161': //haus
-				echo '<img src="' . URI . '/assets/images/promo/promo-marz.jpg" alt="temporäre Aktion Hausarbeit">';
+				echo '<img src="' . URI . '/assets/images/promo/apr-haus.jpg" alt="temporäre Aktion Hausarbeit">';
 				break;
 
 			default:
-				echo '<img src="' . URI . '/assets/images/promo/promo-marz.jpg" alt="temporäre Aktion">';
+				echo '<img src="' . URI . '/assets/images/promo/apr-def.jpg" alt="temporäre Aktion">';
 				break;
 		}
 		?>

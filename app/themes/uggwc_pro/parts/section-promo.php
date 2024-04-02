@@ -40,8 +40,10 @@ if ($items) {
 									<img class="" src="<?php echo $item['image']; ?>" alt="promo image">
 								</div>
 							<?php } ?>
-							<?php echo $item['text']; ?>
-							<br>
+							<div class="promo__ctxt">
+								<?php echo $item['text']; ?>
+								<br>
+							</div>
 							<p class="promo__hashtag">
 								<?php echo $item['hashtag']; ?>
 							</p>

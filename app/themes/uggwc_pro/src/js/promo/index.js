@@ -6,7 +6,7 @@ export function promo() {
 	if (document.querySelector(".promo__list")) {
 		function updateHeight(){
 			if (window.innerWidth > 920) {
-				container.style.minHeight = elems.length * 60 + 4 + "px";
+				container.style.minHeight = elems.length * 64 + 4 + "px";
 				container.style.height = "0px";
 				setTimeout(() => {
 					container.style.height = blocks[0].scrollHeight + "px";
@@ -22,8 +22,8 @@ export function promo() {
 		elems.forEach((el, key) => {
 			el.addEventListener("click", () => {
 				if (window.innerWidth > 920) {
-					container.style.minHeight = elems.length * 60 + 4 + "px";
-					container.style.height = elems.length * 60 + 4 + "px";
+					container.style.minHeight = elems.length * 64 + 4 + "px";
+					container.style.height = elems.length * 64 + 4 + "px";
 					setTimeout(() => {
 						container.style.height = blocks[key].scrollHeight + "px";
 					}, 300);
@@ -34,7 +34,7 @@ export function promo() {
 					});
 					blocks[key].style.height = blocks[key].scrollHeight + "px";
 					container.style.minHeight =
-						blocks[key].scrollHeight + (elems.length * 60 + 4) + "px";
+						blocks[key].scrollHeight + (elems.length * 64 + 4) + "px";
 				}
 			});
 		});
