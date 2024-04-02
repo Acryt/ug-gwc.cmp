@@ -1,4 +1,4 @@
-<form id="form_first" class="form_medium form js-calc" accept-charset="utf-8">
+<form id="form_first" class="form_medium form" accept-charset="utf-8">
 	<h4 class="form__heading">Schnellanfrage stellen</h4>
 	<input type="hidden" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
