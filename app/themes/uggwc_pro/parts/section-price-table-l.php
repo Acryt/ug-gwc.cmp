@@ -2,7 +2,7 @@
 wp_enqueue_style('pltable', URI . '/assets/pltable.bundle.css');
 wp_enqueue_style('ptable', URI . '/assets/ptable.bundle.css');
 
-$dataPrice = PRICE;
+$dataPrice = json_decode(file_get_contents(URI . '/data/pricelist.json'), true);
 
 function filterPricesByName ($name, $data)
 {

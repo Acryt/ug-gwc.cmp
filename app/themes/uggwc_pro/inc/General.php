@@ -84,28 +84,56 @@ class General
 	}
 	function register_json_file_route ()
 	{
-		function get_json_file ()
+		function getJsonPricelist ()
 		{
 			// Путь к JSON файлу
 			$file_path = URI . '/data/pricelist.json';
-
 			// Получаем содержимое файла
 			$file_content = file_get_contents($file_path);
-
 			// Парсим JSON и возвращаем его
 			$json_data = json_decode($file_content, true);
-
 			return $json_data;
 		}
+		function getJsonSpec ()
+		{
+			$fileDir = URI . '/data/spec.json';
+			$fileContent = file_get_contents($fileDir);
+			$jsonContent = json_decode($fileContent, true);
+			return $jsonContent;
+		}
+		function getJsonType ()
+		{
+			$fileDir = URI . '/data/types.json';
+			$fileContent = file_get_contents($fileDir);
+			$jsonContent = json_decode($fileContent, true);
+			return $jsonContent;
+		}
+		register_rest_route(
+			'my-data/v2',
+			'/spec/',
+			array(
+				'methods' => 'GET',
+				'callback' => 'getJsonSpec',
+			)
+		);
+		register_rest_route(
+			'my-data/v2',
+			'/type/',
+			array(
+				'methods' => 'GET',
+				'callback' => 'getJsonType',
+			)
+		);
 		register_rest_route(
 			'my-data/v2',
 			'/pricelist',
 			array(
 				'methods' => 'GET',
-				'callback' => 'get_json_file',
+				'callback' => 'getJsonPricelist',
 			)
 		);
 	}
+
 	function change_name ($name)
 	{
 		return 'UG-GWC.de';

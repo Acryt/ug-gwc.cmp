@@ -5,9 +5,6 @@ define('PATH', $dir);
 define('URI', get_template_directory_uri());
 define('HOMEPAGE', get_option('page_on_front'));
 define('AUTOMATIC_UPDATER_DISABLED', true); // Отключаем автообновления всего
-define('TYPES', json_decode(file_get_contents(URI . '/data/types.json'), true));
-define('SPEC', json_decode(file_get_contents(URI . '/data/spec.json'), true));
-define('PRICE', json_decode(file_get_contents(URI . '/data/pricelist.json'), true));
 
 require_once PATH . 'inc/PrivateConstants.php';
 
