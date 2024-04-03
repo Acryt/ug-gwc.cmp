@@ -214,12 +214,12 @@
 	position: fixed;
 	width: 629px;
 	height: 635px;
-	z-index: 2;
-	bottom: 100px;
+	z-index: 5;
+	bottom: 88px;
 	transition: all 0.5s;
 	visibility: hidden;
 	opacity: 0;
-	transform: scale(0.7);
+	transform: scale(0.55);
 	transform-origin: left bottom;
 	& > img {
 		position: absolute;

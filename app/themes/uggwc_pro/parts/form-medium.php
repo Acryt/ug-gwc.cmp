@@ -4,7 +4,7 @@
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
 	<label class="form__theme req_star" data-tippy-content="Das ist Thema Ihrer Arbeit. Das ist sehr wichtig, Psr Thema jetzt richtig zu schreiben.">
-		<div class="form__icon"><i class="fa-solid fa-align-left"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-align-left"></i></span>
 		<input type="text" name="theme" placeholder="Thema der Arbeit" required>
 	</label>
 
@@ -17,17 +17,17 @@
 	<label class="form__deadline req_star" data-tippy-content="Wählen Sie bitte den Abgabetermin für Ihre Arbeit aus. Es wäre besser, wenn Sie dem Autor mindestens ein
 					paar zusätzliche Tage vor dem Abgabetermin geben, damit Sie auch Zeit für Lesen und Revisionsanfrage
 					falls nötig haben.">
-		<div class="form__icon"><i class="fa-solid fa-hourglass-half"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-hourglass-half"></i></span>
 		<input type="text" name="deadline" class="dp_date" placeholder="Liefertermin" required readonly>
 	</label>
 
 	<label class="form__email req_star" data-tippy-content="Bitte geben Sie Ihre echte E-Mail-Adresse an, damit wir die höchste Qualität Ihrer Arbeit sicherstellen
 					können.">
-		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-at"></i></span>
 		<input id="email" type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__phone">
-		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 	<div class="form__guarant">

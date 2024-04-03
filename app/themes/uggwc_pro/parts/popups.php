@@ -29,7 +29,7 @@
 <div class="popup__box">
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
 	<div class="popup__box-text">
-		<p>Bestellen Sie eine Arbeit bis zum 31. Dezember und wählen Sie selbst ein Geschenk!</p>
+		<p><?php echo carbon_get_theme_option('cf_promo_popup_temp'); ?></p>
 		<ul>
 			<li><span>Expose</span> bis 3 Seiten</li>
 			<li><span>Coaching</span> 30 Min.</li>

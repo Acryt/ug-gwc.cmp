@@ -1,10 +1,10 @@
 <form id="form_care" class="form_care form" accept-charset="utf-8">
 	<label class="form__order req_star">
-		<div class="form__icon"><i class="fa-solid fa-hashtag"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-hashtag"></i></span>
 		<input type="text" name="order" placeholder="Order Number" pattern="^[0-9]+$" required>
 	</label>
 	<label class="form__email req_star">
-		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-at"></i></span>
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__msg">

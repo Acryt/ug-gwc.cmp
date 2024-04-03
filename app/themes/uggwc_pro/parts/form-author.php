@@ -1,20 +1,20 @@
 <form id="form_author" class="form_author form">
 	<label class="req_star">
-		<div class="form__icon"><i class="fa-solid fa-user-graduate"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-user-graduate"></i></span>
 		<input type="text" name="name" placeholder="Name" required>
 	</label>
 	<label class="req_star">
-		<div class="form__icon"><i class="fa-solid fa-at"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-at"></i></span>
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="req_star">
-		<div class="form__icon"><i class="fa-brands fa-whatsapp"></i></div>
+		<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
 		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
 	</label>
 
 	<?php $items = carbon_get_theme_option('cf_select_quality'); ?>
 	<div class="form_select form__quality req_star" data-state="">
-		<div class="form__icon"><i class="fa-solid fa-list"></i></div>
+		<span class="form__icon"><i class="fa-solid fa-list"></i></span>
 		<select class="simple-select wide" name="quality" id="quality" required>
 			<option value="" disabled="" selected="" class="">Qualität</option>
 			<option value="Bachelor" class="">Bachelor</option>
