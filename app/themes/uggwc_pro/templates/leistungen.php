@@ -29,7 +29,7 @@ Template Name: Leistungen
 	if (!empty(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content'])) {
 		Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[7]['cf_content_content']);
 	}
-	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-faq');
 	get_template_part('parts/section-form');
 	?>
 </main>

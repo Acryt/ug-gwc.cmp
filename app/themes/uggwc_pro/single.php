@@ -12,7 +12,7 @@ Template Name: Single
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/content-blog');
-	get_template_part('parts/section-faq-accrd');
+	// get_template_part('parts/section-faq');
 	?>
 </main>
 

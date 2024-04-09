@@ -16,7 +16,7 @@ Template Name: Disziplinen
 	// get_template_part('parts/section-noai');
 	get_template_part('parts/section-price');
 	get_template_part('parts/section-rate-alt');
-	get_template_part('parts/section-faq-accrd');
+	get_template_part('parts/section-faq');
 	get_template_part('parts/section-form');
 	?>
 </main>
