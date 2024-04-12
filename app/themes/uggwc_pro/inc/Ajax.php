@@ -37,7 +37,7 @@ class Ajax
 
 	public function sendAll ()
 	{
-		if (empty ($_POST)) {
+		if (empty($_POST)) {
 			wp_send_json_error(
 				[
 					'message' => __('Empty form!')
@@ -85,7 +85,7 @@ class Ajax
 		}
 	}
 
-	private function sendToDB ($subject, $message): int
+	private static function sendToDB ($subject, $message): int
 	{
 		$dataString = json_encode(
 			[
@@ -94,30 +94,6 @@ class Ajax
 				'status' => 'publish'
 			]
 		);
-		// $dataString = json_encode(
-		// 	[
-		// 		'title' => $subject,
-		// 		'content' => $message,
-		// 		'status' => 'publish',
-		// 		'name' => $_POST['name'],
-		// 		'email' => $_POST['email'],
-		// 		'phone' => $_POST['phone'],
-		// 		'type' => $_POST['type'],
-		// 		'specialization' => $_POST['specialization'],
-		// 		'theme' => $_POST['theme'],
-		// 		'deadline' => $_POST['deadline'],
-		// 		'quote' => $_POST['quote'],
-		// 		'quality' => $_POST['quality'],
-		// 		'calltime' => $_POST['calltime'],
-		// 		'number' => $_POST['number'],
-		// 		'promocode' => $_POST['promocode'],
-		// 		'kontakt' => $_POST['kontakt'],
-		// 		'utmSource' => '',
-		// 		'utmMedium' => '',
-		// 		'utmCampaign' => '',
-		// 		'utmContent' => '',
-		// 	]
-		// );
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, REST_API);
@@ -142,7 +118,7 @@ class Ajax
 		return $response['id'];
 	}
 
-	private function sendToTGTest ($id)
+	private static function sendToTGTest ($id)
 	{
 		$token = TG_TOKEN;
 		$text = "<b>$id</b>\r\n\n";
@@ -278,7 +254,7 @@ class Ajax
 		$res = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, true);
 		return $res;
 	}
-	
+
 	public function facebookAds ($id)
 	{
 		$api = Api::init(null, null, FACEBOOK_TOKEN);
@@ -320,16 +296,40 @@ class Ajax
 		return true;
 	}
 
+	private function getGeo ()
+	{
+		$client_ip = $_SERVER['REMOTE_ADDR'];
+		// проверка для локалки
+		// $client_ip = '84.244.8.172';
+
+		$api = 'https://json.geoiplookup.io/' . $client_ip;
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_URL, $api);
+
+		$response = curl_exec($ch);
+		curl_close($ch);
+
+		$response = json_decode($response);
+
+		$geo = (object) [
+			'ip' => $response->ip,
+			'country_name' => $response->country_name,
+			'region' => $response->region
+		];
+		return $geo;
+	}
 	public function sendWapp ()
 	{
 		$channel = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
-		$clientGeo = json_decode(stripslashes($_COOKIE['geo']));
+		$clientGeo = $this->getGeo();
 		date_default_timezone_set('Europe/Minsk');
 		$clickTime = new DateTime();
 
 		$text = "<b>UG-GWC.de WhatsApp клик 🥸</b>\r\n\n";
 		$text .= "<b>👣 : {$channel}</b>\r\n";
-		$text .= "<b>📱 : {$_SERVER['REMOTE_ADDR']}</b>\r\n\n";
+		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
 		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
 		$text .= "<b>🏠 : {$clientGeo->region}</b>\r\n";
 		$text .= "<b>⌚️ : {$clickTime->format('Y-m-d H:i:s')}</b>";
@@ -343,7 +343,7 @@ class Ajax
 		return $res;
 	}
 
-	public function getChannel ($ch)
+	private static function getChannel ($ch)
 	{
 		if ($ch == 'cpc') {
 			return 'K';
@@ -356,7 +356,7 @@ class Ajax
 		}
 	}
 
-	public function getTitle ($ch)
+	private static function getTitle ($ch)
 	{
 		if ($ch == 'cpc') {
 			return 'Новая заявка! 💰';
@@ -369,7 +369,7 @@ class Ajax
 		}
 	}
 
-	public function getSubject ($ch)
+	private function getSubject ($ch)
 	{
 		return sprintf(
 			'%s | %s | %s',
@@ -379,7 +379,7 @@ class Ajax
 		);
 	}
 
-	public static function formNameFromID (): string
+	private static function formNameFromID (): string
 	{
 		$formArr = array(
 			'form-author' => 'Форма авторов',
@@ -392,14 +392,14 @@ class Ajax
 			'form-bigpromo' => 'Форма промо',
 		);
 
-		if (!empty ($_POST['form-id']) && array_key_exists($_POST['form-id'], $formArr)) {
+		if (!empty($_POST['form-id']) && array_key_exists($_POST['form-id'], $formArr)) {
 			return $formArr[$_POST['form-id']];
 		} else {
 			return 'Форма без ID';
 		}
 	}
 
-	public function messageFromForm ()
+	private static function messageFromForm ()
 	{
 		$mess = '';
 		foreach ($_POST as $key => $value) {
@@ -413,45 +413,45 @@ class Ajax
 		return $mess;
 	}
 
-	public function messageFromCookie ()
+	private static function messageFromCookie ()
 	{
 		$mess = '';
-		if (isset ($_COOKIE['refer'])) {
+		if (isset($_COOKIE['refer'])) {
 			$mess .= sprintf('<p>%s : %s<br></p>', 'Refer', stripslashes($_COOKIE['refer'])); //Вывод
 		}
-		if (isset ($_COOKIE['is_mobile'])) {
+		if (isset($_COOKIE['is_mobile'])) {
 			$mess .= sprintf('<p>%s : %s<br></p>', 'Is_Mobile', stripslashes($_COOKIE['is_mobile'])); //Вывод
 		}
-		if (isset ($_COOKIE['browser'])) {
+		if (isset($_COOKIE['browser'])) {
 			$mess .= sprintf('<p>%s : %s<br></p>', 'Browser', stripslashes($_COOKIE['browser'])); //Вывод
 		}
-		if (isset ($_COOKIE['os'])) {
+		if (isset($_COOKIE['os'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'OS', stripslashes($_COOKIE['os'])); //Вывод
 		}
-		if (isset ($_COOKIE['cookieCook'])) {
+		if (isset($_COOKIE['cookieCook'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'Cookie_Cook', stripslashes($_COOKIE['cookieCook'])); //Вывод
 		}
-		if (isset ($_COOKIE['time_passed'])) {
+		if (isset($_COOKIE['time_passed'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'Time_Passed', stripslashes($_COOKIE['time_passed'])); //Вывод
 		}
-		if (isset ($_COOKIE['fc_page'])) {
+		if (isset($_COOKIE['fc_page'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'Fc_Page', stripslashes($_COOKIE['fc_page'])); //Вывод
 		}
-		if (isset ($_COOKIE['lc_page'])) {
+		if (isset($_COOKIE['lc_page'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'Lc_Page', stripslashes($_COOKIE['lc_page'])); //Вывод
 		}
-		if (isset ($_COOKIE['user_agent'])) {
+		if (isset($_COOKIE['user_agent'])) {
 			$mess .= sprintf('<p>%s : %s</p>', 'User_Agent', stripslashes($_COOKIE['user_agent'])); //Вывод
 		}
 		return $mess;
 	}
 
-	public function messageFromGeo ()
+	private function messageFromGeo ()
 	{
 		$mess = '';
-		if (isset ($_COOKIE['geo'])) {
-			$decCookie = json_decode(stripslashes($_COOKIE['geo'])); //Декодируем JSON из кук
-			foreach ($decCookie as $key => $value) {
+		$clientGeo = $this->getGeo();
+		if (isset($clientGeo)) {
+			foreach ($clientGeo as $key => $value) {
 				$string = (is_array($value)) ? implode(', ', $value) : $value; //Преобразование
 				$mess .= sprintf('<p>%s : %s</p>', ucfirst($key), $string); //Вывод
 			}
@@ -459,10 +459,10 @@ class Ajax
 		return $mess;
 	}
 
-	public function messageFromUtm ()
+	private function messageFromUtm ()
 	{
 		$mess = '';
-		if (isset ($_COOKIE['fc_utm'])) {
+		if (isset($_COOKIE['fc_utm'])) {
 			$decCookie = json_decode(stripslashes($_COOKIE['fc_utm'])); //Декодируем JSON из кук
 			foreach ($decCookie as $key => $value) {
 				$string = (is_array($value)) ? implode(', ', $value) : $value; //Преобразование
@@ -476,15 +476,15 @@ class Ajax
 		return $mess;
 	}
 
-	public function messageFromRating ()
+	private function messageFromRating ()
 	{
 		$this->score = 'Рейтинг неизвестен';
-		if (!empty ($_POST['recaptchaResponse'])) {
+		if (!empty($_POST['recaptchaResponse'])) {
 			$recaptcha = $_POST['recaptchaResponse'];
 			$recaptcha = file_get_contents(RECAPTCHA_URL . '?secret=' . RECAPTCHA_KEY . '&response=' . $recaptcha);
 			$recaptcha = json_decode($recaptcha);
 
-			if ($recaptcha !== null && isset ($recaptcha->score)) {
+			if ($recaptcha !== null && isset($recaptcha->score)) {
 				$this->score = 'Рейтинг: ' . $recaptcha->score;
 				if ($recaptcha->score < 0.5) {
 					$this->score = 'Возможно спам, рейтинг: ' . $recaptcha->score;

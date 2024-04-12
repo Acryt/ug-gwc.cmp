@@ -60,6 +60,12 @@ class General
 			}
 			return get_template_directory() . '/templates/author.php';
 		});
+
+		remove_action('shutdown', 'wp_ob_end_flush_all', 1);
+		add_action('shutdown', function () {
+			while (@ob_end_flush())
+				;
+		});
 	}
 	function remove_block_styles ()
 	{
@@ -308,31 +314,6 @@ class General
 			return $browser;
 		}
 
-		function getGeo ()
-		{
-			$client_ip = $_SERVER['REMOTE_ADDR'];
-			// проверка для локалки
-			// $client_ip = '84.244.8.172';
-
-			// $api = 'https://json.geoiplookup.io/' . $client_ip;
-			$api = 'https://json.geoiplookup.io/';
-
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_URL, $api);
-
-			$response = curl_exec($ch);
-			curl_close($ch);
-
-			$response = json_decode($response);
-
-			$geo = [
-				'ip' => $response->ip,
-				'country_name' => $response->country_name,
-				'region' => $response->region
-			];
-			return $geo;
-		}
 		// реферальная ссылка
 		if (!isset($_COOKIE['refer'])) {
 			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
@@ -378,10 +359,6 @@ class General
 		// mobile
 		if (!isset($_COOKIE['is_mobile'])) {
 			setcookie('is_mobile', (wp_is_mobile() ? 'yes' : 'no'), time() + 60 * 60 * 24, '/');
-		}
-		// GEO параметры
-		if (!isset($_COOKIE['geo'])) {
-			setcookie('geo', json_encode(getGeo()), time() + 60 * 60 * 24, '/');
 		}
 		if (!isset($_COOKIE['user_agent'])) {
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
