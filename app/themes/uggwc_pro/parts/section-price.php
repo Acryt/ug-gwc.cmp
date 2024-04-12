@@ -27,25 +27,25 @@ if ($items) {
 								switch ($key) {
 									case '0':
 										?>
-										<h6>Geisteswissenschaften</h6>
+										<span class="h6 center">Geisteswissenschaften</span>
 										<div class="form__desc" data-tippy-content="Picturedagogik, Psychologie, Germanistik, Politikwissenschaft, Sozialarbeit usw.">?</div>
 										<?php
 										break;
 									case '1':
 										?>
-										<h6>Wirtschaftswissenschaften</h6>
+										<span class="h6 center">Wirtschaftswissenschaften</span>
 										<div class="form__desc" data-tippy-content="BWL, Wirtschaft, Management, Marketing, Logistik, Rechnungswesen, VWL usw.">?</div>
 										<?php
 										break;
 									case '2':
 										?>
-										<h6>Ingenieurwissenschaften</h6>
+										<span class="h6 center">Ingenieurwissenschaften</span>
 										<div class="form__desc" data-tippy-content="Informatik, Maschinenbau, Systems Engineering, Lauingenieurwesen usw.">?</div>
 										<?php
 										break;
 									case '3':
 										?>
-										<h6>Rechtswissenschaften</h6>
+										<span class="h6 center">Rechtswissenschaften</span>
 										<div class="form__desc" data-tippy-content="Arbeitsrecht, Jura, Europäisches Wirtschaftsrecht, Versicherungsrecht usw.">?</div>
 										<?php
 										break;

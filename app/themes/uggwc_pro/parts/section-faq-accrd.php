@@ -1,5 +1,5 @@
 <?php
-	wp_enqueue_style( 'faq', URI . '/assets/faq.bundle.css' );
+wp_enqueue_style('faq', URI . '/assets/faq.bundle.css');
 ?>
 <?php if (carbon_get_theme_option('cf_afaq_accrd')) { ?>
 	<section id="afaq" class="section afaq accrd-js">
@@ -45,9 +45,9 @@
 						<?php foreach ($faq as $k => $v) { ?>
 							<?php if ($k == 0) { ?>
 								<div class="afaq__section accrd-m _active">
-									<h4 class="card">
+									<span class="h4 center card">
 										<?php echo $v['cf_afaq_t'] ?>
-									</h4>
+									</span>
 									<?php foreach ($v['cf_afaq_qa'] as $kq => $vq) { ?>
 										<div class="afaq__item shadow">
 											<input class="afaq__check" type="checkbox" name="afaq" id="afaq<?php echo $k;
@@ -86,7 +86,8 @@
 							<?php foreach ($cfaq as $ck => $cv) { ?>
 								<div class="afaq__item shadow">
 									<input class="afaq__check" type="checkbox" name="afaq" id="cfaq<?php echo $ck; ?>">
-									<label class="afaq__question" for="cfaq<?php echo $ck; ?>"><?php echo $cv['cf_faq_quest'] ?></label>
+									<label class="afaq__question"
+										for="cfaq<?php echo $ck; ?>"><?php echo $cv['cf_faq_quest'] ?></label>
 									<div class="afaq__answer"><?php echo $cv['cf_faq_answer'] ?></div>
 								</div>
 							<?php } ?>

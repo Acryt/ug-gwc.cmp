@@ -1,5 +1,5 @@
 <form id="form_first" class="form_medium form" accept-charset="utf-8">
-	<h4 class="form__heading">Schnellanfrage stellen</h4>
+	<span class="h4 form__heading">Schnellanfrage stellen</span>
 	<input type="hidden" name="name" value="">
 	<?php get_template_part('parts/select-type') ?>
 	<?php get_template_part('parts/select-specialization') ?>
