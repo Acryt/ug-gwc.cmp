@@ -5,7 +5,7 @@
 		display: flex;
 		justify-content: center;
 		width: 25%;
-		transition: all 0.3s ease;
+		transition: all .1s ease;
 		padding: 30px 12px;
 		height: unset;
 
@@ -47,7 +47,7 @@
 		display: grid;
 		grid-template-rows: 32px 32px 32px auto;
 		grid-template-columns: 96px auto;
-		transition: all 0.3s ease;
+		transition: all .1s ease;
 		width: 100%;
 		gap: 0px 16px;
 		padding: 0 8px;

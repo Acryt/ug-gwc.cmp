@@ -34,14 +34,14 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all .1s;
 	  }
 	}
 	&__answer {
 		display: grid;
 		grid-template-rows: 0fr;
 		padding: 0;
-		transition: all .5s;
+		transition: all .1s;
 		color: var(--text-default);
 		overflow: hidden;
 

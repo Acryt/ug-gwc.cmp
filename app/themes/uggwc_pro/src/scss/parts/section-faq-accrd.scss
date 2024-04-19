@@ -24,7 +24,7 @@
 		border-radius: 8px;
 		cursor: pointer;
 		color: var(--thead);
-		transition: all .3s;
+		transition: all .1s;
 		padding: 12px;
 		background: var(--bg);
 		box-shadow: 0 2px 12px 0px var(--box-shadow);
@@ -50,7 +50,7 @@
 		border-radius: 8px;
 		padding: 8px 16px;
 		position: relative;
-		transition: all .5s;
+		transition: all .1s;
 	}
 	&__check {
 		position: absolute;
@@ -62,7 +62,7 @@
 		cursor: pointer;
 		padding: 4px 0;
 		color: var(--thead);
-		transition: all .5s;
+		transition: all .1s;
 		&::after {
 			content: ">";
 			width: 1.5em;
@@ -70,7 +70,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all .1s;
 		}
 	}
 	&__answer {
@@ -78,7 +78,7 @@
 		display: grid;
 		grid-template-rows: 0fr;
 		overflow: hidden;
-		transition: all .5s;
+		transition: all .1s;
 		padding: 0px 4px;
 
 		& > * {

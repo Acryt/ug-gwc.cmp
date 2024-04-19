@@ -9,7 +9,7 @@
 	top: 0px;
 	z-index: 5;
 
-	transition: all 0.5s;
+	transition: all .1s;
 	visibility: hidden;
 	opacity: 0;
 	& > * {
@@ -103,7 +103,7 @@
 	box-shadow: 0px 2px 8px var(--shadow-header);
 	justify-content: center;
 	align-items: center;
-	transition: all .5s;
+	transition: all .1s;
 	// backdrop-filter: blur(8px);
 	overflow: hidden;
 	z-index: 2;
@@ -129,7 +129,7 @@
 		visibility: hidden;
 		width: 128px;
 		opacity: 0;
-		transition: opacity 1s;
+		transition: opacity .1s;
 		font-size: 14px;
 		// font-weight: 600;
 	}
@@ -216,7 +216,7 @@
 	height: 635px;
 	z-index: 5;
 	bottom: 88px;
-	transition: all 0.5s;
+	transition: all .1s;
 	visibility: hidden;
 	opacity: 0;
 	transform: scale(0.55);
@@ -255,7 +255,7 @@
 	padding: 0;
 	background: var(--border);
 	overflow: hidden;
-	transition: all 0.5s;
+	transition: all .1s;
 	z-index: 5;
 	p {
 		text-align: center;

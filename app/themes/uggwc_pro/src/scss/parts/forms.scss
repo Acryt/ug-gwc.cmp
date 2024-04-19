@@ -325,7 +325,7 @@
 		// border-left: 1px solid #0000;
 		border: 1px solid var(--border);
 		width: 100%;
-		transition: all 0.5s;
+		transition: all .1s;
 		color: var(--text);
 		height: 40px;
 		span {
@@ -351,7 +351,7 @@
 		// border-left: 1px solid #0000;
 		border: 1px solid var(--border);
 		width: 100%;
-		transition: all 0.5s;
+		transition: all .1s;
 		color: var(--thead);
 		font-weight: 500;
 		height: 40px;
@@ -523,7 +523,7 @@
 			border-radius: 4px;
 			background: linear-gradient(180deg, #fafafa, #ffffff);
 			color: var(--alert);
-			transition: all 0.5s;
+			transition: all .1s;
 
 			div {
 				height: 16px;

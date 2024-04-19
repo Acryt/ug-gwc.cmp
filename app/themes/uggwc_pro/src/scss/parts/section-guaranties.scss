@@ -16,7 +16,7 @@
 		border-radius: 8px;
 		border: 1px solid var(--pop-brd);
 		// box-shadow: 0px 0px 0px 0px var(--pop-brd);
-		transition: all 0.3s;
+		transition: all .1s;
 	}
 	&__l {
 		position: relative;
@@ -34,7 +34,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all .1s;
 			font-size: 24px;
 			right: 8px;
 			color: var(--thead);
@@ -43,7 +43,7 @@
 	&__n {
 		display: flex;
 		gap: 8px;
-		transition: all 0.3s;
+		transition: all .1s;
 		color: var(--thead);
 		font-size: 16px;
 		font-weight: 600;
@@ -63,7 +63,7 @@
 		padding: 0px;
 		grid-template-rows: 0fr;
 		overflow: hidden;
-		transition: all 0.3s;
+		transition: all .1s;
 		padding: 0 16px;
 
 		// position: absolute;

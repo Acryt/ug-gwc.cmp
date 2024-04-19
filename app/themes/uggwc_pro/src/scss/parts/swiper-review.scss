@@ -4,7 +4,7 @@
 		display: flex;
 		justify-content: center;
 		width: 33%;
-		transition: all .3s ease;
+		transition: all .1s ease;
 
 		@media (max-width: 1024px) {
 			width:40%;
@@ -28,14 +28,14 @@
 		grid-template-columns: 64px auto;
 		margin: 30px 15px;
 		height: calc(100% - 60px);
-		transition: all .3s ease;
+		transition: all .1s ease;
 		width: 100%;
 	}
 	&__img {
 		display: flex;
 		margin: 30px 15px;
 		height: calc(100% - 60px);
-		transition: all .3s ease;
+		transition: all .1s ease;
 		width: 100%;
 		&>img {
 			object-fit: contain;

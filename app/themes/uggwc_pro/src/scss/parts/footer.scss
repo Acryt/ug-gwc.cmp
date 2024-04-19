@@ -18,7 +18,7 @@
 		height: auto;
 		width: 100%;
 		path {
-			transition: all .3s;
+			transition: all .1s;
 			fill: var(--thead);
 		}
 		&:hover {
@@ -127,7 +127,7 @@
 		position: relative;
 		display: flex;
 		border-radius: 8px;
-		transition: all .3s;
+		transition: all .1s;
 		font-weight: 600;
 		color: var(--taccent);
 		&::after {
@@ -137,7 +137,7 @@
 			text-align: center;
 			transform: rotate(90deg);
 			opacity: 1;
-			transition: all .5s;
+			transition: all .1s;
 		}
 		&._active {
 			padding: 8px 12px;
@@ -164,7 +164,7 @@
 		border: 1px solid var(--box-shadow);
 		border-radius: 10px;
 		text-align: left;
-		transition: all .5s;
+		transition: all .1s;
 		@media (max-width: 920px) {
 			position: relative;
 			flex-direction: column;
