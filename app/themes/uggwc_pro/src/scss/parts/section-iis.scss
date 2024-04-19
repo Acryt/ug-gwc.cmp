@@ -8,12 +8,36 @@
 		flex: 1 1 500px;
 	}
 	&__rside {
-		flex: 1 1 300px;
+		flex: 1 1 400px;
 	}
 	&__payments {
-		margin-top: 16px;
+		margin-top: 24px;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 16px;
+		justify-content: center;
+		gap: 4px 16px;
+		max-width: 550px;
+
+		& > * {
+			flex: 0 1 64px;
+		}
+	}
+	&__widgets {
+		display: flex;
+		flex-wrap: wrap;
+		background: var(--tabhead);
+		border-radius: 8px;
+		padding: 32px 24px;
+		justify-content: center;
+		gap: 24px;
+
+		.ratings {
+			margin-top: 0;
+		}
+	}
+	&__snippet {
+		display: flex;
+		gap: 12px;
+		align-items: center;
 	}
 }

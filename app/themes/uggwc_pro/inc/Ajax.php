@@ -68,7 +68,6 @@ class Ajax
 			$id = $this->sendToDB($this->subject, $this->message);
 			if ($id) {
 				$this->sendToTG($id);
-				// $this->sendToTGTest($id);
 				$this->sendFileToTG($id);
 				$this->sendToClient($id);
 				if (MAIL_ADDRESS) {
@@ -196,7 +195,7 @@ class Ajax
 		try {
 			// $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
 			$mail->isSMTP(); //Send using SMTP
-			$mail->Host = 'mail.ug-gwc.de'; //Set the SMTP server to send through
+			$mail->Host = 'smtp.gmail.de'; //Set the SMTP server to send through
 			$mail->SMTPAuth = true; //Enable SMTP authentication
 			$mail->Username = MAIL_BOT_ADDRESS; //SMTP username
 			$mail->Password = MAIL_BOT_PASSWORD; //SMTP password

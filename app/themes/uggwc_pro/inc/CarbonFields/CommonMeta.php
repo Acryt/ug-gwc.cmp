@@ -572,42 +572,6 @@ class CommonMeta
 		return [
 			Field::make('text', 'cf_guarant_title', __('Заголовок')),
 			Field::make('text', 'cf_guarant_subtitle', __('Подзаголовок')),
-			Field::make('text', 'cf_guarant_subtitle1', __('Заговок №1'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext1', __('Текст №1'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation1', __('Аннотация №1'))
-				->set_width(40),
-			Field::make('text', 'cf_guarant_subtitle2', __('Заговок №2'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext2', __('Текст №2'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation2', __('Аннотация №2'))
-				->set_width(40),
-			Field::make('text', 'cf_guarant_subtitle3', __('Заговок №3'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext3', __('Текст №3'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation3', __('Аннотация №3'))
-				->set_width(40),
-			Field::make('text', 'cf_guarant_subtitle4', __('Заговок №4'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext4', __('Текст №4'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation4', __('Аннотация №4'))
-				->set_width(40),
-			Field::make('text', 'cf_guarant_subtitle5', __('Заговок №5'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext5', __('Текст №5'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation5', __('Аннотация №5'))
-				->set_width(40),
-			Field::make('text', 'cf_guarant_subtitle6', __('Заговок №6'))
-				->set_width(20),
-			Field::make('textarea', 'cf_guarant_subtext6', __('Текст №6'))
-				->set_width(30),
-			Field::make('textarea', 'cf_guarant_annotation6', __('Аннотация №6'))
-				->set_width(40),
 			Field::make('complex', 'cf_guarant', __('Повторитель'))
 				->set_layout('tabbed-horizontal')
 				->add_fields(
@@ -617,6 +581,23 @@ class CommonMeta
 						Field::make('textarea', 'cf_guarant_s', __('Подзаголовок гарантии'))
 							->set_width(30),
 						Field::make('textarea', 'cf_guarant_d', __('Описание гарантии'))
+							->set_width(40),
+					)
+				)
+		];
+	}
+	public static function processMeta (): array
+	{
+		return [
+			Field::make('text', 'cf_process_title', __('Заголовок')),
+			Field::make('complex', 'cf_process', __('Повторитель'))
+				->set_layout('tabbed-horizontal')
+				->set_max(5)
+				->add_fields(
+					array(
+						Field::make('text', 'cf_process_n', __('Заголовок пункта процесса'))
+							->set_width(20),
+						Field::make('textarea', 'cf_process_d', __('Описание пункта'))
 							->set_width(40),
 					)
 				)
@@ -877,7 +858,7 @@ class CommonMeta
 	public static function iisMeta (): array
 	{
 		return [
-			Field::make('rich_text', 'cf_iis_content', __('Текст возле Инвойса')),
+			Field::make('rich_text', 'cf_iis_content', __('Текст возле инвойса или виджетов рейтинга')),
 		];
 	}
 	public static function bigFormMeta (): array

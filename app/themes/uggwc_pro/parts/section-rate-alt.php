@@ -22,48 +22,7 @@ if (carbon_get_post_meta(get_the_ID(), 'cf_rating_title')) {
 					akzeptieren <strong>Tether</strong> und <strong>Bitcoin</strong>.</p>
 				<p><strong>All dies macht die Arbeit mit Ghost Writer Company risikolos und vorteilhaft!</strong></p>
 				<div class="rate__payments">
-					<div class="payment-icon">
-						<img src="<?php echo URI . '/assets/images/payments/applepay.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php echo URI . '/assets/images/payments/bitcoin.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/giropay.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/gpay.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/klarna.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/mastercard.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/paypal.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/sepa.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/sofort.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/stripe.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/tether.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/unionpay.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/visa.png'; ?>" alt="">
-					</div>
-					<div class="payment-icon">
-					<img src="<?php echo URI . '/assets/images/payments/wise.png'; ?>" alt="">
-					</div>
+					<?php get_template_part('parts/component-payments'); ?>
 				</div>
 			</div>
 		</div>

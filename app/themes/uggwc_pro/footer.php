@@ -102,48 +102,7 @@
 			<div class="footer__five">
 			<strong class="left">ZAHLUNGSMETHODEN</strong>
 				<div class="footer__payments">
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/applepay.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/bitcoin.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/giropay.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/klarna.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/mastercard.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/paypal.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/sepa.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/sofort.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/stripe.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/tether.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/unionpay.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/visa.png" alt="">
-					</div>
-					<div class="payment-icon">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/wise.png" alt="">
-					</div>
+					<?php get_template_part('parts/component-payments'); ?>
 				</div>
 				<hr>
 				<p>2018-2023 | Alle Rechte vorbehalten © UG-GWC.de</p>

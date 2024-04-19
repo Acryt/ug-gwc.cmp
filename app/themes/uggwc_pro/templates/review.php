@@ -12,7 +12,7 @@ Template Name: Review
 	get_template_part('parts/section-numbers');
 	get_template_part('parts/section-review-page');
 	get_template_part('parts/section-interview');
-	get_template_part('parts/section-rate-alt');
+	get_template_part('parts/section-iis-alt');
 	get_template_part('parts/section-faq-accrd');
 	?>
 </main>

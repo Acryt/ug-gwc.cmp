@@ -13,7 +13,7 @@ Template Name: Home
 	get_template_part('parts/section-video');
 	get_template_part('parts/section-process');
 	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[0]['cf_content_content']);
-	get_template_part('parts/section-rate-alt');
+	get_template_part('parts/section-iis-alt');
 	get_template_part('parts/section-price');
 	get_template_part('parts/section-guaranties');
 	Helpers::customContent(carbon_get_post_meta(get_the_ID(), 'cf_content')[1]['cf_content_content']);

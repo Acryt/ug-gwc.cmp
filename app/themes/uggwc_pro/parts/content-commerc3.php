@@ -22,7 +22,7 @@
 				get_template_part('parts/section-process');
 				get_template_part('parts/section-guaranties');
 				get_template_part('parts/section-price-table-l');
-				get_template_part('parts/section-rate-alt');
+				get_template_part('parts/section-iis-alt');
 				
 				// 2
 				if (isset($items[1])) {
