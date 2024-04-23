@@ -1,12 +1,18 @@
 <section id="guaranties" class="section guaranties">
 	<div class="wrapper container">
 		<div class="section__header">
-			<h2>
-				<?php echo carbon_get_theme_option('cf_guarant_title') ?>
-			</h2>
-			<p>
-				<?php echo carbon_get_theme_option('cf_guarant_subtitle') ?>
-			</p>
+			<?php 
+			if(carbon_get_post_meta(get_the_ID(),'cf_guarant_title')) {
+				echo '<h2>' . carbon_get_post_meta(get_the_ID(),'cf_guarant_title') . '</h2>';
+			} else {
+				echo '<h2>' . carbon_get_theme_option('cf_guarant_title') . '</h2>';
+			}
+			if(carbon_get_post_meta(get_the_ID(),'cf_guarant_subtitle')) {
+				echo '<p>' . carbon_get_post_meta(get_the_ID(),'cf_guarant_subtitle') . '</p>';
+			} else if (carbon_get_theme_option('cf_guarant_subtitle')) {
+				echo '<p>' . carbon_get_theme_option('cf_guarant_subtitle') . '</p>';
+			}
+			?>
 		</div>
 		<div class="section__content guaranties__list">
 			<?php

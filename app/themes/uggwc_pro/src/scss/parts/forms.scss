@@ -6,7 +6,8 @@
 	width: 100%;
 	height: 100%;
 
-	h4, .h4 {
+	h4,
+	.h4 {
 		width: 100%;
 	}
 	&__c {
@@ -259,7 +260,7 @@
 		gap: 8px;
 
 		span {
-			margin:unset;
+			margin: unset;
 		}
 	}
 	textarea {
@@ -325,7 +326,7 @@
 		// border-left: 1px solid #0000;
 		border: 1px solid var(--border);
 		width: 100%;
-		transition: all .1s;
+		transition: all 0.1s;
 		color: var(--text);
 		height: 40px;
 		span {
@@ -351,7 +352,7 @@
 		// border-left: 1px solid #0000;
 		border: 1px solid var(--border);
 		width: 100%;
-		transition: all .1s;
+		transition: all 0.1s;
 		color: var(--thead);
 		font-weight: 500;
 		height: 40px;
@@ -523,7 +524,7 @@
 			border-radius: 4px;
 			background: linear-gradient(180deg, #fafafa, #ffffff);
 			color: var(--alert);
-			transition: all .1s;
+			transition: all 0.1s;
 
 			div {
 				height: 16px;
@@ -561,6 +562,9 @@
 			min-width: 20px;
 			max-width: 20px;
 			height: 20px;
+		}
+		span {
+			margin-top: 0px;
 		}
 	}
 }
@@ -611,4 +615,4 @@
 // NiceSelect
 .option.selected.disabled {
 	display: none;
- }
+}
