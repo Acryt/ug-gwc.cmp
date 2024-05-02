@@ -30,7 +30,7 @@
 			placeholder="Fachbereiche & Interessensschwerpunkte"></textarea>
 	</label>
 	<label>
-		<input type="file" name="fileAuthor" placeholder="File">
+		<input type="file" name="file" placeholder="File">
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">

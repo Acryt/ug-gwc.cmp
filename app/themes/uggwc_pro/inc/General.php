@@ -242,7 +242,7 @@ class General
 		$data[] = 'Allow: /wp-*.jpg';
 		$data[] = 'Allow: /wp-*.jpeg';
 		$data[] = 'Allow: /wp-*.gif';
-		$data[] = 'Allow: /wp-admin/admin-ajax.php';
+		$data[] = 'Disallow: /wp-admin/admin-ajax.php';
 
 		$data[] = 'Sitemap: ' . get_site_url(null, '', 'https') . '/sitemap_index.xml';
 
@@ -326,11 +326,11 @@ class General
 		$utm = $_GET;
 
 		// Страница
-		if (!strpos($_SERVER['REQUEST_URI'], 'wp-json')) {
+		if (!strpos($_SERVER['REQUEST_URI'], 'wp-json') || !strpos($_SERVER['REQUEST_URI'], 'admin-ajax')) {
 			if (!isset($_COOKIE['fc_page'])) {
 				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 3, '/');
 			}
-			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
+			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/' );
 		}
 
 		// органика - директ - реклама

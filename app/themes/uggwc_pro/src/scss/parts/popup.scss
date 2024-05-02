@@ -9,7 +9,7 @@
 	top: 0px;
 	z-index: 5;
 
-	transition: all .1s;
+	transition: all 0.1s;
 	visibility: hidden;
 	opacity: 0;
 	& > * {
@@ -38,23 +38,22 @@
 	z-index: 4;
 	border: unset;
 	background: unset;
-	
+
 	& > * {
 		margin: 0;
+		background: var(--alert);
 	}
 	& > :first-child {
 		position: absolute;
 		width: 30px;
 		height: 3px;
 		transform: rotate(45deg);
-		background: var(--hoverb);
 	}
 	& > :last-child {
 		position: absolute;
 		width: 30px;
 		height: 3px;
 		transform: rotate(-45deg);
-		background: var(--hoverb);
 	}
 }
 .popup__bigform,
@@ -103,7 +102,7 @@
 	box-shadow: 0px 2px 8px var(--shadow-header);
 	justify-content: center;
 	align-items: center;
-	transition: all .1s;
+	transition: all 0.1s;
 	// backdrop-filter: blur(8px);
 	overflow: hidden;
 	z-index: 2;
@@ -129,7 +128,7 @@
 		visibility: hidden;
 		width: 128px;
 		opacity: 0;
-		transition: opacity .1s;
+		transition: opacity 0.1s;
 		font-size: 14px;
 		// font-weight: 600;
 	}
@@ -212,23 +211,16 @@
 }
 .popup__delayed-gift {
 	position: fixed;
-	width: 629px;
-	height: 635px;
+	// width: 629px;
+	// height: 635px;
 	z-index: 5;
-	bottom: 88px;
-	transition: all .1s;
+	// bottom: 88px;
+	transition: all 0.1s;
 	visibility: hidden;
 	opacity: 0;
-	transform: scale(0.55);
-	transform-origin: left bottom;
-	& > img {
-		position: absolute;
-	}
-	.btn {
-		bottom: 20px;
-		position: absolute;
-		left: calc(50% - 86px);
-	}
+	transform: scale(0.8);
+	// transform-origin: left bottom;
+
 	.popup__box-img {
 		height: 80px;
 		width: unset;
@@ -243,6 +235,52 @@
 		top: 24px;
 	}
 }
+.user-reminder {
+	position: absolute;
+	font-size: 56px;
+	color: var(--hover);
+	right: 11.5%;
+	top: 25%;
+	font-weight: 700;
+}
+.popup__bach {
+	.btn {
+		position: absolute;
+		top: 82%;
+		right: 27%;
+	}
+}
+.popup__mast {
+	.btn {
+		position: absolute;
+		top: 88%;
+		right: 34%;
+	}
+}
+
+.popup__haus,
+.popup__home {
+	.btn {
+		position: absolute;
+		top: 54%;
+		right: 5%;
+	}
+	&::before {
+		content: "Die ersten Plätze sind geblieben";
+		width: 20.5%;
+		position: absolute;
+		background: white;
+		height: 34%;
+		right: 2.5%;
+		top: 25%;
+		border-radius: 8px;
+		padding: 20px;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 .popup__cookie {
 	position: fixed;
 	display: flex;
@@ -255,7 +293,7 @@
 	padding: 0;
 	background: var(--border);
 	overflow: hidden;
-	transition: all .1s;
+	transition: all 0.1s;
 	z-index: 5;
 	p {
 		text-align: center;

@@ -8,7 +8,7 @@
 		<input type="email" name="email" placeholder="E-Mail" required>
 	</label>
 	<label class="form__msg">
-		<textarea name="msg" id="msg" placeholder="Message" required></textarea>
+		<textarea name="theme" id="msg" placeholder="Message" required></textarea>
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">

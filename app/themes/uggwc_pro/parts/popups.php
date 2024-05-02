@@ -9,13 +9,13 @@
 		</h4>
 		<div class="popup__bigpromo__sub">
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/apr-prm-bach.jpg' ?>" alt="temporäre Aktion Baucharbeit">
+				<img src="<?php echo URI . '/assets/images/promo/may-prm-bach.jpg' ?>" alt="temporäre Aktion Baucharbeit">
 			</div>
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/apr-prm-haus.jpg' ?>" alt="temporäre Aktion Hausarbeit">
+				<img src="<?php echo URI . '/assets/images/promo/may-prm-haus.jpg' ?>" alt="temporäre Aktion Hausarbeit">
 			</div>
 			<div class="popup__bigpromo__img">
-				<img src="<?php echo URI . '/assets/images/promo/apr-prm-mast.jpg' ?>" alt="temporäre Aktion Masterarbeit">
+				<img src="<?php echo URI . '/assets/images/promo/may-prm-mast.jpg' ?>" alt="temporäre Aktion Masterarbeit">
 			</div>
 		</div>
 		<?php
@@ -25,6 +25,63 @@
 			<a class="btn wave_effect center popup_btn_x" href="#sform"><span>JETZT ANFRAGEN</span></a>
 		<?php } ?>
 	</div>
+	<?php
+	$pageID = [
+		'9' => 'home',
+		'123' => 'bach',
+		'154' => 'master',
+		'161' => 'haus'
+	];
+	if (array_key_exists(get_the_ID(), $pageID)) {
+		switch (get_the_ID()) {
+			case '123': //bach
+				echo '<div class="popup popup__delayed-gift popup__bach">';
+				echo '<button class="popup_x">';
+				echo '<span></span>';
+				echo '<span></span>';
+				echo '</button>';
+				echo '<img class="popup__bg" src="' . URI . '/assets/images/promo/may-bach.jpg" alt="temporäre Aktion Bachelorarbeit">';
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>';
+				echo '</div>';
+				break;
+			case '154': //master magister
+				echo '<div class="popup popup__delayed-gift popup__mast">';
+				echo '<button class="popup_x">';
+				echo '<span></span>';
+				echo '<span></span>';
+				echo '</button>';
+				echo '<img class="popup__bg" src="' . URI . '/assets/images/promo/may-mast.jpg" alt="temporäre Aktion Masterarbeit">';
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>';
+				echo '</div>';
+				break;
+			case '161': //haus
+				echo '<div class="popup popup__delayed-gift popup__haus">';
+				echo '<button class="popup_x">';
+				echo '<span></span>';
+				echo '<span></span>';
+				echo '</button>';
+				echo '<span class="user-reminder"></span>';
+				echo '<img class="popup__bg" src="' . URI . '/assets/images/promo/may-haus.jpg" alt="temporäre Aktion Hausarbeit">';
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>';
+				echo '</div>';
+				break;
+			case '9': //home
+				echo '<div class="popup popup__delayed-gift popup__home">';
+				echo '<button class="popup_x">';
+				echo '<span></span>';
+				echo '<span></span>';
+				echo '</button>';
+				echo '<span class="user-reminder"></span>';
+				echo '<img class="popup__bg" src="' . URI . '/assets/images/promo/may-home.jpg" alt="temporäre Aktion">';
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>';
+				echo '</div>';
+				break;
+			default:
+				// echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';			
+				break;
+		}
+	}
+	?>
 </div>
 <div class="popup__box">
 	<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
@@ -40,46 +97,7 @@
 	</div>
 </div>
 
-<?php
-$pageID = [
-	'9' => 'home',
-	'123' => 'bach',
-	'154' => 'master',
-	'161' => 'haus'
-];
 
-if (array_key_exists(get_the_ID(), $pageID)) {
-	?>
-	<div class="popup popup__delayed-gift"  <?php if (get_the_ID() === 9) echo 'style="height: 765px; width: 625px"' ?>>
-		<button class="popup_x">
-			<span></span>
-			<span></span>
-		</button>
-		<?php
-		switch (get_the_ID()) {
-			case '123': //bach
-				echo '<img src="' . URI . '/assets/images/promo/apr-bach.jpg" alt="temporäre Aktion Bachelorarbeit">'; //bach
-				break;
-
-			case '154': //master
-				echo '<img src="' . URI . '/assets/images/promo/apr-mast.jpg" alt="temporäre Aktion Masterarbeit">';
-				break;
-
-			case '161': //haus
-				echo '<img src="' . URI . '/assets/images/promo/apr-haus.jpg" alt="temporäre Aktion Hausarbeit">';
-				break;
-
-			default:
-				echo '<img src="' . URI . '/assets/images/promo/apr-def.jpg" alt="temporäre Aktion">';
-				break;
-		}
-		?>
-		<img class="popup__box-img" src="<?php echo URI . '/assets/images/promo/popup-box.svg' ?>" alt="">
-		<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt erhalten!</span></button>
-	</div>
-	<?php
-}
-?>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>
 <a target="_blank" class="popup__call shadow js-wapp"

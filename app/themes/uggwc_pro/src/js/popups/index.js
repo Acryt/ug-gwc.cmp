@@ -66,24 +66,56 @@ export function liftPopup() {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth",
-		})
-	})
+		});
+	});
 }
 
 export function giftTag() {
 	const gift = document.querySelectorAll(".js_giftbtn");
-	gift.forEach(element => {
+	gift.forEach((element) => {
 		element.addEventListener("click", () => {
 			document.cookie = "gift=true";
-		})
+		});
 	});
 }
 
 export function delayedGift() {
 	function gift() {
-		document.querySelector(".popup__delayed-gift").classList.add("_active");
+		const delayedGift = document.querySelector(".popup__delayed-gift");
+		delayedGift.classList.add("_active");
+		const popupParent = delayedGift.closest("#popups");
+		if (popupParent) {
+			popupParent.classList.add("_active");
+			remainUsersPromo();
+		}
 	}
 	if (window.innerWidth >= 720) {
 		setTimeout(gift, 5000);
 	}
+}
+
+export function remainUsersPromo() {
+	let rem = document.querySelector(".user-reminder");
+	if (!rem) return;
+	const currentDate = new Date();
+	const nextMonth = new Date(
+		currentDate.getFullYear(),
+		currentDate.getMonth() + 1,
+		1
+	);
+	const daysInMonth = new Date(nextMonth - 1).getDate();
+	const hoursInDay = 24;
+	const remainingHours = hoursInDay - currentDate.getHours();
+	const remainingDays =
+		daysInMonth - currentDate.getDate() + remainingHours / hoursInDay;
+	const number = Math.floor((50 / daysInMonth) * remainingDays);
+	let currentValue = 0;
+	const interval = setInterval(() => {
+		if (currentValue < number) {
+			currentValue++;
+			rem.textContent = currentValue;
+		} else {
+			clearInterval(interval);
+		}
+	}, 30); // Обновление каждый секунду
 }

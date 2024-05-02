@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Single
-*/ 
+*/
 ?>
 
 <?php the_post(); ?>
@@ -13,11 +13,12 @@ Template Name: Single
 	get_template_part('parts/section-crumbs');
 	get_template_part('parts/content-blog');
 	// get_template_part('parts/section-faq');
+	get_template_part('parts/section-same-posts');
 	?>
 </main>
 
 
-<?php 
+<?php
 get_template_part('parts/popups');
 get_footer();
 ?>
