@@ -214,13 +214,14 @@
 	// width: 629px;
 	// height: 635px;
 	z-index: 5;
-	// bottom: 88px;
-	transition: all 0.1s;
+	bottom: 88px;
+	// transition: all 2s;
+	transform: scale(0.7);
+	// animation: opac .5s 1 ease-in-out;
 	visibility: hidden;
 	opacity: 0;
-	transform: scale(0.8);
-	// transform-origin: left bottom;
-
+	transform-origin: left bottom;
+	left: 0px;
 	.popup__box-img {
 		height: 80px;
 		width: unset;
@@ -257,7 +258,14 @@
 		right: 34%;
 	}
 }
-
+// @keyframes opac {
+// 	0% {
+// 		opacity: 0;
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 	}
+// }
 .popup__haus,
 .popup__home {
 	.btn {

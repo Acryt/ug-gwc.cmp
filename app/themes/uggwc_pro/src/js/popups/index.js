@@ -74,7 +74,8 @@ export function giftTag() {
 	const gift = document.querySelectorAll(".js_giftbtn");
 	gift.forEach((element) => {
 		element.addEventListener("click", () => {
-			document.cookie = "gift=true";
+			// document.cookie = "gift=true";
+			setCookie("gift", "true");
 		});
 	});
 }

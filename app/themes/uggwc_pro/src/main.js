@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	cookieClose();
 	sliders();
 	siteTimer();
-	geoCookie();
+	// geoCookie();
 	promo();
 	// phoneInput();
 	promoBlockTimer();

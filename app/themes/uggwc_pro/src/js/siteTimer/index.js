@@ -88,7 +88,7 @@ export function geoCookie() {
 	if (!document.cookie.includes("fc_utm")) {
 		setCookie("fc_utm", JSON.stringify(utm), 3);
 	}
-	setCookie("lc_utm", JSON.stringify(utm), 1);
+	// setCookie("lc_utm", JSON.stringify(utm), 1);
 
 	if (!window.location.href.includes("wp-json")) {
 		if (!document.cookie.includes("fc_page")) {

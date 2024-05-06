@@ -334,6 +334,8 @@ class General
 		}
 
 		// органика - директ - реклама
+		// if (isset($utm['utm_source']) && ($utm["utm_source"] === "instagram" || $utm["utm_source"] === "facebook")) {
+			// $utm['utm_channel'] = "media";
 		if (isset($utm['utm_source']) || strpos($_COOKIE['fc_page'], 'utm_source') !== false || strpos($_SERVER["REQUEST_URI"], 'utm_source') !== false) {
 			$utm['utm_channel'] = 'cpc';
 		} elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) === 'none')) {
