@@ -7,7 +7,7 @@ class Helpers
 		add_filter('rest_authentication_errors', [$this, 'jsonBasicAuthError']);
 	}
 
-	public function jsonBasicAuthHandler ($user)
+	public static function jsonBasicAuthHandler ($user)
 	{
 		global $wp_json_basic_auth_error;
 		$wp_json_basic_auth_error = null;
@@ -38,7 +38,7 @@ class Helpers
 		return $user->ID;
 	}
 
-	public function jsonBasicAuthError ($error)
+	public static function jsonBasicAuthError ($error)
 	{
 		if (!empty($error)) {
 			return $error;
@@ -48,260 +48,11 @@ class Helpers
 		return $wp_json_basic_auth_error;
 	}
 
-	/**
-	 * Выводит домен сайта без протокола
-	 * @return string
-	 */
 	public static function siteUri (): string
 	{
 		$uri = get_site_url(get_current_blog_id());
 		$uri = explode('//', $uri);
 		return end($uri);
-	}
-	public static function siteNumber (): string
-	{
-		$number = get_current_blog_id();
-		$number = explode('//', $number);
-		return end($number);
-	}
-	/**
-	 * Выводит название формы при отправлении данных, исходя из полученных данных
-	 * @param string $string
-	 * @return string
-	 */
-	public static function siteFormName ($string = ''): string
-	{
-		if (!$string) {
-			return '';
-		}
-
-		$name = '';
-
-		if (in_array($string, ['form-author'])) {
-			$name = 'Форма авторов';
-		}
-		if (in_array($string, ['form-big'])) {
-			$name = 'Большая форма';
-		}
-		if (in_array($string, ['form-medium'])) {
-			$name = 'Средняя форма';
-		}
-		if (in_array($string, ['form-first'])) {
-			$name = 'Форма 1 экран';
-		}
-		if (in_array($string, ['form-small'])) {
-			$name = 'Малая форма';
-		}
-		if (in_array($string, ['form-care'])) {
-			$name = 'Форма заботы';
-		}
-		if (in_array($string, ['form-popup'])) {
-			$name = 'Попап форма';
-		}
-		if (in_array($string, ['form-bigpromo'])) {
-			$name = 'Попап форма акции';
-		}
-		return $name;
-	}
-
-	/**
-	 * Выводит массив с данными о всех лендингах
-	 * @return array
-	 */
-	public static function sites (): array
-	{
-		return [
-			18 => [
-				'name' => 'Diplomarbeit',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-diplom.de/',
-				'kontekst' => '3',
-			],
-			16 => [
-				'name' => 'Bachelorarbeit',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-ba.de/',
-				'kontekst' => '2',
-			],
-			13 => [
-				'name' => 'Online-Prüfung',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-online.de/',
-				'kontekst' => '2',
-			],
-			3 => [
-				'name' => 'Doktorarbeit',
-				'image' => URI . '/assets/pic/04.png',
-				'link' => 'https://gwrites-da.de/',
-				'kontekst' => '4',
-			],
-			1 => [
-				'name' => 'Masterarbeit',
-				'image' => URI . '/assets/pic/05.png',
-				'link' => 'https://gwrites-ma.de/',
-				'kontekst' => '0',
-			],
-			15 => [
-				'name' => 'Hausarbeit',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-ha-schreiben/',
-				'kontekst' => '5',
-			],
-			4 => [
-				'name' => 'Statistische Auswertung',
-				'image' => URI . '/assets/pic/07.png',
-				'link' => 'https://gwrites-statistik.de/',
-				'kontekst' => '3',
-			],
-			106 => [
-				'name' => 'Businessplan',
-				'image' => URI . '/assets/pic/08.png',
-				'link' => '',
-			],
-			107 => [
-				'name' => 'Biografie',
-				'image' => URI . '/assets/pic/09.png',
-				'link' => '',
-			],
-			7 => [
-				'name' => 'Forschungsartikel',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-artikel.de/',
-				'kontekst' => '5',
-			],
-			5 => [
-				'name' => 'Facharbeit',
-				'image' => URI . '/assets/pic/11.png',
-				'link' => 'https://gwrites-fa.de/',
-				'kontekst' => '0',
-			],
-			6 => [
-				'name' => 'Abschlussarbeit',
-				'image' => URI . '/assets/pic/12.png',
-				'link' => 'https://gwrites-abschluss.de/',
-				'kontekst' => '5',
-			],
-			108 => [
-				'name' => 'Magisterarbeit',
-				'image' => URI . '/assets/pic/13.png',
-				'link' => '',
-			],
-			17 => [
-				'name' => 'Exposé',
-				'image' => URI . '/assets/pic/10.png',
-				'link' => 'https://gwrites-exposee.de/',
-				'kontekst' => '5',
-			]
-		];
-	}
-
-	/**
-	 * Добавляет код после открывающегося тега BODY
-	 */
-	public static function addedCodeBeforeBody ()
-	{
-		if (is_user_logged_in()) {
-			return;
-		}
-
-		/**
-		 * Masterarbeit
-		 * https://gwrites-ma.de/
-		 */
-		if (get_current_blog_id() === 1) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7GBT53" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		/**
-		 * Doktorarbeit
-		 * https://gwrites-da.de/
-		 */
-		if (get_current_blog_id() === 3) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NGGW6" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		/**
-		 * Statistische Auswertung
-		 * https://gwrites-statistik.de/
-		 */
-		if (get_current_blog_id() === 4) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THWDP8M" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		/**
-		 * Facharbeit
-		 * https://gwrites-fa.de/
-		 */
-		if (get_current_blog_id() === 5) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPJTBXP" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		/**
-		 * Abschlussarbeit
-		 * https://gwrites-abschluss.de/
-		 */
-		if (get_current_blog_id() === 6) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCPWR9V" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		/**
-		 * Forschungsartikel
-		 * https://gwrites-artikel.de/
-		 */
-		if (get_current_blog_id() === 7) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript>
-				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8M6HZZ" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe>
-			</noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
-
-		if (get_current_blog_id() === 18) {
-			?>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3FHL9" height="0" width="0"
-					style="display:none;visibility:hidden"></iframe></noscript>
-			<!-- End Google Tag Manager (noscript) -->
-			<?php
-		}
 	}
 
 	public static function urlPathFromRef (): string
@@ -316,12 +67,14 @@ class Helpers
 			return $site;
 		}
 	}
+
 	public static function del_space ($item)
 	{
 		$sp = array(' ' => '', '+' => '', '(' => '', ')' => '', '-' => '');
 		return strtr($item, $sp);
 	}
-	public static function mgr_whatsapp(): string
+
+	public static function mgr_whatsapp (): string
 	{
 		$day = date('N');
 		$mgrArr = [
@@ -335,6 +88,7 @@ class Helpers
 		];
 		return $mgrArr[$day];
 	}
+
 	public static function get_competition_options ()
 	{
 		$options = carbon_get_theme_option('cf_select_competition');
@@ -344,6 +98,7 @@ class Helpers
 		}
 		return $checkbox_options;
 	}
+
 	public static function get_competition_values ($competition_ids)
 	{
 		$values = array();
@@ -357,6 +112,7 @@ class Helpers
 		}
 		return $values;
 	}
+
 	public static function customContent ($cont)
 	{
 		if (!$cont) {
