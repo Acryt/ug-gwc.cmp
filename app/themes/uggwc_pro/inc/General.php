@@ -349,7 +349,6 @@ class General
 			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 3, '/');
 		}
 		setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-
 		//OS
 		if (!isset($_COOKIE['os'])) {
 			setcookie('os', getOS($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');

@@ -53,7 +53,7 @@ class Ajax
 					'name',
 					'email',
 					'phone',
-					'kontakt',
+					'on-wapp',
 					'calltime',
 					'promo',
 					'order',
@@ -99,16 +99,19 @@ class Ajax
 		$res->FbAds = $this->facebookAds($this->id);
 		// $res->ToClient = $this->sendToClient($this->id);
 
-		// $result = new stdClass();
-		// $result->sendToDB->id = $res->sendToDB->id;
-		// $result->sendToDB->ok = $res->sendToDB->ok;
-		// $result->ToTG->ok = $res->ToTG->ok;
-		// $result->FileToTG->ok = $res->FileToTG->ok;
-		// $result->CRM = $res->CRM;
-		// $result->FbAds = $res->FbAds;
-		// $result->ToClient['ok'] = $res->ToClient;
-		// $res->postArr = array_merge($_POST, $this->postMeta); //удалить после отладки, вывод в ответ всех полей
-		wp_send_json($res);
+		$result = [
+			'ToCRM' => [
+				'ok' => $res->ToCRM->ok,
+				'id' => $res->ToCRM->id
+			],
+			'ToTG' => [
+				'ok' => $res->ToTG->ok
+			],
+			'FileToTG' => [
+				'ok' => $res->FileToTG->ok
+			]
+		];
+		wp_send_json($result);
 	}
 
 	public function sendToCRM ()
@@ -238,7 +241,7 @@ class Ajax
 		try {
 			// $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
 			$mail->isSMTP(); //Send using SMTP
-			$mail->Host = 'smtp.gmail.de'; //Set the SMTP server to send through
+			$mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 			$mail->SMTPAuth = true; //Enable SMTP authentication
 			$mail->Username = MAIL_BOT_ADDRESS; //SMTP username
 			$mail->Password = MAIL_BOT_PASSWORD; //SMTP password
@@ -298,8 +301,31 @@ class Ajax
 		<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 
-		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, true);
+		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, false);
 		return $response;
+	}
+
+	public function sendWapp ()
+	{
+		$channel = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
+		$clientGeo = $this->getGeo();
+		date_default_timezone_set('Europe/Minsk');
+		$clickTime = new DateTime();
+
+		$text = "<b>UG-GWC.de WhatsApp клик 🥸</b>\r\n\n";
+		$text .= "<b>👣 : {$channel}</b>\r\n";
+		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
+		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
+		$text .= "<b>🏠 : {$clientGeo->region}</b>\r\n";
+		$text .= "<b>⌚️ : {$clickTime->format('Y-m-d H:i:s')}</b>";
+
+		$data = [
+			'parse_mode' => 'html',
+			'chat_id' => TG_CHANNEL_ID,
+			'text' => $text
+		];
+		$res = file_get_contents("https://api.telegram.org/bot" . TG_TOKEN . "/sendMessage?" . http_build_query($data));
+		return $res;
 	}
 
 	public function facebookAds ($id)
@@ -341,29 +367,6 @@ class Ajax
 			->setEvents($events);
 		$response = json_decode($request->execute());
 		return $response;
-	}
-
-	public function sendWapp ()
-	{
-		$channel = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
-		$clientGeo = $this->getGeo();
-		date_default_timezone_set('Europe/Minsk');
-		$clickTime = new DateTime();
-
-		$text = "<b>UG-GWC.de WhatsApp клик 🥸</b>\r\n\n";
-		$text .= "<b>👣 : {$channel}</b>\r\n";
-		$text .= "<b>📱 : {$clientGeo->ip}</b>\r\n\n";
-		$text .= "<b>🌐 : {$clientGeo->country_name}</b>\r\n";
-		$text .= "<b>🏠 : {$clientGeo->region}</b>\r\n";
-		$text .= "<b>⌚️ : {$clickTime->format('Y-m-d H:i:s')}</b>";
-
-		$data = [
-			'parse_mode' => 'html',
-			'chat_id' => TG_CHANNEL_ID,
-			'text' => $text
-		];
-		$res = file_get_contents("https://api.telegram.org/bot" . TG_TOKEN . "/sendMessage?" . http_build_query($data));
-		return $res;
 	}
 
 	public function getGeo ()

@@ -94,9 +94,17 @@ export function delayedGift() {
 		setTimeout(gift, 5000);
 	}
 }
+export function hoverGift() {
+	const gift = document.querySelectorAll(".js_giftbox");
+	gift.forEach((element) => {
+		element.addEventListener("mouseenter", () => {
+			remainUsersPromo();
+		});
+	});
+}
 
 export function remainUsersPromo() {
-	let rem = document.querySelector(".user-reminder");
+	let rem = document.querySelectorAll(".user-reminder");
 	if (!rem) return;
 	const currentDate = new Date();
 	const nextMonth = new Date(
@@ -114,7 +122,9 @@ export function remainUsersPromo() {
 	const interval = setInterval(() => {
 		if (currentValue < number) {
 			currentValue++;
-			rem.textContent = currentValue;
+			rem.forEach((el) => {
+				el.textContent = currentValue;
+			});
 		} else {
 			clearInterval(interval);
 		}

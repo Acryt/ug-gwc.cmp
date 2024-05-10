@@ -26,7 +26,7 @@ import { stickyHeader } from "./js/scroll";
 import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
 import { accrd } from "./js/priceAccrd";
-import { closePopups, openPopup, cookieClose, liftPopup, giftTag, delayedGift, remainUsersPromo } from "./js/popups";
+import { closePopups, openPopup, cookieClose, liftPopup, giftTag, hoverGift, delayedGift, remainUsersPromo } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer, geoCookie } from "./js/siteTimer";
 import { promo } from "./js/promo";
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	progressBar();
 	giftTag();
 	delayedGift();
+	hoverGift();
 	wordCount();
 	fileInput();
 	handleLinkClickAndSendWapp();

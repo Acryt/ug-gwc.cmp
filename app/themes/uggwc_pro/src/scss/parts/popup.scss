@@ -174,7 +174,7 @@
 	&-img {
 		animation: swinging 3s infinite;
 	}
-	&-text {
+	&-bg {
 		position: fixed;
 		display: none;
 		flex-direction: column;
@@ -182,27 +182,27 @@
 		left: 20px;
 		width: 280px;
 		background: var(--thead);
-		padding: 8px 12px;
 		border-radius: 4px;
-		p,
-		span {
-			color: var(--bg);
-		}
-		li::before {
-			content: "";
+
+		.user-reminder {
 			position: absolute;
-			top: 10px;
-			left: 0px;
-			width: 4px;
-			height: 4px;
-			border-radius: 50%;
-			background-color: var(--bg);
+			bottom: 73px;
+			font-size: 30px;
+			right: 106px;
+			color: var(--hover);
+		}
+		.btn {
+			position: absolute;
+			bottom: 54px;
+			font-size: 12px;
+			right: 34px;
+			padding: 4px 8px;
 		}
 	}
 	.btn {
 		align-self: center;
 	}
-	&:hover .popup__box-text {
+	&:hover .popup__box-text, &:hover .popup__box-bg {
 		display: flex;
 	}
 	@media (min-width: 720px) {
@@ -235,14 +235,14 @@
 	.popup_x {
 		top: 24px;
 	}
-}
-.user-reminder {
-	position: absolute;
-	font-size: 56px;
-	color: var(--hover);
-	right: 11.5%;
-	top: 25%;
-	font-weight: 700;
+	.user-reminder {
+		position: absolute;
+		font-size: 56px;
+		color: var(--hover);
+		right: 11.5%;
+		top: 25%;
+		font-weight: 700;
+	}
 }
 .popup__bach {
 	.btn {

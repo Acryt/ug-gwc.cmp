@@ -36,7 +36,7 @@
 		<span class="form__file_text">ZIP,DOCX oder PDF(&lt;50mb)</span>
 	</label>
 	<label class="form__kontakt">
-		<input class="kontakt" type="checkbox" name="kontakt">
+		<input class="kontakt" type="checkbox" name="on-wapp">
 		<span class="form__kontakt_text">Kontakt nur über WhatsApp</span>
 	</label>
 	<div class="form__guarant">
