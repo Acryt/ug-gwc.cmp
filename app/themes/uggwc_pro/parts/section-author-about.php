@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style( 'abauthor', URI . '/assets/abauthor.bundle.css' );
+$ver = filemtime(get_template_directory() . '/assets/abauthor.bundle.css');
+wp_enqueue_style('abauthor', URI . '/assets/abauthor.bundle.css', [], $ver);
 
 $authorInfo = carbon_get_theme_option('cf_author');
 $filteredAuthors = [];

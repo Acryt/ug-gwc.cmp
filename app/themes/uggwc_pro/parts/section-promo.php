@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('promo', URI . '/assets/promo.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/promo.bundle.css');
+wp_enqueue_style('promo', URI . '/assets/promo.bundle.css', [], $ver);
 
 $items = carbon_get_theme_option('cf_promo');
 if ($items) {

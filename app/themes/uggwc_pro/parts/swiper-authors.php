@@ -1,5 +1,6 @@
 <?php 
-	wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/sw_authors.bundle.css');
+wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css', [], $ver);
 ?>
 
 <div class="swiper author_swiper">

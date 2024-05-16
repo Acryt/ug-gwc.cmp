@@ -445,7 +445,7 @@ class Ajax
 			'form-small' => 'Малая форма',
 			'form-care' => 'Форма заботы',
 			'form-popup' => 'Форма попап',
-			'form-bigpromo' => 'Форма промо',
+			'form-promo' => 'Форма промо',
 		);
 
 		if (!empty($_POST['form-id']) && array_key_exists($_POST['form-id'], $formArr)) {

@@ -1,5 +1,6 @@
 <?php
-	wp_enqueue_style( 'sw_review', URI . '/assets/sw_review.bundle.css' );
+$ver = filemtime(get_template_directory() . '/assets/sw_review.bundle.css');
+wp_enqueue_style('sw_review', URI . '/assets/sw_review.bundle.css', [], $ver);
 ?>
 <div class="swiper review_swiper">
 	<div class="swiper-wrapper">

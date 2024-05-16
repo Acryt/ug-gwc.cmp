@@ -1,5 +1,6 @@
 <?php
-	wp_enqueue_style( 'sw_review_alt', URI . '/assets/sw_review_alt.bundle.css' );
+$ver = filemtime(get_template_directory() . '/assets/sw_review_alt.bundle.css');
+wp_enqueue_style('sw_review_alt', URI . '/assets/sw_review_alt.bundle.css', [], $ver);
 ?>
 <div class="swiper review_swiper_alt js-rsa">
 	<div class="swiper-wrapper">

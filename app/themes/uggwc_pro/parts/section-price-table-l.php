@@ -1,6 +1,8 @@
 <?php
-wp_enqueue_style('pltable', URI . '/assets/pltable.bundle.css');
-wp_enqueue_style('ptable', URI . '/assets/ptable.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/pltable.bundle.css');
+wp_enqueue_style('pltable', URI . '/assets/pltable.bundle.css', [], $ver);
+$ver = filemtime(get_template_directory() . '/assets/ptable.bundle.css');
+wp_enqueue_style('ptable', URI . '/assets/ptable.bundle.css', [], $ver);
 
 $dataPrice = json_decode(file_get_contents(URI . '/data/pricelist.json'), true);
 

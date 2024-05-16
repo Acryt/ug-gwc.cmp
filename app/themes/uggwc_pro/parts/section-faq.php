@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('faq', URI . '/assets/faq.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
+wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 
 $items = carbon_get_post_meta(get_the_ID(), 'cf_faq');
 

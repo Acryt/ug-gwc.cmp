@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('sabout', URI . '/assets/about.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/about.bundle.css');
+wp_enqueue_style('sabout', URI . '/assets/about.bundle.css', [], $ver);
 ?>
 <section id="about" class="section about">
 	<div class="wrapper">

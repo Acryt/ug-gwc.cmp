@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('faq', URI . '/assets/faq.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
+wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 ?>
 <?php if (carbon_get_theme_option('cf_afaq_accrd')) { ?>
 	<section id="afaq" class="section afaq accrd-js">
