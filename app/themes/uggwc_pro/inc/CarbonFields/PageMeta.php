@@ -38,6 +38,7 @@ class PageMeta
 			// ->set_context('carbon_fields_after_title')
 			->where('post_type', '=', 'post')
 			->add_tab(__('Switches'), CommonMeta::switchMeta())
+			->add_tab(__('Meta'), CommonMeta::metaMeta())
 			->add_tab(__('First Screen'), CommonMeta::firstMeta())
 			->add_tab(__('FAQ'), CommonMeta::faqMeta())
 			->add_tab(__('Accordion'), CommonMeta::accrdMeta())

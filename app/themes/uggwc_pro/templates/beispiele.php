@@ -18,8 +18,9 @@ Template Name: Beispiele
 	get_template_part('parts/section-form');
 	?>
 </main>
-<?php get_template_part('parts/meta-software-app'); ?>
-<?php 
+
+<?php
+get_template_part('parts/meta-software-app');
 get_template_part('parts/popups');
 get_footer();
 ?>
