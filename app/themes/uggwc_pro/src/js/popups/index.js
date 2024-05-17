@@ -83,6 +83,9 @@ export function giftTag() {
 export function delayedGift() {
 	function gift() {
 		const delayedGift = document.querySelector(".popup__delayed-gift");
+		if (!delayedGift) {
+			return;
+		}
 		delayedGift.classList.add("_active");
 		const popupParent = delayedGift.closest("#popups");
 		if (popupParent) {
