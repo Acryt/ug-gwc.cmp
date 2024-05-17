@@ -20,7 +20,7 @@
 			foreach ($variable as $key => $value) { ?>
 				<input class="guaranties__c" type="checkbox" name="guaranties" id="guaranties<?php echo $key; ?>">
 				<div class="guaranties__item">
-					<label class="guaranties__l" for="guaranties<?php echo $key; ?>">
+					<label class="guaranties__l cp" for="guaranties<?php echo $key; ?>">
 						<span class="guaranties__n">
 							<span class="guaranties__icon">
 								<img src="<?php echo URI . '/assets/images/guaranties/00' . $key + 1 . '.svg' ?>" alt="icon">

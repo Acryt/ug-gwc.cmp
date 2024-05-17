@@ -87,7 +87,7 @@ $filteredValues = Helpers::get_competition_values($compAuthor);
 				<h3>Fragen an den Autor:</h3>
 				<?php
 				foreach ($filteredAuthors[0]['cf_author_faq'] as $key => $value) { ?>
-					<details class="abauthor__det content shadow">
+					<details class="abauthor__det cp content shadow">
 						<summary class="abauthor__sum">
 							<?php echo $key + 1 . '. ' . $value['cf_author_faq_quest'] ?>
 						</summary>

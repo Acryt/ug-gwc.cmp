@@ -26,17 +26,17 @@ wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 						$faq = carbon_get_theme_option('cf_afaq_accrd');
 						foreach ($faq as $k => $v) {
 							if ($k == 0) { ?>
-								<div class="afaq__btn accrd-b _active">
+								<div class="afaq__btn cp accrd-b _active">
 									<?php echo $v['cf_afaq_t'] ?>
 								</div>
 							<?php } else { ?>
-								<div class="afaq__btn accrd-b">
+								<div class="afaq__btn cp accrd-b">
 									<?php echo $v['cf_afaq_t'] ?>
 								</div>
 							<?php }
 						}
 						if ($cfaq_t) { ?>
-							<div class="afaq__btn accrd-b">
+							<div class="afaq__btn cp accrd-b">
 								<?php echo $cfaq_t ?>
 							</div>
 						<?php }
@@ -53,7 +53,7 @@ wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 										<div class="afaq__item shadow">
 											<input class="afaq__check" type="checkbox" name="afaq" id="afaq<?php echo $k;
 											echo $kq ?>">
-											<label class="afaq__question" for="afaq<?php echo $k;
+											<label class="afaq__question cp" for="afaq<?php echo $k;
 											echo $kq ?>"><?php echo $vq['cf_afaq_quest'] ?></label>
 											<div class="afaq__answer">
 												<?php echo $vq['cf_afaq_answer'] ?>
@@ -70,7 +70,7 @@ wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 										<div class="afaq__item shadow">
 											<input class="afaq__check" type="checkbox" name="afaq" id="afaq<?php echo $k;
 											echo $kq ?>">
-											<label class="afaq__question" for="afaq<?php echo $k;
+											<label class="afaq__question cp" for="afaq<?php echo $k;
 											echo $kq ?>"><?php echo $vq['cf_afaq_quest'] ?></label>
 											<div class="afaq__answer">
 												<?php echo $vq['cf_afaq_answer'] ?>
@@ -87,7 +87,7 @@ wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
 							<?php foreach ($cfaq as $ck => $cv) { ?>
 								<div class="afaq__item shadow">
 									<input class="afaq__check" type="checkbox" name="afaq" id="cfaq<?php echo $ck; ?>">
-									<label class="afaq__question"
+									<label class="afaq__question cp"
 										for="cfaq<?php echo $ck; ?>"><?php echo $cv['cf_faq_quest'] ?></label>
 									<div class="afaq__answer"><?php echo $cv['cf_faq_answer'] ?></div>
 								</div>

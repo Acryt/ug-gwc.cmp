@@ -72,7 +72,8 @@
 		top: -60px;
 		height: calc(100% + 120px);
 		@media (max-width: 920px) {
-			opacity: 0.3;
+			// opacity: 0.3;
+			display: none;
 		}
 	}
 	&__hat {

@@ -70,7 +70,7 @@ wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css',[], $ver);
 		cardHtml +=
 			`</div>
 			 <details class="aauthor__det">
-				<summary class="aauthor__sum">
+				<summary class="aauthor__sum cp">
 				  <h6>Beschreibung:</h6>
 				</summary>
 				<div class="aauthor__desc">` +
