@@ -34,7 +34,7 @@ if ($items) {
 						<input type="radio" class="promo__input" name="promo" id="promo<?php echo $key; ?>" <?php if ($key == 0) {
 								echo 'checked';
 							} ?>>
-						<label class="promo__elem" for="promo<?php echo $key; ?>"><?php echo $item['title']; ?></label>
+						<label class="promo__elem cp" for="promo<?php echo $key; ?>"><?php echo $item['title']; ?></label>
 						<div class="promo__block content">
 							<?php if ($item['image']) { ?>
 								<div class="promo__cimg">

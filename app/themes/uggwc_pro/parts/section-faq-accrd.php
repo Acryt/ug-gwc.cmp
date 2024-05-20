@@ -1,8 +1,8 @@
 <?php
-$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
-wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
-?>
-<?php if (carbon_get_theme_option('cf_afaq_accrd')) { ?>
+if (carbon_get_theme_option('cf_afaq_accrd')) {
+	$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
+	wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
+	?>
 	<section id="afaq" class="section afaq accrd-js">
 		<div class="wrapper">
 			<div class="section__header">

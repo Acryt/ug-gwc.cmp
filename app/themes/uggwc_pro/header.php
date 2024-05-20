@@ -109,19 +109,19 @@
 			</div>
 			<nav class="header__nav nav-menu">
 				<div class="header__nav_wrap">
-					<div class="dd-btn">Leistungen</div>
+					<div class="dd-btn cp">Leistungen</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_leis') ?>
 					</div>
-					<div class="dd-btn">Lektorat & Korrektorat</div>
+					<div class="dd-btn cp">Lektorat & Korrektorat</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_lect') ?>
 					</div>
-					<div class="dd-btn">Disziplinen</div>
+					<div class="dd-btn cp">Disziplinen</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_disz') ?>
 					</div>
-					<div class="dd-btn">Über uns</div>
+					<div class="dd-btn cp">Über uns</div>
 					<div class="dd-menu">
 						<a href="/uber-uns/">Über uns</a>
 						<a href="/wie-wir-arbeiten/">So geht's!</a>

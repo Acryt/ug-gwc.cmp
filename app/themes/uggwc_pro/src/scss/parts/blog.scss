@@ -42,7 +42,7 @@
 		.blog__item {
 		}
 		& > a {
-			height: 400px;
+			height: 340px;
 		}
 		& > a:nth-child(10n + 1) {
 			grid-column: span 2;
@@ -65,7 +65,7 @@
 		}
 	}
 	.wp-post-image {
-		height: 70%;
+		height: 60%;
 	}
 	img {
 		object-fit: cover;

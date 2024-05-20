@@ -362,12 +362,12 @@ class CommonMeta
 	public static function metaMeta (): array
 	{
 		return [
-			Field::make('separator', 'cf_meta', __('SotwareApplication Meta (только для коммерческих)')),
+			Field::make('separator', 'cf_meta', __('Aggregate Rating')),
 			Field::make('text', 'cf_meta_rvalue', __('Средний рейтинг'))
 				->set_width(20),
 			Field::make('text', 'cf_meta_rcount', __('Колличество отзывов'))
 				->set_width(20),
-			Field::make('text', 'cf_meta_rprice', __('Минимальная цена в сниппете'))
+			Field::make('text', 'cf_meta_rprice', __('Минимальная цена в сниппете (только для комерч. стр.)'))
 				->set_width(20),
 		];
 	}

@@ -1,10 +1,10 @@
 <?php
-$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
-wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
-
 $items = carbon_get_post_meta(get_the_ID(), 'cf_faq');
 
-if (isset($items[0])) { ?>
+if (isset($items[0])) {
+	$ver = filemtime(get_template_directory() . '/assets/faq.bundle.css');
+	wp_enqueue_style('faq', URI . '/assets/faq.bundle.css', [], $ver);
+	?>
 	<section id="faq" class="section faq">
 		<div class="wrapper">
 			<div class="section__header">

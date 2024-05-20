@@ -20,7 +20,7 @@ Template Name: Beispiele
 </main>
 
 <?php
-get_template_part('parts/meta-software-app');
+get_template_part('parts/meta-ar');
 get_template_part('parts/popups');
 get_footer();
 ?>
