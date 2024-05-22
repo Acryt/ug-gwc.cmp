@@ -8,8 +8,10 @@ Template Name: ForDEV
 <?php get_header(); ?>
 <main class="main">
 	<?php
+	get_template_part('parts/section-price-table');
 	phpinfo();
-	var_dump($_SERVER);
+
+	echo $_SERVER['REQUEST_URI'];
 	?>
 </main>
 
