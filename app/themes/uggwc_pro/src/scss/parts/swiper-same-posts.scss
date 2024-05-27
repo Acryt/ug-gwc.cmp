@@ -1,0 +1,41 @@
+.sameposts {
+	.swiper-wrapper {
+	}
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		transition: all 0.1s ease;
+		background: #f7f6fa;
+		gap: 8px;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 74px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 600;
+		text-align: center;
+		margin: 0 16px;
+	}
+	&__sub {
+		color: var(--text);
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		margin: 0 16px 16px;
+	}
+	.wp-post-image {
+		object-fit: cover;
+		width: 100%;
+		height: 260px;
+	}
+	.epvc-post-count {
+		display: inline-block;
+	}
+}

@@ -21,6 +21,7 @@ module.exports = {
 		sw_review: path.resolve(__dirname, "./src/scss/parts/swiper-review.scss"),
 		sw_review_alt: path.resolve(__dirname, "./src/scss/parts/swiper-review-alt.scss"),
 		sw_photo: path.resolve(__dirname, "./src/scss/parts/swiper-photo.scss"),
+		sw_sp: path.resolve(__dirname, "./src/scss/parts/swiper-same-posts.scss"),
 		blog: path.resolve(__dirname, "./src/scss/parts/blog.scss"),
 	},
 	output: {
