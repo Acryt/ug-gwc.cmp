@@ -209,6 +209,7 @@ class Helpers
 		$excludedStrings = [
 			'wp-json',
 			'admin-ajax',
+			'cart.json'
 		];
 		$isExcluded = false;
 		foreach ($excludedStrings as $excludedString) {

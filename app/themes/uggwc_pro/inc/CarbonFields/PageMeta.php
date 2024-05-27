@@ -30,6 +30,7 @@ class PageMeta
 			->add_tab(__('Rating bottom'), CommonMeta::rateMeta())
 			->add_tab(__('Relink'), CommonMeta::relinkMeta())
 			->add_tab(__('Form'), CommonMeta::bigFormMeta())
+			->add_tab(__('Same Posts'), CommonMeta::samePostsMeta())
 		;
 	}
 	public function postMeta()
@@ -45,6 +46,7 @@ class PageMeta
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 			->add_tab(__('Form'), CommonMeta::bigFormMeta())
+			->add_tab(__('Same Posts'), CommonMeta::samePostsMeta())
 		;
 	}
 }

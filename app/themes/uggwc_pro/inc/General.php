@@ -21,24 +21,22 @@ class General
 		remove_action('auth_cookie_bad_hash', 'rest_cookie_collect_status');
 		remove_action('auth_cookie_valid', 'rest_cookie_collect_status');
 		remove_filter('rest_authentication_errors', 'rest_cookie_check_errors', 100);
-		// remove_action('init', 'rest_api_init');
 		remove_action('rest_api_init', 'rest_api_default_filters', 10);
+		// remove_action('init', 'rest_api_init');
 		// remove_action('parse_request', 'rest_api_loaded');
 		add_action('wp_enqueue_scripts', [$this, 'remove_block_styles'], 100);
-
 		add_action('wp_enqueue_scripts', [$this, 'connectedStylesAndScripts']);
 		add_action('admin_enqueue_scripts', [$this, 'connectedAdminScripts']);
 		add_action('do_robotstxt', [$this, 'addedRobotsTxt']);
 		add_action('init', [$this, 'settingsWordpress']);
-		// add_action('init', [$this, 'geo']);
 		add_action('rest_api_init', [$this, 'register_json_file_route']);
+
 		add_filter('wpseo_locale', [$this, 'locale']);
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
 		add_filter('upload_mimes', [$this, 'svgUploadAllow']);
 		add_filter('upload_mimes', [$this, 'add_custom_mime_types']);
 		add_filter( 'xmlrpc_enabled', '__return_false' );
 		// add_filter( 'litespeed_ucss_per_pagetype', '__return_true' );
-
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
 		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);

@@ -868,4 +868,24 @@ class CommonMeta
 			Field::make('text', 'cf_bigform_s', __('Подзаголовок большой формы')),
 		];
 	}
+	public static function samePostsMeta (): array
+	{
+		return [
+			Field::make('separator', 'cf_samepost_spr', __('Посты в слайдер')),
+			Field::make('text', 'cf_sameposts_title', __('Заголовок перед слайдером')),
+			Field::make('association', 'cf_sameposts', 'Выберите посты в слайдер')
+				->set_types(
+					array(
+						array(
+							'type' => 'post',
+							'post_type' => 'post',
+						),
+						array(
+							'type' => 'post',
+							'post_type' => 'page',
+						)
+					)
+				)
+		];
+	}
 }

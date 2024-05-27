@@ -92,8 +92,8 @@ export function geoCookie() {
 
 	if (!window.location.href.includes("wp-json") &&  !window.location.href.includes("admin-ajax")) {
 		if (!document.cookie.includes("fc_page")) {
-			setCookie("fc_page", JSON.stringify(window.location.href), 3);
+			setCookie("fc_page", encodeURIComponent(window.location.href), 3);
 		}
-		setCookie("lc_page", JSON.stringify(window.location.href), 1);
+		setCookie("lc_page", encodeURIComponent(window.location.href), 1);
 	}
 }
