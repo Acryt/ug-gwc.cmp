@@ -7,7 +7,7 @@
 		<div class="section__content card shadow">
 			<div class="care__info">
 				<img class="care__img" src="<?php echo get_bloginfo('template_url') . '/assets/images/advance/sup.svg' ?>" alt="">
-				<h4 class="care__h"><?php echo carbon_get_theme_option('cf_care_text'); ?></h4>
+				<span class="care__h h4"><?php echo carbon_get_theme_option('cf_care_text'); ?></span>
 				<p class="care__p"><?php echo carbon_get_theme_option('cf_care_desc'); ?></p>
 			</div>
 			<div class="care__c_form">

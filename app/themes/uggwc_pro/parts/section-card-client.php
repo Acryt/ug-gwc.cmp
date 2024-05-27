@@ -15,8 +15,8 @@ if ($items) {
 			<div class="worker__item shadow">
 				<!-- <h5 class="sm_swiper__title">Unsere Kundenbetreuer</h5> -->
 				<img class="worker__image" src="<?php echo $item['cf_client_photo'] ?>" alt="">
-				<h5 class="worker__name"><?php echo $item['cf_client_name'] ?></h5>
-				<h6 class="worker__spec"><?php echo $item['cf_client_spec'] ?></h6>
+				<span class="worker__name h5"><?php echo $item['cf_client_name'] ?></span>
+				<span class="worker__spec h6"><?php echo $item['cf_client_spec'] ?></span>
 				<p class="worker__time"><?php echo $item['cf_client_time'] ?></p>
 				<p class="worker__day"><?php echo $item['cf_client_day'] ?></p>
 				<div class="worker__flex">

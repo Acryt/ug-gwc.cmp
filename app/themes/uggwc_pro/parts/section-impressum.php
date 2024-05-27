@@ -14,7 +14,7 @@ wp_enqueue_style('sabout', URI . '/assets/about.bundle.css', [], $ver);
 		</div>
 		<div class="section__content">
 			<div class="about__organisation card shadow">
-				<h3>GWC Ghost-writerservice UG (haftungsbeschränkt)</h3>
+				<span class="h3">GWC Ghost-writerservice UG (haftungsbeschränkt)</span>
 				<a class="about__logo" href="/">
 					<img class="" src="<?php bloginfo('template_url'); ?>/assets/images/logos/logo.svg" alt="Logo">
 				</a>

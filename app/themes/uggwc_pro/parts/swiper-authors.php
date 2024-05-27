@@ -13,9 +13,9 @@ wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css', [], $ver);
 				<div class="author_swiper__item shadow">
 					<div class="author_swiper__title">
 						<div class="author_swiper__photo"><img src="<?php echo $item['cf_author_photo'] ?>" alt="photo"></div>
-						<h6 class="author_swiper__name">
+						<span class="author_swiper__name h6">
 							<?php echo $item['cf_author_name'] ?>
-						</h6>
+						</span>
 						<div class="author_swiper__stars">
 							<?php
 							$rating = $item['cf_author_rating'];
@@ -87,7 +87,7 @@ wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css', [], $ver);
 						<span>Deutsch</span>
 						<span>Englisch</span>
 					</div>
-					<a class="btn fit borda js_btn" data-slr=".popup__bigpromo"><span>Bestellen</span></a>
+					<a class="btn fit borda js_btn center" data-slr=".popup__bigpromo"><span>Bestellen</span></a>
 				</div>
 			</div>
 		<?php } ?>

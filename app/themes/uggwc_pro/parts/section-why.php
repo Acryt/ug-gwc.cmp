@@ -13,9 +13,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/why/akad.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle1') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext1') ?>
 				</p>
@@ -24,9 +24,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/why/cert.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle2') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext2') ?>
 				</p>
@@ -35,9 +35,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/why/quality.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle3') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext3') ?>
 				</p>
@@ -46,9 +46,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/why/test.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle4') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext4') ?>
 				</p>
@@ -57,9 +57,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/advance/author.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle5') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext5') ?>
 				</p>
@@ -68,9 +68,9 @@
 				<div class="why__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/advance/competent.svg" alt="" class="loaded">
 				</div>
-				<h4 class="why__title">
+				<span class="why__title h4">
 					<?php echo carbon_get_theme_option('cf_why_subtitle6') ?>
-				</h4>
+				</span>
 				<p class="why__text">
 					<?php echo carbon_get_theme_option('cf_why_subtext6') ?>
 				</p>

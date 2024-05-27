@@ -8,7 +8,7 @@
 				<img src="<?php echo URI . '/assets/images/video/video.svg' ?>" alt="">
 			</div>
 			<a href="https://www.youtube.com/embed/2J5vog4Zhmc?si=AjmIC1uZLhkXuD1v" data-fancybox="gallery">
-				<img src="<?php echo URI . '/assets/images/video/youtube-video.jpg'; ?>" />
+				<img src="<?php echo URI . '/assets/images/video/youtube-video.jpg'; ?>" alt="Ghostwriter Agentur" />
 			</a>
 		</div>
 	</div>
