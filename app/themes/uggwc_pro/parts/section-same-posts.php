@@ -14,7 +14,7 @@ if (!empty($related_posts)) {
 			<div class="swiper js-sp">
 				<div class="swiper-wrapper">
 					<?php
-					foreach ($related_posts as $current_post) { ?>
+					foreach ($related_posts as $key => $current_post) { ?>
 						<a class="swiper-slide sameposts__item" href="<?php echo get_the_permalink($current_post['id']) ?>"
 							data-fancybox="reviews">
 							<?php
@@ -25,7 +25,12 @@ if (!empty($related_posts)) {
 							}
 							?>
 							<span class="sameposts__title""><?php echo get_the_title($current_post['id']); ?></span>
-							<span class="sameposts__sub"">&#128065; Gesehen &#183; <?php echo do_shortcode('[epvc_views id="' . $current_post['id'] . '"]'); ?></span>
+							<span class=" sameposts__sub"">&#128065; Gesehen &#183; <?php
+							$current_date = date('Y-m-d') + $key;
+							srand(strtotime($current_date));
+							$random_number = rand(100, 1000) + get_post_meta($current_post['id'], 'post_count_' . $current_post['id'], true);
+							echo $random_number;
+							?></span>
 							<span class="sameposts__sub""><?php echo get_the_modified_date('d.m.Y', $current_post['id']); ?></span>
 						</a>
 					<?php } ?>
