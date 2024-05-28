@@ -5,6 +5,8 @@ class Helpers
 	{
 		add_filter('determine_current_user', [$this, 'jsonBasicAuthHandler'], 20);
 		add_filter('rest_authentication_errors', [$this, 'jsonBasicAuthError']);
+		add_action('wp', [$this, 'geo']);
+		add_action('wp', [$this, 'viewsCount']);
 	}
 
 	public static function jsonBasicAuthHandler ($user)
@@ -142,7 +144,23 @@ class Helpers
 		</section>';
 		}
 	}
-	
+	public static function viewsCount ()
+	{
+		$arrCount = json_decode($_COOKIE['vc']) ?? array();
+		$postCount = get_the_ID();
+		$viewCount = get_post_meta(get_the_ID(), 'views_counter', true);
+		$viewed = in_array($postCount, $arrCount);
+		if (!$viewed) {
+			if ($viewCount === '') {
+				$viewCount = 1;
+			} else {
+				$viewCount++;
+			}
+			update_post_meta(get_the_ID(), 'views_counter', $viewCount);
+			$arrCount[] = $postCount;
+			setcookie('vc', json_encode($arrCount), time() + 60 * 60 * 24 * 30, '/');
+		}
+	}
 	public static function geo ()
 	{
 		function getOS ($user_agent)

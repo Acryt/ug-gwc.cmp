@@ -18,7 +18,7 @@ export function siteTimer() {
 
 export function geoCookie() {
 	function getGeo() {
-		const api = "https://json.geoiplookup.io/";
+		const api = "https://json.geoiplookup.io";
 
 		return fetch(api)
 			.then((response) => response.json())
@@ -75,15 +75,15 @@ export function geoCookie() {
 		utm["utm_channel"] = "organic";
 	}
 
-	if (!document.cookie.includes("geo")) {
-		getGeo()
-			.then((geo) => {
-				setCookie("geo", JSON.stringify(geo), 1);
-			})
-			.catch((error) => {
-				console.log("Error:", error);
-			});
-	}
+	// if (!document.cookie.includes("geo")) {
+	// 	getGeo()
+	// 		.then((geo) => {
+	// 			setCookie("geo", JSON.stringify(geo), 2);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.log("Error:", error);
+	// 		});
+	// }
 
 	if (!document.cookie.includes("fc_utm")) {
 		setCookie("fc_utm", JSON.stringify(utm), 3);

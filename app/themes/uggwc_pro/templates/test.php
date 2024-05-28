@@ -11,7 +11,14 @@ Template Name: ForDEV
 	// get_template_part('parts/section-price-table');
 	// phpinfo();
 	echo '<section><pre>';
-	echo get_post_meta(get_the_ID(), 'post_count_' . get_the_ID(), true);
+	// Helpers::viewsCount();
+	// $x = new WP_Query([
+	// 	'include'    => get_the_ID()		
+	// ]);
+	// print_r (get_post());
+
+	// print_r( get_post_meta(get_the_ID()));
+	// print_r( get_post(get_the_ID()));
 	echo '</pre></section>';
 	// echo do_shortcode('[epvc_views id="' . $current_post['id'] . '"]');
 	get_template_part('parts/section-same-posts');

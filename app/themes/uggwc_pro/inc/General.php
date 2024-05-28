@@ -35,7 +35,7 @@ class General
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
 		add_filter('upload_mimes', [$this, 'svgUploadAllow']);
 		add_filter('upload_mimes', [$this, 'add_custom_mime_types']);
-		add_filter( 'xmlrpc_enabled', '__return_false' );
+		add_filter('xmlrpc_enabled', '__return_false');
 		// add_filter( 'litespeed_ucss_per_pagetype', '__return_true' );
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
@@ -151,14 +151,11 @@ class General
 	# Исправление MIME типа для SVG файлов.
 	function fix_svg_mime_type ($data, $file, $filename, $mimes, $real_mime = '')
 	{
-
-		// WP 5.1 +
 		if (version_compare($GLOBALS['wp_version'], '5.1.0', '>=')) {
 			$dosvg = in_array($real_mime, ['image/svg', 'image/svg+xml']);
 		} else {
 			$dosvg = ('.svg' === strtolower(substr($filename, -4)));
 		}
-
 		// mime тип был обнулен, поправим его
 		// а также проверим право пользователя
 		if ($dosvg) {
@@ -261,5 +258,102 @@ class General
 		return $files;
 	}
 }
-
+final class My_Sortable_Post_Columns
+{
+	public static function init ()
+	{
+		add_filter('manage_post_posts_columns', [__CLASS__, 'add_columns'], 4);
+		add_filter('manage_post_posts_custom_column', [__CLASS__, 'fill_columns'], 5, 2);
+		add_action('admin_head', [__CLASS__, '_css']);
+		add_filter('manage_edit-post_sortable_columns', [__CLASS__, 'add_sortable_columns']);
+		add_filter('pre_get_posts', [__CLASS__, 'handle_sort_request']);
+	}
+	public static function add_columns ($columns)
+	{
+		$out = [];
+		$i = 0;
+		foreach ($columns as $col => $name) {
+			if (++$i == 3) {
+				$out['views'] = 'Views';
+			}
+			$out[$col] = $name;
+		}
+		return $out;
+	}
+	public static function add_sortable_columns ($sortable_columns)
+	{
+		$sortable_columns['views'] = 'views_views';
+		return $sortable_columns;
+	}
+	public static function fill_columns ($colname, $post_id)
+	{
+		if ($colname === 'views') {
+			echo get_post_meta($post_id, 'views_counter', 1);
+		}
+	}
+	public static function _css ()
+	{
+		if ('edit' === get_current_screen()->base) {
+			echo '<style>.column-views{ width:10%; }</style>';
+		}
+	}
+	public static function handle_sort_request ($object)
+	{
+		if ($object->get('orderby') != 'views_views') {
+			return;
+		}
+		$object->set('meta_key', 'views_counter');
+		$object->set('orderby', 'meta_value_num');
+	}
+}
+final class My_Sortable_Page_Columns
+{
+	public static function init ()
+	{
+		add_filter('manage_page_posts_columns', [__CLASS__, 'add_columns'], 4);
+		add_filter('manage_page_posts_custom_column', [__CLASS__, 'fill_columns'], 5, 2);
+		add_action('admin_head', [__CLASS__, '_css']);
+		add_filter('manage_edit-page_sortable_columns', [__CLASS__, 'add_sortable_columns']);
+		add_filter('pre_get_posts', [__CLASS__, 'handle_sort_request']);
+	}
+	public static function add_columns ($columns)
+	{
+		$out = [];
+		$i = 0;
+		foreach ($columns as $col => $name) {
+			if (++$i == 3) {
+				$out['views'] = 'Views';
+			}
+			$out[$col] = $name;
+		}
+		return $out;
+	}
+	public static function add_sortable_columns ($sortable_columns)
+	{
+		$sortable_columns['views'] = 'views_views';
+		return $sortable_columns;
+	}
+	public static function fill_columns ($colname, $post_id)
+	{
+		if ($colname === 'views') {
+			echo get_post_meta($post_id, 'views_counter', 1);
+		}
+	}
+	public static function _css ()
+	{
+		if ('edit-page' === get_current_screen()->base) {
+			echo '<style>.column-views{ width:10%; }</style>';
+		}
+	}
+	public static function handle_sort_request ($object)
+	{
+		if ($object->get('orderby') != 'views_views') {
+			return;
+		}
+		$object->set('meta_key', 'views_counter');
+		$object->set('orderby', 'meta_value_num');
+	}
+}
+My_Sortable_Post_Columns::init();
+My_Sortable_Page_Columns::init();
 new General();

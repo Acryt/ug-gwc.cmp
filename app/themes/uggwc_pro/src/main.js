@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		trigger: "click mouseenter",
 		allowHTML: true,
 		maxWidth: 246,
-		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% Rabatt für neue Kunden</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>'
+		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Sonderangebote des Monats</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>'
 	});
 	tippy('[data-tippy-form2]', {
 		trigger: "click mouseenter",

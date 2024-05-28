@@ -15,8 +15,7 @@ if (!empty($related_posts)) {
 				<div class="swiper-wrapper">
 					<?php
 					foreach ($related_posts as $key => $current_post) { ?>
-						<a class="swiper-slide sameposts__item" href="<?php echo get_the_permalink($current_post['id']) ?>"
-							data-fancybox="reviews">
+						<a class="swiper-slide sameposts__item" href="<?php echo get_the_permalink($current_post['id']) ?>">
 							<?php
 							if ($current_post['subtype'] === 'post') {
 								echo get_the_post_thumbnail($current_post['id']);
@@ -26,9 +25,9 @@ if (!empty($related_posts)) {
 							?>
 							<span class="sameposts__title""><?php echo get_the_title($current_post['id']); ?></span>
 							<span class=" sameposts__sub"">&#128065; Gesehen &#183; <?php
-							$current_date = date('Y-m-d') + $key;
-							srand(strtotime($current_date));
-							$random_number = rand(100, 1000) + get_post_meta($current_post['id'], 'post_count_' . $current_post['id'], true);
+							$current_date = date('Y-m-d');
+							srand(strtotime($current_date) + $key);
+							$random_number = rand(600, 1800) + intval(get_post_meta($current_post['id'], 'views_counter', true));
 							echo $random_number;
 							?></span>
 							<span class="sameposts__sub""><?php echo get_the_modified_date('d.m.Y', $current_post['id']); ?></span>
