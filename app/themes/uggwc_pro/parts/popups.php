@@ -1,9 +1,9 @@
 <?php
 $pageID = [
-	'9' => ['may-home.jpg', 'may-m-home.jpg', 'home'],
-	'123' => ['may-bach.jpg', 'may-bach.jpg', 'may-prm-bach.jpg'],
-	'154' => ['may-mast.jpg', 'may-mast.jpg', 'may-prm-haus.jpg'],
-	'161' => ['may-haus.jpg', 'may-m-haus.jpg', 'may-prm-mast.jpg'],
+	'9' => ['june-home.jpg', 'june-home-m.jpg', 'home'],
+	'123' => ['june-bach.jpg', 'june-bach-m.jpg', 'june-bach-prm.jpg'],
+	'154' => ['june-mast.jpg', 'june-mast-m.jpg', 'june-haus-prm.jpg'],
+	'161' => ['june-haus.jpg', 'june-haus-m.jpg', 'june-mast-prm.jpg'],
 ]; ?>
 <div id="popups" class="popups">
 	<div class="popup popup__bigpromo card shadow">
@@ -36,7 +36,7 @@ $pageID = [
 	if (array_key_exists(get_the_ID(), $pageID)) {
 		switch (get_the_ID()) {
 			case '9': //home
-				echo '<div class="popup popup__delayed-gift popup__home">';
+				echo '<div class="popup popup__delayed-gift home">';
 				echo '<button class="popup_x">';
 				echo '<span></span>';
 				echo '<span></span>';
@@ -47,7 +47,7 @@ $pageID = [
 				echo '</div>';
 				break;
 			case '123': //bach
-				echo '<div class="popup popup__delayed-gift popup__bach">';
+				echo '<div class="popup popup__delayed-gift bach">';
 				echo '<button class="popup_x">';
 				echo '<span></span>';
 				echo '<span></span>';
@@ -57,7 +57,7 @@ $pageID = [
 				echo '</div>';
 				break;
 			case '154': //master magister
-				echo '<div class="popup popup__delayed-gift popup__mast">';
+				echo '<div class="popup popup__delayed-gift mast">';
 				echo '<button class="popup_x">';
 				echo '<span></span>';
 				echo '<span></span>';
@@ -67,7 +67,7 @@ $pageID = [
 				echo '</div>';
 				break;
 			case '161': //haus
-				echo '<div class="popup popup__delayed-gift popup__haus">';
+				echo '<div class="popup popup__delayed-gift haus">';
 				echo '<button class="popup_x">';
 				echo '<span></span>';
 				echo '<span></span>';
@@ -78,7 +78,6 @@ $pageID = [
 				echo '</div>';
 				break;
 			default:
-				// echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';			
 				break;
 		}
 	}
@@ -90,7 +89,7 @@ $pageID = [
 		switch (get_the_ID()) {
 			case '9': //home
 				echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';
-				echo '<div class="popup__box-bg">';
+				echo '<div class="popup__box-bg home">';
 				echo '<img class="popup__box-bg-img" src="' . URI . '/assets/images/promo/' . $pageID[get_the_ID()][1] . '" alt="temporärige Aktion">';
 				echo '<span class="user-reminder"></span>';
 				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt
@@ -99,23 +98,23 @@ $pageID = [
 				break;
 			case '123': //bach
 				echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';
-				echo '<div class="popup__box-bg">';
+				echo '<div class="popup__box-bg bach">';
 				echo '<img class="popup__box-bg-img" src="' . URI . '/assets/images/promo/' . $pageID[get_the_ID()][1] . '" alt="temporärige Aktion">';
-				echo '<button class="btn wave_effect js_btn js_giftbtn" style="bottom: 30px;" data-slr=".popup__bigpromo"><span>Jetzt
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt
 					erhalten!</span></button>';
 				echo '</div>';
 				break;
 			case '154': //master magister
 				echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';
-				echo '<div class="popup__box-bg">';
+				echo '<div class="popup__box-bg mast">';
 				echo '<img class="popup__box-bg-img" src="' . URI . '/assets/images/promo/' . $pageID[get_the_ID()][1] . '" alt="temporärige Aktion">';
-				echo '<button class="btn wave_effect js_btn js_giftbtn" style="bottom: 18px; right: 84px;" data-slr=".popup__bigpromo"><span>Jetzt
+				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt
 					erhalten!</span></button>';
 				echo '</div>';
 				break;
 			case '161': //haus
 				echo '<img class="popup__box-img" src="' . URI . '/assets/images/promo/popup-box.svg" alt="">';
-				echo '<div class="popup__box-bg">';
+				echo '<div class="popup__box-bg haus">';
 				echo '<img class="popup__box-bg-img" src="' . URI . '/assets/images/promo/' . $pageID[get_the_ID()][1] . '" alt="temporärige Aktion">';
 				echo '<span class="user-reminder"></span>';
 				echo '<button class="btn wave_effect js_btn js_giftbtn" data-slr=".popup__bigpromo"><span>Jetzt
@@ -137,5 +136,5 @@ $pageID = [
 </a>
 <div class="popup__cookie">
 	<p>Im Interesse der Benutzerfreundlichkeit und zur Verbesserung unseres Services verwenden wir Cookies</p>
-	<div class="popup__cookie_btn btn wave_effect"><span>AKZEPTIEREN</span></div>
+	<button class="popup__cookie_btn btn wave_effect" onclick="consentGrantedAdStorage()"><span>AKZEPTIEREN</span></button>
 </div>
