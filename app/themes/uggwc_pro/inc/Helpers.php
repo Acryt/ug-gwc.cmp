@@ -217,7 +217,7 @@ class Helpers
 			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
 				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 7, '/');
 			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
+				setcookie('refer', 'none', time() + 60 * 60 * 24 * 7, '/');
 			}
 		}
 		//  куки
@@ -277,5 +277,5 @@ class Helpers
 		}
 	}
 }
-
+dir(__DIR__);
 new Helpers();

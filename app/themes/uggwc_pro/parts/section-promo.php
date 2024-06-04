@@ -10,27 +10,28 @@ if ($items) {
 		<div class="wrapper">
 			<div class="section__header">
 				<div class="header_c">
-					<div class="header_img"><img class="" src="<?php bloginfo('template_url'); ?>/assets/images/promo/aktionen.jpg" alt=""></div>
-					<?php 
-						if (is_page_template('templates/promo.php')) {
-							echo '<h1 class="section__heading">'. carbon_get_theme_option('cf_promo_title') .'</h1>';
-						} else {
-							echo '<h2>' . carbon_get_theme_option('cf_promo_title') . '</h2>';
-						}
+					<div class="header_img">
+						<!-- <img class="" src="<?php bloginfo('template_url'); ?>/assets/images/promo/aktionen.jpg" alt=""> -->
+					</div>
+					<?php
+					if (is_page_template('templates/promo.php')) {
+						echo '<h1 class="section__heading">' . carbon_get_theme_option('cf_promo_title') . '</h1>';
+					} else {
+						echo '<h2>' . carbon_get_theme_option('cf_promo_title') . '</h2>';
+					}
 					?>
 
 				</div>
 				<?php if (carbon_get_theme_option('cf_promo_subtitle')) { ?>
-				<p>
-					<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
-				</p>
+					<p>
+						<?php echo carbon_get_theme_option('cf_promo_subtitle') ?>
+					</p>
 				<?php } ?>
 			</div>
 			<div class="section__content">
 				<fieldset class="promo__list">
 					<?php
 					foreach ($items as $key => $item) { ?>
-
 						<input type="radio" class="promo__input" name="promo" id="promo<?php echo $key; ?>" <?php if ($key == 0) {
 								echo 'checked';
 							} ?>>
@@ -51,8 +52,31 @@ if ($items) {
 						</div>
 					<?php } ?>
 				</fieldset>
+				<div class="promo__blocks">
+					<?php
+					foreach ($items as $key => $item) {
+						if ($key == 0) { ?>
+							<div class="promo__block _active content js">
+							<?php } else { ?>
+								<div class="promo__block content js">
+								<?php } ?>
+								<?php if ($item['image']) { ?>
+									<div class="promo__cimg">
+										<img class="" src="<?php echo $item['image']; ?>" alt="promo image">
+									</div>
+								<?php } ?>
+								<div class="promo__ctxt">
+									<?php echo $item['text']; ?>
+									<br>
+								</div>
+								<p class="promo__hashtag">
+									<?php echo $item['hashtag']; ?>
+								</p>
+							</div>
+						<?php } ?>
+					</div>
+				</div>
 			</div>
-		</div>
 	</section>
 
 <?php } ?>

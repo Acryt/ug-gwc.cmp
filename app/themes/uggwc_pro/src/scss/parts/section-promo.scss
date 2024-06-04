@@ -1,47 +1,33 @@
 .promo {
-	.section__header {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			text-align: start;
-		}
-	}
-	.header_c {
+	.section__content {
 		display: flex;
-		align-items: flex-end;
-		h2 {
-			margin-left: 12px;
-		}
-	}
-	.header_img {
-		position: relative;
-		height: 80px;
+		background: var(--bg-wave);
+		border-radius: 12px;
+		overflow: hidden;
+		border: 2px solid var(--border);
 	}
 	&__list {
-		position: relative;
+		display: flex;
+		flex-direction: column;
 		padding: 0;
 		margin: 0;
-		border: 2px solid var(--border);
-		border-radius: 12px;
-		width: 100%;
-		transition: all .1s;
-		// height: 256px;
-		background: var(--bg-wave);
-		// @media (max-width: 1200px) {
-		// 	height: 300px;
-		// }
-		// @media (max-width: 1024px) {
-		// 	height: 400px;
-		// }
-		// @media (max-width: 960px) {
-		// 	height: 500px;
-		// }
-		// @media (max-width: 920px) {
-		// 	height: unset;
-		// }
+		border: none;
+	}
+	&__blocks {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 1 300px;
+		// background: linear-gradient(
+		// 	160deg,
+		// 	#fff 0%,
+		// 	#fff 45%,
+		// 	#f7dcff 70%,
+		// 	#d2fffe 100%
+		// );
+		color: var(--thead);
+		@media (max-width: 920px) {
+			display: none;
+		}
 	}
 	&__input {
 		display: none;
@@ -53,61 +39,10 @@
 		font-weight: 600;
 		padding: 12px;
 		z-index: 1;
-		transition: all .1s;
+		transition: all 0.1s;
 		@media (max-width: 920px) {
 			width: 100%;
 		}
-	}
-	&__block {
-		// display: none;
-		opacity: 0;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		width: calc(100% - 290px);
-		padding: 12px;
-		transition: all .1s;
-		overflow: hidden;
-		background: linear-gradient(
-			160deg,
-			#fff 0%,
-			#fff 45%,
-			#f7dcff 70%,
-			#d2fffe 100%
-		);
-		color: var(--thead);
-		height: 100%;
-
-		@media (max-width: 920px) {
-			// display: block;
-			position: relative;
-			height: 0px;
-			padding: 0 12px;
-			width: 100%;
-			opacity: 1;
-		}
-	}
-	&__cimg {
-		position: relative;
-		z-index: 1;
-		height: 160px;
-		float: left;
-		margin: 0.5em 0.5em 0 0;
-		width: 160px;
-		border-bottom-right-radius: 32px;
-		overflow: hidden;
-		img {
-			object-fit: cover;
-		}
-	}
-	&__ctxt {
-		flex: 1 1 300px;
-	}
-	&__hashtag {
-		display: block;
-		margin-top: auto;
-		color: var(--hover);
-		width: 100%;
 	}
 	&__input:checked + .promo__elem {
 		background: white;
@@ -119,41 +54,57 @@
 			border-top-right-radius: 8px;
 		}
 	}
-	&__input:checked + .promo__elem + .promo__block {
-		// display: block;
-		display: flex;
+
+	&__block {
+		display: none;
+		background: linear-gradient(
+			160deg,
+			#fff 0%,
+			#fff 45%,
+			#f7dcff 70%,
+			#d2fffe 100%
+		);
+		width: 100%;
+		padding: 12px;
 		flex-wrap: wrap;
-		border-top-right-radius: 8px;
-		border-bottom-right-radius: 8px;
-		opacity: 1;
+		color: var(--thead);
 		@media (max-width: 920px) {
-			border-top-right-radius: unset;
-			border-bottom-left-radius: 8px;
-			// height: 236px;
+			display: flex;
 		}
-		// @media (max-width: 768px) {
-		// 	height: 330px;
-		// }
-		// @media (max-width: 750px) {
-		// 	height: 174px;
-		// }
-		// @media (max-width: 640px) {
-		// 	height: 206px;
-		// }
-		// @media (max-width: 540px) {
-		// 	height: 242px;
-		// }
-		// @media (max-width: 480px) {
-		// 	height: 260px;
-		// }
-		// @media (max-width: 480px) {
-		// 	height: 366px;
-		// }
-		// @media (max-width: 340px) {
-		// 	height: 368px;
-		// }
-		// @media (max-width: 320px) {
-		// 	height: 428px;
-		// }
+	}
+	&__input:checked + .promo__elem + .promo__block {
+		display: block;
+		flex-wrap: wrap;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		opacity: 1;
+		@media (min-width: 921px) {
+			display: none;
+		}
+	}
+	&__block {
+		display: none;
+		&._active {
+			display: block;
+		}
+	}
+	&__cimg {
+		position: relative;
+		z-index: 1;
+		height: 280px;
+		float: left;
+		margin: 0.5em 0.5em 0 0;
+		width: 280px;
+		border-bottom-right-radius: 32px;
+		overflow: hidden;
+		img {
+			object-fit: cover;
+		}
+	}
+	&__hashtag {
+		display: block;
+		margin-top: auto;
+		color: var(--hover);
+		width: 100%;
 	}
 }

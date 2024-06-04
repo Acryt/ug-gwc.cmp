@@ -4,6 +4,7 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = {
 	mode: "production",
+	// mode: "development",
 	entry: {
 		main: path.resolve(__dirname, "./src/main.js"),
 		header: path.resolve(__dirname, "./src/header.js"),
