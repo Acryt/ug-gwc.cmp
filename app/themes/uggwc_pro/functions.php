@@ -14,7 +14,6 @@ require_once PATH . 'inc/Helpers.php';
 require_once PATH . 'inc/Ajax.php';
 // require_once DE_PATH .'inc/Shortcodes.php';
 
-
 /** Settings meta fields */
 require_once 'inc/CarbonFields/CommonMeta.php';
 require_once 'inc/CarbonFields/GeneralMeta.php';

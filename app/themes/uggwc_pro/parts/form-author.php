@@ -43,7 +43,7 @@
 			alt="">
 	</div>
 	<div class="form__disabled">
-		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
+		<span class="h4">Danke, dass Sie sich für uns entschieden haben!</span>
 		<h6>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit.Wir werden uns in Kürze mit Ihnen in Verbindung
 			setzen.</h6>
 	</div>

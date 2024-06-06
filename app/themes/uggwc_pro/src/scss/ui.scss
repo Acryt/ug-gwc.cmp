@@ -340,12 +340,12 @@ hr {
 }
 
 // Скрытие мобилка-широкоформатник
-.no-wide {
+.no-pc {
 	@media (min-width: 921px) {
 		display: none !important;
 	}
 }
-.no-mob {
+.no-mbl {
 	@media (max-width: 920px) {
 		display: none !important;
 	}
