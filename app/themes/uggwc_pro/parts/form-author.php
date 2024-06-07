@@ -9,7 +9,7 @@
 	</label>
 	<label class="req_star">
 		<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
-		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp" required>
 	</label>
 
 	<?php $items = carbon_get_theme_option('cf_select_quality'); ?>

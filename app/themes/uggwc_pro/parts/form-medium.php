@@ -28,7 +28,7 @@
 	</label>
 	<label class="form__phone">
 		<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
-		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp" required>
 	</label>
 	<div class="form__guarant">
 		<img class="form__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">

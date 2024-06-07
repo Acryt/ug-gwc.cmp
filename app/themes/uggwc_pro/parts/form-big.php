@@ -38,7 +38,7 @@
 		</label>
 		<label class="form__phone req_star">
 			<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
-			<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+			<input class="phone" type="tel" name="phone" placeholder="WhatsApp" required>
 		</label>
 		<label class="form__kontakt">
 			<input class="kontakt" type="checkbox" name="on-wapp">

@@ -28,7 +28,7 @@
 	</label>
 	<label class="form__phone req_star">
 		<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
-		<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+		<input class="phone" type="tel" name="phone" placeholder="WhatsApp" required>
 	</label>
 	<label class="form__file">
 		<input type="file" name="file">
