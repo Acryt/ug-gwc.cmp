@@ -39,7 +39,7 @@
 		justify-content: space-around;
 		align-items: center;
 		flex: 1 0 200px;
-		@include responsiveFont(12, 16);
+		@include responsiveFont(10, 16);
 		@media (max-width: 920px) {
 			display: none;
 		}

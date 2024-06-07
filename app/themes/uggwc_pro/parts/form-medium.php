@@ -40,7 +40,7 @@
 	<div class="form__sending"><img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/loading.gif" alt="">
 	</div>
 	<div class="form__disabled">
-		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
+		<span class="h4">Danke, dass Sie sich für uns entschieden haben!</span>
 		<div class="form__sent">
 			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
 		</div>
