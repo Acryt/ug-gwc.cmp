@@ -1,3 +1,33 @@
+User-agent: MJ12bot 
+Disallow: / 
+
+User-agent: AhrefsBot/6.1 
+Disallow: / 
+
+User-agent: AhrefsBot 
+Disallow: / 
+
+User-agent: stripper 
+Disallow: / 
+
+User-agent: imagestripper 
+Disallow: / 
+
+User-agent: grapeshotcrawler 
+Disallow: / 
+
+User-agent: anarchie 
+Disallow: / 
+
+User-agent: SemrushBot 
+Disallow: / 
+
+User-agent: magnet 
+Disallow: / 
+
+User-agent: SemrushBot/1.1~bl 
+Disallow: /
+
 User-agent: *
 Disallow: /cgi-bin
 Disallow: /? 
