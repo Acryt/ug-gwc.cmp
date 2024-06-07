@@ -18,7 +18,7 @@ export function siteTimer() {
 
 export function geoCookie() {
 	function getGeo() {
-		const api = "https://json.geoiplookup.io/";
+		const api = "https://json.geoiplookup.io";
 
 		return fetch(api)
 			.then((response) => response.json())
@@ -31,7 +31,7 @@ export function geoCookie() {
 				return geo;
 			})
 			.catch((error) => {
-				console.log("Ошибка при получении геоданных:", error);
+				console.log("Error:", error);
 			});
 	}
 	function setCookie(name, value, days) {
@@ -75,25 +75,25 @@ export function geoCookie() {
 		utm["utm_channel"] = "organic";
 	}
 
-	if (!document.cookie.includes("geo")) {
-		getGeo()
-			.then((geo) => {
-				setCookie("geo", JSON.stringify(geo), 1);
-			})
-			.catch((error) => {
-				console.log("Ошибка при получении геоданных:", error);
-			});
-	}
+	// if (!document.cookie.includes("geo")) {
+	// 	getGeo()
+	// 		.then((geo) => {
+	// 			setCookie("geo", JSON.stringify(geo), 2);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.log("Error:", error);
+	// 		});
+	// }
 
 	if (!document.cookie.includes("fc_utm")) {
 		setCookie("fc_utm", JSON.stringify(utm), 3);
 	}
-	// setCookie("lc_utm", JSON.stringify(utm), 1);
+	setCookie("lc_utm", JSON.stringify(utm), 1);
 
-	if (!window.location.href.includes("wp-json")) {
+	if (!window.location.href.includes("wp-json") &&  !window.location.href.includes("admin-ajax")) {
 		if (!document.cookie.includes("fc_page")) {
-			setCookie("fc_page", window.location.href, 3);
+			setCookie("fc_page", encodeURIComponent(window.location.href), 3);
 		}
-		setCookie("lc_page", window.location.href, 1);
+		setCookie("lc_page", encodeURIComponent(window.location.href), 1);
 	}
 }

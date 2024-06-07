@@ -1,5 +1,6 @@
 <?php
-	wp_enqueue_style( 'paccrd', URI . '/assets/paccrd.bundle.css' );
+$ver = filemtime(get_template_directory() . '/assets/paccrd.bundle.css');
+wp_enqueue_style('paccrd', URI . '/assets/paccrd.bundle.css', [], $ver);
 ?>
 <section id="priceAccrd" class="section price_accrd accrd-js">
 	<div class="wrapper">

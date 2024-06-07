@@ -30,6 +30,7 @@ class PageMeta
 			->add_tab(__('Rating bottom'), CommonMeta::rateMeta())
 			->add_tab(__('Relink'), CommonMeta::relinkMeta())
 			->add_tab(__('Form'), CommonMeta::bigFormMeta())
+			->add_tab(__('Same Posts'), CommonMeta::samePostsMeta())
 		;
 	}
 	public function postMeta()
@@ -38,12 +39,14 @@ class PageMeta
 			// ->set_context('carbon_fields_after_title')
 			->where('post_type', '=', 'post')
 			->add_tab(__('Switches'), CommonMeta::switchMeta())
+			->add_tab(__('Meta'), CommonMeta::metaMeta())
 			->add_tab(__('First Screen'), CommonMeta::firstMeta())
 			->add_tab(__('FAQ'), CommonMeta::faqMeta())
 			->add_tab(__('Accordion'), CommonMeta::accrdMeta())
 			->add_tab(__('Content'), CommonMeta::contentMeta())
 			->add_tab(__('SEO x2'), CommonMeta::seoMeta())
 			->add_tab(__('Form'), CommonMeta::bigFormMeta())
+			->add_tab(__('Same Posts'), CommonMeta::samePostsMeta())
 		;
 	}
 }

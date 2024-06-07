@@ -21,23 +21,22 @@ class General
 		remove_action('auth_cookie_bad_hash', 'rest_cookie_collect_status');
 		remove_action('auth_cookie_valid', 'rest_cookie_collect_status');
 		remove_filter('rest_authentication_errors', 'rest_cookie_check_errors', 100);
-		// remove_action('init', 'rest_api_init');
 		remove_action('rest_api_init', 'rest_api_default_filters', 10);
+		// remove_action('init', 'rest_api_init');
 		// remove_action('parse_request', 'rest_api_loaded');
 		add_action('wp_enqueue_scripts', [$this, 'remove_block_styles'], 100);
-
 		add_action('wp_enqueue_scripts', [$this, 'connectedStylesAndScripts']);
 		add_action('admin_enqueue_scripts', [$this, 'connectedAdminScripts']);
 		add_action('do_robotstxt', [$this, 'addedRobotsTxt']);
 		add_action('init', [$this, 'settingsWordpress']);
-		add_action('init', [$this, 'geo']);
 		add_action('rest_api_init', [$this, 'register_json_file_route']);
+
 		add_filter('wpseo_locale', [$this, 'locale']);
 		add_filter('wp_check_filetype_and_ext', [$this, 'fix_svg_mime_type'], 10, 5);
 		add_filter('upload_mimes', [$this, 'svgUploadAllow']);
 		add_filter('upload_mimes', [$this, 'add_custom_mime_types']);
+		add_filter('xmlrpc_enabled', '__return_false');
 		// add_filter( 'litespeed_ucss_per_pagetype', '__return_true' );
-
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
 		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);
@@ -152,14 +151,11 @@ class General
 	# Исправление MIME типа для SVG файлов.
 	function fix_svg_mime_type ($data, $file, $filename, $mimes, $real_mime = '')
 	{
-
-		// WP 5.1 +
 		if (version_compare($GLOBALS['wp_version'], '5.1.0', '>=')) {
 			$dosvg = in_array($real_mime, ['image/svg', 'image/svg+xml']);
 		} else {
 			$dosvg = ('.svg' === strtolower(substr($filename, -4)));
 		}
-
 		// mime тип был обнулен, поправим его
 		// а также проверим право пользователя
 		if ($dosvg) {
@@ -261,112 +257,103 @@ class General
 
 		return $files;
 	}
-	function geo ()
+}
+final class My_Sortable_Post_Columns
+{
+	public static function init ()
 	{
-		function getOS ($userAgent)
-		{
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Windows") !== false)
-				$os = "Windows";
-			elseif (strpos($user_agent, "Linux") !== false)
-				$os = "Linux";
-			elseif (strpos($user_agent, "X11") !== false)
-				$os = "Linux";
-			elseif (strpos($user_agent, "iPhone") !== false)
-				$os = "iPhone";
-			elseif (strpos($user_agent, "OpenBSD") !== false)
-				$os = "OpenBSD";
-			elseif (strpos($user_agent, "SunOS") !== false)
-				$os = "SunOS";
-			elseif (strpos($user_agent, "Safari") !== false)
-				$os = "Safari";
-			elseif (strpos($user_agent, "Macintosh") !== false)
-				$os = "Macintosh";
-			elseif (strpos($user_agent, "Mac_PowerPC") !== false)
-				$os = "Macintosh";
-			elseif (strpos($user_agent, "QNX") !== false)
-				$os = "QNX";
-			elseif (strpos($user_agent, "BeOS") !== false)
-				$os = "BeOS";
-			elseif (strpos($user_agent, "OS/2") !== false)
-				$os = "OS/2";
-			elseif (strpos($user_agent, "QNX") !== false)
-				$os = "QNX";
-			else
-				$os = "Undefined or Search Bot";
-			return $os;
-		}
-		function getBrowser ($userAgent)
-		{
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			if (strpos($user_agent, "Firefox") !== false)
-				$browser = "Firefox";
-			elseif (strpos($user_agent, "Opera") !== false)
-				$browser = "Opera";
-			elseif (strpos($user_agent, "Chrome") !== false)
-				$browser = "Chrome";
-			elseif (strpos($user_agent, "MSIE") !== false)
-				$browser = "Internet Explorer";
-			elseif (strpos($user_agent, "Safari") !== false)
-				$browser = "Safari";
-			else
-				$browser = "Undefined";
-			return $browser;
-		}
-
-		// реферальная ссылка
-		if (!isset($_COOKIE['refer'])) {
-			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 7, '/');
-			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 365, '/');
+		add_filter('manage_post_posts_columns', [__CLASS__, 'add_columns'], 4);
+		add_filter('manage_post_posts_custom_column', [__CLASS__, 'fill_columns'], 5, 2);
+		add_action('admin_head', [__CLASS__, '_css']);
+		add_filter('manage_edit-post_sortable_columns', [__CLASS__, 'add_sortable_columns']);
+		add_filter('pre_get_posts', [__CLASS__, 'handle_sort_request']);
+	}
+	public static function add_columns ($columns)
+	{
+		$out = [];
+		$i = 0;
+		foreach ($columns as $col => $name) {
+			if (++$i == 3) {
+				$out['views'] = 'Views';
 			}
+			$out[$col] = $name;
 		}
-		//  куки
-		$utm = $_GET;
-
-		// Страница
-		if (!strpos($_SERVER['REQUEST_URI'], 'wp-json') || !strpos($_SERVER['REQUEST_URI'], 'admin-ajax')) {
-			if (!isset($_COOKIE['fc_page'])) {
-				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 3, '/');
-			}
-			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/' );
-		}
-
-		// органика - директ - реклама
-		// if (isset($utm['utm_source']) && ($utm["utm_source"] === "instagram" || $utm["utm_source"] === "facebook")) {
-			// $utm['utm_channel'] = "media";
-		if (isset($utm['utm_source']) || strpos($_COOKIE['fc_page'], 'utm_source') !== false || strpos($_SERVER["REQUEST_URI"], 'utm_source') !== false) {
-			$utm['utm_channel'] = 'cpc';
-		} elseif (!isset($_SERVER["HTTP_REFERER"]) || (stripslashes($_COOKIE['refer']) === 'none')) {
-			$utm['utm_channel'] = 'direct';
-		} else {
-			$utm['utm_channel'] = 'organic';
-		}
-
-		// запись утм
-		if (!isset($_COOKIE['fc_utm'])) {
-			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 3, '/');
-		}
-		setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-
-		//OS
-		if (!isset($_COOKIE['os'])) {
-			setcookie('os', getOS($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		//Browser
-		if (!isset($_COOKIE['browser'])) {
-			setcookie('browser', getBrowser($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		// mobile
-		if (!isset($_COOKIE['is_mobile'])) {
-			setcookie('is_mobile', (wp_is_mobile() ? 'yes' : 'no'), time() + 60 * 60 * 24, '/');
-		}
-		if (!isset($_COOKIE['user_agent'])) {
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			setcookie('user_agent', $user_agent, time() + 60 * 60 * 24, '/');
+		return $out;
+	}
+	public static function add_sortable_columns ($sortable_columns)
+	{
+		$sortable_columns['views'] = 'views_views';
+		return $sortable_columns;
+	}
+	public static function fill_columns ($colname, $post_id)
+	{
+		if ($colname === 'views') {
+			echo get_post_meta($post_id, 'views_counter', 1);
 		}
 	}
+	public static function _css ()
+	{
+		if ('edit' === get_current_screen()->base) {
+			echo '<style>.column-views{ width:10%; }</style>';
+		}
+	}
+	public static function handle_sort_request ($object)
+	{
+		if ($object->get('orderby') != 'views_views') {
+			return;
+		}
+		$object->set('meta_key', 'views_counter');
+		$object->set('orderby', 'meta_value_num');
+	}
 }
-
+final class My_Sortable_Page_Columns
+{
+	public static function init ()
+	{
+		add_filter('manage_page_posts_columns', [__CLASS__, 'add_columns'], 4);
+		add_filter('manage_page_posts_custom_column', [__CLASS__, 'fill_columns'], 5, 2);
+		add_action('admin_head', [__CLASS__, '_css']);
+		add_filter('manage_edit-page_sortable_columns', [__CLASS__, 'add_sortable_columns']);
+		add_filter('pre_get_posts', [__CLASS__, 'handle_sort_request']);
+	}
+	public static function add_columns ($columns)
+	{
+		$out = [];
+		$i = 0;
+		foreach ($columns as $col => $name) {
+			if (++$i == 3) {
+				$out['views'] = 'Views';
+			}
+			$out[$col] = $name;
+		}
+		return $out;
+	}
+	public static function add_sortable_columns ($sortable_columns)
+	{
+		$sortable_columns['views'] = 'views_views';
+		return $sortable_columns;
+	}
+	public static function fill_columns ($colname, $post_id)
+	{
+		if ($colname === 'views') {
+			echo get_post_meta($post_id, 'views_counter', 1);
+		}
+	}
+	public static function _css ()
+	{
+		if ('edit-page' === get_current_screen()->base) {
+			echo '<style>.column-views{ width:10%; }</style>';
+		}
+	}
+	public static function handle_sort_request ($object)
+	{
+		if ($object->get('orderby') != 'views_views') {
+			return;
+		}
+		$object->set('meta_key', 'views_counter');
+		$object->set('orderby', 'meta_value_num');
+	}
+}
+My_Sortable_Post_Columns::init();
+My_Sortable_Page_Columns::init();
 new General();

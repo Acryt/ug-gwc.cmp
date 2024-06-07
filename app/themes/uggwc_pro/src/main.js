@@ -26,7 +26,7 @@ import { stickyHeader } from "./js/scroll";
 import { sliders } from "./js/sliders";
 import { dropdown } from "./js/dropdown";
 import { accrd } from "./js/priceAccrd";
-import { closePopups, openPopup, cookieClose, liftPopup, giftTag, delayedGift, remainUsersPromo } from "./js/popups";
+import { closePopups, openPopup, cookieClose, liftPopup, giftTag, hoverGift, delayedGift, remainUsersPromo } from "./js/popups";
 import { niceSelectVanilla } from "./js/select";
 import { siteTimer, geoCookie } from "./js/siteTimer";
 import { promo } from "./js/promo";
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	cookieClose();
 	sliders();
 	siteTimer();
-	// geoCookie();
+	geoCookie();
 	promo();
 	// phoneInput();
 	promoBlockTimer();
@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	progressBar();
 	giftTag();
 	delayedGift();
+	hoverGift();
 	wordCount();
 	fileInput();
 	handleLinkClickAndSendWapp();
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		trigger: "click mouseenter",
 		allowHTML: true,
 		maxWidth: 246,
-		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% Rabatt für neue Kunden</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>'
+		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Sonderangebote des Monats</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>'
 	});
 	tippy('[data-tippy-form2]', {
 		trigger: "click mouseenter",

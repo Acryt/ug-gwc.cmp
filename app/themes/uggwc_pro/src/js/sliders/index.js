@@ -8,6 +8,33 @@ import {
 } from "swiper/modules";
 
 export function sliders() {
+	const samePostsSwiper = new Swiper(".js-sp", {
+		modules: [Autoplay],
+		direction: "horizontal",
+		speed: 2000,
+		slidesPerView: 1,
+      spaceBetween: 12,
+		loop: true,
+		autoplay: {
+			enabled: false,
+			delay: 3000,
+			pauseOnMouseEnter: true,
+		},
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+      },
+	})
 	const sManagerSwiper = new Swiper(".sm_swiper", {
 		modules: [Navigation, Autoplay, Pagination, EffectCube],
 		// effect: "flip",

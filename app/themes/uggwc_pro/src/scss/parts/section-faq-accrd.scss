@@ -22,7 +22,7 @@
 	&__btn {
 		padding: 8px;
 		border-radius: 8px;
-		cursor: pointer;
+		// cursor: pointer;
 		color: var(--thead);
 		transition: all .1s;
 		padding: 12px;
@@ -59,7 +59,7 @@
 	&__question {
 		display: flex;
 		justify-content: space-between;
-		cursor: pointer;
+		// cursor: pointer;
 		padding: 4px 0;
 		color: var(--thead);
 		transition: all .1s;

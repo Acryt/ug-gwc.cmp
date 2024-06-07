@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('sabout', URI . '/assets/about.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/about.bundle.css');
+wp_enqueue_style('sabout', URI . '/assets/about.bundle.css', [], $ver);
 ?>
 <section id="impressum" class="section about">
 	<div class="wrapper">
@@ -13,7 +14,7 @@ wp_enqueue_style('sabout', URI . '/assets/about.bundle.css');
 		</div>
 		<div class="section__content">
 			<div class="about__organisation card shadow">
-				<h3>GWC Ghost-writerservice UG (haftungsbeschränkt)</h3>
+				<span class="h3">GWC Ghost-writerservice UG (haftungsbeschränkt)</span>
 				<a class="about__logo" href="/">
 					<img class="" src="<?php bloginfo('template_url'); ?>/assets/images/logos/logo.svg" alt="Logo">
 				</a>

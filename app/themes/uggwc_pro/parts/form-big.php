@@ -38,10 +38,10 @@
 		</label>
 		<label class="form__phone req_star">
 			<span class="form__icon"><i class="fa-brands fa-whatsapp"></i></span>
-			<input class="phone" type="tel" name="phone" placeholder="WhatsApp">
+			<input class="phone" type="tel" name="phone" placeholder="WhatsApp" required>
 		</label>
 		<label class="form__kontakt">
-			<input class="kontakt" type="checkbox" name="kontakt">
+			<input class="kontakt" type="checkbox" name="on-wapp">
 			<span class="form__kontakt_text">Kontakt nur über WhatsApp</span>
 		</label>
 		<?php get_template_part('parts/select-calltime') ?>
@@ -72,7 +72,7 @@
 			alt="">
 	</div>
 	<div class="form__disabled">
-		<h4>Danke, dass Sie sich für uns entschieden haben!</h4>
+		<span class="h4">Danke, dass Sie sich für uns entschieden haben!</span>
 		<div class="form__sent">
 			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
 		</div>

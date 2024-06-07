@@ -36,8 +36,9 @@ Template Name: Leistungen3
 	get_template_part('parts/section-form');
 	?>
 </main>
-<?php get_template_part('parts/meta-software-app'); ?>
-<?php 
+
+<?php
+get_template_part('parts/meta-ar');
 get_template_part('parts/popups');
 get_footer();
 ?>

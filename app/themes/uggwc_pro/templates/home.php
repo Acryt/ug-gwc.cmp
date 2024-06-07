@@ -23,6 +23,7 @@ Template Name: Home
 	get_template_part('parts/section-form');
 	?>
 </main>
+
 <?php
 get_template_part('parts/popups');
 get_footer();

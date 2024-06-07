@@ -1,5 +1,6 @@
 <?php
-wp_enqueue_style('process', URI . '/assets/process.bundle.css');
+$ver = filemtime(get_template_directory() . '/assets/process.bundle.css');
+wp_enqueue_style('process', URI . '/assets/process.bundle.css', [], $ver);
 
 $images = array(
 	'/assets/images/process/001.svg',

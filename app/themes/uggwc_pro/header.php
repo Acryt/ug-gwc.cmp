@@ -66,6 +66,7 @@
 				<a href="/impressum/">Impressum</a>
 				<a href="/ghostwriter-preise/">Preise</a>
 				<a class="new_star" href="/unsere-autoren/">Unsere Autoren</a>
+				<a class="no-mbl" href="/fur-autoren/">Für Autoren</a>
 				<a href="/faq/">FAQ</a>
 			</div>
 			<div class="header__basic">
@@ -78,6 +79,7 @@
 					<a class="header__item" href="/impressum/">Impressum</a>
 					<a class="header__item" href="/ghostwriter-preise/">Preise</a>
 					<a class="header__item new_star" href="/unsere-autoren/">Unsere Autoren</a>
+					<a class="header__item" href="/fur-autoren/">Für Autoren</a>
 					<a class="header__item" href="/faq/">FAQ</a>
 					<div class="header__item header__time">
 						<p class="s">
@@ -109,29 +111,29 @@
 			</div>
 			<nav class="header__nav nav-menu">
 				<div class="header__nav_wrap">
-					<div class="dd-btn">Leistungen</div>
+					<div class="dd-btn cp">Leistungen</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_leis') ?>
 					</div>
-					<div class="dd-btn">Lektorat & Korrektorat</div>
+					<div class="dd-btn cp">Lektorat & Korrektorat</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_lect') ?>
 					</div>
-					<div class="dd-btn">Disziplinen</div>
+					<div class="dd-btn cp">Disziplinen</div>
 					<div class="dd-menu">
 						<?php echo carbon_get_theme_option('cf_menu_disz') ?>
 					</div>
-					<div class="dd-btn">Über uns</div>
+					<div class="dd-btn cp">Über uns</div>
 					<div class="dd-menu">
 						<a href="/uber-uns/">Über uns</a>
 						<a href="/wie-wir-arbeiten/">So geht's!</a>
-						<a href="/fur-autoren/">Für Autoren</a>
 						<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
 					</div>
 					<a href="/werbeaktionen/">Rabatte</a>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
-					<a class="no-wide" href="/worter-zu-seiten/">Wörter zu Seiten</a>
+					<a class="no-pc" href="/fur-autoren/">Für Autoren</a>
+					<a class="no-pc" href="/worter-zu-seiten/">Wörter zu Seiten</a>
 
 					<a class="header__contact btnh borda wave_effect" href="/anfragen/">
 						<span>Unverbindliche Anfrage</span>

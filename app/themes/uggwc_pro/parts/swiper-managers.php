@@ -7,8 +7,8 @@
 		<div class="swiper-slide sm_swiper__slide">
 			<!-- <h5 class="sm_swiper__title">Unsere Kundenbetreuer</h5> -->
 			<img class="sm_swiper__image" src="<?php echo $item['cf_manager_photo'] ?>" alt="">
-			<h5 class="sm_swiper__name"><?php echo $item['cf_manager_name'] ?></h5>
-			<h6 class="sm_swiper__spec"><?php echo $item['cf_manager_spec'] ?></h6>
+			<span class="sm_swiper__name h5"><?php echo $item['cf_manager_name'] ?></span>
+			<span class="sm_swiper__spec h6"><?php echo $item['cf_manager_spec'] ?></span>
 			<p class="sm_swiper__time"><?php echo $item['cf_manager_time'] ?></p>
 			<p class="sm_swiper__day"><?php echo $item['cf_manager_day'] ?></p>
 			<div class="sm_swiper__icons icons">

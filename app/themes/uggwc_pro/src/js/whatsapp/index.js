@@ -23,7 +23,7 @@ export function handleLinkClickAndSendWapp() {
 					window.location.href = link.href;
 				})
 				.catch((error) => {
-					console.error("Ошибка:", error);
+					console.error("Error:", error);
 				});
 		});
 	})

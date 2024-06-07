@@ -161,134 +161,7 @@
 		display: flex;
 	}
 }
-.popup__box {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	bottom: 100px;
-	left: 22px;
-	border: unset;
-	background: unset;
-	z-index: 2;
-	&-img {
-		animation: swinging 3s infinite;
-	}
-	&-text {
-		position: fixed;
-		display: none;
-		flex-direction: column;
-		bottom: 150px;
-		left: 20px;
-		width: 280px;
-		background: var(--thead);
-		padding: 8px 12px;
-		border-radius: 4px;
-		p,
-		span {
-			color: var(--bg);
-		}
-		li::before {
-			content: "";
-			position: absolute;
-			top: 10px;
-			left: 0px;
-			width: 4px;
-			height: 4px;
-			border-radius: 50%;
-			background-color: var(--bg);
-		}
-	}
-	.btn {
-		align-self: center;
-	}
-	&:hover .popup__box-text {
-		display: flex;
-	}
-	@media (min-width: 720px) {
-		display: none;
-	}
-}
-.popup__delayed-gift {
-	position: fixed;
-	// width: 629px;
-	// height: 635px;
-	z-index: 5;
-	bottom: 88px;
-	// transition: all 2s;
-	transform: scale(0.7);
-	// animation: opac .5s 1 ease-in-out;
-	visibility: hidden;
-	opacity: 0;
-	transform-origin: left bottom;
-	left: 0px;
-	.popup__box-img {
-		height: 80px;
-		width: unset;
-		right: 70px;
-		bottom: 30px;
-	}
-	&._active {
-		visibility: visible;
-		opacity: 1;
-	}
-	.popup_x {
-		top: 24px;
-	}
-}
-.user-reminder {
-	position: absolute;
-	font-size: 56px;
-	color: var(--hover);
-	right: 11.5%;
-	top: 25%;
-	font-weight: 700;
-}
-.popup__bach {
-	.btn {
-		position: absolute;
-		top: 82%;
-		right: 27%;
-	}
-}
-.popup__mast {
-	.btn {
-		position: absolute;
-		top: 88%;
-		right: 34%;
-	}
-}
-// @keyframes opac {
-// 	0% {
-// 		opacity: 0;
-// 	}
-// 	100% {
-// 		opacity: 1;
-// 	}
-// }
-.popup__haus,
-.popup__home {
-	.btn {
-		position: absolute;
-		top: 54%;
-		right: 5%;
-	}
-	&::before {
-		content: "Die ersten Plätze sind geblieben";
-		width: 20.5%;
-		position: absolute;
-		background: white;
-		height: 34%;
-		right: 2.5%;
-		top: 25%;
-		border-radius: 8px;
-		padding: 20px;
-		font-size: 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-}
+
 .popup__cookie {
 	position: fixed;
 	display: flex;
@@ -354,5 +227,146 @@
 	50% {
 		transform-origin: center 30px;
 		transform: rotate(0deg);
+	}
+}
+
+// Promo Mobile
+.popup__box {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 100px;
+	left: 22px;
+	border: unset;
+	background: unset;
+	z-index: 2;
+	.user-reminder {
+		position: absolute;
+		font-size: 30px;
+		color: var(--hover);
+	}
+	.btn {
+		position: absolute;
+		font-size: 12px;
+		padding: 4px 8px;
+		align-self: center;
+	}
+	&-img {
+		animation: swinging 3s infinite;
+	}
+	&-bg {
+		position: fixed;
+		display: none;
+		flex-direction: column;
+		bottom: 150px;
+		left: 20px;
+		width: 280px;
+		background: var(--thead);
+		border-radius: 4px;
+		&.home {
+			.user-reminder {
+				right: 36%;
+				bottom: 20.5%;
+			}
+			.btn {
+				right: 10%;
+				bottom: 16%;
+			}
+		}
+		&.haus {
+			.user-reminder {
+				right: 36%;
+				bottom: 20.5%;
+			}
+			.btn {
+				right: 10%;
+				bottom: 16%;
+			}
+		}
+		&.bach {
+			.user-reminder {
+			}
+			.btn {
+				right: 30%;
+				bottom: 7%;
+			}
+		}
+		&.mast {
+			.user-reminder {
+			}
+			.btn {
+				right: 30%;
+				bottom: 7%;
+			}
+		}
+	}
+	&:hover .popup__box-text,
+	&:hover .popup__box-bg {
+		display: flex;
+	}
+	@media (min-width: 720px) {
+		display: none;
+	}
+}
+
+// Promo PC
+.popup__delayed-gift {
+	position: fixed;
+	z-index: 5;
+	bottom: 88px;
+	transform: scale(0.7);
+	visibility: hidden;
+	opacity: 0;
+	transform-origin: left bottom;
+	left: 0px;
+	.popup__box-img {
+		height: 80px;
+		width: unset;
+		right: 70px;
+		bottom: 30px;
+	}
+	&._active {
+		visibility: visible;
+		opacity: 1;
+	}
+	.popup_x {
+		top: 24px;
+	}
+	.user-reminder {
+		position: absolute;
+		font-size: 56px;
+		color: var(--hover);
+		font-weight: 700;
+	}
+	.btn {
+		position: absolute;
+	}
+	&.home {
+		.user-reminder {
+			top: 29%;
+			right: 13.5%;
+		}
+		.btn {
+			top: 56%;
+			right: 7.5%;
+		}
+	}
+	&.haus {
+		.user-reminder {
+			top: 39%;
+			right: 13.5%;
+		}
+		.btn {
+			top: 67%;
+			right: 7.5%;
+		}
+	}
+	&.bach,
+	&.mast {
+		.btn {
+			top: 86%;
+			right: 36%;
+		}
 	}
 }

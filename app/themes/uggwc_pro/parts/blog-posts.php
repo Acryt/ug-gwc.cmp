@@ -1,5 +1,6 @@
 <?php
-	wp_enqueue_style( 'blog', URI . '/assets/blog.bundle.css' );
+$ver = filemtime(get_template_directory() . '/assets/blog.bundle.css');
+wp_enqueue_style('blog', URI . '/assets/blog.bundle.css', [], $ver);
 ?>
 <section class="section blog">
 	<div class="wrapper">
