@@ -4,6 +4,7 @@ node_modules
 wp-config1.php
 composer.lock
 yarn.lock
+package-lock.json
 **/.yarn/**
 **/.pnp.cjs
 **/.pnp.loader.mjs
