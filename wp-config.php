@@ -1,5 +1,6 @@
 <?php
-define( 'WP_CACHE', false ); // Added by WP Rocket
+define('WP_CACHE', false); // Added by WP Rocket
+define('FS_METHOD', 'direct');
 
 /**
  * The base configuration for WordPress
@@ -22,33 +23,33 @@ define( 'WP_CACHE', false ); // Added by WP Rocket
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'ug_gwc' );
+define('DB_NAME', 'ug_gwc');
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define('DB_PASSWORD', '');
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 
 
 // Load Composer’s autoloader
-require_once (__DIR__.'/vendor/autoload.php');
+require_once (__DIR__ . '/vendor/autoload.php');
 
 // ========================
 // Custom Content Directory
 // ========================
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/app' );
-define( 'WP_CONTENT_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/app' );
+define('WP_CONTENT_DIR', dirname(__FILE__) . '/app');
+define('WP_CONTENT_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/app');
 
 // Загрузка файлов
 // define( 'ALLOW_UNFILTERED_UPLOADS', true );
@@ -64,14 +65,14 @@ define( 'WP_CONTENT_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/app' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define('AUTH_KEY', 'put your unique phrase here');
+define('SECURE_AUTH_KEY', 'put your unique phrase here');
+define('LOGGED_IN_KEY', 'put your unique phrase here');
+define('NONCE_KEY', 'put your unique phrase here');
+define('AUTH_SALT', 'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT', 'put your unique phrase here');
+define('NONCE_SALT', 'put your unique phrase here');
 
 /**#@-*/
 
@@ -95,7 +96,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define('WP_DEBUG', false);
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -104,8 +105,8 @@ define( 'WP_DEBUG', false );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/wordpress/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', __DIR__ . '/wordpress/');
 }
 
 /** Sets up WordPress vars and included files. */
