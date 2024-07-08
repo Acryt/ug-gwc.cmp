@@ -12,19 +12,23 @@
 	transition: all 0.1s;
 	visibility: hidden;
 	opacity: 0;
-	& > * {
+
+	&>* {
 		display: none;
 	}
+
 	&._active {
 		visibility: visible;
 		opacity: 1;
 	}
-	& :first-child {
-	}
+
+	& :first-child {}
 }
+
 .popup._active {
 	display: flex;
 }
+
 .popup_x {
 	cursor: pointer;
 	position: absolute;
@@ -39,23 +43,26 @@
 	border: unset;
 	background: unset;
 
-	& > * {
+	&>* {
 		margin: 0;
 		background: var(--alert);
 	}
-	& > :first-child {
+
+	&> :first-child {
 		position: absolute;
 		width: 30px;
 		height: 3px;
 		transform: rotate(45deg);
 	}
-	& > :last-child {
+
+	&> :last-child {
 		position: absolute;
 		width: 30px;
 		height: 3px;
 		transform: rotate(-45deg);
 	}
 }
+
 .popup__bigform,
 .popup__bigpromo {
 	position: relative;
@@ -66,23 +73,28 @@
 	// padding: 56px 24px 24px 24px;
 	overflow-y: auto;
 	width: 800px;
+
 	.form_big {
 		@include responsiveGap(8, 12);
 	}
 }
+
 .popup__bigpromo {
 	h4 {
 		text-align: center;
 		max-width: 650px;
 	}
+
 	&__sub {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	&__img {
 		flex: 1 0 200px;
 		padding: 16px;
 	}
+
 	&__text {
 		flex: 1 0 480px;
 		// display: flex;
@@ -90,6 +102,7 @@
 		// justify-content: center;
 	}
 }
+
 // Попапчики
 .popup__call,
 .popup__lift {
@@ -110,6 +123,7 @@
 	// 	z-index: 4;
 	// }
 }
+
 .popup__call {
 	display: flex;
 	justify-content: center;
@@ -132,6 +146,7 @@
 		font-size: 14px;
 		// font-weight: 600;
 	}
+
 	&:hover {
 		color: var(--bg);
 		width: 200px;
@@ -145,18 +160,22 @@
 		}
 	}
 }
+
 .b24-widget-button-wrapper.b24-widget-button-position-bottom-right {
 	right: 24px;
 	bottom: 24px;
 }
+
 .popup__lift {
 	display: none;
 	left: 24px;
 	background: var(--bg);
+
 	&:hover {
 		color: var(--bg);
 		border: 2px solid var(--hoverb);
 	}
+
 	&._sticky {
 		display: flex;
 	}
@@ -176,17 +195,20 @@
 	overflow: hidden;
 	transition: all 0.1s;
 	z-index: 5;
+
 	p {
 		text-align: center;
 		color: var(--thead);
 		font-weight: 600;
 		@include responsiveFont(12, 20);
 	}
+
 	&_btn {
 		background: var(--hoverb);
 		border: 2px solid var(--bg);
 		z-index: 5;
 	}
+
 	&._active {
 		padding: 12px;
 		height: 110px;
@@ -198,32 +220,39 @@
 		max-height: 120px;
 		margin: 0;
 	}
+
 	.option {
 		margin: 0;
 		padding-left: 12px;
 	}
 }
+
 @keyframes swinging {
 	0% {
 		transform-origin: center 30px;
 		transform: rotate(0deg);
 	}
+
 	10% {
 		transform-origin: center 30px;
 		transform: rotate(20deg);
 	}
+
 	20% {
 		transform-origin: center 30px;
 		transform: rotate(-15deg);
 	}
+
 	30% {
 		transform-origin: center 30px;
 		transform: rotate(10deg);
 	}
+
 	40% {
 		transform-origin: center 30px;
 		transform: rotate(-5deg);
 	}
+
 	50% {
 		transform-origin: center 30px;
 		transform: rotate(0deg);
@@ -241,20 +270,24 @@
 	border: unset;
 	background: unset;
 	z-index: 2;
+
 	.user-reminder {
 		position: absolute;
 		font-size: 30px;
 		color: var(--hover);
 	}
+
 	.btn {
 		position: absolute;
 		font-size: 12px;
 		padding: 4px 8px;
 		align-self: center;
 	}
+
 	&-img {
 		animation: swinging 3s infinite;
 	}
+
 	&-bg {
 		position: fixed;
 		display: none;
@@ -264,47 +297,55 @@
 		width: 280px;
 		background: var(--thead);
 		border-radius: 4px;
+
 		&.home {
 			.user-reminder {
-				right: 36%;
-				bottom: 20.5%;
+				right: 43%;
+				bottom: 15.5%;
 			}
+
 			.btn {
-				right: 10%;
-				bottom: 16%;
+				right: 17%;
+				bottom: 11%;
 			}
 		}
+
 		&.haus {
 			.user-reminder {
-				right: 36%;
-				bottom: 20.5%;
+				right: 43%;
+				bottom: 15.5%;
 			}
+
 			.btn {
-				right: 10%;
-				bottom: 16%;
+				right: 17%;
+				bottom: 11%;
 			}
 		}
+
 		&.bach {
-			.user-reminder {
-			}
+			.user-reminder {}
+
 			.btn {
 				right: 30%;
 				bottom: 7%;
 			}
 		}
+
 		&.mast {
-			.user-reminder {
-			}
+			.user-reminder {}
+
 			.btn {
 				right: 30%;
 				bottom: 7%;
 			}
 		}
 	}
+
 	&:hover .popup__box-text,
 	&:hover .popup__box-bg {
 		display: flex;
 	}
+
 	@media (min-width: 720px) {
 		display: none;
 	}
@@ -320,52 +361,62 @@
 	opacity: 0;
 	transform-origin: left bottom;
 	left: 0px;
+
 	.popup__box-img {
 		height: 80px;
 		width: unset;
 		right: 70px;
 		bottom: 30px;
 	}
+
 	&._active {
 		visibility: visible;
 		opacity: 1;
 	}
+
 	.popup_x {
 		top: 24px;
 	}
+
 	.user-reminder {
 		position: absolute;
 		font-size: 56px;
 		color: var(--hover);
 		font-weight: 700;
 	}
+
 	.btn {
 		position: absolute;
 	}
+
 	&.home {
 		.user-reminder {
 			top: 29%;
-			right: 13.5%;
+			right: 12%;
 		}
+
 		.btn {
 			top: 56%;
-			right: 7.5%;
+			right: 6%;
 		}
 	}
+
 	&.haus {
 		.user-reminder {
-			top: 39%;
-			right: 13.5%;
+			top: 35%;
+			right: 12%;
 		}
+
 		.btn {
-			top: 67%;
-			right: 7.5%;
+			top: 61%;
+			right: 6%;
 		}
 	}
+
 	&.bach,
 	&.mast {
 		.btn {
-			top: 86%;
+			top: 89%;
 			right: 36%;
 		}
 	}

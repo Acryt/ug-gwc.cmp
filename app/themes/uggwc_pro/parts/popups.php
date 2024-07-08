@@ -1,9 +1,9 @@
 <?php
 $pageID = [
-	'9' => ['june-home.jpg', 'june-home-m.jpg', 'home'],
-	'123' => ['june-bach.jpg', 'june-bach-m.jpg', 'june-bach-prm.jpg'],
-	'154' => ['june-mast.jpg', 'june-mast-m.jpg', 'june-haus-prm.jpg'],
-	'161' => ['june-haus.jpg', 'june-haus-m.jpg', 'june-mast-prm.jpg'],
+	'9' => ['juli-home.jpg', 'juli-home-m.jpg', 'home'],
+	'123' => ['juli-bach.jpg', 'juli-bach-m.jpg', 'juli-bach-prm.jpg'],
+	'154' => ['juli-mast.jpg', 'juli-mast-m.jpg', 'juli-haus-prm.jpg'],
+	'161' => ['jule-haus.jpg', 'jule-haus-m.jpg', 'juli-mast-prm.jpg'],
 ]; ?>
 <div id="popups" class="popups">
 	<div class="popup popup__bigpromo card shadow">
@@ -129,8 +129,7 @@ $pageID = [
 </div>
 
 <button class="popup__lift shadow wave_effect"><i class="fa-solid fa-up-long"></i></button>
-<a target="_blank" class="popup__call shadow js-wapp"
-	href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
+<a target="_blank" class="popup__call shadow js-wapp" href="https://wa.me/<?php echo Helpers::del_space(Helpers::mgr_whatsapp()); ?>">
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>
 </a>
