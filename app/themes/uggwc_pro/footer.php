@@ -2,8 +2,7 @@
 	<div class="wrapper">
 		<div class="footer__content">
 			<div class="footer__one">
-				<div class="footer__logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logos/logo.svg"
-						alt="Logo"></div>
+				<div class="footer__logo"><img src="<?php bloginfo('template_url'); ?>/assets/images/logos/logo.svg" alt="Logo"></div>
 				<strong>ORGANISATIONSDATEN</strong>
 				<p>GWC Ghost-writerservice UG (haftungsbeschränkt)</p>
 				<p>Eingetragen im Handelsregister des Amtsgerichts Berlin (Charlottenburg)</p>
@@ -55,8 +54,7 @@
 					<p>Ohne KI</p>
 				</div>
 				<div>
-					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg"
-						alt="">
+					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 					<a href="/unsere-garantien/">Unsere Garantien</a><br>
 					<a href="/ruckgaberichtlinien/">Rückgaberichtlinien</a><br>
 					<a href="/agb/">AGB</a>
@@ -100,12 +98,12 @@
 
 			</div>
 			<div class="footer__five">
-			<strong class="left">ZAHLUNGSMETHODEN</strong>
+				<strong class="left">ZAHLUNGSMETHODEN</strong>
 				<div class="footer__payments">
 					<?php get_template_part('parts/component-payments'); ?>
 				</div>
 				<hr>
-				<p>2018-2023 | Alle Rechte vorbehalten © UG-GWC.de</p>
+				<p>2018-<?php echo date('Y'); ?> | Alle Rechte vorbehalten © UG-GWC.de</p>
 			</div>
 		</div>
 	</div>
