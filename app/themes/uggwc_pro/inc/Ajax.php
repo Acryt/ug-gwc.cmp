@@ -119,7 +119,7 @@ class Ajax
 		$res->ToTG = $this->sendToTG($this->id);
 		$res->FileToTG = $this->sendFileToTG($this->id);
 		$res->FbAds = $this->facebookAds($this->id);
-		// $res->ToClient = $this->sendToClient($this->id);
+		$res->ToClient = $this->sendToClient($this->id);
 
 		$result = [
 			'ToCRM' => [
@@ -128,6 +128,9 @@ class Ajax
 			],
 			'ToTG' => [
 				'ok' => $res->ToTG->ok
+			],
+			'ToClient' => [
+				'ok' => $res->ToClient->ok
 			]
 		];
 		if (!is_null($res->FileToTG)) {
@@ -261,15 +264,15 @@ class Ajax
 	{
 		$mail = new Mailer(true);
 		try {
-			// $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
+			// $mail->SMTPDebug = 2;
 			$mail->isSMTP(); //Send using SMTP
 			$mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 			$mail->SMTPAuth = true; //Enable SMTP authentication
 			$mail->Username = MAIL_BOT_ADDRESS; //SMTP username
 			$mail->Password = MAIL_BOT_PASSWORD; //SMTP password
-			$mail->SMTPSecure = 'ssl'; //Enable implicit TLS encryption
+			$mail->SMTPSecure = 'tls';
 			$mail->CharSet = "utf-8";
-			$mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+			$mail->Port = 587;
 
 			$mail->setFrom(MAIL_BOT_ADDRESS, 'UG-GWC.de');
 			$mail->addAddress($to, $name);
@@ -278,15 +281,15 @@ class Ajax
 			//  $mail->addCC('cc@example.com');
 			//  $mail->addBCC('bcc@example.com');
 			if ($file !== false) {
-				$mail->addAttachment(PATH . 'assets/docs/Warum wählt man uns.pdf');         //Add attachments
+				$mail->addAttachment(PATH . 'assets/docs/Warum wählt man unsere Agentur.pdf');         //Add attachments
 			}
 			$mail->isHTML(true);
 			$mail->Subject = $subj;
 			$mail->Body = $msg;
 
 			if($mail->send()) { // Attempt to send the email
-				$mail->copyToFolder(); // Will save into inbox
-				$mail->copyToFolder("Sent"); // Will save into Sent folder
+				// $mail->copyToFolder(); // Will save into inbox
+				// $mail->copyToFolder("Sent"); // Will save into Sent folder
 			} else {
 				throw new Exception($mail->ErrorInfo);
 			}
@@ -328,7 +331,7 @@ class Ajax
 		<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 
-		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, false);
+		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, true);
 		return $response;
 	}
 
