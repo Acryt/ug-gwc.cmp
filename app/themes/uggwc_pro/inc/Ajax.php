@@ -44,6 +44,7 @@ class Ajax
 	public $fc_source;
 	public $score;
 	public $id;
+	public $manager;
 	public $postMeta = [];
 
 	public function __construct ()
@@ -109,14 +110,16 @@ class Ajax
 
 		if (isset($res->ToCRM->id)) {
 			$this->id = $res->ToCRM->id;
+			$this->manager = $res->ToCRM->manager;
 			$res->ToCRM->ok = true;
 		} else {
 			$this->id = 1;
+			$this->manager = 'none';
 			$res->ToCRM->ok = false;
 			$res->ToCRM->id = 1;
 		}
 
-		$res->ToTG = $this->sendToTG($this->id);
+		$res->ToTG = $this->sendToTG($this->id, $this->manager);
 		$res->FileToTG = $this->sendFileToTG($this->id);
 		$res->FbAds = $this->facebookAds($this->id);
 		$res->ToClient = $this->sendToClient($this->id);
@@ -124,7 +127,8 @@ class Ajax
 		$result = [
 			'ToCRM' => [
 				'ok' => $res->ToCRM->ok,
-				'id' => $res->ToCRM->id
+				'id' => $res->ToCRM->id,
+				'manager' => $res->ToCRM->manager
 			],
 			'ToTG' => [
 				'ok' => $res->ToTG->ok
@@ -189,7 +193,7 @@ class Ajax
 		}
 	}
 
-	private function sendToTG ($id)
+	private function sendToTG ($id, $manager)
 	{
 		$text = "<b>{$this->title}</b>\r\n\n";
 		$text .= "{$this->subject}\r\n\n";
@@ -201,8 +205,9 @@ class Ajax
 		$text .= "<b>✍️ :</b> " . ($_POST['theme'] ?? '') . "\r\n";
 		$text .= "<b>🗒 :</b> " . ($_POST['number'] ?? '') . "\r\n";
 		$text .= "<b>🔥 :</b> " . ($_POST['deadline'] ?? '') . "\r\n";
-		$text .= "<b>👣 :</b> " . ($this->fc_source ?? '') . "\r\n";
+		$text .= "<b>👣 :</b> " . ($this->fc_source ?? '') . "\r\n\n";
 		$text .= "<b>🗃 :</b> " . $id . "\r\n";
+		$text .= "<b>👧 :</b> " . $manager . "\r\n";
 		$text .= "<b>⌚️ :</b> " . date('d.m.Y H:i:s') . "\r\n\n";
 		$text .= "{$this->score} \r\n";
 		// $text .= "<a href='https://akademily.de/wp-admin/post.php?post=" . $id . "&action=edit'><b>Клац</b></a>";
