@@ -55,3 +55,34 @@ add_action('do_feed_rss2_comments', 'itsme_disable_feed', 1);
 add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'feed_links', 2);
+
+function true_author_caps(){
+	global $pagenow;
+	$role = get_role('editor');
+	// $role = new WP_User( 5 );
+	$role->remove_cap( 'moderate_comments' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'manage_categories' ); // разрешаем авторам редактировать посты других авторов
+	$role->add_cap( 'edit_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_others_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_published_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'publish_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_others_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_published_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_private_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_private_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->add_cap( 'read_private_pages' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_others_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_others_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_private_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_private_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->add_cap( 'read_private_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'edit_published_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'publish_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_published_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->add_cap( 'edit_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'delete_posts' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'unfiltered_html' ); // разрешаем авторам редактировать посты других авторов
+	$role->remove_cap( 'upload_files' ); // разрешаем авторам редактировать посты других авторов
+}
+add_action( 'init', 'true_author_caps' ); // вешаем функцию на хук
