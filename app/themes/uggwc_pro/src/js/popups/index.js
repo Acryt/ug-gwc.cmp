@@ -82,16 +82,16 @@ export function giftTag() {
 
 export function delayedGift() {
 	function gift() {
-		const delayedGift = document.querySelector(".popup__delayed-gift");
+		const delayedGift = document.querySelector(".js_delaygift");
 		if (!delayedGift) {
 			return;
 		}
 		delayedGift.classList.add("_active");
 		const popupParent = delayedGift.closest("#popups");
-		if (popupParent) {
-			popupParent.classList.add("_active");
-			remainUsersPromo();
-		}
+		// if (popupParent) {
+		// popupParent.classList.add("_active");
+		remainUsersPromo();
+		// }
 	}
 	if (window.innerWidth >= 720) {
 		setTimeout(gift, 5000);
