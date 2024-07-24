@@ -33,6 +33,21 @@ $pageID = [
 			<a class="btn wave_effect center popup_btn_x" href="#sform"><span>JETZT ANFRAGEN</span></a>
 		<?php } ?>
 	</div>
+	<div class="popup popup__post card shadow js_post">
+		<button class="popup_x">
+			<span></span>
+			<span></span>
+		</button>
+		<span class="h4">Danke, dass Sie sich für uns entschieden haben!</span>
+		<div class="form__sent">
+			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
+		</div>
+		<br>
+		<p>Ihre Anfragenummer: <strong class="js_idpost"></strong></p>
+		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung
+			setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und
+				Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
+	</div>
 </div>
 <div class="popup__box js_giftbox">
 	<?php

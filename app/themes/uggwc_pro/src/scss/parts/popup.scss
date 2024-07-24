@@ -63,6 +63,29 @@
 	}
 }
 
+.popup__post {
+	position: relative;
+	display: none;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	text-align: center;
+	margin-inline: auto;
+	width: 800px;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 12px;
+	overflow-y: auto;
+
+	p span {
+		color: var(--alert);
+	}
+
+	&._active {
+		display: flex;
+	}
+}
+
 .popup__bigform,
 .popup__bigpromo {
 	position: relative;
