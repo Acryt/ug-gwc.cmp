@@ -150,8 +150,3 @@ if (array_key_exists(get_the_ID(), $pageID)) {
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>
 </a>
-<div class="popup__cookie">
-	<p>Im Interesse der Benutzerfreundlichkeit und zur Verbesserung unseres Services verwenden wir Cookies</p>
-	<button class="popup__cookie_btn btn wave_effect"
-		onclick="consentGrantedAdStorage()"><span>AKZEPTIEREN</span></button>
-</div>

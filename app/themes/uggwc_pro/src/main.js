@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	accrd();
 	closePopups();
 	openPopup();
-	cookieClose();
+	// cookieClose();
 	sliders();
 	siteTimer();
 	geoCookie();
