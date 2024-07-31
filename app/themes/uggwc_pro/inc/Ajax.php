@@ -334,7 +334,7 @@ class Ajax
 		<p>Wenn Sie eine dringende Frage haben, kontaktieren Sie uns bitte auf eine der folgenden Arten:</p>
 		<br>
 		<p>Email: <a href="mailto:info@ug-gwc.de">info@ug-gwc.de</a></p>
-		<p>WhatsApp: <a href="https://wa.me/493046690297">493046690297</a></p>
+		<p>WhatsApp: <a href="https://wa.me/493046690286">493046690286</a></p>
 		<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 

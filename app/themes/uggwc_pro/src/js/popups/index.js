@@ -126,10 +126,13 @@ export function remainUsersPromo() {
 		if (currentValue < number) {
 			currentValue++;
 			rem.forEach((el) => {
-				el.textContent = currentValue;
+				el.textContent = toString(currentValue);
 			});
 		} else {
+			rem.forEach((el) => {
+				el.textContent = number;
+			});
 			clearInterval(interval);
 		}
-	}, 30); // Обновление каждый секунду
+	}, 30);
 }

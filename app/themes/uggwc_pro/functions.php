@@ -9,8 +9,8 @@ define('PRICELIST', json_decode(file_get_contents(URI . '/data/pricelist.json'),
 
 require_once PATH . 'inc/PrivateConstants.php';
 
-require_once PATH . 'inc/General.php';
 require_once PATH . 'inc/Helpers.php';
+require_once PATH . 'inc/General.php';
 require_once PATH . 'inc/Ajax.php';
 // require_once DE_PATH .'inc/Shortcodes.php';
 
