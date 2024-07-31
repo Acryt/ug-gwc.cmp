@@ -4,13 +4,15 @@ export function mailer() {
 	if (!forms.length) {
 		return;
 	}
-
+	const popupCont = document.querySelector("#popups");
+	const popupPost = document.querySelector(".js_post");
+	const idPost = popupPost.querySelector(".js_idpost");
 	for (let form of forms) {
-		form.action = 'sendForm';
+		form.action = "sendForm";
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
 			let data = new FormData(form);
-			data.append('action', 'sendForm');
+			data.append("action", "sendForm");
 			// data.append('file', form.querySelector('input[type="file"]').files[0]);
 
 			// Класс для визуализации формы при отправке
@@ -21,10 +23,14 @@ export function mailer() {
 				body: data,
 				credentials: "same-origin",
 			})
-				.then((response) => {
+				.then((response) => response.json())
+				.then((res) => {
 					form.reset();
 					form.classList.remove("_sending");
-					form.classList.add("_disabled");
+					// form.classList.add("_disabled");
+					popupCont.classList.add("_active");
+					popupPost.classList.add("_active");
+					idPost.innerHTML = res.ToCRM.id;
 					setTimeout(() => {
 						form.classList.remove("_disabled");
 					}, 1000);

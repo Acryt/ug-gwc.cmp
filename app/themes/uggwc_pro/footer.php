@@ -57,6 +57,7 @@
 					<img class="footer__shield" src="<?php bloginfo('template_url'); ?>/assets/images/icons/shield.svg" alt="">
 					<a href="/unsere-garantien/">Unsere Garantien</a><br>
 					<a href="/ruckgaberichtlinien/">Rückgaberichtlinien</a><br>
+					<a href="/datenschutz/">Datenschutz</a><br>
 					<a href="/agb/">AGB</a>
 				</div>
 
@@ -92,9 +93,6 @@
 
 				<strong>LEISTUNGEN</strong>
 				<?php echo carbon_get_theme_option('cf_menu_footer_leis') ?>
-
-				<!-- </div>
-			<div class="footer__four"> -->
 
 			</div>
 			<div class="footer__five">

@@ -1,9 +1,9 @@
 <?php
 $pageID = [
-	'9' => ['juli-home.jpg', 'juli-home-m.jpg', 'home'],
-	'123' => ['juli-bach.jpg', 'juli-bach-m.jpg', 'juli-bach-prm.jpg'],
-	'154' => ['juli-mast.jpg', 'juli-mast-m.jpg', 'juli-haus-prm.jpg'],
-	'161' => ['jule-haus.jpg', 'jule-haus-m.jpg', 'juli-mast-prm.jpg'],
+	'9' => ['august-home.jpg', 'august-home-m.jpg', 'home'],
+	'123' => ['august-bach.jpg', 'august-bach-m.jpg', 'august-bach-prm.jpg'],
+	'154' => ['august-mast.jpg', 'august-mast-m.jpg', 'august-haus-prm.jpg'],
+	'161' => ['august-haus.jpg', 'august-haus-m.jpg', 'august-mast-prm.jpg'],
 ]; ?>
 <div id="popups" class="popups">
 	<div class="popup popup__bigpromo card shadow">
@@ -32,6 +32,21 @@ $pageID = [
 		} else { ?>
 			<a class="btn wave_effect center popup_btn_x" href="#sform"><span>JETZT ANFRAGEN</span></a>
 		<?php } ?>
+	</div>
+	<div class="popup popup__post card shadow js_post">
+		<button class="popup_x">
+			<span></span>
+			<span></span>
+		</button>
+		<span class="h4">Danke, dass Sie sich für uns entschieden haben!</span>
+		<div class="form__sent">
+			<img src="<?php echo get_bloginfo('template_url') ?>/assets/images/forms/sent.svg" alt="">
+		</div>
+		<br>
+		<p>Ihre Anfragenummer: <strong class="js_idpost"></strong></p>
+		<p>Wir haben Ihre Anfrage erhalten und bearbeiten sie derzeit. Wir werden uns in Kürze mit Ihnen in Verbindung
+			setzen.<br>Wenn Sie keine E-Mail erhalten haben, <span>überprüfen Sie bitte Ihren Spam- und
+				Werbung-Ordner</span> und markieren Sie unsere E-Mail als „Kein Spam“.</p>
 	</div>
 </div>
 <div class="popup__box js_giftbox">
@@ -135,8 +150,3 @@ if (array_key_exists(get_the_ID(), $pageID)) {
 	<i class="fa-brands fa-whatsapp"></i>
 	<span>Chatte mit uns über Whatsapp</span>
 </a>
-<div class="popup__cookie">
-	<p>Im Interesse der Benutzerfreundlichkeit und zur Verbesserung unseres Services verwenden wir Cookies</p>
-	<button class="popup__cookie_btn btn wave_effect"
-		onclick="consentGrantedAdStorage()"><span>AKZEPTIEREN</span></button>
-</div>

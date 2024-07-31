@@ -12,7 +12,8 @@ use FacebookAds\Object\ServerSide\Event;
 use FacebookAds\Object\ServerSide\EventRequest;
 use FacebookAds\Object\ServerSide\UserData;
 
-class Mailer extends PHPMailer {
+class Mailer extends PHPMailer
+{
 
 	/**
 	 * Save email to a folder (via IMAP)
@@ -24,13 +25,14 @@ class Mailer extends PHPMailer {
 	 *
 	 * @author David Tkachuk <http://davidrockin.com/>
 	 */
-	public function copyToFolder($folderPath = null) {
-		 $message = $this->MIMEHeader . $this->MIMEBody;
-		 $path = "INBOX" . (isset($folderPath) && !is_null($folderPath) ? ".".$folderPath : ""); // Location to save the email
-		 $imapStream = imap_open("{" . $this->Host . "}" . $path , $this->Username, $this->Password);
+	public function copyToFolder ($folderPath = null)
+	{
+		$message = $this->MIMEHeader . $this->MIMEBody;
+		$path = "INBOX" . (isset($folderPath) && !is_null($folderPath) ? "." . $folderPath : ""); // Location to save the email
+		$imapStream = imap_open("{" . $this->Host . "}" . $path, $this->Username, $this->Password);
 
-		 imap_append($imapStream, "{" . $this->Host . "}" . $path, $message);
-		 imap_close($imapStream);
+		imap_append($imapStream, "{" . $this->Host . "}" . $path, $message);
+		imap_close($imapStream);
 	}
 
 }
@@ -292,7 +294,7 @@ class Ajax
 			$mail->Subject = $subj;
 			$mail->Body = $msg;
 
-			if($mail->send()) { // Attempt to send the email
+			if ($mail->send()) { // Attempt to send the email
 				// $mail->copyToFolder(); // Will save into inbox
 				// $mail->copyToFolder("Sent"); // Will save into Sent folder
 			} else {
@@ -332,7 +334,7 @@ class Ajax
 		<p>Wenn Sie eine dringende Frage haben, kontaktieren Sie uns bitte auf eine der folgenden Arten:</p>
 		<br>
 		<p>Email: <a href="mailto:info@ug-gwc.de">info@ug-gwc.de</a></p>
-		<p>WhatsApp: <a href="https://wa.me/493046690297">493046690297</a></p>
+		<p>WhatsApp: <a href="https://wa.me/493046690286">493046690286</a></p>
 		<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 
@@ -495,21 +497,21 @@ class Ajax
 		foreach ($_COOKIE as $key => $value) {
 			if (
 				in_array($key, [
-					'browser',
 					'cookieCook',
 					'fc_page',
 					'lc_page',
 					'gift',
-					'is_mobile',
-					'os',
 					'refer',
 					'time_passed',
-					'user_agent',
 				])
 			) {
 				$this->postMeta[$key] = $value;
 			}
 		}
+		$this->postMeta['is_mobile'] = (wp_is_mobile() ? 'yes' : 'no');
+		$this->postMeta['browser'] = Helpers::getBrowser($_SERVER['HTTP_USER_AGENT']);
+		$this->postMeta['os'] = Helpers::getOS($_SERVER['HTTP_USER_AGENT']);
+		$this->postMeta['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 	}
 
 	public function postMetaGeo ()

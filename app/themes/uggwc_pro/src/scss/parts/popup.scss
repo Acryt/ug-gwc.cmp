@@ -63,6 +63,29 @@
 	}
 }
 
+.popup__post {
+	position: relative;
+	display: none;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	text-align: center;
+	margin-inline: auto;
+	width: 800px;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 12px;
+	overflow-y: auto;
+
+	p span {
+		color: var(--alert);
+	}
+
+	&._active {
+		display: flex;
+	}
+}
+
 .popup__bigform,
 .popup__bigpromo {
 	position: relative;
@@ -300,25 +323,25 @@
 
 		&.home {
 			.user-reminder {
-				right: 43%;
-				bottom: 15.5%;
+				right: 42%;
+				bottom: 19.5%;
 			}
 
 			.btn {
-				right: 17%;
-				bottom: 11%;
+				right: 13%;
+				bottom: 15%;
 			}
 		}
 
 		&.haus {
 			.user-reminder {
-				right: 43%;
-				bottom: 15.5%;
+				right: 42%;
+				bottom: 19.5%;
 			}
 
 			.btn {
-				right: 17%;
-				bottom: 11%;
+				right: 13%;
+				bottom: 15%;
 			}
 		}
 

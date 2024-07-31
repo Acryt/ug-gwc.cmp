@@ -144,6 +144,7 @@ class Helpers
 		</section>';
 		}
 	}
+
 	public static function viewsCount ()
 	{
 		$arrCount = json_decode($_COOKIE['vc']) ?? array();
@@ -161,57 +162,9 @@ class Helpers
 			setcookie('vc', json_encode($arrCount), time() + 60 * 60 * 24 * 30, '/');
 		}
 	}
+
 	public static function geo ()
 	{
-		function getOS ($user_agent)
-		{
-			if (strpos($user_agent, "Windows") !== false)
-				$os = "Windows";
-			elseif (strpos($user_agent, "Linux") !== false)
-				$os = "Linux";
-			elseif (strpos($user_agent, "X11") !== false)
-				$os = "Linux";
-			elseif (strpos($user_agent, "iPhone") !== false)
-				$os = "iPhone";
-			elseif (strpos($user_agent, "OpenBSD") !== false)
-				$os = "OpenBSD";
-			elseif (strpos($user_agent, "SunOS") !== false)
-				$os = "SunOS";
-			elseif (strpos($user_agent, "Safari") !== false)
-				$os = "Safari";
-			elseif (strpos($user_agent, "Macintosh") !== false)
-				$os = "Macintosh";
-			elseif (strpos($user_agent, "Mac_PowerPC") !== false)
-				$os = "Macintosh";
-			elseif (strpos($user_agent, "QNX") !== false)
-				$os = "QNX";
-			elseif (strpos($user_agent, "BeOS") !== false)
-				$os = "BeOS";
-			elseif (strpos($user_agent, "OS/2") !== false)
-				$os = "OS/2";
-			elseif (strpos($user_agent, "QNX") !== false)
-				$os = "QNX";
-			else
-				$os = "Undefined or Search Bot";
-			return $os;
-		}
-		function getBrowser ($user_agent)
-		{
-			if (strpos($user_agent, "Firefox") !== false)
-				$browser = "Firefox";
-			elseif (strpos($user_agent, "Opera") !== false)
-				$browser = "Opera";
-			elseif (strpos($user_agent, "Chrome") !== false)
-				$browser = "Chrome";
-			elseif (strpos($user_agent, "MSIE") !== false)
-				$browser = "Internet Explorer";
-			elseif (strpos($user_agent, "Safari") !== false)
-				$browser = "Safari";
-			else
-				$browser = "Undefined";
-			return $browser;
-		}
-
 		// реферальная ссылка
 		if (!isset($_COOKIE['refer'])) {
 			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
@@ -220,14 +173,15 @@ class Helpers
 				setcookie('refer', 'none', time() + 60 * 60 * 24 * 30, '/');
 			}
 		}
+
 		//  куки
 		$utm = $_GET;
-
 		// Страница
 		$excludedStrings = [
 			'wp-json',
 			'admin-ajax',
-			'cart.json'
+			'cart.json',
+			'assets'
 		];
 		$isExcluded = false;
 		foreach ($excludedStrings as $excludedString) {
@@ -259,22 +213,56 @@ class Helpers
 			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 30, '/');
 		}
 		setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
-		//OS
-		if (!isset($_COOKIE['os'])) {
-			setcookie('os', getOS($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		//Browser
-		if (!isset($_COOKIE['browser'])) {
-			setcookie('browser', getBrowser($_SERVER['HTTP_USER_AGENT']), time() + 60 * 60 * 24, '/');
-		}
-		// mobile
-		if (!isset($_COOKIE['is_mobile'])) {
-			setcookie('is_mobile', (wp_is_mobile() ? 'yes' : 'no'), time() + 60 * 60 * 24, '/');
-		}
-		if (!isset($_COOKIE['user_agent'])) {
-			$user_agent = $_SERVER["HTTP_USER_AGENT"];
-			setcookie('user_agent', $user_agent, time() + 60 * 60 * 24, '/');
-		}
+	}
+
+	public static function getOS ($user_agent)
+	{
+		if (strpos($user_agent, "Windows") !== false)
+			$os = "Windows";
+		elseif (strpos($user_agent, "Linux") !== false)
+			$os = "Linux";
+		elseif (strpos($user_agent, "X11") !== false)
+			$os = "Linux";
+		elseif (strpos($user_agent, "iPhone") !== false)
+			$os = "iPhone";
+		elseif (strpos($user_agent, "OpenBSD") !== false)
+			$os = "OpenBSD";
+		elseif (strpos($user_agent, "SunOS") !== false)
+			$os = "SunOS";
+		elseif (strpos($user_agent, "Safari") !== false)
+			$os = "Safari";
+		elseif (strpos($user_agent, "Macintosh") !== false)
+			$os = "Macintosh";
+		elseif (strpos($user_agent, "Mac_PowerPC") !== false)
+			$os = "Macintosh";
+		elseif (strpos($user_agent, "QNX") !== false)
+			$os = "QNX";
+		elseif (strpos($user_agent, "BeOS") !== false)
+			$os = "BeOS";
+		elseif (strpos($user_agent, "OS/2") !== false)
+			$os = "OS/2";
+		elseif (strpos($user_agent, "QNX") !== false)
+			$os = "QNX";
+		else
+			$os = "Undefined or Search Bot";
+		return $os;
+	}
+	
+	public static function getBrowser ($user_agent)
+	{
+		if (strpos($user_agent, "Firefox") !== false)
+			$browser = "Firefox";
+		elseif (strpos($user_agent, "Opera") !== false)
+			$browser = "Opera";
+		elseif (strpos($user_agent, "Chrome") !== false)
+			$browser = "Chrome";
+		elseif (strpos($user_agent, "MSIE") !== false)
+			$browser = "Internet Explorer";
+		elseif (strpos($user_agent, "Safari") !== false)
+			$browser = "Safari";
+		else
+			$browser = "Undefined";
+		return $browser;
 	}
 }
 dir(__DIR__);

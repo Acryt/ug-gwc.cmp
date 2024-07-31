@@ -60,3 +60,11 @@
 		top: 120px;
 	}
 }
+
+.content__container #cmplz-document {
+	max-width: unset;
+}
+.content__container #cmplz-cookies-overview .cmplz-dropdown.cmplz-dropdown-cookiepolicy summary div {
+	grid-template-columns: 2fr auto auto auto 25px;
+	height: 64px;
+}

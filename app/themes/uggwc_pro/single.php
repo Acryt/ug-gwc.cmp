@@ -1,11 +1,7 @@
 <?php
-/*
-Template Name: Single
-*/
+the_post();
+get_header();
 ?>
-
-<?php the_post(); ?>
-<?php get_header(); ?>
 
 <main class="main">
 	<?php
