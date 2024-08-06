@@ -155,10 +155,20 @@ class Ajax
 				'Authorization:Basic ' . base64_encode(CRM_LOGIN . ':' . CRM_PASSWORD),
 			);
 			// Prepare POST data
+			// $data = array_merge($_POST, $this->postMeta);
+			// if (!empty($_FILES['file']['tmp_name'])) {
+			// 	$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
+			// 	$data['file'] = $fileUpload;
+			// }
+
+			// Prepare POST data
 			$data = array_merge($_POST, $this->postMeta);
 			if (!empty($_FILES['file']['tmp_name'])) {
-				$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
-				$data['file'] = $fileUpload;
+				$fileUpload = $_FILES['file'];
+				$file_extension = pathinfo($fileUpload['name'], PATHINFO_EXTENSION);
+				$current_date = date('ymdHi');
+				$new_filename = "file{$current_date}.{$file_extension}";
+				$data['file'] = new CURLFile($fileUpload['tmp_name'], $fileUpload['type'], $new_filename);
 			}
 
 			$ch = curl_init(CRM_URL);
