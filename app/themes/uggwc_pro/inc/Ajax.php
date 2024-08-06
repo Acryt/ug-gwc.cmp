@@ -154,12 +154,6 @@ class Ajax
 				'Content-Type: multipart/form-data',
 				'Authorization:Basic ' . base64_encode(CRM_LOGIN . ':' . CRM_PASSWORD),
 			);
-			// Prepare POST data
-			// $data = array_merge($_POST, $this->postMeta);
-			// if (!empty($_FILES['file']['tmp_name'])) {
-			// 	$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
-			// 	$data['file'] = $fileUpload;
-			// }
 
 			// Prepare POST data
 			$data = array_merge($_POST, $this->postMeta);
