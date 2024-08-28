@@ -12,13 +12,12 @@ require_once PATH . 'inc/PrivateConstants.php';
 require_once PATH . 'inc/Helpers.php';
 require_once PATH . 'inc/General.php';
 require_once PATH . 'inc/Ajax.php';
-// require_once DE_PATH .'inc/Shortcodes.php';
+// require_once PATH .'inc/Shortcodes.php';
 
 /** Settings meta fields */
 require_once 'inc/CarbonFields/CommonMeta.php';
 require_once 'inc/CarbonFields/GeneralMeta.php';
 require_once 'inc/CarbonFields/UserMeta.php';
-// require_once 'inc/CarbonFields/PostMeta.php';
 require_once 'inc/CarbonFields/PageMeta.php';
 
 add_action('after_setup_theme', function () {
@@ -31,12 +30,6 @@ add_action('after_setup_theme', function () {
 
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
-
-function test_code ()
-{
-	return 'Тест кода';
-}
-add_shortcode('test_1', 'test_code');
 
 $content = get_the_content();
 $output = apply_filters('do_shortcode', $content);

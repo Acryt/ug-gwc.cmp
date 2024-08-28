@@ -319,6 +319,7 @@ class Ajax
 	{
 		$sbjForClient = 'Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!';
 		$messForClient = '<p><strong>Hallo! Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!</strong></p>
+		<p>Dies ist eine automatisch generierte E-Mail. Bitte antworten Sie nicht darauf.</p>
 		<p>Wir haben Ihre Anfrage erhalten und prüfen sie derzeit. Sobald wir alle Ihre Anforderungen geprüft haben, wird sich Ihr persönlicher Manager mit Ihnen in Verbindung setzen. Wenn Sie vor 18:00 Uhr eine Anfrage gesendet haben, wird sich Ihr persönlicher Manager innerhalb von 15 Minuten mit Ihnen in Verbindung setzen. Wenn nach 18.00 Uhr, dann am nächsten Tag morgens.</p>
 		<p style="text-align: center;"><strong>Ihre Anfragenummer:' . $id . '</strong></p>
 		<br>
