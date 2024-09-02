@@ -292,7 +292,7 @@ class Ajax
 	public function sendFileToTG ($id)
 	{
 		// Проверка на наличие файла
-		if ($_FILES['file']['name'] !== '') {
+		if (isset($_FILES['file']) && $_FILES['file']['name'] !== '') {
 			$uploaddir = '../../loads/' . $id . '/';
 			// Проверка на существование директории
 			if (!file_exists($uploaddir)) {
