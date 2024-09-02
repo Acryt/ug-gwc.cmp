@@ -1,4 +1,4 @@
-// import { getCookie, setCookie, deleteCookie } from "../cookie";
+import { getCookie, setCookie, deleteCookie } from "../cookie";
 
 export function siteTimer() {
 	let startTime = "";
@@ -10,7 +10,7 @@ export function siteTimer() {
 
 	function updateTime() {
 		startTime += 5;
-		setCookie("time_passed", startTime);
+		setCookie("time_passed", startTime, {'SameSite': 'strict'});
 	}
 	updateTime();
 	setInterval(updateTime, 5000);
@@ -50,12 +50,12 @@ export function geoCookie() {
 				document.referrer +
 				"; expires=" +
 				new Date(Date.now() + 604800000) +
-				"; path=/";
+				"; path=/; SameSite=Strict";
 		} else {
 			document.cookie =
 				"refer=none; expires=" +
 				new Date(Date.now() + 31536000000) +
-				"; path=/";
+				"; path=/; SameSite=Strict";
 		}
 	}
 
