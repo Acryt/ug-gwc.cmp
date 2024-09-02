@@ -147,7 +147,7 @@ class Helpers
 
 	public static function viewsCount ()
 	{
-		$arrCount = json_decode($_COOKIE['vc']) ?? array();
+		$arrCount = isset($_COOKIE['vc']) ? json_decode($_COOKIE['vc'], true) : array();
 		$postCount = get_the_ID();
 		$viewCount = get_post_meta(get_the_ID(), 'views_counter', true);
 		$viewed = in_array($postCount, $arrCount);

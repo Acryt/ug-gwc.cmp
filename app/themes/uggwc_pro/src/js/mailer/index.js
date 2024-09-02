@@ -8,12 +8,16 @@ export function mailer() {
 	const popupPost = document.querySelector(".js_post");
 	const idPost = popupPost.querySelector(".js_idpost");
 	for (let form of forms) {
-		form.action = "sendForm";
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
+			let formIdInput = form.querySelector('input[name="form-id"]');
+
 			let data = new FormData(form);
-			data.append("action", "sendForm");
-			// data.append('file', form.querySelector('input[type="file"]').files[0]);
+			if (formIdInput && formIdInput.value === "form-author") {
+				data.append("action", "sendAuthor");
+			} else {
+				data.append("action", "sendForm");
+			}
 
 			// Класс для визуализации формы при отправке
 			form.classList.add("_sending");
