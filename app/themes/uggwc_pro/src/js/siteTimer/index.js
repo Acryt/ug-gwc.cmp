@@ -1,4 +1,4 @@
-import { getCookie, setCookie, deleteCookie } from "../cookie";
+// import { getCookie, setCookie, deleteCookie } from "../cookie";
 
 export function siteTimer() {
 	let startTime = "";
@@ -37,7 +37,7 @@ export function geoCookie() {
 	function setCookie(name, value, days) {
 		const expires = new Date();
 		expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-		document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/`;
+		document.cookie = `${name}=${value}; SameSite=Strict; expires=${expires.toUTCString()}; path=/`;
 	}
 
 	if (!document.cookie.includes("refer")) {
