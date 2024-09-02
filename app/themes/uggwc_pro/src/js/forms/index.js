@@ -29,6 +29,7 @@ export function calendarInput() {
 			minDate: new Date(),
 			autohide: true,
 			// updateOnBlur: true,
+			orientation: "bottom",
 			enableOnReadonly: true,
 			format: 'dd.mm.yyyy',
 		});

@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 // import "vanillajs-datepicker/sass/datepicker.scss";
 
 // import "animate.css";
-import { WOW } from "wowjs";
+// import { WOW } from "wowjs";
 
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	accrd();
 	closePopups();
 	openPopup();
-	cookieClose();
+	// cookieClose();
 	sliders();
 	siteTimer();
 	geoCookie();
@@ -74,27 +74,33 @@ document.addEventListener("DOMContentLoaded", () => {
 		// hideOnClick: false,
 		// trigger: 'click',
 		allowHTML: true,
+		placement: 'top',
 	});
 	tippy('[data-tippy-form1]', {
 		trigger: "click mouseenter",
+		placement: 'top',
 		allowHTML: true,
 		maxWidth: 246,
-		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Sonderangebote des Monats</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>'
+		content: '<div class="form__pluses"><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Sonderangebote des Monats</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Teilzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>Möglichkeit der Ratenzahlung</span></div><div class="form__pluses-c"><div class="form__pluses-i"><img src="/app/themes/uggwc_pro/assets/images/icons/checked.svg" alt=""></div><span>5% bei vollständiger Bezahlung</span></div></div>',
+		popperOptions: {
+			
+		}
 	});
 	tippy('[data-tippy-form2]', {
 		trigger: "click mouseenter",
+		placement: 'top',
 		allowHTML: true,
 		maxWidth: 246,
 		content: '<div class="form__payments"><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/applepay.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/bitcoin.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/giropay.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/gpay.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/klarna.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/mastercard.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/paypal.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/sepa.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/sofort.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/stripe.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/tether.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/unionpay.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/visa.png" alt=""></div><div class="payment-icon"><img src="/app/themes/uggwc_pro/assets/images/payments/wise.png" alt=""></div></div>'
 	});
 
-	let wow = new WOW({
-		boxClass: "wow", // default
-		animateClass: "animate__animated", // default
-		offset: 0, // default
-		mobile: true, // default
-		live: true, // default
-	});
-	wow.init();
+	// let wow = new WOW({
+	// 	boxClass: "wow", // default
+	// 	animateClass: "animate__animated", // default
+	// 	offset: 0, // default
+	// 	mobile: true, // default
+	// 	live: true, // default
+	// });
+	// wow.init();
 });
 console.log("Scripts loaded");

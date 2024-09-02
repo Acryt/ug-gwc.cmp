@@ -5,6 +5,7 @@
 		border-radius: 12px;
 		overflow: hidden;
 		border: 2px solid var(--border);
+		gap: unset;
 	}
 	&__list {
 		display: flex;

@@ -132,6 +132,9 @@
 					<a href="/werbeaktionen/">Rabatte</a>
 					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
+					<!--a href="/shop/">Shop</a>
+					<a href="/mein-konto/">Mein Konto</a>
+					<a href="/cart/">Cart</a-->
 					<a class="no-pc" href="/fur-autoren/">Für Autoren</a>
 					<a class="no-pc" href="/worter-zu-seiten/">Wörter zu Seiten</a>
 

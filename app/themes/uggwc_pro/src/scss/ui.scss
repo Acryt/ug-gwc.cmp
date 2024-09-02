@@ -10,7 +10,7 @@ body {
 	justify-content: space-between;
 	margin: 0 auto;
 	height: 100vh;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	overflow-x: hidden;
@@ -189,17 +189,21 @@ table {
 	width: 100%;
 	overflow: hidden;
 	border-spacing: 0;
+	margin-top: 16px;
 }
 thead,
 tfoot {
 	background: var(--tabhead);
-	color: var(--hover);
+	color: var(--thead);
 	text-align: center;
 	height: 16px;
 	@include responsiveFont(14, 16);
 
 	th {
 		padding: 4px 8px;
+	}
+	td {
+		padding: 12px 12px;
 	}
 }
 tbody {

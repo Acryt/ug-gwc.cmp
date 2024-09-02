@@ -12,7 +12,8 @@ use FacebookAds\Object\ServerSide\Event;
 use FacebookAds\Object\ServerSide\EventRequest;
 use FacebookAds\Object\ServerSide\UserData;
 
-class Mailer extends PHPMailer {
+class Mailer extends PHPMailer
+{
 
 	/**
 	 * Save email to a folder (via IMAP)
@@ -24,13 +25,14 @@ class Mailer extends PHPMailer {
 	 *
 	 * @author David Tkachuk <http://davidrockin.com/>
 	 */
-	public function copyToFolder($folderPath = null) {
-		 $message = $this->MIMEHeader . $this->MIMEBody;
-		 $path = "INBOX" . (isset($folderPath) && !is_null($folderPath) ? ".".$folderPath : ""); // Location to save the email
-		 $imapStream = imap_open("{" . $this->Host . "}" . $path , $this->Username, $this->Password);
+	public function copyToFolder ($folderPath = null)
+	{
+		$message = $this->MIMEHeader . $this->MIMEBody;
+		$path = "INBOX" . (isset($folderPath) && !is_null($folderPath) ? "." . $folderPath : ""); // Location to save the email
+		$imapStream = imap_open("{" . $this->Host . "}" . $path, $this->Username, $this->Password);
 
-		 imap_append($imapStream, "{" . $this->Host . "}" . $path, $message);
-		 imap_close($imapStream);
+		imap_append($imapStream, "{" . $this->Host . "}" . $path, $message);
+		imap_close($imapStream);
 	}
 
 }
@@ -44,16 +46,19 @@ class Ajax
 	public $fc_source;
 	public $score;
 	public $id;
+	public $manager;
 	public $postMeta = [];
 
 	public function __construct ()
 	{
 		// Если пользователь аутентифицирован, используем wp_ajax
 		add_action('wp_ajax_sendForm', [$this, 'sendAll']);
+		add_action('wp_ajax_sendAuthor', [$this, 'sendAuthor']);
 		add_action('wp_ajax_sendWapp', [$this, 'sendWapp']);
 
 		// Если пользователь не аутентифицирован, используем wp_ajax_nopriv
 		add_action('wp_ajax_nopriv_sendForm', [$this, 'sendAll']);
+		add_action('wp_ajax_nopriv_sendAuthor', [$this, 'sendAuthor']);
 		add_action('wp_ajax_nopriv_sendWapp', [$this, 'sendWapp'], );
 	}
 
@@ -95,7 +100,7 @@ class Ajax
 				]
 			);
 		}
-		// $this->sanitizeData();
+		$this->sanitizeData();
 		$this->ch = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
 		$this->channel = $this->getChannel($this->ch);
 		$this->title = $this->getTitle($this->ch);
@@ -109,27 +114,93 @@ class Ajax
 
 		if (isset($res->ToCRM->id)) {
 			$this->id = $res->ToCRM->id;
+			$this->manager = $res->ToCRM->manager;
 			$res->ToCRM->ok = true;
+			$res->ToCRM->form = 'default';
 		} else {
 			$this->id = 1;
+			$this->manager = 'none';
 			$res->ToCRM->ok = false;
 			$res->ToCRM->id = 1;
+			$res->ToCRM->form = 'default';
 		}
 
-		$res->ToTG = $this->sendToTG($this->id);
+		$res->ToTG = $this->sendToTG($this->id, $this->manager);
 		$res->FileToTG = $this->sendFileToTG($this->id);
 		$res->FbAds = $this->facebookAds($this->id);
-		// $res->ToClient = $this->sendToClient($this->id);
+		$res->ToClient = $this->sendToClient($this->id);
 
-		$result = [
-			'ToCRM' => [
-				'ok' => $res->ToCRM->ok,
-				'id' => $res->ToCRM->id
-			],
-			'ToTG' => [
-				'ok' => $res->ToTG->ok
-			]
-		];
+		$result = [];
+		if (!is_null($res->ToCRM)) {
+			$result['ToCRM'] = [
+				'ok' => isset($res->ToCRM->ok) ? $res->ToCRM->ok : false,
+				'id' => isset($res->ToCRM->id) ? $res->ToCRM->id : false,
+				'manager' => isset($res->ToCRM->manager) ? $res->ToCRM->manager : false
+			];
+		}
+		if (!is_null($res->ToTG)) {
+			$result['ToTG'] = [
+				'ok' => isset($res->ToTG->ok) ? $res->ToTG->ok : false
+			];
+		}
+		if (!is_null($res->FileToTG)) {
+			$result['FileToTG'] = [
+				'ok' => isset($res->FileToTG->ok) ? $res->FileToTG->ok : false
+			];
+		}
+		wp_send_json($result);
+	}
+
+	public function sendAuthor ()
+	{
+		if (empty($_POST)) {
+			wp_send_json_error(
+				[
+					'message' => __('Empty form!')
+				]
+			);
+		}
+		$this->sanitizeData();
+		$this->ch = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
+		$this->channel = $this->getChannel($this->ch);
+		$this->title = $this->getTitle($this->ch);
+		$this->subject = $this->getSubject($this->channel);
+		$this->postMetaCookies();
+		$this->postMetaUtm();
+		$this->postMetaGeo();
+
+		$res = new stdClass();
+		$res->ToCRM = $this->sendToCRM();
+
+		if (isset($res->ToCRM->id)) {
+			$this->id = $res->ToCRM->id;
+			$this->manager = $res->ToCRM->manager;
+			$res->ToCRM->ok = true;
+			$res->ToCRM->form = 'author';
+		} else {
+			$this->id = 1;
+			$this->manager = 'none';
+			$res->ToCRM->ok = false;
+			$res->ToCRM->id = 1;
+			$res->ToCRM->form = 'author';
+		}
+
+		$res->ToTG = $this->sendToTG($this->id, $this->manager);
+		$res->FileToTG = $this->sendFileToTG($this->id);
+
+		$result = [];
+		if (!is_null($res->ToCRM)) {
+			$result['ToCRM'] = [
+				'ok' => isset($res->ToCRM->ok) ? $res->ToCRM->ok : false,
+				'id' => isset($res->ToCRM->id) ? $res->ToCRM->id : false,
+				'manager' => isset($res->ToCRM->manager) ? $res->ToCRM->manager : false
+			];
+		}
+		if (!is_null($res->ToTG)) {
+			$result['ToTG'] = [
+				'ok' => isset($res->ToTG->ok) ? $res->ToTG->ok : false
+			];
+		}
 		if (!is_null($res->FileToTG)) {
 			$result['FileToTG'] = [
 				'ok' => isset($res->FileToTG->ok) ? $res->FileToTG->ok : false
@@ -145,11 +216,15 @@ class Ajax
 				'Content-Type: multipart/form-data',
 				'Authorization:Basic ' . base64_encode(CRM_LOGIN . ':' . CRM_PASSWORD),
 			);
+
 			// Prepare POST data
 			$data = array_merge($_POST, $this->postMeta);
 			if (!empty($_FILES['file']['tmp_name'])) {
-				$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
-				$data['file'] = $fileUpload;
+				$fileUpload = $_FILES['file'];
+				$file_extension = pathinfo($fileUpload['name'], PATHINFO_EXTENSION);
+				$current_date = date('ymdHi');
+				$new_filename = "file{$current_date}.{$file_extension}";
+				$data['file'] = new CURLFile($fileUpload['tmp_name'], $fileUpload['type'], $new_filename);
 			}
 
 			$ch = curl_init(CRM_URL);
@@ -186,7 +261,7 @@ class Ajax
 		}
 	}
 
-	private function sendToTG ($id)
+	private function sendToTG ($id, $manager)
 	{
 		$text = "<b>{$this->title}</b>\r\n\n";
 		$text .= "{$this->subject}\r\n\n";
@@ -198,8 +273,9 @@ class Ajax
 		$text .= "<b>✍️ :</b> " . ($_POST['theme'] ?? '') . "\r\n";
 		$text .= "<b>🗒 :</b> " . ($_POST['number'] ?? '') . "\r\n";
 		$text .= "<b>🔥 :</b> " . ($_POST['deadline'] ?? '') . "\r\n";
-		$text .= "<b>👣 :</b> " . ($this->fc_source ?? '') . "\r\n";
+		$text .= "<b>👣 :</b> " . ($this->fc_source ?? '') . "\r\n\n";
 		$text .= "<b>🗃 :</b> " . $id . "\r\n";
+		$text .= "<b>👧 :</b> " . $manager . "\r\n";
 		$text .= "<b>⌚️ :</b> " . date('d.m.Y H:i:s') . "\r\n\n";
 		$text .= "{$this->score} \r\n";
 		// $text .= "<a href='https://akademily.de/wp-admin/post.php?post=" . $id . "&action=edit'><b>Клац</b></a>";
@@ -261,15 +337,15 @@ class Ajax
 	{
 		$mail = new Mailer(true);
 		try {
-			// $mail->SMTPDebug = SMTP::DEBUG_SERVER; //Enable verbose debug output
+			// $mail->SMTPDebug = 2;
 			$mail->isSMTP(); //Send using SMTP
 			$mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 			$mail->SMTPAuth = true; //Enable SMTP authentication
 			$mail->Username = MAIL_BOT_ADDRESS; //SMTP username
 			$mail->Password = MAIL_BOT_PASSWORD; //SMTP password
-			$mail->SMTPSecure = 'ssl'; //Enable implicit TLS encryption
+			$mail->SMTPSecure = 'tls';
 			$mail->CharSet = "utf-8";
-			$mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+			$mail->Port = 587;
 
 			$mail->setFrom(MAIL_BOT_ADDRESS, 'UG-GWC.de');
 			$mail->addAddress($to, $name);
@@ -278,15 +354,15 @@ class Ajax
 			//  $mail->addCC('cc@example.com');
 			//  $mail->addBCC('bcc@example.com');
 			if ($file !== false) {
-				$mail->addAttachment(PATH . 'assets/docs/Warum wählt man uns.pdf');         //Add attachments
+				$mail->addAttachment(PATH . 'assets/docs/Warum wählt man unsere Agentur.pdf');         //Add attachments
 			}
 			$mail->isHTML(true);
 			$mail->Subject = $subj;
 			$mail->Body = $msg;
 
-			if($mail->send()) { // Attempt to send the email
-				$mail->copyToFolder(); // Will save into inbox
-				$mail->copyToFolder("Sent"); // Will save into Sent folder
+			if ($mail->send()) { // Attempt to send the email
+				// $mail->copyToFolder(); // Will save into inbox
+				// $mail->copyToFolder("Sent"); // Will save into Sent folder
 			} else {
 				throw new Exception($mail->ErrorInfo);
 			}
@@ -305,6 +381,7 @@ class Ajax
 	{
 		$sbjForClient = 'Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!';
 		$messForClient = '<p><strong>Hallo! Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!</strong></p>
+		<p>Dies ist eine automatisch generierte E-Mail. Bitte antworten Sie nicht darauf.</p>
 		<p>Wir haben Ihre Anfrage erhalten und prüfen sie derzeit. Sobald wir alle Ihre Anforderungen geprüft haben, wird sich Ihr persönlicher Manager mit Ihnen in Verbindung setzen. Wenn Sie vor 18:00 Uhr eine Anfrage gesendet haben, wird sich Ihr persönlicher Manager innerhalb von 15 Minuten mit Ihnen in Verbindung setzen. Wenn nach 18.00 Uhr, dann am nächsten Tag morgens.</p>
 		<p style="text-align: center;"><strong>Ihre Anfragenummer:' . $id . '</strong></p>
 		<br>
@@ -324,11 +401,11 @@ class Ajax
 		<p>Wenn Sie eine dringende Frage haben, kontaktieren Sie uns bitte auf eine der folgenden Arten:</p>
 		<br>
 		<p>Email: <a href="mailto:info@ug-gwc.de">info@ug-gwc.de</a></p>
-		<p>WhatsApp: <a href="https://wa.me/493046690297">493046690297</a></p>
+		<p>WhatsApp: <a href="https://wa.me/493046690286">493046690286</a></p>
 		<p>Festnetz: <a href="tel:+493046690330">+49(304)669-03-30</a></p>
 		<p style="text-align: center;"><em>Mit freundlichen Grüßen, Ihr Team von Ghost Writer Company</em></p>';
 
-		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, false);
+		$response = $this->sendMail($_POST['email'], $_POST['name'], $sbjForClient, $messForClient, true);
 		return $response;
 	}
 
@@ -487,21 +564,21 @@ class Ajax
 		foreach ($_COOKIE as $key => $value) {
 			if (
 				in_array($key, [
-					'browser',
 					'cookieCook',
 					'fc_page',
 					'lc_page',
 					'gift',
-					'is_mobile',
-					'os',
 					'refer',
 					'time_passed',
-					'user_agent',
 				])
 			) {
 				$this->postMeta[$key] = $value;
 			}
 		}
+		$this->postMeta['is_mobile'] = (wp_is_mobile() ? 'yes' : 'no');
+		$this->postMeta['browser'] = Helpers::getBrowser($_SERVER['HTTP_USER_AGENT']);
+		$this->postMeta['os'] = Helpers::getOS($_SERVER['HTTP_USER_AGENT']);
+		$this->postMeta['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 	}
 
 	public function postMetaGeo ()

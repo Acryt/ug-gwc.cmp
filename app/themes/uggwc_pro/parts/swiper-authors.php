@@ -21,11 +21,11 @@ wp_enqueue_style('sw_authors', URI . '/assets/sw_authors.bundle.css', [], $ver);
 							$rating = $item['cf_author_rating'];
 							$solidStar = intdiv($rating, 10);
 							// $divStar = boolval($rating % 10);
-							$emptyStar = ((5 - $solidStar) - (($rating / 5) % 2));
+							$emptyStar = (int)((5 - $solidStar) - ((int)($rating / 5) % 2));
 							for ($i = 0; $i < $solidStar; $i++) {
 								echo '<i class="fa-solid fa-star"></i>';
 							}
-							if (($rating / 5) % 2 != 0) {
+							if ((int)($rating / 5) % 2 != 0) {
 								echo '<i class="fa-solid fa-star-half-stroke"></i>';
 							}
 							for ($i = 0; $i < $emptyStar; $i++) {

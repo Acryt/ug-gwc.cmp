@@ -3,17 +3,15 @@ wordpress
 node_modules
 wp-config1.php
 composer.lock
-yarn.lock
-**/.yarn/**
-**/.pnp.cjs
-**/.pnp.loader.mjs
-**/.yarnrc.yml
+package-lock.json
 
-**/cache/
+/cache/
 app/plugins/
 !app/plugins/carbon-fields/
 !app/plugins/wp-rocket/
 app/upgrade/
+app/languages/
 **/assets/*.*
-**PrivateConstants.php
+PrivateConstants**.php
 ajax**.php
+.htaccess*
