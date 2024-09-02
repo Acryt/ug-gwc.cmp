@@ -23,7 +23,7 @@ function filterPricesByName ($name, $data)
 // var_dump(get_post_field('post_name', get_post()));
 // var_dump(filterPricesByName(get_post_field('post_name', get_post()), $dataPrice));
 $pageArr = filterPricesByName(get_post_field('post_name', get_post()), $dataPrice);
-if ((bool) $pageArr[0]['prices'][0]['quantityPrices']) { ?>
+if ( isset($pageArr[0]['prices'][0]['quantityPrices'])) { ?>
 
 	<section id="priceTableL" class="section price_table_l">
 		<div class="wrapper">

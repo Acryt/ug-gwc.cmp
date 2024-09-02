@@ -53,10 +53,12 @@ class Ajax
 	{
 		// Если пользователь аутентифицирован, используем wp_ajax
 		add_action('wp_ajax_sendForm', [$this, 'sendAll']);
+		add_action('wp_ajax_sendAuthor', [$this, 'sendAuthor']);
 		add_action('wp_ajax_sendWapp', [$this, 'sendWapp']);
 
 		// Если пользователь не аутентифицирован, используем wp_ajax_nopriv
 		add_action('wp_ajax_nopriv_sendForm', [$this, 'sendAll']);
+		add_action('wp_ajax_nopriv_sendAuthor', [$this, 'sendAuthor']);
 		add_action('wp_ajax_nopriv_sendWapp', [$this, 'sendWapp'], );
 	}
 
@@ -98,7 +100,7 @@ class Ajax
 				]
 			);
 		}
-		// $this->sanitizeData();
+		$this->sanitizeData();
 		$this->ch = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
 		$this->channel = $this->getChannel($this->ch);
 		$this->title = $this->getTitle($this->ch);
@@ -114,11 +116,13 @@ class Ajax
 			$this->id = $res->ToCRM->id;
 			$this->manager = $res->ToCRM->manager;
 			$res->ToCRM->ok = true;
+			$res->ToCRM->form = 'default';
 		} else {
 			$this->id = 1;
 			$this->manager = 'none';
 			$res->ToCRM->ok = false;
 			$res->ToCRM->id = 1;
+			$res->ToCRM->form = 'default';
 		}
 
 		$res->ToTG = $this->sendToTG($this->id, $this->manager);
@@ -126,19 +130,77 @@ class Ajax
 		$res->FbAds = $this->facebookAds($this->id);
 		$res->ToClient = $this->sendToClient($this->id);
 
-		$result = [
-			'ToCRM' => [
-				'ok' => $res->ToCRM->ok,
-				'id' => $res->ToCRM->id,
-				'manager' => $res->ToCRM->manager
-			],
-			'ToTG' => [
-				'ok' => $res->ToTG->ok
-			],
-			'ToClient' => [
-				'ok' => $res->ToClient->ok
-			]
-		];
+		$result = [];
+		if (!is_null($res->ToCRM)) {
+			$result['ToCRM'] = [
+				'ok' => isset($res->ToCRM->ok) ? $res->ToCRM->ok : false,
+				'id' => isset($res->ToCRM->id) ? $res->ToCRM->id : false,
+				'manager' => isset($res->ToCRM->manager) ? $res->ToCRM->manager : false
+			];
+		}
+		if (!is_null($res->ToTG)) {
+			$result['ToTG'] = [
+				'ok' => isset($res->ToTG->ok) ? $res->ToTG->ok : false
+			];
+		}
+		if (!is_null($res->FileToTG)) {
+			$result['FileToTG'] = [
+				'ok' => isset($res->FileToTG->ok) ? $res->FileToTG->ok : false
+			];
+		}
+		wp_send_json($result);
+	}
+
+	public function sendAuthor ()
+	{
+		if (empty($_POST)) {
+			wp_send_json_error(
+				[
+					'message' => __('Empty form!')
+				]
+			);
+		}
+		$this->sanitizeData();
+		$this->ch = json_decode(stripslashes($_COOKIE['fc_utm']))->utm_channel;
+		$this->channel = $this->getChannel($this->ch);
+		$this->title = $this->getTitle($this->ch);
+		$this->subject = $this->getSubject($this->channel);
+		$this->postMetaCookies();
+		$this->postMetaUtm();
+		$this->postMetaGeo();
+
+		$res = new stdClass();
+		$res->ToCRM = $this->sendToCRM();
+
+		if (isset($res->ToCRM->id)) {
+			$this->id = $res->ToCRM->id;
+			$this->manager = $res->ToCRM->manager;
+			$res->ToCRM->ok = true;
+			$res->ToCRM->form = 'author';
+		} else {
+			$this->id = 1;
+			$this->manager = 'none';
+			$res->ToCRM->ok = false;
+			$res->ToCRM->id = 1;
+			$res->ToCRM->form = 'author';
+		}
+
+		$res->ToTG = $this->sendToTG($this->id, $this->manager);
+		$res->FileToTG = $this->sendFileToTG($this->id);
+
+		$result = [];
+		if (!is_null($res->ToCRM)) {
+			$result['ToCRM'] = [
+				'ok' => isset($res->ToCRM->ok) ? $res->ToCRM->ok : false,
+				'id' => isset($res->ToCRM->id) ? $res->ToCRM->id : false,
+				'manager' => isset($res->ToCRM->manager) ? $res->ToCRM->manager : false
+			];
+		}
+		if (!is_null($res->ToTG)) {
+			$result['ToTG'] = [
+				'ok' => isset($res->ToTG->ok) ? $res->ToTG->ok : false
+			];
+		}
 		if (!is_null($res->FileToTG)) {
 			$result['FileToTG'] = [
 				'ok' => isset($res->FileToTG->ok) ? $res->FileToTG->ok : false
@@ -154,11 +216,15 @@ class Ajax
 				'Content-Type: multipart/form-data',
 				'Authorization:Basic ' . base64_encode(CRM_LOGIN . ':' . CRM_PASSWORD),
 			);
+
 			// Prepare POST data
 			$data = array_merge($_POST, $this->postMeta);
 			if (!empty($_FILES['file']['tmp_name'])) {
-				$fileUpload = new CURLFile($_FILES['file']['tmp_name'], $_FILES['file']['type'], $_FILES['file']['name']);
-				$data['file'] = $fileUpload;
+				$fileUpload = $_FILES['file'];
+				$file_extension = pathinfo($fileUpload['name'], PATHINFO_EXTENSION);
+				$current_date = date('ymdHi');
+				$new_filename = "file{$current_date}.{$file_extension}";
+				$data['file'] = new CURLFile($fileUpload['tmp_name'], $fileUpload['type'], $new_filename);
 			}
 
 			$ch = curl_init(CRM_URL);
@@ -315,6 +381,7 @@ class Ajax
 	{
 		$sbjForClient = 'Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!';
 		$messForClient = '<p><strong>Hallo! Vielen Dank, dass Sie sich für Ghost Writer Company entschieden haben!</strong></p>
+		<p>Dies ist eine automatisch generierte E-Mail. Bitte antworten Sie nicht darauf.</p>
 		<p>Wir haben Ihre Anfrage erhalten und prüfen sie derzeit. Sobald wir alle Ihre Anforderungen geprüft haben, wird sich Ihr persönlicher Manager mit Ihnen in Verbindung setzen. Wenn Sie vor 18:00 Uhr eine Anfrage gesendet haben, wird sich Ihr persönlicher Manager innerhalb von 15 Minuten mit Ihnen in Verbindung setzen. Wenn nach 18.00 Uhr, dann am nächsten Tag morgens.</p>
 		<p style="text-align: center;"><strong>Ihre Anfragenummer:' . $id . '</strong></p>
 		<br>

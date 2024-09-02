@@ -97,10 +97,10 @@ class Helpers
 		$mgrArr = [
 			'1' => '49(304)669-02-86',
 			'2' => '49(304)669-02-86',
-			'3' => '49(304)669-01-89',
-			'4' => '49(304)669-00-72',
-			'5' => '49(304)669-00-72',
-			'6' => '49(304)669-00-72',
+			'3' => '49(304)669-02-86',
+			'4' => '49(304)669-02-86',
+			'5' => '49(304)669-02-86',
+			'6' => '49(304)669-02-86',
 			'7' => '49(304)669-02-86',
 		];
 		return $mgrArr[$day];
@@ -147,7 +147,7 @@ class Helpers
 
 	public static function viewsCount ()
 	{
-		$arrCount = json_decode($_COOKIE['vc']) ?? array();
+		$arrCount = isset($_COOKIE['vc']) ? json_decode($_COOKIE['vc'], true) : array();
 		$postCount = get_the_ID();
 		$viewCount = get_post_meta(get_the_ID(), 'views_counter', true);
 		$viewed = in_array($postCount, $arrCount);
