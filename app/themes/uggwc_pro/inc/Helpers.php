@@ -264,5 +264,4 @@ class Helpers
 		return $browser;
 	}
 }
-dir(__DIR__);
 new Helpers();

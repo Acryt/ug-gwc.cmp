@@ -607,5 +607,4 @@ class Ajax
 		}
 	}
 }
-
 new Ajax();
