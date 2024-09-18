@@ -60,11 +60,11 @@ class General
 			return get_template_directory() . '/templates/author.php';
 		});
 
-		remove_action('shutdown', 'wp_ob_end_flush_all', 1);
-		add_action('shutdown', function () {
-			while (@ob_end_flush())
-				;
-		});
+		// remove_action('shutdown', 'wp_ob_end_flush_all', 1);
+		// add_action('shutdown', function () {
+		// 	while (@ob_end_flush())
+		// 		;
+		// });
 	}
 	function remove_block_styles ()
 	{
@@ -119,6 +119,7 @@ class General
 			array(
 				'methods' => 'GET',
 				'callback' => 'getJsonSpec',
+				'permission_callback' => '__return_true',
 			)
 		);
 		register_rest_route(
@@ -127,6 +128,7 @@ class General
 			array(
 				'methods' => 'GET',
 				'callback' => 'getJsonType',
+				'permission_callback' => '__return_true',
 			)
 		);
 		register_rest_route(
@@ -135,6 +137,7 @@ class General
 			array(
 				'methods' => 'GET',
 				'callback' => 'getJsonPricelist',
+				'permission_callback' => '__return_true',
 			)
 		);
 	}

@@ -4,6 +4,7 @@ node_modules
 wp-config1.php
 composer.lock
 package-lock.json
+.ddev/
 
 /cache/
 app/plugins/

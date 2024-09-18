@@ -57,18 +57,6 @@ class Helpers
 		return end($uri);
 	}
 
-	public static function urlPathFromRef (): string
-	{
-		$str = wp_get_referer();
-		if ($str) {
-			preg_match_all('/https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/i', $str, $matches, PREG_SET_ORDER, 0);
-			$site = $matches[0][1] . $matches[0][2];
-			return $site;
-		} else {
-			return $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-		}
-	}
-
 	public static function urlPath (): string
 	{
 		$str = '';
@@ -79,9 +67,8 @@ class Helpers
 		} else {
 			$str = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 		}
-		$url = parse_url($str);
-		$domain = $url['host'];
-		$path = isset($url['path']) ? $url['path'] : '';
+		$domain = parse_url($str, PHP_URL_HOST) ?? '';
+		$path = parse_url($str, PHP_URL_PATH) ?? '';
 		return $domain . $path;
 	}
 

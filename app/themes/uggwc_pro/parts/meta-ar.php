@@ -20,7 +20,7 @@ if (carbon_get_post_meta(get_the_ID(), 'cf_meta_rcount')) {
 		{
 			"@context": "https://schema.org",
 			"@type": "SoftwareApplication",
-			"url": "https://<?php echo Helpers::urlPathFromRef(); ?>",
+			"url": "https://<?php echo Helpers::urlPath(); ?>",
 			"name": "<?php echo carbon_get_post_meta(get_the_ID(), 'cf_first_title'); ?>",
 			"softwareVersion": "1.0.1",
 			"description": "Unsere Ghostwriter zu Ihren Diensten",
