@@ -1,5 +1,7 @@
 export function mailer() {
-	const forms = document.querySelectorAll("form");
+	const forms = document.querySelectorAll(
+		"#form_first, #form_promo, #form_popup, #form_big, #form_author, #form_care, #form_medium, #form_small"
+	);
 
 	if (!forms.length) {
 		return;
