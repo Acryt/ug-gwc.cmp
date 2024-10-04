@@ -1,15 +1,18 @@
 <?php
-the_post();
-get_header();
+/*
+Template Name: Gutenberg
+*/ 
 ?>
+
+
+<?php get_header(); ?>
 
 <main class="main">
 	<?php
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	the_content();
-	get_template_part('parts/section-faq');
-	get_template_part('parts/section-same-posts');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

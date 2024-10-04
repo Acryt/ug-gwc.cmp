@@ -56,9 +56,9 @@ if ($items) {
 					<?php
 					foreach ($items as $key => $item) {
 						if ($key == 0) { ?>
-							<div class="promo__block _active content js">
+							<div class="promo__block _active js">
 							<?php } else { ?>
-								<div class="promo__block content js">
+								<div class="promo__block js">
 								<?php } ?>
 								<?php if ($item['image']) { ?>
 									<div class="promo__cimg">

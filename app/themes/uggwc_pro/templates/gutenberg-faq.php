@@ -1,7 +1,11 @@
 <?php
-the_post();
-get_header();
+/*
+Template Name: Gutenberg with FAQ
+*/ 
 ?>
+
+
+<?php get_header(); ?>
 
 <main class="main">
 	<?php
@@ -9,7 +13,7 @@ get_header();
 	get_template_part('parts/section-crumbs');
 	the_content();
 	get_template_part('parts/section-faq');
-	get_template_part('parts/section-same-posts');
+	get_template_part('parts/section-form');
 	?>
 </main>
 

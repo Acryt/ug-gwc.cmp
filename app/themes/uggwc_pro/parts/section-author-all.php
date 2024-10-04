@@ -37,7 +37,7 @@ wp_enqueue_style('author-all', URI . '/assets/aauthor.bundle.css',[], $ver);
 		  <div class="aauthor__photo"><img src="${author.cf_author_photo}" alt="photo"></div>
 		  <div class="aauthor__cont">
 			 <div class="aauthor__one">
-				<span class="aauthor__name h6"><a href="/autoren/${author.cf_author_id}">${author.cf_author_name}</a></span>
+				<span class="aauthor__name h6"><p>${author.cf_author_name}</p></span>
 				<div class="aauthor__stars">`;
 
 		for (let i = 0; i < solidStar; i++) {

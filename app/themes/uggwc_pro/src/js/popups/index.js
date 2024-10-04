@@ -126,7 +126,7 @@ export function remainUsersPromo() {
 		if (currentValue < number) {
 			currentValue++;
 			rem.forEach((el) => {
-				el.textContent = toString(currentValue);
+				el.textContent = currentValue.toString();
 			});
 		} else {
 			rem.forEach((el) => {

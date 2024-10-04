@@ -32,7 +32,7 @@
         "wpackagist-plugin/tinymce-advanced": "^5.6",
         "wpackagist-plugin/wp-smushit": "*",
         "phpmailer/phpmailer": "^6.8",
-        "facebook/php-business-sdk": "16.0.*",
+        "facebook/php-business-sdk": "^20",
         "htmlburger/carbon-fields": "^3.6"
 	},
 	"config": {

@@ -1,9 +1,9 @@
 <?php
 $pageID = [
-	'9' => ['august-home.jpg', 'august-home-m.jpg', 'home'],
-	'123' => ['august-bach.jpg', 'august-bach-m.jpg', 'august-bach-prm.jpg'],
-	'154' => ['august-mast.jpg', 'august-mast-m.jpg', 'august-haus-prm.jpg'],
-	'161' => ['august-haus.jpg', 'august-haus-m.jpg', 'august-mast-prm.jpg'],
+	'9' => ['oct-home.jpg', 'oct-home-m.jpg', 'home'],
+	'123' => ['oct-bach.jpg', 'oct-bach-m.jpg', 'oct-bach-prm.jpg'],
+	'154' => ['oct-mast.jpg', 'oct-mast-m.jpg', 'oct-haus-prm.jpg'],
+	'161' => ['oct-haus.jpg', 'oct-haus-m.jpg', 'oct-mast-prm.jpg'],
 ]; ?>
 <div id="popups" class="popups">
 	<div class="popup popup__bigpromo card shadow">

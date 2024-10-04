@@ -1,6 +1,6 @@
 <div class="ratings">
 	<div class="ratings__one">
-		<img class="" src="<?php bloginfo('template_url'); ?>/assets/images/review/google.svg" alt="Logo">
+		<img class="" src="<?php echo URI ?>/assets/images/review/google.svg" alt="Logo">
 		<div class="ratings__stars">
 			<?php
 			$rating = floatval(carbon_get_theme_option('cf_rating_one')) * 2; // 9.8

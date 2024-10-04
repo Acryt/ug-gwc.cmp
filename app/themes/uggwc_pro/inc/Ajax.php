@@ -292,7 +292,7 @@ class Ajax
 	public function sendFileToTG ($id)
 	{
 		// Проверка на наличие файла
-		if ($_FILES['file']['name'] !== '') {
+		if (isset($_FILES['file']) && $_FILES['file']['name'] !== '') {
 			$uploaddir = '../../loads/' . $id . '/';
 			// Проверка на существование директории
 			if (!file_exists($uploaddir)) {
@@ -447,14 +447,14 @@ class Ajax
 
 		$content = (new Content())
 			->setProductId(Helpers::del_space(strtolower($_POST['type'])))
-			->setQuantity($_POST['number'])
+			->setQuantity(intval($_POST['number'] ?: 5))
 			->setDeliveryCategory(DeliveryCategory::HOME_DELIVERY);
 
 		$custom_data = (new CustomData())
 			->setOrderId($id)
 			->setContents(array($content))
 			->setCurrency('eur')
-			->setValue(50 * $_POST['number']);
+			->setValue(intval($_POST['number'] ?: 5) * 50);
 
 		$event = (new Event())
 			->setEventName('CreateLead')
@@ -607,5 +607,4 @@ class Ajax
 		}
 	}
 }
-
 new Ajax();

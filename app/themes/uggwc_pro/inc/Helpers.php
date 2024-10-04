@@ -57,18 +57,6 @@ class Helpers
 		return end($uri);
 	}
 
-	public static function urlPathFromRef (): string
-	{
-		$str = wp_get_referer();
-		if ($str) {
-			preg_match_all('/https?:\/\/(?:www\.)?([-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)*(\/[\/\d\w\.-]*)*(?:[\?])*(.+)*/i', $str, $matches, PREG_SET_ORDER, 0);
-			$site = $matches[0][1] . $matches[0][2];
-			return $site;
-		} else {
-			return $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-		}
-	}
-
 	public static function urlPath (): string
 	{
 		$str = '';
@@ -79,9 +67,8 @@ class Helpers
 		} else {
 			$str = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 		}
-		$url = parse_url($str);
-		$domain = $url['host'];
-		$path = isset($url['path']) ? $url['path'] : '';
+		$domain = parse_url($str, PHP_URL_HOST) ?? '';
+		$path = parse_url($str, PHP_URL_PATH) ?? '';
 		return $domain . $path;
 	}
 
@@ -159,7 +146,7 @@ class Helpers
 			}
 			update_post_meta(get_the_ID(), 'views_counter', $viewCount);
 			$arrCount[] = $postCount;
-			setcookie('vc', json_encode($arrCount), time() + 60 * 60 * 24 * 30, '/');
+			setcookie('vc', json_encode($arrCount), ['expires' => time() + 60 * 60 * 24 * 30, 'path' => '/', 'sameSite' => 'strict']);
 		}
 	}
 
@@ -168,12 +155,11 @@ class Helpers
 		// реферальная ссылка
 		if (!isset($_COOKIE['refer'])) {
 			if (isset($_SERVER["HTTP_REFERER"]) && !strpos($_SERVER["HTTP_REFERER"], $_SERVER['HTTP_HOST'])) {
-				setcookie('refer', $_SERVER["HTTP_REFERER"], time() + 60 * 60 * 24 * 30, '/');
+				setcookie('refer', $_SERVER["HTTP_REFERER"], ['expires' => time() + 60 * 60 * 24 * 30, 'path' => '/', 'sameSite' => 'strict']);
 			} else {
-				setcookie('refer', 'none', time() + 60 * 60 * 24 * 30, '/');
+				setcookie('refer', 'none', ['expires' => time() + 60 * 60 * 24 * 30, 'path' => '/', 'sameSite' => 'strict']);
 			}
 		}
-
 		//  куки
 		$utm = $_GET;
 		// Страница
@@ -192,9 +178,9 @@ class Helpers
 		}
 		if (!$isExcluded) {
 			if (!isset($_COOKIE['fc_page'])) {
-				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24 * 30, '/');
+				setcookie('fc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), ['expires' => time() + 60 * 60 * 24 * 30, 'path' => '/', 'sameSite' => 'strict']);
 			}
-			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), time() + 60 * 60 * 24, '/');
+			setcookie('lc_page', (((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']), ['expires' => time() + 60 * 60 * 24, 'path' => '/', 'sameSite' => 'strict']);
 		}
 
 		// органика - директ - реклама
@@ -210,9 +196,9 @@ class Helpers
 
 		// запись утм
 		if (!isset($_COOKIE['fc_utm'])) {
-			setcookie('fc_utm', json_encode($utm), time() + 60 * 60 * 24 * 30, '/');
+			setcookie('fc_utm', json_encode($utm), ['expires' => time() + 60 * 60 * 24 * 30, 'path' => '/', 'sameSite' => 'strict']);
 		}
-		setcookie('lc_utm', json_encode($utm), time() + 60 * 60 * 24, '/');
+		setcookie('lc_utm', json_encode($utm), ['expires' => time() + 60 * 60 * 24, 'path' => '/', 'sameSite' => 'strict']);
 	}
 
 	public static function getOS ($user_agent)
@@ -247,7 +233,7 @@ class Helpers
 			$os = "Undefined or Search Bot";
 		return $os;
 	}
-	
+
 	public static function getBrowser ($user_agent)
 	{
 		if (strpos($user_agent, "Firefox") !== false)
@@ -265,5 +251,4 @@ class Helpers
 		return $browser;
 	}
 }
-dir(__DIR__);
 new Helpers();
