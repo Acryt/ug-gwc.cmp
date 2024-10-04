@@ -4,24 +4,24 @@ class General
 	public function __construct ()
 	{
 		// Удаляем из Wordpress ненужные элементы
-		remove_action('wp_head', 'print_emoji_detection_script', 7);
-		remove_action('wp_head', 'rest_output_link_wp_head', 10);
-		remove_action('wp_head', 'wp_resource_hints', 2);
-		remove_action('wp_head', 'wp_generator');
-		remove_action('wp_head', 'wlwmanifest_link');
-		remove_action('wp_head', 'rsd_link');
-		remove_action('wp_head', 'wp_oembed_add_discovery_links');
-		remove_action('wp_head', 'wp_oembed_add_host_js');
-		remove_action('wp_print_styles', 'print_emoji_styles');
-		remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
-		remove_action('template_redirect', 'rest_output_link_header', 11);
-		remove_action('auth_cookie_malformed', 'rest_cookie_collect_status');
-		remove_action('auth_cookie_expired', 'rest_cookie_collect_status');
-		remove_action('auth_cookie_bad_username', 'rest_cookie_collect_status');
-		remove_action('auth_cookie_bad_hash', 'rest_cookie_collect_status');
-		remove_action('auth_cookie_valid', 'rest_cookie_collect_status');
-		remove_filter('rest_authentication_errors', 'rest_cookie_check_errors', 100);
-		remove_action('rest_api_init', 'rest_api_default_filters', 10);
+		// remove_action('wp_head', 'print_emoji_detection_script', 7);
+		// remove_action('wp_head', 'rest_output_link_wp_head', 10);
+		// remove_action('wp_head', 'wp_resource_hints', 2);
+		// remove_action('wp_head', 'wp_generator');
+		// remove_action('wp_head', 'wlwmanifest_link');
+		// remove_action('wp_head', 'rsd_link');
+		// remove_action('wp_head', 'wp_oembed_add_discovery_links');
+		// remove_action('wp_head', 'wp_oembed_add_host_js');
+		// remove_action('wp_print_styles', 'print_emoji_styles');
+		// remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+		// remove_action('template_redirect', 'rest_output_link_header', 11);
+		// remove_action('auth_cookie_malformed', 'rest_cookie_collect_status');
+		// remove_action('auth_cookie_expired', 'rest_cookie_collect_status');
+		// remove_action('auth_cookie_bad_username', 'rest_cookie_collect_status');
+		// remove_action('auth_cookie_bad_hash', 'rest_cookie_collect_status');
+		// remove_action('auth_cookie_valid', 'rest_cookie_collect_status');
+		// remove_filter('rest_authentication_errors', 'rest_cookie_check_errors', 100);
+		// remove_action('rest_api_init', 'rest_api_default_filters', 10);
 		// remove_action('init', 'rest_api_init');
 		// remove_action('parse_request', 'rest_api_loaded');
 		add_action('wp_enqueue_scripts', [$this, 'remove_block_styles'], 100);
@@ -40,25 +40,25 @@ class General
 		add_filter('wp_mail_from', [$this, 'change_email']);
 		add_filter('wp_mail_from_name', [$this, 'change_name']);
 		add_filter('wpseo_next_rel_link', [$this, 'remove_wpseo_next_rel_link']);
-		add_filter('wpseo_sitemap_index', [$this, 'add_sitemap_custom_items']);
+		// add_filter('wpseo_sitemap_index', [$this, 'add_sitemap_custom_items']);
 
 		add_filter('excerpt_more', function ($more) {
 			return '...';
 		});
 		// динамический роутинг авторов
-		add_action('init', function () {
-			add_rewrite_rule('autoren/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
-		});
-		add_filter('query_vars', function ($query_vars) {
-			$query_vars[] = 'authorID';
-			return $query_vars;
-		});
-		add_action('template_include', function ($template) {
-			if (get_query_var('authorID') == false || get_query_var('authorID') == '') {
-				return $template;
-			}
-			return get_template_directory() . '/templates/author.php';
-		});
+		// add_action('init', function () {
+		// 	add_rewrite_rule('autoren/([0-9]+)[/]?$', 'index.php?authorID=$matches[1]', 'top');
+		// });
+		// add_filter('query_vars', function ($query_vars) {
+		// 	$query_vars[] = 'authorID';
+		// 	return $query_vars;
+		// });
+		// add_action('template_include', function ($template) {
+		// 	if (get_query_var('authorID') == false || get_query_var('authorID') == '') {
+		// 		return $template;
+		// 	}
+		// 	return get_template_directory() . '/templates/author.php';
+		// });
 
 		// remove_action('shutdown', 'wp_ob_end_flush_all', 1);
 		// add_action('shutdown', function () {

@@ -78,6 +78,8 @@
 			<a href="/uber-uns/">Über uns</a>
 			<a href="/faq/">FAQ</a>
 			<a href="/blog/">Blog</a>
+			<a href="/shop/">Shop</a>
+			<a href="/warenkorb/">Warenkorb</a>
 			<strong>WIR ARBEITEN IN:</strong>
 			<a href="/ghostwriter-berlin/">Ghostwriter Berlin</a>
 			<a href="/ghostwriter-deutschland/">Ghostwriter Deutschland</a>

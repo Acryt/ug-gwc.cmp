@@ -3,9 +3,7 @@ export function mailer() {
 		"#form_first, #form_promo, #form_popup, #form_big, #form_author, #form_care, #form_medium, #form_small"
 	);
 
-	if (!forms.length) {
-		return;
-	}
+	if (!forms.length) return;
 	const popupCont = document.querySelector("#popups");
 	const popupPost = document.querySelector(".js_post");
 	const idPost = popupPost.querySelector(".js_idpost");
@@ -13,7 +11,6 @@ export function mailer() {
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
 			let formIdInput = form.querySelector('input[name="form-id"]');
-
 			let data = new FormData(form);
 			if (formIdInput && formIdInput.value === "form-author") {
 				data.append("action", "sendAuthor");

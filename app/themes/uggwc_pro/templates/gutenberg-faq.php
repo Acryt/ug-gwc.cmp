@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Leistungen-Gutenberg
+Template Name: Gutenberg with FAQ
 */ 
 ?>
 
@@ -12,6 +12,7 @@ Template Name: Leistungen-Gutenberg
 	get_template_part('parts/section-first');
 	get_template_part('parts/section-crumbs');
 	the_content();
+	get_template_part('parts/section-faq');
 	get_template_part('parts/section-form');
 	?>
 </main>

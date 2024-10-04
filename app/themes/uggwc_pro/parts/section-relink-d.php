@@ -116,7 +116,7 @@
 				</div>
 				<span>Management</span>
 			</a>
-			<a href="/marketing/">
+			<a href="/ghostwriter-marketing/">
 				<div class="relink__img">
 					<img src="<?php bloginfo('template_url'); ?>/assets/images/thema/Marketing.svg" alt="theme image">
 				</div>

@@ -7,7 +7,7 @@ class GeneralMeta
 	public function __construct ()
 	{
 		add_action('carbon_fields_register_fields', [$this, 'generalOptionsMeta']);
-		add_action('carbon_fields_theme_options_container_saved', [$this, 'generate_authors_xml']); // генерация sitemap авторов
+		// add_action('carbon_fields_theme_options_container_saved', [$this, 'generate_authors_xml']); // генерация sitemap авторов
 	}
 
 	public function generalOptionsMeta ()
