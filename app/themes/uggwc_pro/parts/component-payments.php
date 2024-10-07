@@ -2,13 +2,16 @@
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/applepay.png" alt="payment logo">
 </div>
 <div class="payment-icon">
+	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.png" alt="payment logo">
+</div>
+<div class="payment-icon">
+	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/tilldeal.png" alt="payment logo">
+</div>
+<div class="payment-icon">
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/bitcoin.png" alt="payment logo">
 </div>
 <div class="payment-icon">
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/giropay.png" alt="payment logo">
-</div>
-<div class="payment-icon">
-	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/gpay.png" alt="payment logo">
 </div>
 <div class="payment-icon">
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/payments/klarna.png" alt="payment logo">

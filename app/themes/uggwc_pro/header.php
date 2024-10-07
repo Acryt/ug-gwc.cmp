@@ -11,25 +11,25 @@
 	<?php
 	if (is_single()) { ?>
 		<script type="application/ld+json">
-				{
-					"@context": "https://schema.org",
-					"@type": "Article",
-					"headline": "<?php
-					if (carbon_get_post_meta(get_the_ID(), 'cf_first_title')) {
-						echo carbon_get_post_meta(get_the_ID(), 'cf_first_title');
-					} else {
-						the_title();
+					{
+						"@context": "https://schema.org",
+						"@type": "Article",
+						"headline": "<?php
+						if (carbon_get_post_meta(get_the_ID(), 'cf_first_title')) {
+							echo carbon_get_post_meta(get_the_ID(), 'cf_first_title');
+						} else {
+							the_title();
+						}
+						?>",
+						"datePublished": "<?php the_date() ?>",
+						"dateModified": "<?php the_modified_date(); ?>",
+						"author": [{
+							"@type": "Person",
+							"name": "<?php the_author(); ?>",
+							"url": "<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
+						}]
 					}
-					?>",
-					"datePublished": "<?php the_date() ?>",
-					"dateModified": "<?php the_modified_date(); ?>",
-					"author": [{
-						"@type": "Person",
-						"name": "<?php the_author(); ?>",
-						"url": "<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"
-					}]
-				}
-			</script>
+				</script>
 	<?php } ?>
 	<script type="application/ld+json">
 		{
@@ -56,9 +56,10 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-	$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
-	wp_enqueue_style('main', URI . '/assets/main.bundle.css',[], $ver);
+$ver = filemtime(get_template_directory() . '/assets/main.bundle.css');
+wp_enqueue_style('main', URI . '/assets/main.bundle.css', [], $ver);
 ?>
+
 <body>
 	<header class="header">
 		<div class="header__content">
@@ -127,16 +128,20 @@
 					<div class="dd-menu">
 						<a href="/uber-uns/">Über uns</a>
 						<a href="/wie-wir-arbeiten/">So geht's!</a>
-						<a href="/worter-zu-seiten/">Wort- und Zeichenzähler</a>
+						<a href="/bewertungen/">Bewertungen</a>
 					</div>
 					<a href="/werbeaktionen/">Rabatte</a>
-					<a href="/bewertungen/">Bewertungen</a>
 					<a href="/blog/">Blog</a>
-					<!--a href="/shop/">Shop</a>
-					<a href="/mein-konto/">Mein Konto</a>
-					<a href="/cart/">Cart</a-->
 					<a class="no-pc" href="/fur-autoren/">Für Autoren</a>
-					<a class="no-pc" href="/worter-zu-seiten/">Wörter zu Seiten</a>
+
+					<a class="no-pc" href="/shop/">Shop</a>
+					<?php if (is_user_logged_in()): ?>
+						<a href="/warenkorb/">Warenkorb</a>
+						<a href="/mein-konto/">Mein Konto</a>
+					<?php else: ?>
+						<a href="/warenkorb/">Warenkorb</a>
+						<a href="/mein-konto/">Login</a>
+					<?php endif; ?>
 
 					<a class="header__contact btnh borda wave_effect" href="/anfragen/">
 						<span>Unverbindliche Anfrage</span>
